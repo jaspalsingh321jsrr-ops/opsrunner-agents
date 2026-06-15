@@ -2,270 +2,486 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>OpsRunner — Command Center</title>
+<title>OpsRunner — Business Command Center</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#0f1117;color:#e2e8f0;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#0f1117;color:#e2e8f0;min-height:100vh;font-size:13px}
 .app{display:flex;height:100vh;overflow:hidden}
 .sidebar{width:200px;background:#1a1d27;border-right:1px solid #2a2d3e;display:flex;flex-direction:column;flex-shrink:0}
-.logo{padding:18px 16px 14px;border-bottom:1px solid #2a2d3e}
-.logo h1{font-size:17px;font-weight:700;letter-spacing:-0.5px}
+.logo{padding:16px;border-bottom:1px solid #2a2d3e}
+.logo h1{font-size:16px;font-weight:700;letter-spacing:-0.5px}
 .logo p{font-size:10px;color:#64748b;margin-top:2px}
-.nav{padding:8px 0;flex:1}
-.nav-item{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:12px;cursor:pointer;color:#94a3b8;transition:all 0.12s;border-left:2px solid transparent}
+.nav-section{padding:8px 0 4px;font-size:10px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:0.06em;padding-left:14px;margin-top:6px}
+.nav-item{display:flex;align-items:center;gap:7px;padding:7px 14px;font-size:12px;cursor:pointer;color:#94a3b8;transition:all 0.12s;border-left:2px solid transparent}
 .nav-item:hover{background:#222535;color:#e2e8f0}
 .nav-item.active{background:#222535;color:#7f77dd;border-left-color:#7f77dd;font-weight:500}
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden}
-.topbar{background:#1a1d27;border-bottom:1px solid #2a2d3e;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.topbar{background:#1a1d27;border-bottom:1px solid #2a2d3e;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .topbar h2{font-size:14px;font-weight:500}
-.topbar p{font-size:11px;color:#64748b;margin-top:1px}
-.btn{padding:6px 12px;border-radius:7px;cursor:pointer;font-size:11px;font-weight:500;border:1px solid #2a2d3e;background:transparent;color:#94a3b8;transition:all 0.15s}
+.topbar p{font-size:10px;color:#64748b;margin-top:1px}
+.btn{padding:5px 11px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:500;border:1px solid #2a2d3e;background:transparent;color:#94a3b8;transition:all 0.15s}
 .btn:hover{background:#222535;color:#e2e8f0}
-.content{flex:1;overflow-y:auto;padding:16px 20px;display:flex;gap:16px}
-.left-col{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
-.right-col{width:360px;flex-shrink:0;display:flex;flex-direction:column;gap:12px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.stat{background:#1a1d27;border:1px solid #2a2d3e;border-radius:10px;padding:12px 14px}
-.stat .val{font-size:24px;font-weight:700;font-family:monospace}
-.stat .lbl{font-size:10px;color:#64748b;margin-top:3px}
-.card{background:#1a1d27;border:1px solid #2a2d3e;border-radius:10px;padding:14px}
-.card-title{font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
-.task{padding:9px 10px;border:1px solid #2a2d3e;border-radius:8px;cursor:pointer;transition:border-color 0.12s;margin-bottom:6px}
+.btn-green{background:#14532d;color:#4ade80;border-color:#14532d}
+.btn-green:hover{background:#166534}
+.btn-red{background:#7f1d1d;color:#f87171;border-color:#7f1d1d}
+.btn-red:hover{background:#991b1b}
+.btn-blue{background:#1e3a5f;color:#60a5fa;border-color:#1e3a5f}
+.btn-blue:hover{background:#1e40af}
+.content{flex:1;overflow-y:auto;padding:16px 20px}
+/* Stats */
+.stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px}
+.stat{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:10px 12px}
+.stat .val{font-size:22px;font-weight:700;font-family:monospace;line-height:1}
+.stat .lbl{font-size:9px;color:#64748b;margin-top:3px;text-transform:uppercase;letter-spacing:0.04em}
+/* CRM Pipeline */
+.pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px}
+.pipe-col{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:10px}
+.pipe-head{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #2a2d3e}
+.pipe-card{background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:8px;margin-bottom:6px;cursor:pointer;transition:border-color 0.12s}
+.pipe-card:hover{border-color:#7f77dd}
+.pipe-card .name{font-size:11px;font-weight:500;margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pipe-card .co{font-size:10px;color:#64748b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pipe-card .days{font-size:9px;color:#4b5563;margin-top:3px}
+/* Lead detail */
+.lead-detail{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:14px;margin-bottom:16px;display:none}
+.lead-detail h3{font-size:13px;font-weight:500;margin-bottom:10px}
+.email-preview{background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:12px;font-size:11px;line-height:1.6;color:#cbd5e1;white-space:pre-wrap;margin-bottom:10px;font-family:monospace;max-height:200px;overflow-y:auto}
+.action-row{display:flex;gap:8px;flex-wrap:wrap}
+/* Tasks */
+.task{padding:8px 10px;border:1px solid #2a2d3e;border-radius:7px;cursor:pointer;transition:border-color 0.12s;margin-bottom:6px}
 .task:hover{border-color:#7f77dd}
 .task.sel{border-color:#7f77dd;background:#1e2038}
-.task-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.tag{font-size:9px;font-weight:600;padding:2px 7px;border-radius:10px;flex-shrink:0}
-.task-title{font-size:12px;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.task-time{font-size:10px;color:#64748b;flex-shrink:0}
-.task-meta{font-size:10px;color:#64748b;display:flex;gap:10px}
-.badge{padding:1px 7px;border-radius:8px;font-size:9px;font-weight:600}
+.task-row{display:flex;align-items:center;gap:8px;margin-bottom:3px}
+.tag{font-size:9px;font-weight:600;padding:1px 6px;border-radius:8px;flex-shrink:0}
+.task-title{font-size:11px;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.task-time{font-size:9px;color:#64748b;flex-shrink:0}
+.badge{padding:1px 6px;border-radius:6px;font-size:9px;font-weight:600}
 .b-pending{background:#1e3a5f;color:#60a5fa}
-.b-approved{background:#1a3528;color:#4ade80}
 .b-completed{background:#0d2e1d;color:#22c55e}
 .b-revision{background:#2d1515;color:#f87171}
-.detail{background:#1a1d27;border:1px solid #2a2d3e;border-radius:10px;flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:300px}
-.detail-head{padding:12px 14px;border-bottom:1px solid #2a2d3e}
-.detail-head h3{font-size:13px;font-weight:500;margin-bottom:4px}
-.detail-meta{font-size:10px;color:#64748b}
-.detail-out{flex:1;overflow-y:auto;padding:12px 14px;font-size:11.5px;line-height:1.7;color:#cbd5e1;white-space:pre-wrap;background:#111827;font-family:monospace}
-.detail-actions{padding:10px 14px;border-top:1px solid #2a2d3e;display:flex;gap:8px}
-.btn-approve{background:#14532d;color:#4ade80;border:none;padding:6px 14px;border-radius:7px;cursor:pointer;font-size:11px;font-weight:500}
-.btn-approve:hover{background:#166534}
-.btn-reject{background:#7f1d1d;color:#f87171;border:none;padding:6px 14px;border-radius:7px;cursor:pointer;font-size:11px;font-weight:500}
-.btn-reject:hover{background:#991b1b}
-.empty{display:flex;align-items:center;justify-content:center;color:#64748b;font-size:12px;flex-direction:column;gap:6px;padding:40px}
-.toast{position:fixed;bottom:20px;right:20px;background:#1e3a5f;color:#60a5fa;padding:10px 16px;border-radius:8px;font-size:12px;font-weight:500;border:1px solid #2a4a7a;z-index:999;display:none}
+/* Two col */
+.two-col{display:grid;grid-template-columns:1fr 360px;gap:16px}
+.panel{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:14px}
+.panel-title{font-size:10px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
+.detail-out{background:#111827;border-radius:6px;padding:10px;font-size:11px;line-height:1.6;color:#cbd5e1;white-space:pre-wrap;font-family:monospace;max-height:300px;overflow-y:auto}
+.toast{position:fixed;bottom:16px;right:16px;background:#1e3a5f;color:#60a5fa;padding:8px 14px;border-radius:7px;font-size:11px;font-weight:500;border:1px solid #2a4a7a;z-index:999;display:none}
+/* Finance */
+.fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fin-card{background:#111827;border:1px solid #2a2d3e;border-radius:8px;padding:14px}
+.fin-val{font-size:26px;font-weight:700;font-family:monospace}
+.fin-lbl{font-size:10px;color:#64748b;margin-top:4px}
+.fin-sub{font-size:10px;color:#4b5563;margin-top:2px}
 </style>
 </head>
 <body>
 <div class="app">
 <div class="sidebar">
-  <div class="logo"><h1>OpsRunner</h1><p>AI Command Center</p></div>
-  <div class="nav">
-    <div class="nav-item active" data-view="all">⊞ All tasks</div>
-    <div class="nav-item" data-view="pending">⏳ Pending review</div>
-    <div class="nav-item" data-view="completed">✓ Completed</div>
-  </div>
+  <div class="logo"><h1>OpsRunner</h1><p>Business Command Center</p></div>
+  <div class="nav-section">Overview</div>
+  <div class="nav-item active" data-view="dashboard">⊞ Dashboard</div>
+  <div class="nav-item" data-view="finance">📊 Finance tracker</div>
+  <div class="nav-section">Sales</div>
+  <div class="nav-item" data-view="crm">👥 Lead pipeline</div>
+  <div class="nav-item" data-view="emails">✉ Email approvals</div>
+  <div class="nav-section">Marketing</div>
+  <div class="nav-item" data-view="posts">📣 LinkedIn posts</div>
+  <div class="nav-section">Operations</div>
+  <div class="nav-item" data-view="tasks">✓ Agent tasks</div>
 </div>
+
 <div class="main">
   <div class="topbar">
-    <div>
-      <h2 id="view-title">All tasks</h2>
-      <p id="last-refresh">Loading...</p>
+    <div><h2 id="view-title">Dashboard</h2><p id="last-refresh">Loading...</p></div>
+    <div style="display:flex;gap:6px">
+      <button class="btn" onclick="loadAll()">↺ Refresh</button>
     </div>
-    <button class="btn" onclick="loadData()">↺ Refresh</button>
   </div>
-  <div class="content">
-    <div class="left-col">
-      <div class="stats">
-        <div class="stat"><div class="val" id="s-total" style="color:#7f77dd">0</div><div class="lbl">Total tasks</div></div>
-        <div class="stat"><div class="val" id="s-pending" style="color:#60a5fa">0</div><div class="lbl">Pending</div></div>
-        <div class="stat"><div class="val" id="s-completed" style="color:#4ade80">0</div><div class="lbl">Completed</div></div>
-        <div class="stat"><div class="val" id="s-today" style="color:#fbbf24">0</div><div class="lbl">Today</div></div>
+
+  <div class="content" id="main-content">
+
+    <!-- DASHBOARD VIEW -->
+    <div id="view-dashboard">
+      <div class="stats-row">
+        <div class="stat"><div class="val" id="s-leads" style="color:#60a5fa">0</div><div class="lbl">Total leads</div></div>
+        <div class="stat"><div class="val" id="s-emails-sent" style="color:#4ade80">0</div><div class="lbl">Emails sent</div></div>
+        <div class="stat"><div class="val" id="s-pending-email" style="color:#fbbf24">0</div><div class="lbl">Need approval</div></div>
+        <div class="stat"><div class="val" id="s-replied" style="color:#a78bfa">0</div><div class="lbl">Replied</div></div>
+        <div class="stat"><div class="val" id="s-won" style="color:#4ade80">0</div><div class="lbl">Clients won</div></div>
+        <div class="stat"><div class="val" id="s-pipeline" style="color:#f59e0b">$0</div><div class="lbl">Pipeline value</div></div>
       </div>
-      <div class="card">
-        <div class="card-title">Tasks</div>
-        <div id="task-list"></div>
-      </div>
-    </div>
-    <div class="right-col">
-      <div class="detail" id="detail-panel">
-        <div class="empty" id="empty-msg">
-          <div style="font-size:28px">📋</div>
-          <div>Select a task to view output</div>
-        </div>
-        <div id="detail-content" style="display:none;flex:1;flex-direction:column">
-          <div class="detail-head">
-            <h3 id="d-title"></h3>
-            <div class="detail-meta" id="d-meta"></div>
+      <div class="two-col">
+        <div>
+          <div class="panel" style="margin-bottom:12px">
+            <div class="panel-title">Emails waiting for your approval</div>
+            <div id="approval-list"><div style="color:#4b5563;font-size:11px;padding:10px 0">No emails pending approval.</div></div>
           </div>
-          <div class="detail-out" id="d-output"></div>
-          <div class="detail-actions">
-            <button class="btn-approve" onclick="approve()">✓ Approve</button>
-            <button class="btn-reject" onclick="reject()">✗ Needs revision</button>
+          <div class="panel">
+            <div class="panel-title">Recent agent tasks</div>
+            <div id="recent-tasks-dash"></div>
           </div>
         </div>
+        <div>
+          <div class="panel" style="margin-bottom:12px">
+            <div class="panel-title">Pipeline summary</div>
+            <div id="pipeline-summary"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Latest LinkedIn posts ready to publish</div>
+            <div id="latest-posts"></div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- CRM VIEW -->
+    <div id="view-crm" style="display:none">
+      <div id="lead-detail-panel" class="lead-detail">
+        <h3 id="ld-name"></h3>
+        <div style="font-size:10px;color:#64748b;margin-bottom:10px" id="ld-meta"></div>
+        <div style="font-size:11px;font-weight:500;margin-bottom:4px">Email ready to send:</div>
+        <div style="font-size:10px;color:#60a5fa;margin-bottom:6px" id="ld-subject"></div>
+        <div class="email-preview" id="ld-body"></div>
+        <div class="action-row">
+          <button class="btn btn-green" onclick="approveLead()">✓ Approve — send this email</button>
+          <button class="btn btn-red" onclick="rejectLead()">✗ Edit before sending</button>
+          <button class="btn btn-blue" onclick="markReplied()">📩 Mark as replied</button>
+          <button class="btn btn-blue" onclick="markWon()">🏆 Mark as won</button>
+          <button class="btn" onclick="markLost()">✗ Mark as lost</button>
+        </div>
+        <div style="margin-top:8px">
+          <input id="ld-note" placeholder="Add a note about this lead..." style="background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:6px 10px;color:#e2e8f0;font-size:11px;width:100%">
+          <button class="btn" style="margin-top:4px" onclick="saveNote()">Save note</button>
+        </div>
+      </div>
+      <div class="pipeline" id="pipeline-board"></div>
+    </div>
+
+    <!-- EMAIL APPROVALS VIEW -->
+    <div id="view-emails" style="display:none">
+      <div class="panel">
+        <div class="panel-title">Emails waiting for your approval — click approve to send via Gmail</div>
+        <div id="email-approval-list"></div>
+      </div>
+    </div>
+
+    <!-- LINKEDIN POSTS VIEW -->
+    <div id="view-posts" style="display:none">
+      <div class="panel">
+        <div class="panel-title">LinkedIn posts ready to publish — copy and post manually or connect Buffer</div>
+        <div id="posts-list"></div>
+      </div>
+    </div>
+
+    <!-- AGENT TASKS VIEW -->
+    <div id="view-tasks" style="display:none">
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-title">All agent tasks</div>
+          <div id="task-list"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">Task output</div>
+          <div id="task-detail-out" class="detail-out" style="min-height:200px">Select a task to view output</div>
+          <div style="display:flex;gap:6px;margin-top:8px">
+            <button class="btn btn-green" onclick="approveTask()">✓ Approve</button>
+            <button class="btn btn-red" onclick="rejectTask()">✗ Revision needed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCE VIEW -->
+    <div id="view-finance" style="display:none">
+      <div class="fin-grid" style="margin-bottom:16px">
+        <div class="fin-card"><div class="fin-val" id="f-mrr" style="color:#4ade80">$0</div><div class="fin-lbl">Monthly Recurring Revenue</div><div class="fin-sub">From paid Leakly Pro users</div></div>
+        <div class="fin-card"><div class="fin-val" id="f-pipeline" style="color:#60a5fa">$0</div><div class="fin-lbl">Sales pipeline value</div><div class="fin-sub">Estimated from active leads</div></div>
+        <div class="fin-card"><div class="fin-val" id="f-cost" style="color:#f87171">$0</div><div class="fin-lbl">Claude API spend today</div><div class="fin-sub">~$0.12/day target</div></div>
+        <div class="fin-card"><div class="fin-val" id="f-leads" style="color:#a78bfa">0</div><div class="fin-lbl">Total leads found</div><div class="fin-sub">By lead finder agent</div></div>
+        <div class="fin-card"><div class="fin-val" id="f-sent" style="color:#fbbf24">0</div><div class="fin-lbl">Total emails sent</div><div class="fin-sub">Via Gmail automation</div></div>
+        <div class="fin-card"><div class="fin-val" id="f-conv" style="color:#4ade80">0%</div><div class="fin-lbl">Conversion rate</div><div class="fin-sub">Leads → clients won</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">How to update MRR</div>
+        <div style="font-size:11px;color:#94a3b8;line-height:1.7">
+          When a user upgrades to Leakly Pro, go to your GitHub repo → edit <code style="background:#111827;padding:1px 4px;border-radius:3px">data/finance.json</code> → update the <code style="background:#111827;padding:1px 4px;border-radius:3px">mrr</code> value.<br><br>
+          The Finance agent runs every 8 hours and updates pipeline value automatically based on your lead count.
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 </div>
 <div class="toast" id="toast"></div>
 
 <script>
-let allTasks = [];
-let selectedId = null;
-let currentView = "all";
+const GITHUB_USER = "jaspalsingh321jsrr-ops";
+const REPO = "opsrunner-agents";
+const BRANCH = "main";
+const BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/${BRANCH}/data`;
 
-const agentColors = {
-  "Sales agent":["#1e3a5f","#60a5fa"],
-  "Marketing agent":["#1a3528","#4ade80"],
-  "Finance agent":["#2d1f4a","#a78bfa"],
-  "Client success agent":["#2a1e38","#f472b6"],
-  "Tech agent":["#1f2d3a","#38bdf8"],
-};
-const badgeClass = {pending_review:"b-pending",approved:"b-approved",completed:"b-completed",needs_revision:"b-revision"};
-const badgeLabel = {pending_review:"Pending",approved:"Approved",completed:"Completed",needs_revision:"Needs revision"};
+let leads=[], tasks=[], posts=[], finance={};
+let selectedLeadId=null, selectedTaskId=null;
+let currentView="dashboard";
 
-function timeAgo(iso){
-  const d=Math.floor((Date.now()-new Date(iso))/60000);
-  if(d<1)return"just now";if(d<60)return d+"m ago";
-  if(d<1440)return Math.floor(d/60)+"h ago";return Math.floor(d/1440)+"d ago";
+const agentColors={"Sales agent":["#1e3a5f","#60a5fa"],"Marketing agent":["#1a3528","#4ade80"],"Finance agent":["#2d1f4a","#a78bfa"],"Client success agent":["#2a1e38","#f472b6"],"Tech agent":["#1f2d3a","#38bdf8"],"Lead Finder":["#1e3a5f","#60a5fa"],"LinkedIn Poster":["#1a3528","#4ade80"]};
+const badgeClass={pending_review:"b-pending",approved:"b-pending",completed:"b-completed",needs_revision:"b-revision"};
+
+const PIPE_STAGES=["new","approved","sent","replied","call","won"];
+const PIPE_LABELS={"new":"New leads","approved":"Email approved","sent":"Email sent","replied":"Replied","call":"Call scheduled","won":"Client won ✓"};
+const PIPE_COLORS={"new":"#60a5fa","approved":"#fbbf24","sent":"#a78bfa","replied":"#34d399","call":"#f97316","won":"#4ade80"};
+
+function timeAgo(iso){const d=Math.floor((Date.now()-new Date(iso))/60000);if(d<1)return"just now";if(d<60)return d+"m ago";if(d<1440)return Math.floor(d/60)+"h ago";return Math.floor(d/1440)+"d ago";}
+function fmt$(n){return "$"+Number(n||0).toLocaleString();}
+
+async function fetchJSON(file){
+  // Try local server first, then GitHub
+  try{const r=await fetch(`../data/${file}?t=${Date.now()}`);if(r.ok){const d=await r.json();return d;}}catch(e){}
+  try{const r=await fetch(`${BASE}/${file}?t=${Date.now()}`);if(r.ok)return await r.json();}catch(e){}
+  return null;
 }
 
-function renderTasks(){
-  let tasks=[...allTasks];
-  if(currentView==="pending") tasks=tasks.filter(t=>t.status==="pending_review");
-  if(currentView==="completed") tasks=tasks.filter(t=>t.status==="completed");
+async function loadAll(){
+  const [l,t,p,f]=await Promise.all([fetchJSON("leads.json"),fetchJSON("tasks.json"),fetchJSON("posts.json"),fetchJSON("finance.json")]);
+  leads=l||[];tasks=t||[];posts=p||[];finance=f||{};
+  document.getElementById("last-refresh").textContent="Updated "+new Date().toLocaleTimeString();
+  updateStats();renderCurrentView();
+}
 
-  document.getElementById("s-total").textContent=allTasks.length;
-  document.getElementById("s-pending").textContent=allTasks.filter(t=>t.status==="pending_review").length;
-  document.getElementById("s-completed").textContent=allTasks.filter(t=>t.status==="completed").length;
-  const today=new Date().toISOString().slice(0,10);
-  document.getElementById("s-today").textContent=allTasks.filter(t=>t.created_at?.slice(0,10)===today).length;
+function updateStats(){
+  const sent=leads.filter(l=>["sent","replied","call","won","sequence_complete"].includes(l.status)).length;
+  const pending=leads.filter(l=>l.status==="new"&&l.email_subject).length;
+  const replied=leads.filter(l=>["replied","call"].includes(l.status)).length;
+  const won=leads.filter(l=>l.status==="won").length;
+  const pipe=leads.filter(l=>!["won","lost"].includes(l.status)).length*500;
+  document.getElementById("s-leads").textContent=leads.length;
+  document.getElementById("s-emails-sent").textContent=sent;
+  document.getElementById("s-pending-email").textContent=pending;
+  document.getElementById("s-replied").textContent=replied;
+  document.getElementById("s-won").textContent=won;
+  document.getElementById("s-pipeline").textContent=fmt$(pipe);
+}
 
-  const list=document.getElementById("task-list");
-  if(tasks.length===0){
-    list.innerHTML=`<div style="color:#64748b;font-size:12px;padding:20px 0;text-align:center">
-      No tasks yet.<br><br>Go to GitHub Actions → Sales Agent → Run workflow</div>`;
-    return;
-  }
-  list.innerHTML=tasks.slice(0,30).map(t=>{
+function renderCurrentView(){
+  if(currentView==="dashboard") renderDashboard();
+  else if(currentView==="crm") renderCRM();
+  else if(currentView==="emails") renderEmailApprovals();
+  else if(currentView==="posts") renderPosts();
+  else if(currentView==="tasks") renderTasks();
+  else if(currentView==="finance") renderFinance();
+}
+
+function renderDashboard(){
+  // Approval list
+  const pending=leads.filter(l=>l.status==="new"&&l.email_subject);
+  const abox=document.getElementById("approval-list");
+  if(pending.length===0){abox.innerHTML='<div style="color:#4b5563;font-size:11px;padding:8px 0">No emails pending. Lead finder runs every 2 hours.</div>';}
+  else{abox.innerHTML=pending.slice(0,5).map(l=>`<div class="task" onclick="showLeadDetail('${l.id}');showView('crm')">
+    <div class="task-row"><span style="font-size:11px;font-weight:500">${l.first_name} ${l.last_name}</span><span style="font-size:10px;color:#64748b;margin-left:auto">${l.company}</span></div>
+    <div style="font-size:10px;color:#60a5fa">${l.email_subject}</div>
+    <div style="display:flex;gap:6px;margin-top:4px"><button class="btn btn-green" style="font-size:10px;padding:3px 8px" onclick="event.stopPropagation();quickApprove('${l.id}')">✓ Approve & send</button></div>
+  </div>`).join("");}
+
+  // Pipeline summary
+  const pbox=document.getElementById("pipeline-summary");
+  pbox.innerHTML=PIPE_STAGES.map(s=>{
+    const cnt=leads.filter(l=>l.status===s).length;
+    return`<div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #1e2030">
+      <span style="font-size:11px;color:${PIPE_COLORS[s]}">${PIPE_LABELS[s]}</span>
+      <span style="font-size:13px;font-weight:700;color:${PIPE_COLORS[s]}">${cnt}</span>
+    </div>`;}).join("");
+
+  // Recent tasks
+  const tbox=document.getElementById("recent-tasks-dash");
+  tbox.innerHTML=tasks.slice(0,4).map(t=>{
     const [bg,fg]=agentColors[t.agent]||["#1a2a3a","#94a3b8"];
-    const bc=badgeClass[t.status]||"b-pending";
-    const bl=badgeLabel[t.status]||t.status;
-    return`<div class="task${t.id===selectedId?" sel":""}" onclick="selectTask('${t.id}')">
-      <div class="task-row">
-        <span class="tag" style="background:${bg};color:${fg}">${t.agent}</span>
-        <span class="task-title">${t.title}</span>
-        <span class="task-time">${timeAgo(t.created_at)}</span>
-      </div>
-      <div class="task-meta">
-        <span class="badge ${bc}">${bl}</span>
-        ${t.approved_by?`<span>✓ ${t.approved_by}</span>`:""}
-      </div>
+    return`<div class="task"><div class="task-row"><span class="tag" style="background:${bg};color:${fg}">${t.agent}</span><span class="task-title">${t.title}</span><span class="task-time">${timeAgo(t.created_at)}</span></div></div>`;
+  }).join("")||'<div style="color:#4b5563;font-size:11px">No tasks yet.</div>';
+
+  // Latest posts
+  const pst=document.getElementById("latest-posts");
+  pst.innerHTML=posts.slice(0,2).map(p=>`<div style="border:1px solid #2a2d3e;border-radius:6px;padding:8px;margin-bottom:6px">
+    <div style="font-size:10px;color:#4ade80;margin-bottom:4px">${p.angle_desc}</div>
+    <div style="font-size:11px;color:#94a3b8;overflow:hidden;max-height:40px">${(p.linkedin||"").slice(0,120)}...</div>
+    <button class="btn" style="margin-top:6px;font-size:10px" onclick="copyPost('${p.id}')">📋 Copy post</button>
+  </div>`).join("")||'<div style="color:#4b5563;font-size:11px">No posts yet.</div>';
+}
+
+function renderCRM(){
+  const board=document.getElementById("pipeline-board");
+  board.innerHTML=PIPE_STAGES.map(stage=>{
+    const stageleads=leads.filter(l=>l.status===stage);
+    return`<div class="pipe-col">
+      <div class="pipe-head" style="color:${PIPE_COLORS[stage]}">${PIPE_LABELS[stage]} (${stageleads.length})</div>
+      ${stageleads.length===0?'<div style="color:#4b5563;font-size:10px;padding:4px">Empty</div>':
+        stageleads.map(l=>`<div class="pipe-card" onclick="showLeadDetail('${l.id}')">
+          <div class="name">${l.first_name} ${l.last_name}</div>
+          <div class="co">${l.company}</div>
+          <div class="days">${timeAgo(l.created_at)}</div>
+        </div>`).join("")}
     </div>`;
   }).join("");
 }
 
-function selectTask(id){
-  selectedId=id;
-  const t=allTasks.find(x=>x.id===id);
-  if(!t)return;
-  document.getElementById("empty-msg").style.display="none";
-  const dc=document.getElementById("detail-content");
-  dc.style.display="flex";dc.style.flexDirection="column";dc.style.flex="1";
-  document.getElementById("d-title").textContent=t.title;
-  const bc=badgeClass[t.status]||"b-pending";
-  const bl=badgeLabel[t.status]||t.status;
-  document.getElementById("d-meta").innerHTML=
-    `<span class="badge ${bc}">${bl}</span> &nbsp;${t.agent}&nbsp;&nbsp;${timeAgo(t.created_at)}
-    ${t.revision_note?`<div style="margin-top:4px;color:#f87171;font-size:10px">${t.revision_note.slice(0,200)}</div>`:""}`;
-  document.getElementById("d-output").textContent=t.output;
-  renderTasks();
+function showLeadDetail(id){
+  selectedLeadId=id;
+  const l=leads.find(x=>x.id===id);
+  if(!l)return;
+  const panel=document.getElementById("lead-detail-panel");
+  panel.style.display="block";
+  document.getElementById("ld-name").textContent=`${l.first_name} ${l.last_name} — ${l.position} at ${l.company}`;
+  document.getElementById("ld-meta").textContent=`${l.email} · ${l.domain} · confidence: ${l.confidence}% · status: ${l.status} · ${timeAgo(l.created_at)}${l.notes?` · Note: ${l.notes}`:""}`;
+  document.getElementById("ld-subject").textContent=`Subject: ${l.email_subject||"No email written yet"}`;
+  document.getElementById("ld-body").textContent=l.email_body||"No email written yet.";
+  document.getElementById("ld-note").value=l.notes||"";
 }
 
-function approve(){
-  if(!selectedId)return;
-  const t=allTasks.find(x=>x.id===selectedId);
-  if(!t)return;
-  t.status="completed";t.approved_by="Jaspal";
-  saveTasks();renderTasks();selectTask(selectedId);
-  toast("✓ Approved");
+function quickApprove(id){selectedLeadId=id;approveLead();}
+
+function approveLead(){
+  const l=leads.find(x=>x.id===selectedLeadId);
+  if(!l)return;
+  l.status="approved";l.updated_at=new Date().toISOString();
+  saveLeads();toast("✓ Email approved — will send on next agent run (within 30 min)");
+  renderCurrentView();
 }
 
-function reject(){
-  if(!selectedId)return;
-  const note=prompt("What needs to be fixed?");
+function rejectLead(){
+  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
+  const note=prompt("What needs to change in this email?","");
   if(!note)return;
-  const t=allTasks.find(x=>x.id===selectedId);
-  if(!t)return;
-  t.status="needs_revision";t.revision_note=note;
-  saveTasks();renderTasks();selectTask(selectedId);
-  toast("↩ Sent back for revision");
+  l.status="needs_edit";l.notes=note;l.updated_at=new Date().toISOString();
+  saveLeads();toast("↩ Marked for editing");renderCurrentView();
 }
 
-function saveTasks(){
-  localStorage.setItem("opsrunner_tasks",JSON.stringify(allTasks));
+function markReplied(){
+  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
+  l.status="replied";l.replied_at=new Date().toISOString();l.updated_at=new Date().toISOString();
+  saveLeads();toast("📩 Marked as replied");renderCurrentView();
 }
 
-async function loadData(){
-  // Try 1: load from local server (python -m http.server)
-  try{
-    const r=await fetch("../data/tasks.json?t="+Date.now());
-    if(r.ok){
-      const data=await r.json();
-      if(data.length>0){
-        allTasks=data;
-        document.getElementById("last-refresh").textContent="Live from local file · "+new Date().toLocaleTimeString();
-        renderTasks();return;
-      }
-    }
-  }catch(e){}
+function markWon(){
+  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
+  l.status="won";l.updated_at=new Date().toISOString();
+  finance.leads_converted=(finance.leads_converted||0)+1;
+  saveLeads();toast("🏆 Client won! Congratulations!");renderCurrentView();
+}
 
-  // Try 2: load from GitHub (public repo)
-  try{
-    const r=await fetch("https://raw.githubusercontent.com/jaspalsingh321jsrr-ops/opsrunner-agents/main/data/tasks.json?t="+Date.now());
-    if(r.ok){
-      const data=await r.json();
-      if(data.length>0){
-        allTasks=data;
-        document.getElementById("last-refresh").textContent="From GitHub · "+new Date().toLocaleTimeString();
-        renderTasks();return;
-      }
-    }
-  }catch(e){}
+function markLost(){
+  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
+  l.status="lost";l.updated_at=new Date().toISOString();
+  saveLeads();toast("Lead marked as lost");renderCurrentView();
+}
 
-  // Try 3: load from localStorage (previously saved)
-  const saved=localStorage.getItem("opsrunner_tasks");
-  if(saved){
-    allTasks=JSON.parse(saved);
-    document.getElementById("last-refresh").textContent="From cache · "+new Date().toLocaleTimeString();
-    renderTasks();return;
-  }
+function saveNote(){
+  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
+  l.notes=document.getElementById("ld-note").value;
+  l.updated_at=new Date().toISOString();
+  saveLeads();toast("Note saved");
+}
 
-  document.getElementById("last-refresh").textContent="Waiting for agent to run...";
+function saveLeads(){
+  localStorage.setItem("opsrunner_leads",JSON.stringify(leads));
+}
+
+function renderEmailApprovals(){
+  const box=document.getElementById("email-approval-list");
+  const pending=leads.filter(l=>l.status==="new"&&l.email_subject);
+  if(pending.length===0){box.innerHTML='<div style="color:#4b5563;padding:20px 0;text-align:center">No emails waiting. Lead finder runs every 2 hours and writes emails automatically.</div>';return;}
+  box.innerHTML=pending.map(l=>`<div style="border:1px solid #2a2d3e;border-radius:8px;padding:12px;margin-bottom:10px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <div><div style="font-size:12px;font-weight:500">${l.first_name} ${l.last_name} — ${l.company}</div>
+      <div style="font-size:10px;color:#64748b">${l.email} · ${l.position}</div></div>
+      <div style="display:flex;gap:6px">
+        <button class="btn btn-green" onclick="selectedLeadId='${l.id}';approveLead()">✓ Approve & send</button>
+        <button class="btn btn-red" onclick="selectedLeadId='${l.id}';rejectLead()">✗ Edit</button>
+      </div>
+    </div>
+    <div style="font-size:10px;color:#60a5fa;margin-bottom:6px">Subject: ${l.email_subject}</div>
+    <div class="email-preview">${l.email_body}</div>
+  </div>`).join("");
+}
+
+function renderPosts(){
+  const box=document.getElementById("posts-list");
+  if(posts.length===0){box.innerHTML='<div style="color:#4b5563;padding:20px 0;text-align:center">No posts yet. LinkedIn agent runs every 8 hours.</div>';return;}
+  box.innerHTML=posts.slice(0,10).map(p=>`<div style="border:1px solid #2a2d3e;border-radius:8px;padding:12px;margin-bottom:10px">
+    <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+      <div style="font-size:11px;font-weight:500;color:#4ade80">${p.angle_desc}</div>
+      <div style="display:flex;gap:6px">
+        <button class="btn" onclick="copyPost('${p.id}')">📋 Copy LinkedIn</button>
+        <button class="btn" onclick="copyTwitter('${p.id}')">🐦 Copy Twitter</button>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#94a3b8;line-height:1.6;white-space:pre-wrap">${(p.linkedin||"").slice(0,400)}${p.linkedin?.length>400?"...":""}</div>
+    <div style="font-size:10px;color:#4b5563;margin-top:6px">${timeAgo(p.created_at)} · ${p.char_count} chars</div>
+  </div>`).join("");
+}
+
+function copyPost(id){
+  const p=posts.find(x=>x.id===id);if(!p)return;
+  navigator.clipboard.writeText(p.linkedin||"");toast("📋 LinkedIn post copied!");
+}
+function copyTwitter(id){
+  const p=posts.find(x=>x.id===id);if(!p)return;
+  navigator.clipboard.writeText(p.twitter||"");toast("🐦 Twitter thread copied!");
+}
+
+function renderTasks(){
+  const box=document.getElementById("task-list");
+  box.innerHTML=tasks.slice(0,20).map(t=>{
+    const [bg,fg]=agentColors[t.agent]||["#1a2a3a","#94a3b8"];
+    const bc=badgeClass[t.status]||"b-pending";
+    return`<div class="task${t.id===selectedTaskId?" sel":""}" onclick="selectTask('${t.id}')">
+      <div class="task-row"><span class="tag" style="background:${bg};color:${fg}">${t.agent}</span><span class="task-title">${t.title}</span><span class="task-time">${timeAgo(t.created_at)}</span></div>
+      <div><span class="badge ${bc}">${t.status}</span></div>
+    </div>`;}).join("")||'<div style="color:#4b5563;font-size:11px">No tasks yet.</div>';
+}
+
+function selectTask(id){
+  selectedTaskId=id;
+  const t=tasks.find(x=>x.id===id);if(!t)return;
+  document.getElementById("task-detail-out").textContent=t.output;
   renderTasks();
 }
 
-function toast(msg){
-  const el=document.getElementById("toast");
-  el.textContent=msg;el.style.display="block";
-  setTimeout(()=>el.style.display="none",3000);
+function approveTask(){if(!selectedTaskId)return;const t=tasks.find(x=>x.id===selectedTaskId);if(!t)return;t.status="completed";toast("✓ Approved");renderTasks();}
+function rejectTask(){if(!selectedTaskId)return;const t=tasks.find(x=>x.id===selectedTaskId);if(!t)return;t.status="needs_revision";toast("↩ Revision requested");renderTasks();}
+
+function renderFinance(){
+  const conv=finance.leads_converted||0;
+  const total=finance.leads_total||0;
+  document.getElementById("f-mrr").textContent=fmt$(finance.mrr||0);
+  document.getElementById("f-pipeline").textContent=fmt$(finance.pipeline||0);
+  document.getElementById("f-cost").textContent=fmt$(finance.api_cost||0);
+  document.getElementById("f-leads").textContent=Math.max(total,leads.length);
+  document.getElementById("f-sent").textContent=finance.emails_sent||leads.filter(l=>["sent","replied","call","won","sequence_complete"].includes(l.status)).length;
+  document.getElementById("f-conv").textContent=total>0?Math.round(conv/total*100)+"%":"0%";
 }
 
-document.querySelectorAll(".nav-item").forEach(el=>{
-  el.addEventListener("click",()=>{
-    document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));
-    el.classList.add("active");
-    currentView=el.dataset.view;
-    document.getElementById("view-title").textContent=el.textContent.trim().slice(2);
-    renderTasks();
+function showView(v){
+  currentView=v;
+  document.querySelectorAll(".nav-item").forEach(el=>el.classList.remove("active"));
+  document.querySelector(`[data-view="${v}"]`)?.classList.add("active");
+  ["dashboard","crm","emails","posts","tasks","finance"].forEach(name=>{
+    const el=document.getElementById(`view-${name}`);
+    if(el)el.style.display=name===v?"block":"none";
   });
-});
+  const titles={dashboard:"Dashboard",crm:"Lead pipeline",emails:"Email approvals",posts:"LinkedIn posts",tasks:"Agent tasks",finance:"Finance tracker"};
+  document.getElementById("view-title").textContent=titles[v]||v;
+  renderCurrentView();
+}
 
-loadData();
-setInterval(loadData,30000);
+function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.style.display="block";setTimeout(()=>el.style.display="none",3000);}
+
+// Nav clicks
+document.querySelectorAll(".nav-item").forEach(el=>{el.addEventListener("click",()=>showView(el.dataset.view));});
+
+// Load leads from localStorage first (faster), then refresh from GitHub
+const cached=localStorage.getItem("opsrunner_leads");
+if(cached){leads=JSON.parse(cached);}
+loadAll();
+setInterval(loadAll,60000);
 </script>
 </body>
 </html>

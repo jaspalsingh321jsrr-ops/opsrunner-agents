@@ -1,0 +1,29 @@
+name: LinkedIn Poster Agent
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'   # every 8 hours — 3 posts per day
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install anthropic python-dotenv
+      - name: Run LinkedIn poster
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python agents/linkedin_poster.py
+      - name: Save results
+        run: |
+          git config user.name "OpsRunner Bot"
+          git config user.email "bot@opsrunner.ai"
+          git add data/posts.json data/tasks.json
+          git diff --staged --quiet || git commit -m "LinkedIn agent run — $(date -u +%Y-%m-%d-%H%M)"
+          git push
