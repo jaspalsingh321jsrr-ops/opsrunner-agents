@@ -1,0 +1,31 @@
+name: Tech Agent
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install anthropic python-dotenv
+      - name: Run tech agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python agents/tech.py
+      - name: Run manager review
+        run: python agents/manager.py
+      - name: Save results
+        run: |
+          git config user.name "OpsRunner Bot"
+          git config user.email "bot@opsrunner.ai"
+          git add data/tasks.json
+          git diff --staged --quiet || git commit -m "Tech agent run — $(date -u +%Y-%m-%d-%H%M)"
+          git push
