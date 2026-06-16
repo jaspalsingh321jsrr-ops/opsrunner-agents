@@ -1,27 +1,44 @@
 """
-LinkedIn Auto-Poster — runs every 8 hours via GitHub Actions
-Creates and saves posts to posts.json
-Note: LinkedIn API requires OAuth — posts saved for manual copy-paste
-or use Buffer/Zapier to auto-post from the JSON feed
-1 Claude call per run
+LinkedIn Poster — 4 posts per week on a fixed content calendar
+Monday: Problem/Stats post
+Wednesday: Product story post  
+Friday: Social proof / results post
+Sunday: OpsRunner / accounting firms post
 """
 import sys, os, json, uuid, datetime
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from agents.base import call_claude, PRODUCTS
 
-POSTS_DB  = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "posts.json")
-TASKS_DB  = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "tasks.json")
+POSTS_DB = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "posts.json")
+TASKS_DB = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "tasks.json")
 
-CONTENT_ANGLES = [
-    ("stats",      "Subscription blindness stats — $219/mo average, 2.5x what people think"),
-    ("privacy",    "Why privacy-first matters — no bank login, no credentials stored"),
-    ("story",      "Real story: found $2,400/year in forgotten subscriptions using Leakly"),
-    ("opsrunner",  "Accounting firms spending $30K-$80K/month on staff that AI can replace"),
-    ("india",      "India market: Jio, Airtel, Swiggy, Zomato subscriptions piling up"),
-    ("hook",       "Controversial take on subscription economy and personal finance"),
-    ("howto",      "Step by step: how to find hidden subscriptions in your bank statement"),
-    ("comparison", "Leakly vs Rocket Money — why no bank login changes everything"),
-]
+# Weekly content calendar — which day posts what
+WEEKLY_CALENDAR = {
+    0: {  # Monday
+        "type":  "problem_stats",
+        "angle": "Subscription blindness — Americans spend $219/mo, 2.5x what they think. 59.9% have unused subscriptions.",
+        "goal":  "Problem awareness — make people realise they have this problem",
+        "cta":   "Upload your bank statement free at leakly-psi.vercel.app",
+    },
+    2: {  # Wednesday
+        "type":  "product_story",
+        "angle": "How Leakly finds hidden subscriptions in your bank statement — no bank login, no credentials, upload PDF/Excel/CSV.",
+        "goal":  "Product education — show how it works in simple terms",
+        "cta":   "Try it free — leakly-psi.vercel.app",
+    },
+    4: {  # Friday
+        "type":  "social_proof",
+        "angle": "What users discover when they upload their first statement — real examples of hidden charges found (Netflix price hike, forgotten Spotify, unused gym app).",
+        "goal":  "Social proof — show real results to build trust",
+        "cta":   "What will YOU find? leakly-psi.vercel.app",
+    },
+    6: {  # Sunday
+        "type":  "opsrunner",
+        "angle": "Accounting firms spend $30K-$80K/month on staff for work that AI can do. OpsRunner automates 9 departments — reconciliation, categorisation, compliance, reporting.",
+        "goal":  "B2B awareness — target accounting firm owners",
+        "cta":   "Book a demo — singhjaspal3460@gmail.com",
+    },
+}
 
 def load_posts():
     if not os.path.exists(POSTS_DB):
@@ -39,7 +56,7 @@ def save_post(post):
     with open(POSTS_DB, "w") as f:
         json.dump(posts[:200], f, indent=2, default=str)
 
-    # Also save to tasks.json so it appears in main dashboard
+    # Save to tasks.json for dashboard
     tasks = []
     if os.path.exists(TASKS_DB):
         try:
@@ -47,80 +64,110 @@ def save_post(post):
                 tasks = json.load(f)
         except:
             tasks = []
-    task = {
-        "id": post["id"],
-        "agent": "Marketing agent",
-        "manager": "VP Revenue",
-        "task_type": "linkedin_post",
-        "title": f"LinkedIn post — {post['angle']}",
-        "output": f"LINKEDIN POST:\n\n{post['linkedin']}\n\n---\n\nTWITTER THREAD:\n\n{post['twitter']}",
-        "status": "completed",
-        "created_at": post["created_at"],
+    tasks.insert(0, {
+        "id": post["id"], "agent": "Marketing agent",
+        "manager": "VP Revenue", "task_type": "linkedin_post",
+        "title": f"LinkedIn post — {post['type']} — {post['post_date']}",
+        "output": f"POST TYPE: {post['type'].upper()}\nSCHEDULED: {post['post_date']}\n\n=== LINKEDIN POST ===\n\n{post['linkedin']}\n\n=== TWITTER/X THREAD ===\n\n{post['twitter']}\n\n=== BEST TIME TO POST ===\n{post['timing']}",
+        "status": "completed", "created_at": post["created_at"],
         "updated_at": post["created_at"],
-        "revision_note": "Auto-approved",
-        "approved_by": "CEO (auto)",
-    }
-    tasks.insert(0, task)
+        "revision_note": "Auto-approved", "approved_by": "CEO (auto)",
+    })
     with open(TASKS_DB, "w") as f:
         json.dump(tasks[:500], f, indent=2, default=str)
 
 def run():
-    now   = datetime.datetime.utcnow()
-    hour  = now.hour
-    angle_key, angle_desc = CONTENT_ANGLES[(hour // 8) % len(CONTENT_ANGLES)]
+    now     = datetime.datetime.utcnow()
+    weekday = now.weekday()  # 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
 
-    system = f"""You are a LinkedIn content expert for OpsRunner and Leakly.
+    # Only create post on scheduled days
+    if weekday not in WEEKLY_CALENDAR:
+        day_name = now.strftime("%A")
+        print(f"[LINKEDIN] {day_name} is not a post day. Schedule: Mon/Wed/Fri/Sun")
+        return None
+
+    cal = WEEKLY_CALENDAR[weekday]
+    day_name = now.strftime("%A")
+    date_str = now.strftime("%B %d, %Y")
+
+    # Check if we already posted today
+    posts = load_posts()
+    today = now.strftime("%Y-%m-%d")
+    already_posted = any(p.get("post_date","")[:10] == today for p in posts)
+    if already_posted:
+        print(f"[LINKEDIN] Already posted today ({today}) — skipping")
+        return None
+
+    print(f"[LINKEDIN] Creating {cal['type']} post for {day_name} {date_str}")
+
+    system = f"""You are a LinkedIn content expert for Leakly and OpsRunner.
 {PRODUCTS}
-Key stats: Americans spend $219/mo on subscriptions (2.5x their estimate). 59.9% have unused subs.
-Voice: Smart, direct, data-driven. Hook in line 1 — make people stop scrolling.
-Never use hashtag spam. Max 3 relevant hashtags. Short punchy paragraphs."""
+Key stats: Americans spend $219/mo on subscriptions (2.5x their estimate). 59.9% have unused paid subs. $2,628/year average.
+Write posts that stop scrolling. Hook on line 1. Data + story. Short paragraphs. Human voice.
+Never start with "I'm excited" or "Thrilled to share". Be direct and specific."""
 
-    prompt = f"""Create today's content batch. Angle: {angle_desc}
+    prompt = f"""Create a complete LinkedIn content package for {day_name} {date_str}.
 
-## LINKEDIN POST (max 1300 chars)
-Line 1: scroll-stopping hook (no "I" start, no "Excited to share")
-Lines 2-8: value, data, or story
-Last line: clear CTA
-[3 line breaks between sections — LinkedIn formatting]
+POST TYPE: {cal['type']}
+ANGLE: {cal['angle']}
+GOAL: {cal['goal']}
+CTA: {cal['cta']}
 
-## TWITTER THREAD (7 tweets)
-Tweet 1: hook that makes people click "show more"
-Tweets 2-6: one insight each, max 270 chars
-Tweet 7: CTA with link to https://leakly-psi.vercel.app
+## LINKEDIN POST
+Requirements:
+- Line 1: scroll-stopping hook (stat, question, or bold statement — NOT "I")  
+- Lines 2-10: value through story, data, or insight
+- Use line breaks between every 1-2 sentences (LinkedIn formatting)
+- End with ONE clear CTA
+- Max 1300 characters
+- Max 3 hashtags at the very end
 
-## BEST TIME TO POST TODAY
-LinkedIn: [specific time and why]
-Twitter: [specific time and why]"""
+## TWITTER/X THREAD (7 tweets)
+- Tweet 1: hook that makes people tap "Read more" 
+- Tweets 2-6: one insight per tweet, max 270 chars each
+- Tweet 7: CTA with URL
+- Number each tweet: 1/7, 2/7 etc
+
+## BEST TIME TO POST
+LinkedIn: [exact time in IST and why]
+Twitter: [exact time in IST and why]
+
+## WHY THIS ANGLE TODAY
+One sentence explaining why {day_name} is the right day for this content."""
 
     result = call_claude(system, prompt)
 
     # Parse sections
     sections = result.split("##")
-    linkedin = ""
-    twitter  = ""
-    timing   = ""
+    linkedin = twitter = timing = why = ""
     for s in sections:
-        if "LINKEDIN" in s.upper():
-            linkedin = s.replace("LINKEDIN POST", "").replace("(max 1300 chars)", "").strip()
-        elif "TWITTER" in s.upper():
-            twitter = s.replace("TWITTER THREAD", "").replace("(7 tweets)", "").strip()
-        elif "BEST TIME" in s.upper() or "TIME TO POST" in s.upper():
-            timing = s.strip()
+        su = s.upper()
+        if "LINKEDIN POST" in su:
+            linkedin = s.split("\n",1)[1].strip() if "\n" in s else s.strip()
+        elif "TWITTER" in su:
+            twitter = s.split("\n",1)[1].strip() if "\n" in s else s.strip()
+        elif "BEST TIME" in su:
+            timing = s.split("\n",1)[1].strip() if "\n" in s else s.strip()
+        elif "WHY THIS" in su:
+            why = s.split("\n",1)[1].strip() if "\n" in s else s.strip()
 
     post = {
         "id":         str(uuid.uuid4())[:8],
-        "angle":      angle_key,
-        "angle_desc": angle_desc,
+        "type":       cal["type"],
+        "angle":      cal["angle"],
+        "goal":       cal["goal"],
         "linkedin":   linkedin or result,
         "twitter":    twitter,
         "timing":     timing,
-        "status":     "ready",  # ready → posted
-        "created_at": now.isoformat(),
+        "why_today":  why,
+        "status":     "ready",
+        "post_date":  now.isoformat(),
         "char_count": len(linkedin),
+        "created_at": now.isoformat(),
     }
 
     save_post(post)
-    print(f"[LINKEDIN] Created post: {angle_key} ({len(linkedin)} chars)")
+    print(f"[LINKEDIN] ✓ {cal['type']} post created — {len(linkedin)} chars")
     return post
 
 if __name__ == "__main__":

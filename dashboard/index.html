@@ -330,7 +330,20 @@ function showLeadDetail(id){
   const panel=document.getElementById("lead-detail-panel");
   panel.style.display="block";
   document.getElementById("ld-name").textContent=`${l.first_name} ${l.last_name} — ${l.position} at ${l.company}`;
-  document.getElementById("ld-meta").textContent=`${l.email} · ${l.domain} · confidence: ${l.confidence}% · status: ${l.status} · ${timeAgo(l.created_at)}${l.notes?` · Note: ${l.notes}`:""}`;
+  document.getElementById("ld-meta").innerHTML=`
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
+      <div><span style="color:#4b5563">Email:</span> <a href="mailto:${l.email}" style="color:#60a5fa">${l.email}</a></div>
+      <div><span style="color:#4b5563">Company:</span> ${l.company}</div>
+      <div><span style="color:#4b5563">Position:</span> ${l.position}</div>
+      <div><span style="color:#4b5563">Domain:</span> ${l.domain}</div>
+      <div><span style="color:#4b5563">LinkedIn:</span> ${l.linkedin?`<a href="${l.linkedin}" target="_blank" style="color:#60a5fa">View profile →</a>`:"Not found"}</div>
+      <div><span style="color:#4b5563">Confidence:</span> ${l.confidence}% · ${l.source||"research"}</div>
+      <div><span style="color:#4b5563">Status:</span> <span style="color:${PIPE_COLORS[l.status]||"#94a3b8"}">${l.status}</span></div>
+      <div><span style="color:#4b5563">Added:</span> ${timeAgo(l.created_at)}</div>
+    </div>
+    ${l.pain_point?`<div style="color:#fbbf24;font-size:10px;margin-bottom:4px">Pain point: ${l.pain_point}</div>`:""}
+    ${l.why_us?`<div style="color:#4ade80;font-size:10px">Why us: ${l.why_us}</div>`:""}
+    ${l.notes?`<div style="color:#94a3b8;font-size:10px;margin-top:4px">Note: ${l.notes}</div>`:""}`;
   document.getElementById("ld-subject").textContent=`Subject: ${l.email_subject||"No email written yet"}`;
   document.getElementById("ld-body").textContent=l.email_body||"No email written yet.";
   document.getElementById("ld-note").value=l.notes||"";
