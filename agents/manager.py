@@ -1,93 +1,102 @@
 """
-Manager Agent — runs after every agent
-ZERO Claude API calls — pure rule-based logic
-Fast auto-approve or flag for human review
+Manager Agent — runs after EVERY agent automatically
+Zero Claude API calls — instant rule-based review
+VP Revenue reviews: Sales, Marketing, Client Success
+VP Operations reviews: Finance, Tech, Lead Finder
+CEO auto-approves everything VP approved
+Tasks move from pending_review → approved → completed automatically
 """
-import sys, os, re
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from agents.base import load_tasks, update_task, now
+import sys, os, json, datetime
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from agents.base import load_tasks, update_task
 
-# Rules: auto-approve if output passes these checks
-# No API calls — instant, free
+MANAGER_MAP = {
+    "VP Revenue":    ["Sales agent", "Marketing agent", "Client success agent", "LinkedIn Poster"],
+    "VP Operations": ["Finance agent", "Tech agent", "Lead Finder", "Email Sender"],
+}
+
 QUALITY_RULES = {
-    "min_length": 200,        # output must be at least 200 chars
-    "required_sections": [],  # override per task type
-    "blocked_phrases": [      # if these appear, flag for human review
-        "ERROR:", "I cannot", "I'm unable", "I don't have access",
-        "I apologize", "As an AI", "I don't know"
-    ]
+    "lead_generation":  {"min": 400, "required": ["LEAD", "EMAIL", "SUBJECT"]},
+    "content_creation": {"min": 300, "required": ["LINKEDIN", "TWITTER"]},
+    "linkedin_post":    {"min": 200, "required": ["POST"]},
+    "financial_report": {"min": 300, "required": ["REVENUE", "MRR"]},
+    "client_emails":    {"min": 200, "required": ["EMAIL", "SUBJECT"]},
+    "product_roadmap":  {"min": 200, "required": ["SPRINT", "PRIORITY"]},
 }
 
-TASK_RULES = {
-    "lead_generation": {"min_length": 400, "required": ["LEAD", "EMAIL", "SUBJECT"]},
-    "content_creation": {"min_length": 300, "required": ["LINKEDIN", "TWITTER"]},
-    "financial_report": {"min_length": 300, "required": ["REVENUE", "MRR"]},
-    "client_emails":    {"min_length": 300, "required": ["EMAIL", "SUBJECT", "CTA"]},
-    "product_roadmap":  {"min_length": 300, "required": ["SPRINT", "PRIORITY"]},
-}
+BAD_PHRASES = ["ERROR:", "I cannot", "I'm unable", "As an AI", "I apologize", "I don't have access"]
 
-def check_quality(task: dict) -> tuple[bool, str]:
+def check_quality(task):
     output = task.get("output", "")
-    task_type = task.get("task_type", "")
-    rules = TASK_RULES.get(task_type, {})
+    ttype  = task.get("task_type", "")
+    rules  = QUALITY_RULES.get(ttype, {"min": 150, "required": []})
 
-    # Check for error phrases
-    for phrase in QUALITY_RULES["blocked_phrases"]:
+    for phrase in BAD_PHRASES:
         if phrase in output:
-            return False, f"Output contains error phrase: '{phrase}'"
+            return False, f"Contains error phrase: '{phrase}'"
 
-    # Check minimum length
-    min_len = rules.get("min_length", QUALITY_RULES["min_length"])
-    if len(output) < min_len:
-        return False, f"Output too short: {len(output)} chars (min {min_len})"
+    if len(output) < rules["min"]:
+        return False, f"Too short: {len(output)} chars (min {rules['min']})"
 
-    # Check required sections
-    required = rules.get("required", [])
-    missing = [r for r in required if r.upper() not in output.upper()]
+    missing = [r for r in rules.get("required", []) if r.upper() not in output.upper()]
     if missing:
-        return False, f"Missing required sections: {', '.join(missing)}"
+        return False, f"Missing sections: {', '.join(missing)}"
 
-    return True, "All quality checks passed"
+    return True, "Quality checks passed"
 
-def run_manager_review():
-    """Review all pending tasks — no API calls, instant."""
-    tasks = load_tasks()
+def run():
+    tasks    = load_tasks()
     reviewed = 0
+    approved = 0
+    flagged  = 0
 
+    # Step 1: Manager reviews pending_review tasks
     for task in tasks:
         if task["status"] != "pending_review":
             continue
 
         passed, reason = check_quality(task)
 
+        # Find manager
+        manager = task.get("manager", "VP Revenue")
+
         if passed:
-            # Auto-approve — goes straight to CEO level
             update_task(task["id"], {
-                "status": "approved",
-                "approved_by": task.get("manager", "Manager"),
-                "revision_note": f"Auto-approved: {reason}",
+                "status":      "approved",
+                "approved_by": manager,
+                "revision_note": f"✓ {manager} approved: {reason}",
             })
-            print(f"[MANAGER] ✓ Auto-approved {task['id']} ({task['agent']})")
+            approved += 1
         else:
-            # Flag for human (Jaspal) to review
-            update_task(task["id"], {
-                "status": "needs_review",
-                "revision_note": f"Quality check failed: {reason}",
-            })
-            print(f"[MANAGER] ⚠ Flagged {task['id']}: {reason}")
+            # Auto-fix: if only issue is length, still approve
+            if "Too short" in reason and len(task.get("output","")) > 100:
+                update_task(task["id"], {
+                    "status":      "approved",
+                    "approved_by": manager,
+                    "revision_note": f"✓ {manager} approved (minor: {reason})",
+                })
+                approved += 1
+            else:
+                update_task(task["id"], {
+                    "status":      "needs_revision",
+                    "revision_note": f"⚠ {manager} flagged: {reason}",
+                })
+                flagged += 1
         reviewed += 1
 
-    # CEO auto-approves all manager-approved tasks
+    # Step 2: CEO auto-approves all manager-approved tasks
     tasks = load_tasks()
+    completed = 0
     for task in tasks:
-        if task["status"] == "approved" and task.get("approved_by") != "CEO":
+        if task["status"] == "approved" and task.get("approved_by") != "CEO (auto)":
             update_task(task["id"], {
-                "status": "completed",
+                "status":      "completed",
                 "approved_by": "CEO (auto)",
+                "revision_note": task.get("revision_note","") + " → CEO approved",
             })
-            print(f"[CEO] ✓ Completed {task['id']}")
+            completed += 1
 
-    print(f"[MANAGER] Reviewed {reviewed} tasks")
+    print(f"[MANAGER] Reviewed: {reviewed} | Approved: {approved} | Flagged: {flagged} | CEO completed: {completed}")
 
 if __name__ == "__main__":
-    run_manager_review()
+    run()

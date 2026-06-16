@@ -5,207 +5,173 @@
 <title>OpsRunner — Business Command Center</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#0f1117;color:#e2e8f0;min-height:100vh;font-size:13px}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#0f1117;color:#e2e8f0;font-size:13px}
 .app{display:flex;height:100vh;overflow:hidden}
-.sidebar{width:200px;background:#1a1d27;border-right:1px solid #2a2d3e;display:flex;flex-direction:column;flex-shrink:0}
+.sidebar{width:210px;background:#1a1d27;border-right:1px solid #2a2d3e;display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
 .logo{padding:16px;border-bottom:1px solid #2a2d3e}
-.logo h1{font-size:16px;font-weight:700;letter-spacing:-0.5px}
+.logo h1{font-size:15px;font-weight:700;letter-spacing:-0.5px}
 .logo p{font-size:10px;color:#64748b;margin-top:2px}
-.nav-section{padding:8px 0 4px;font-size:10px;font-weight:600;color:#4b5563;text-transform:uppercase;letter-spacing:0.06em;padding-left:14px;margin-top:6px}
-.nav-item{display:flex;align-items:center;gap:7px;padding:7px 14px;font-size:12px;cursor:pointer;color:#94a3b8;transition:all 0.12s;border-left:2px solid transparent}
-.nav-item:hover{background:#222535;color:#e2e8f0}
-.nav-item.active{background:#222535;color:#7f77dd;border-left-color:#7f77dd;font-weight:500}
+.section{padding:10px 14px 4px;font-size:9px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.08em}
+.nav{display:flex;align-items:center;gap:8px;padding:7px 14px;font-size:12px;cursor:pointer;color:#94a3b8;border-left:2px solid transparent;transition:all 0.12s}
+.nav:hover{background:#222535;color:#e2e8f0}
+.nav.active{background:#222535;color:#7f77dd;border-left-color:#7f77dd;font-weight:500}
+.nb{margin-left:auto;background:#3b1d8a;color:#a78bfa;font-size:9px;padding:1px 5px;border-radius:8px;font-weight:600}
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden}
 .topbar{background:#1a1d27;border-bottom:1px solid #2a2d3e;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .topbar h2{font-size:14px;font-weight:500}
 .topbar p{font-size:10px;color:#64748b;margin-top:1px}
-.btn{padding:5px 11px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:500;border:1px solid #2a2d3e;background:transparent;color:#94a3b8;transition:all 0.15s}
+.btn{padding:5px 11px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:500;border:1px solid #2a2d3e;background:transparent;color:#94a3b8;transition:all 0.12s}
 .btn:hover{background:#222535;color:#e2e8f0}
-.btn-green{background:#14532d;color:#4ade80;border-color:#14532d}
-.btn-green:hover{background:#166534}
-.btn-red{background:#7f1d1d;color:#f87171;border-color:#7f1d1d}
-.btn-red:hover{background:#991b1b}
-.btn-blue{background:#1e3a5f;color:#60a5fa;border-color:#1e3a5f}
-.btn-blue:hover{background:#1e40af}
+.bg{background:#14532d!important;color:#4ade80!important;border-color:#14532d!important}
+.ba{background:#422006!important;color:#fbbf24!important;border-color:#422006!important}
+.br{background:#450a0a!important;color:#f87171!important;border-color:#450a0a!important}
+.bb{background:#0c1a33!important;color:#60a5fa!important;border-color:#1e3a5f!important}
 .content{flex:1;overflow-y:auto;padding:16px 20px}
-/* Stats */
-.stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
 .stat{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:10px 12px}
-.stat .val{font-size:22px;font-weight:700;font-family:monospace;line-height:1}
-.stat .lbl{font-size:9px;color:#64748b;margin-top:3px;text-transform:uppercase;letter-spacing:0.04em}
-/* CRM Pipeline */
-.pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px}
-.pipe-col{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:10px}
-.pipe-head{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #2a2d3e}
-.pipe-card{background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:8px;margin-bottom:6px;cursor:pointer;transition:border-color 0.12s}
-.pipe-card:hover{border-color:#7f77dd}
-.pipe-card .name{font-size:11px;font-weight:500;margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pipe-card .co{font-size:10px;color:#64748b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pipe-card .days{font-size:9px;color:#4b5563;margin-top:3px}
-/* Lead detail */
-.lead-detail{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:14px;margin-bottom:16px;display:none}
-.lead-detail h3{font-size:13px;font-weight:500;margin-bottom:10px}
-.email-preview{background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:12px;font-size:11px;line-height:1.6;color:#cbd5e1;white-space:pre-wrap;margin-bottom:10px;font-family:monospace;max-height:200px;overflow-y:auto}
-.action-row{display:flex;gap:8px;flex-wrap:wrap}
-/* Tasks */
-.task{padding:8px 10px;border:1px solid #2a2d3e;border-radius:7px;cursor:pointer;transition:border-color 0.12s;margin-bottom:6px}
-.task:hover{border-color:#7f77dd}
-.task.sel{border-color:#7f77dd;background:#1e2038}
-.task-row{display:flex;align-items:center;gap:8px;margin-bottom:3px}
-.tag{font-size:9px;font-weight:600;padding:1px 6px;border-radius:8px;flex-shrink:0}
-.task-title{font-size:11px;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.task-time{font-size:9px;color:#64748b;flex-shrink:0}
-.badge{padding:1px 6px;border-radius:6px;font-size:9px;font-weight:600}
-.b-pending{background:#1e3a5f;color:#60a5fa}
-.b-completed{background:#0d2e1d;color:#22c55e}
-.b-revision{background:#2d1515;color:#f87171}
-/* Two col */
-.two-col{display:grid;grid-template-columns:1fr 360px;gap:16px}
-.panel{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:14px}
-.panel-title{font-size:10px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
-.detail-out{background:#111827;border-radius:6px;padding:10px;font-size:11px;line-height:1.6;color:#cbd5e1;white-space:pre-wrap;font-family:monospace;max-height:300px;overflow-y:auto}
+.sv{font-size:22px;font-weight:700;font-family:monospace;line-height:1}
+.sl{font-size:9px;color:#64748b;margin-top:3px;text-transform:uppercase;letter-spacing:0.04em}
+.card{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:14px;margin-bottom:12px}
+.ct{font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
+.trow{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #1e2030;cursor:pointer}
+.trow:last-child{border-bottom:none}
+.trow:hover{background:#1e2030;margin:0 -14px;padding-left:14px;padding-right:14px}
+.ticon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;background:#1a2a3a}
+.tbody{flex:1;min-width:0}
+.ttitle{font-size:12px;font-weight:500;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tmeta{font-size:10px;color:#64748b;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tout{font-size:11px;line-height:1.7;color:#cbd5e1;white-space:pre-wrap;background:#111827;border-radius:6px;padding:12px;font-family:monospace;max-height:350px;overflow-y:auto;margin-top:10px;display:none}
+.badge{padding:1px 7px;border-radius:6px;font-size:9px;font-weight:700}
+.bc{background:#0d2e1d;color:#22c55e}
+.bp{background:#0c1a33;color:#60a5fa}
+.bv{background:#2d0f0f;color:#f87171}
+.board{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}
+.pcol{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:10px;min-height:120px}
+.phead{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #2a2d3e}
+.lcard{background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:8px;margin-bottom:6px;cursor:pointer;transition:border-color 0.12s}
+.lcard:hover{border-color:#7f77dd}
+.lcard .ln{font-size:11px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lcard .lc{font-size:10px;color:#64748b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lcard .le{font-size:9px;color:#60a5fa;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
+.ld{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:14px;margin-bottom:12px;display:none}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;font-size:11px}
+.ebox{background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:10px;font-size:11px;line-height:1.6;color:#cbd5e1;white-space:pre-wrap;font-family:monospace;max-height:180px;overflow-y:auto;margin:8px 0}
+.abar{display:flex;gap:6px;flex-wrap:wrap}
+.pcontent{background:#111827;border-radius:6px;padding:10px;font-size:11px;line-height:1.7;color:#cbd5e1;white-space:pre-wrap;max-height:200px;overflow-y:auto;margin:8px 0}
+.two{display:grid;grid-template-columns:1fr 370px;gap:14px}
 .toast{position:fixed;bottom:16px;right:16px;background:#1e3a5f;color:#60a5fa;padding:8px 14px;border-radius:7px;font-size:11px;font-weight:500;border:1px solid #2a4a7a;z-index:999;display:none}
-/* Finance */
-.fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.fin-card{background:#111827;border:1px solid #2a2d3e;border-radius:8px;padding:14px}
-.fin-val{font-size:26px;font-weight:700;font-family:monospace}
-.fin-lbl{font-size:10px;color:#64748b;margin-top:4px}
-.fin-sub{font-size:10px;color:#4b5563;margin-top:2px}
 </style>
 </head>
 <body>
 <div class="app">
 <div class="sidebar">
   <div class="logo"><h1>OpsRunner</h1><p>Business Command Center</p></div>
-  <div class="nav-section">Overview</div>
-  <div class="nav-item active" data-view="dashboard">⊞ Dashboard</div>
-  <div class="nav-item" data-view="finance">📊 Finance tracker</div>
-  <div class="nav-section">Sales</div>
-  <div class="nav-item" data-view="crm">👥 Lead pipeline</div>
-  <div class="nav-item" data-view="emails">✉ Email approvals</div>
-  <div class="nav-section">Marketing</div>
-  <div class="nav-item" data-view="posts">📣 LinkedIn posts</div>
-  <div class="nav-section">Operations</div>
-  <div class="nav-item" data-view="tasks">✓ Agent tasks</div>
+  <div class="section">Overview</div>
+  <div class="nav active" data-view="dashboard">⊞&nbsp; Dashboard</div>
+  <div class="nav" data-view="finance">📊&nbsp; Finance</div>
+  <div class="section">Sales</div>
+  <div class="nav" data-view="leads">👥&nbsp; Lead pipeline <span class="nb" id="nb-leads" style="display:none">0</span></div>
+  <div class="nav" data-view="emails">✉&nbsp; Email approvals <span class="nb" id="nb-emails" style="display:none">0</span></div>
+  <div class="nav" data-view="sales-tasks">💼&nbsp; Sales agent</div>
+  <div class="section">Marketing</div>
+  <div class="nav" data-view="posts">📣&nbsp; LinkedIn posts</div>
+  <div class="nav" data-view="marketing-tasks">📢&nbsp; Marketing agent</div>
+  <div class="section">Operations</div>
+  <div class="nav" data-view="finance-tasks">📊&nbsp; Finance agent</div>
+  <div class="nav" data-view="client-tasks">🤝&nbsp; Client success</div>
+  <div class="nav" data-view="tech-tasks">🛠&nbsp; Tech agent</div>
 </div>
-
 <div class="main">
   <div class="topbar">
-    <div><h2 id="view-title">Dashboard</h2><p id="last-refresh">Loading...</p></div>
-    <div style="display:flex;gap:6px">
-      <button class="btn" onclick="loadAll()">↺ Refresh</button>
-    </div>
+    <div><h2 id="vtitle">Dashboard</h2><p id="vrefresh">Loading...</p></div>
+    <button class="btn" onclick="loadAll()">↺ Refresh</button>
   </div>
+  <div class="content">
 
-  <div class="content" id="main-content">
-
-    <!-- DASHBOARD VIEW -->
     <div id="view-dashboard">
-      <div class="stats-row">
-        <div class="stat"><div class="val" id="s-leads" style="color:#60a5fa">0</div><div class="lbl">Total leads</div></div>
-        <div class="stat"><div class="val" id="s-emails-sent" style="color:#4ade80">0</div><div class="lbl">Emails sent</div></div>
-        <div class="stat"><div class="val" id="s-pending-email" style="color:#fbbf24">0</div><div class="lbl">Need approval</div></div>
-        <div class="stat"><div class="val" id="s-replied" style="color:#a78bfa">0</div><div class="lbl">Replied</div></div>
-        <div class="stat"><div class="val" id="s-won" style="color:#4ade80">0</div><div class="lbl">Clients won</div></div>
-        <div class="stat"><div class="val" id="s-pipeline" style="color:#f59e0b">$0</div><div class="lbl">Pipeline value</div></div>
+      <div class="stats">
+        <div class="stat"><div class="sv" id="s1" style="color:#60a5fa">0</div><div class="sl">Total leads</div></div>
+        <div class="stat"><div class="sv" id="s2" style="color:#fbbf24">0</div><div class="sl">Need approval</div></div>
+        <div class="stat"><div class="sv" id="s3" style="color:#4ade80">0</div><div class="sl">Emails sent</div></div>
+        <div class="stat"><div class="sv" id="s4" style="color:#a78bfa">0</div><div class="sl">Clients won</div></div>
+        <div class="stat"><div class="sv" id="s5" style="color:#38bdf8">0</div><div class="sl">Tasks today</div></div>
       </div>
-      <div class="two-col">
+      <div class="two">
         <div>
-          <div class="panel" style="margin-bottom:12px">
-            <div class="panel-title">Emails waiting for your approval</div>
-            <div id="approval-list"><div style="color:#4b5563;font-size:11px;padding:10px 0">No emails pending approval.</div></div>
-          </div>
-          <div class="panel">
-            <div class="panel-title">Recent agent tasks</div>
-            <div id="recent-tasks-dash"></div>
-          </div>
+          <div class="card"><div class="ct">⚡ Emails needing your approval</div><div id="d-approvals"></div></div>
+          <div class="card"><div class="ct">📋 Recent agent activity</div><div id="d-tasks"></div></div>
         </div>
         <div>
-          <div class="panel" style="margin-bottom:12px">
-            <div class="panel-title">Pipeline summary</div>
-            <div id="pipeline-summary"></div>
-          </div>
-          <div class="panel">
-            <div class="panel-title">Latest LinkedIn posts ready to publish</div>
-            <div id="latest-posts"></div>
-          </div>
+          <div class="card"><div class="ct">👥 Pipeline</div><div id="d-pipeline"></div></div>
+          <div class="card"><div class="ct">📣 Latest post ready</div><div id="d-post"></div></div>
         </div>
       </div>
     </div>
 
-    <!-- CRM VIEW -->
-    <div id="view-crm" style="display:none">
-      <div id="lead-detail-panel" class="lead-detail">
-        <h3 id="ld-name"></h3>
-        <div style="font-size:10px;color:#64748b;margin-bottom:10px" id="ld-meta"></div>
-        <div style="font-size:11px;font-weight:500;margin-bottom:4px">Email ready to send:</div>
-        <div style="font-size:10px;color:#60a5fa;margin-bottom:6px" id="ld-subject"></div>
-        <div class="email-preview" id="ld-body"></div>
-        <div class="action-row">
-          <button class="btn btn-green" onclick="approveLead()">✓ Approve — send this email</button>
-          <button class="btn btn-red" onclick="rejectLead()">✗ Edit before sending</button>
-          <button class="btn btn-blue" onclick="markReplied()">📩 Mark as replied</button>
-          <button class="btn btn-blue" onclick="markWon()">🏆 Mark as won</button>
-          <button class="btn" onclick="markLost()">✗ Mark as lost</button>
+    <div id="view-leads" style="display:none">
+      <div class="ld" id="lead-detail">
+        <div style="display:flex;justify-content:space-between;margin-bottom:10px">
+          <div><div style="font-size:14px;font-weight:600" id="ld-title"></div><div style="font-size:10px;color:#64748b;margin-top:2px" id="ld-sub"></div></div>
+          <button class="btn" onclick="document.getElementById('lead-detail').style.display='none'">✕</button>
         </div>
-        <div style="margin-top:8px">
-          <input id="ld-note" placeholder="Add a note about this lead..." style="background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:6px 10px;color:#e2e8f0;font-size:11px;width:100%">
-          <button class="btn" style="margin-top:4px" onclick="saveNote()">Save note</button>
+        <div class="dgrid" id="ld-grid"></div>
+        <div style="font-size:10px;color:#60a5fa;margin-bottom:4px;font-weight:500" id="ld-subj"></div>
+        <div class="ebox" id="ld-body"></div>
+        <div class="abar">
+          <button class="btn bg" onclick="approveLead()">✓ Approve — send email via Gmail</button>
+          <button class="btn ba" onclick="markReplied()">📩 They replied</button>
+          <button class="btn bb" onclick="markCall()">📞 Call scheduled</button>
+          <button class="btn bg" style="background:#0c2a1a!important" onclick="markWon()">🏆 Won — new client!</button>
+          <button class="btn br" onclick="markLost()">✗ Lost</button>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:8px">
+          <input id="ld-note" placeholder="Add a note..." style="flex:1;background:#111827;border:1px solid #2a2d3e;border-radius:6px;padding:5px 9px;color:#e2e8f0;font-size:11px">
+          <button class="btn" onclick="saveNote()">Save</button>
         </div>
       </div>
-      <div class="pipeline" id="pipeline-board"></div>
+      <div class="board" id="pipeline-board"></div>
     </div>
 
-    <!-- EMAIL APPROVALS VIEW -->
     <div id="view-emails" style="display:none">
-      <div class="panel">
-        <div class="panel-title">Emails waiting for your approval — click approve to send via Gmail</div>
-        <div id="email-approval-list"></div>
-      </div>
+      <div class="card"><div class="ct">✉ Review and approve emails — click Approve to send via Gmail</div><div id="email-list"></div></div>
     </div>
 
-    <!-- LINKEDIN POSTS VIEW -->
+    <div id="view-sales-tasks" style="display:none">
+      <div class="card"><div class="ct">💼 Sales agent — click any task to see full output</div><div id="sales-list"></div></div>
+    </div>
+
     <div id="view-posts" style="display:none">
-      <div class="panel">
-        <div class="panel-title">LinkedIn posts ready to publish — copy and post manually or connect Buffer</div>
+      <div class="card">
+        <div class="ct">📣 LinkedIn posts — Mon / Wed / Fri / Sun · copy and paste to LinkedIn</div>
+        <div style="font-size:11px;color:#64748b;margin-bottom:10px">Posts are auto-created on schedule. Click Copy to get the text. Takes 30 seconds to post.</div>
         <div id="posts-list"></div>
       </div>
     </div>
 
-    <!-- AGENT TASKS VIEW -->
-    <div id="view-tasks" style="display:none">
-      <div class="two-col">
-        <div class="panel">
-          <div class="panel-title">All agent tasks</div>
-          <div id="task-list"></div>
-        </div>
-        <div class="panel">
-          <div class="panel-title">Task output</div>
-          <div id="task-detail-out" class="detail-out" style="min-height:200px">Select a task to view output</div>
-          <div style="display:flex;gap:6px;margin-top:8px">
-            <button class="btn btn-green" onclick="approveTask()">✓ Approve</button>
-            <button class="btn btn-red" onclick="rejectTask()">✗ Revision needed</button>
-          </div>
-        </div>
-      </div>
+    <div id="view-marketing-tasks" style="display:none">
+      <div class="card"><div class="ct">📢 Marketing agent — ad copy, Twitter threads, content</div><div id="marketing-list"></div></div>
     </div>
 
-    <!-- FINANCE VIEW -->
+    <div id="view-finance-tasks" style="display:none">
+      <div class="card"><div class="ct">📊 Finance agent — revenue models, pricing, forecasts</div><div id="finance-list"></div></div>
+    </div>
+
+    <div id="view-client-tasks" style="display:none">
+      <div class="card"><div class="ct">🤝 Client success — onboarding, retention, upsell emails</div><div id="client-list"></div></div>
+    </div>
+
+    <div id="view-tech-tasks" style="display:none">
+      <div class="card"><div class="ct">🛠 Tech agent — roadmap, sprints, architecture</div><div id="tech-list"></div></div>
+    </div>
+
     <div id="view-finance" style="display:none">
-      <div class="fin-grid" style="margin-bottom:16px">
-        <div class="fin-card"><div class="fin-val" id="f-mrr" style="color:#4ade80">$0</div><div class="fin-lbl">Monthly Recurring Revenue</div><div class="fin-sub">From paid Leakly Pro users</div></div>
-        <div class="fin-card"><div class="fin-val" id="f-pipeline" style="color:#60a5fa">$0</div><div class="fin-lbl">Sales pipeline value</div><div class="fin-sub">Estimated from active leads</div></div>
-        <div class="fin-card"><div class="fin-val" id="f-cost" style="color:#f87171">$0</div><div class="fin-lbl">Claude API spend today</div><div class="fin-sub">~$0.12/day target</div></div>
-        <div class="fin-card"><div class="fin-val" id="f-leads" style="color:#a78bfa">0</div><div class="fin-lbl">Total leads found</div><div class="fin-sub">By lead finder agent</div></div>
-        <div class="fin-card"><div class="fin-val" id="f-sent" style="color:#fbbf24">0</div><div class="fin-lbl">Total emails sent</div><div class="fin-sub">Via Gmail automation</div></div>
-        <div class="fin-card"><div class="fin-val" id="f-conv" style="color:#4ade80">0%</div><div class="fin-lbl">Conversion rate</div><div class="fin-sub">Leads → clients won</div></div>
-      </div>
-      <div class="panel">
-        <div class="panel-title">How to update MRR</div>
-        <div style="font-size:11px;color:#94a3b8;line-height:1.7">
-          When a user upgrades to Leakly Pro, go to your GitHub repo → edit <code style="background:#111827;padding:1px 4px;border-radius:3px">data/finance.json</code> → update the <code style="background:#111827;padding:1px 4px;border-radius:3px">mrr</code> value.<br><br>
-          The Finance agent runs every 8 hours and updates pipeline value automatically based on your lead count.
-        </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div class="card" style="margin:0"><div class="ct">MRR</div><div style="font-size:28px;font-weight:700;color:#4ade80" id="f1">$0</div><div style="font-size:10px;color:#64748b;margin-top:4px">Monthly recurring revenue</div></div>
+        <div class="card" style="margin:0"><div class="ct">Pipeline</div><div style="font-size:28px;font-weight:700;color:#60a5fa" id="f2">$0</div><div style="font-size:10px;color:#64748b;margin-top:4px">Active leads × $500</div></div>
+        <div class="card" style="margin:0"><div class="ct">Total leads</div><div style="font-size:28px;font-weight:700;color:#a78bfa" id="f3">0</div><div style="font-size:10px;color:#64748b;margin-top:4px">Found by lead agent</div></div>
+        <div class="card" style="margin:0"><div class="ct">Emails sent</div><div style="font-size:28px;font-weight:700;color:#fbbf24" id="f4">0</div><div style="font-size:10px;color:#64748b;margin-top:4px">Via Gmail</div></div>
+        <div class="card" style="margin:0"><div class="ct">Clients won</div><div style="font-size:28px;font-weight:700;color:#4ade80" id="f5">0</div><div style="font-size:10px;color:#64748b;margin-top:4px">Mark leads as Won</div></div>
+        <div class="card" style="margin:0"><div class="ct">Conversion</div><div style="font-size:28px;font-weight:700;color:#38bdf8" id="f6">0%</div><div style="font-size:10px;color:#64748b;margin-top:4px">Won ÷ total leads</div></div>
       </div>
     </div>
 
@@ -213,288 +179,170 @@ body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#0f1117;
 </div>
 </div>
 <div class="toast" id="toast"></div>
-
 <script>
-const GITHUB_USER = "jaspalsingh321jsrr-ops";
-const REPO = "opsrunner-agents";
-const BRANCH = "main";
-const BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/${BRANCH}/data`;
+const GH="https://raw.githubusercontent.com/jaspalsingh321jsrr-ops/opsrunner-agents/main/data";
+let leads=[],tasks=[],posts=[],finance={},selLead=null,curView="dashboard";
+const PS=["new","approved","sent","replied","call","won"];
+const PL={new:"🆕 New",approved:"✓ Approved",sent:"📤 Sent",replied:"💬 Replied",call:"📞 Call",won:"🏆 Won"};
+const PC={new:"#60a5fa",approved:"#fbbf24",sent:"#a78bfa",replied:"#34d399",call:"#f97316",won:"#4ade80"};
+const ATASKS={"sales-tasks":["Sales agent"],"marketing-tasks":["Marketing agent"],"finance-tasks":["Finance agent"],"client-tasks":["Client success agent"],"tech-tasks":["Tech agent"]};
+const ALIST={"sales-tasks":"sales-list","marketing-tasks":"marketing-list","finance-tasks":"finance-list","client-tasks":"client-list","tech-tasks":"tech-list"};
+const TITLES={dashboard:"Dashboard",leads:"Lead pipeline",emails:"Email approvals","sales-tasks":"Sales agent",posts:"LinkedIn posts","marketing-tasks":"Marketing agent","finance-tasks":"Finance agent","client-tasks":"Client success","tech-tasks":"Tech agent",finance:"Finance tracker"};
 
-let leads=[], tasks=[], posts=[], finance={};
-let selectedLeadId=null, selectedTaskId=null;
-let currentView="dashboard";
+function ago(d){const m=Math.floor((Date.now()-new Date(d))/60000);if(m<1)return"just now";if(m<60)return m+"m ago";if(m<1440)return Math.floor(m/60)+"h ago";return Math.floor(m/1440)+"d ago";}
+function $$(n){return"$"+Number(n||0).toLocaleString();}
+function bc(s){return{completed:"bc",pending_review:"bp",approved:"bp",needs_revision:"bv"}[s]||"bp";}
+function ai(a){return{"Sales agent":"💼","Marketing agent":"📢","Finance agent":"📊","Client success agent":"🤝","Tech agent":"🛠","Lead Finder":"🔍","LinkedIn Poster":"📣"}[a]||"🤖";}
 
-const agentColors={"Sales agent":["#1e3a5f","#60a5fa"],"Marketing agent":["#1a3528","#4ade80"],"Finance agent":["#2d1f4a","#a78bfa"],"Client success agent":["#2a1e38","#f472b6"],"Tech agent":["#1f2d3a","#38bdf8"],"Lead Finder":["#1e3a5f","#60a5fa"],"LinkedIn Poster":["#1a3528","#4ade80"]};
-const badgeClass={pending_review:"b-pending",approved:"b-pending",completed:"b-completed",needs_revision:"b-revision"};
-
-const PIPE_STAGES=["new","approved","sent","replied","call","won"];
-const PIPE_LABELS={"new":"New leads","approved":"Email approved","sent":"Email sent","replied":"Replied","call":"Call scheduled","won":"Client won ✓"};
-const PIPE_COLORS={"new":"#60a5fa","approved":"#fbbf24","sent":"#a78bfa","replied":"#34d399","call":"#f97316","won":"#4ade80"};
-
-function timeAgo(iso){const d=Math.floor((Date.now()-new Date(iso))/60000);if(d<1)return"just now";if(d<60)return d+"m ago";if(d<1440)return Math.floor(d/60)+"h ago";return Math.floor(d/1440)+"d ago";}
-function fmt$(n){return "$"+Number(n||0).toLocaleString();}
-
-async function fetchJSON(file){
-  // Try local server first, then GitHub
-  try{const r=await fetch(`../data/${file}?t=${Date.now()}`);if(r.ok){const d=await r.json();return d;}}catch(e){}
-  try{const r=await fetch(`${BASE}/${file}?t=${Date.now()}`);if(r.ok)return await r.json();}catch(e){}
-  return null;
+async function get(f){
+  try{const r=await fetch("../data/"+f+"?t="+Date.now());if(r.ok)return await r.json();}catch(e){}
+  try{const r=await fetch(GH+"/"+f+"?t="+Date.now());if(r.ok)return await r.json();}catch(e){}
+  return f.includes("finance")?{}:[];
 }
 
 async function loadAll(){
-  const [l,t,p,f]=await Promise.all([fetchJSON("leads.json"),fetchJSON("tasks.json"),fetchJSON("posts.json"),fetchJSON("finance.json")]);
-  leads=l||[];tasks=t||[];posts=p||[];finance=f||{};
-  document.getElementById("last-refresh").textContent="Updated "+new Date().toLocaleTimeString();
-  updateStats();renderCurrentView();
+  [leads,tasks,posts,finance]=await Promise.all([get("leads.json"),get("tasks.json"),get("posts.json"),get("finance.json")]);
+  const c=localStorage.getItem("opl");if(c)JSON.parse(c).forEach(cl=>{if(!leads.find(l=>l.id===cl.id))leads.push(cl);});
+  const na=leads.filter(l=>l.status==="new"&&l.email_subject).length;
+  const nl=leads.filter(l=>l.status==="new").length;
+  const nbe=document.getElementById("nb-emails"),nbl=document.getElementById("nb-leads");
+  nbe.textContent=na;nbe.style.display=na?"":"none";
+  nbl.textContent=nl;nbl.style.display=nl?"":"none";
+  document.getElementById("vrefresh").textContent="Updated "+new Date().toLocaleTimeString();
+  render();
 }
 
-function updateStats(){
+function render(){
+  if(curView==="dashboard")renderDash();
+  else if(curView==="leads")renderLeads();
+  else if(curView==="emails")renderEmails();
+  else if(curView==="posts")renderPosts();
+  else if(curView==="finance")renderFin();
+  else if(ATASKS[curView])renderAT(curView);
+}
+
+function renderDash(){
+  const na=leads.filter(l=>l.status==="new"&&l.email_subject);
   const sent=leads.filter(l=>["sent","replied","call","won","sequence_complete"].includes(l.status)).length;
-  const pending=leads.filter(l=>l.status==="new"&&l.email_subject).length;
-  const replied=leads.filter(l=>["replied","call"].includes(l.status)).length;
   const won=leads.filter(l=>l.status==="won").length;
-  const pipe=leads.filter(l=>!["won","lost"].includes(l.status)).length*500;
-  document.getElementById("s-leads").textContent=leads.length;
-  document.getElementById("s-emails-sent").textContent=sent;
-  document.getElementById("s-pending-email").textContent=pending;
-  document.getElementById("s-replied").textContent=replied;
-  document.getElementById("s-won").textContent=won;
-  document.getElementById("s-pipeline").textContent=fmt$(pipe);
+  const today=new Date().toISOString().slice(0,10);
+  document.getElementById("s1").textContent=leads.length;
+  document.getElementById("s2").textContent=na.length;
+  document.getElementById("s3").textContent=sent;
+  document.getElementById("s4").textContent=won;
+  document.getElementById("s5").textContent=tasks.filter(t=>t.created_at?.slice(0,10)===today).length;
+
+  document.getElementById("d-approvals").innerHTML=na.length===0
+    ?"<div style='color:#374151;font-size:11px;padding:8px 0'>No emails pending. Lead finder writes emails every 2 hours automatically.</div>"
+    :na.slice(0,3).map(l=>`<div class="trow" onclick="goLead('${l.id}')"><div class="ticon">✉</div><div class="tbody"><div class="ttitle">${l.first_name} ${l.last_name} — ${l.company}</div><div class="tmeta"><span style="color:#60a5fa">${l.email}</span></div><div style="font-size:10px;color:#94a3b8;margin-top:2px">${l.email_subject}</div></div><button class="btn bg" style="font-size:10px;flex-shrink:0" onclick="event.stopPropagation();qApprove('${l.id}')">✓ Approve</button></div>`).join("");
+
+  document.getElementById("d-tasks").innerHTML=tasks.slice(0,5).map(t=>`<div class="trow"><div class="ticon">${ai(t.agent)}</div><div class="tbody"><div class="ttitle">${t.title}</div><div class="tmeta"><span class="badge ${bc(t.status)}">${t.status}</span><span>${t.agent}</span><span>${ago(t.created_at)}</span></div></div></div>`).join("")||"<div style='color:#374151;font-size:11px'>No tasks yet.</div>";
+
+  document.getElementById("d-pipeline").innerHTML=PS.map(s=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #1e2030"><span style="font-size:11px;color:${PC[s]}">${PL[s]}</span><span style="font-size:13px;font-weight:700;color:${PC[s]}">${leads.filter(l=>l.status===s).length}</span></div>`).join("");
+
+  const p=posts[0];
+  document.getElementById("d-post").innerHTML=p
+    ?`<div style="font-size:10px;color:#4ade80;margin-bottom:6px">${p.type||"post"}</div><div style="font-size:11px;color:#94a3b8;max-height:60px;overflow:hidden">${(p.linkedin||"").slice(0,150)}...</div><button class="btn" style="margin-top:8px;font-size:10px" onclick="copy('${p.id}','li')">📋 Copy</button>`
+    :"<div style='color:#374151;font-size:11px'>No posts yet. Runs Mon/Wed/Fri/Sun.</div>";
 }
 
-function renderCurrentView(){
-  if(currentView==="dashboard") renderDashboard();
-  else if(currentView==="crm") renderCRM();
-  else if(currentView==="emails") renderEmailApprovals();
-  else if(currentView==="posts") renderPosts();
-  else if(currentView==="tasks") renderTasks();
-  else if(currentView==="finance") renderFinance();
+function renderLeads(){
+  document.getElementById("pipeline-board").innerHTML=PS.map(s=>{
+    const sl=leads.filter(l=>l.status===s);
+    return`<div class="pcol"><div class="phead" style="color:${PC[s]}">${PL[s]} (${sl.length})</div>${sl.length===0?"<div style='color:#374151;font-size:10px'>Empty</div>":sl.map(l=>`<div class="lcard" onclick="showLead('${l.id}')"><div class="ln">${l.first_name} ${l.last_name}</div><div class="lc">${l.company}</div><div class="le">${l.email}</div></div>`).join("")}</div>`;}).join("");
 }
 
-function renderDashboard(){
-  // Approval list
-  const pending=leads.filter(l=>l.status==="new"&&l.email_subject);
-  const abox=document.getElementById("approval-list");
-  if(pending.length===0){abox.innerHTML='<div style="color:#4b5563;font-size:11px;padding:8px 0">No emails pending. Lead finder runs every 2 hours.</div>';}
-  else{abox.innerHTML=pending.slice(0,5).map(l=>`<div class="task" onclick="showLeadDetail('${l.id}');showView('crm')">
-    <div class="task-row"><span style="font-size:11px;font-weight:500">${l.first_name} ${l.last_name}</span><span style="font-size:10px;color:#64748b;margin-left:auto">${l.company}</span></div>
-    <div style="font-size:10px;color:#60a5fa">${l.email_subject}</div>
-    <div style="display:flex;gap:6px;margin-top:4px"><button class="btn btn-green" style="font-size:10px;padding:3px 8px" onclick="event.stopPropagation();quickApprove('${l.id}')">✓ Approve & send</button></div>
-  </div>`).join("");}
-
-  // Pipeline summary
-  const pbox=document.getElementById("pipeline-summary");
-  pbox.innerHTML=PIPE_STAGES.map(s=>{
-    const cnt=leads.filter(l=>l.status===s).length;
-    return`<div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #1e2030">
-      <span style="font-size:11px;color:${PIPE_COLORS[s]}">${PIPE_LABELS[s]}</span>
-      <span style="font-size:13px;font-weight:700;color:${PIPE_COLORS[s]}">${cnt}</span>
-    </div>`;}).join("");
-
-  // Recent tasks
-  const tbox=document.getElementById("recent-tasks-dash");
-  tbox.innerHTML=tasks.slice(0,4).map(t=>{
-    const [bg,fg]=agentColors[t.agent]||["#1a2a3a","#94a3b8"];
-    return`<div class="task"><div class="task-row"><span class="tag" style="background:${bg};color:${fg}">${t.agent}</span><span class="task-title">${t.title}</span><span class="task-time">${timeAgo(t.created_at)}</span></div></div>`;
-  }).join("")||'<div style="color:#4b5563;font-size:11px">No tasks yet.</div>';
-
-  // Latest posts
-  const pst=document.getElementById("latest-posts");
-  pst.innerHTML=posts.slice(0,2).map(p=>`<div style="border:1px solid #2a2d3e;border-radius:6px;padding:8px;margin-bottom:6px">
-    <div style="font-size:10px;color:#4ade80;margin-bottom:4px">${p.angle_desc}</div>
-    <div style="font-size:11px;color:#94a3b8;overflow:hidden;max-height:40px">${(p.linkedin||"").slice(0,120)}...</div>
-    <button class="btn" style="margin-top:6px;font-size:10px" onclick="copyPost('${p.id}')">📋 Copy post</button>
-  </div>`).join("")||'<div style="color:#4b5563;font-size:11px">No posts yet.</div>';
-}
-
-function renderCRM(){
-  const board=document.getElementById("pipeline-board");
-  board.innerHTML=PIPE_STAGES.map(stage=>{
-    const stageleads=leads.filter(l=>l.status===stage);
-    return`<div class="pipe-col">
-      <div class="pipe-head" style="color:${PIPE_COLORS[stage]}">${PIPE_LABELS[stage]} (${stageleads.length})</div>
-      ${stageleads.length===0?'<div style="color:#4b5563;font-size:10px;padding:4px">Empty</div>':
-        stageleads.map(l=>`<div class="pipe-card" onclick="showLeadDetail('${l.id}')">
-          <div class="name">${l.first_name} ${l.last_name}</div>
-          <div class="co">${l.company}</div>
-          <div class="days">${timeAgo(l.created_at)}</div>
-        </div>`).join("")}
-    </div>`;
-  }).join("");
-}
-
-function showLeadDetail(id){
-  selectedLeadId=id;
-  const l=leads.find(x=>x.id===id);
-  if(!l)return;
-  const panel=document.getElementById("lead-detail-panel");
-  panel.style.display="block";
-  document.getElementById("ld-name").textContent=`${l.first_name} ${l.last_name} — ${l.position} at ${l.company}`;
-  document.getElementById("ld-meta").innerHTML=`
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
-      <div><span style="color:#4b5563">Email:</span> <a href="mailto:${l.email}" style="color:#60a5fa">${l.email}</a></div>
-      <div><span style="color:#4b5563">Company:</span> ${l.company}</div>
-      <div><span style="color:#4b5563">Position:</span> ${l.position}</div>
-      <div><span style="color:#4b5563">Domain:</span> ${l.domain}</div>
-      <div><span style="color:#4b5563">LinkedIn:</span> ${l.linkedin?`<a href="${l.linkedin}" target="_blank" style="color:#60a5fa">View profile →</a>`:"Not found"}</div>
-      <div><span style="color:#4b5563">Confidence:</span> ${l.confidence}% · ${l.source||"research"}</div>
-      <div><span style="color:#4b5563">Status:</span> <span style="color:${PIPE_COLORS[l.status]||"#94a3b8"}">${l.status}</span></div>
-      <div><span style="color:#4b5563">Added:</span> ${timeAgo(l.created_at)}</div>
-    </div>
-    ${l.pain_point?`<div style="color:#fbbf24;font-size:10px;margin-bottom:4px">Pain point: ${l.pain_point}</div>`:""}
-    ${l.why_us?`<div style="color:#4ade80;font-size:10px">Why us: ${l.why_us}</div>`:""}
-    ${l.notes?`<div style="color:#94a3b8;font-size:10px;margin-top:4px">Note: ${l.notes}</div>`:""}`;
-  document.getElementById("ld-subject").textContent=`Subject: ${l.email_subject||"No email written yet"}`;
+function showLead(id){
+  selLead=id;const l=leads.find(x=>x.id===id);if(!l)return;
+  document.getElementById("lead-detail").style.display="block";
+  document.getElementById("ld-title").textContent=`${l.first_name} ${l.last_name} — ${l.position}`;
+  document.getElementById("ld-sub").textContent=`${l.company} · ${l.status} · ${ago(l.created_at)}`;
+  document.getElementById("ld-grid").innerHTML=`
+    <div><span style="color:#64748b">Email</span><br><a href="mailto:${l.email}" style="color:#60a5fa">${l.email}</a></div>
+    <div><span style="color:#64748b">Company</span><br>${l.company}</div>
+    <div><span style="color:#64748b">Position</span><br>${l.position}</div>
+    <div><span style="color:#64748b">Domain</span><br>${l.domain}</div>
+    <div><span style="color:#64748b">LinkedIn</span><br>${l.linkedin?`<a href="${l.linkedin}" target="_blank" style="color:#60a5fa">View profile →</a>`:"Not found"}</div>
+    <div><span style="color:#64748b">Confidence</span><br>${l.confidence||75}% (${l.source||"research"})</div>
+    ${l.pain_point?`<div style="grid-column:span 2"><span style="color:#64748b">Pain point</span><br><span style="color:#fbbf24">${l.pain_point}</span></div>`:""}
+    ${l.notes?`<div style="grid-column:span 2"><span style="color:#64748b">Notes</span><br>${l.notes}</div>`:""}`;
+  document.getElementById("ld-subj").textContent=`Subject: ${l.email_subject||"No email yet"}`;
   document.getElementById("ld-body").textContent=l.email_body||"No email written yet.";
   document.getElementById("ld-note").value=l.notes||"";
 }
 
-function quickApprove(id){selectedLeadId=id;approveLead();}
+function goLead(id){showView("leads");showLead(id);}
 
-function approveLead(){
-  const l=leads.find(x=>x.id===selectedLeadId);
-  if(!l)return;
-  l.status="approved";l.updated_at=new Date().toISOString();
-  saveLeads();toast("✓ Email approved — will send on next agent run (within 30 min)");
-  renderCurrentView();
-}
+function ul(id,u){const l=leads.find(x=>x.id===id);if(!l)return;Object.assign(l,u,{updated_at:new Date().toISOString()});localStorage.setItem("opl",JSON.stringify(leads));renderLeads();if(selLead===id)showLead(id);}
+function approveLead(){if(!selLead)return;ul(selLead,{status:"approved"});toast("✓ Email approved — sends within 30 min via Gmail");}
+function qApprove(id){selLead=id;approveLead();}
+function markReplied(){if(!selLead)return;ul(selLead,{status:"replied",replied_at:new Date().toISOString()});toast("📩 Marked replied — day 3 follow-up queued");}
+function markCall(){if(!selLead)return;ul(selLead,{status:"call"});toast("📞 Call scheduled!");}
+function markWon(){if(!selLead)return;ul(selLead,{status:"won"});toast("🏆 Client won!");}
+function markLost(){if(!selLead)return;ul(selLead,{status:"lost"});toast("Lead marked lost");}
+function saveNote(){if(!selLead)return;ul(selLead,{notes:document.getElementById("ld-note").value});toast("Note saved");}
 
-function rejectLead(){
-  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
-  const note=prompt("What needs to change in this email?","");
-  if(!note)return;
-  l.status="needs_edit";l.notes=note;l.updated_at=new Date().toISOString();
-  saveLeads();toast("↩ Marked for editing");renderCurrentView();
-}
-
-function markReplied(){
-  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
-  l.status="replied";l.replied_at=new Date().toISOString();l.updated_at=new Date().toISOString();
-  saveLeads();toast("📩 Marked as replied");renderCurrentView();
-}
-
-function markWon(){
-  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
-  l.status="won";l.updated_at=new Date().toISOString();
-  finance.leads_converted=(finance.leads_converted||0)+1;
-  saveLeads();toast("🏆 Client won! Congratulations!");renderCurrentView();
-}
-
-function markLost(){
-  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
-  l.status="lost";l.updated_at=new Date().toISOString();
-  saveLeads();toast("Lead marked as lost");renderCurrentView();
-}
-
-function saveNote(){
-  const l=leads.find(x=>x.id===selectedLeadId);if(!l)return;
-  l.notes=document.getElementById("ld-note").value;
-  l.updated_at=new Date().toISOString();
-  saveLeads();toast("Note saved");
-}
-
-function saveLeads(){
-  localStorage.setItem("opsrunner_leads",JSON.stringify(leads));
-}
-
-function renderEmailApprovals(){
-  const box=document.getElementById("email-approval-list");
-  const pending=leads.filter(l=>l.status==="new"&&l.email_subject);
-  if(pending.length===0){box.innerHTML='<div style="color:#4b5563;padding:20px 0;text-align:center">No emails waiting. Lead finder runs every 2 hours and writes emails automatically.</div>';return;}
-  box.innerHTML=pending.map(l=>`<div style="border:1px solid #2a2d3e;border-radius:8px;padding:12px;margin-bottom:10px">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-      <div><div style="font-size:12px;font-weight:500">${l.first_name} ${l.last_name} — ${l.company}</div>
-      <div style="font-size:10px;color:#64748b">${l.email} · ${l.position}</div></div>
-      <div style="display:flex;gap:6px">
-        <button class="btn btn-green" onclick="selectedLeadId='${l.id}';approveLead()">✓ Approve & send</button>
-        <button class="btn btn-red" onclick="selectedLeadId='${l.id}';rejectLead()">✗ Edit</button>
+function renderEmails(){
+  const p=leads.filter(l=>l.status==="new"&&l.email_subject);
+  document.getElementById("email-list").innerHTML=p.length===0
+    ?"<div style='color:#374151;padding:20px 0;text-align:center'>No emails pending approval.<br><br>Lead finder runs every 2 hours and automatically writes personalised emails for each lead.</div>"
+    :p.map(l=>`<div style="border:1px solid #2a2d3e;border-radius:8px;padding:12px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-size:13px;font-weight:500">${l.first_name} ${l.last_name}</div>
+        <div style="font-size:10px;color:#64748b">${l.company} · ${l.position}</div>
+        <div style="font-size:10px"><a href="mailto:${l.email}" style="color:#60a5fa">${l.email}</a></div>
+        ${l.linkedin?`<div style="font-size:10px"><a href="${l.linkedin}" target="_blank" style="color:#7f77dd">LinkedIn →</a></div>`:""}</div>
+        <div style="display:flex;gap:6px"><button class="btn bg" onclick="selLead='${l.id}';approveLead();this.parentElement.parentElement.parentElement.style.opacity='0.4'">✓ Approve & send</button><button class="btn br" onclick="selLead='${l.id}';markLost()">✗ Skip</button></div>
       </div>
-    </div>
-    <div style="font-size:10px;color:#60a5fa;margin-bottom:6px">Subject: ${l.email_subject}</div>
-    <div class="email-preview">${l.email_body}</div>
-  </div>`).join("");
+      <div style="font-size:10px;color:#60a5fa;font-weight:500;margin-bottom:6px">Subject: ${l.email_subject}</div>
+      <div class="ebox">${l.email_body}</div></div>`).join("");
+}
+
+function renderAT(view){
+  const agents=ATASKS[view];const lid=ALIST[view];const box=document.getElementById(lid);if(!box)return;
+  const f=tasks.filter(t=>agents.includes(t.agent));
+  box.innerHTML=f.length===0?"<div style='color:#374151;padding:20px 0;text-align:center'>No tasks yet. This agent runs automatically on its schedule.</div>"
+    :f.map(t=>`<div class="trow" onclick="this.querySelector('.tout').style.display=this.querySelector('.tout').style.display==='none'?'block':'none'"><div class="ticon">${ai(t.agent)}</div><div class="tbody" style="width:100%"><div class="ttitle">${t.title}</div><div class="tmeta"><span class="badge ${bc(t.status)}">${t.status}</span><span>${ago(t.created_at)}</span>${t.approved_by?`<span style="color:#4ade80">✓ ${t.approved_by}</span>`:""}</div><div class="tout">${t.output}</div></div></div>`).join("");
 }
 
 function renderPosts(){
-  const box=document.getElementById("posts-list");
-  if(posts.length===0){box.innerHTML='<div style="color:#4b5563;padding:20px 0;text-align:center">No posts yet. LinkedIn agent runs every 8 hours.</div>';return;}
-  box.innerHTML=posts.slice(0,10).map(p=>`<div style="border:1px solid #2a2d3e;border-radius:8px;padding:12px;margin-bottom:10px">
-    <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-      <div style="font-size:11px;font-weight:500;color:#4ade80">${p.angle_desc}</div>
-      <div style="display:flex;gap:6px">
-        <button class="btn" onclick="copyPost('${p.id}')">📋 Copy LinkedIn</button>
-        <button class="btn" onclick="copyTwitter('${p.id}')">🐦 Copy Twitter</button>
+  document.getElementById("posts-list").innerHTML=posts.length===0
+    ?"<div style='color:#374151;padding:20px 0;text-align:center'>No posts yet.<br><br>LinkedIn poster creates posts automatically on Monday, Wednesday, Friday, and Sunday.</div>"
+    :posts.slice(0,10).map(p=>`<div style="border:1px solid #2a2d3e;border-radius:8px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div><div style="font-size:11px;font-weight:600;color:#4ade80">${p.type||"post"} — ${new Date(p.created_at).toLocaleDateString()}</div><div style="font-size:10px;color:#64748b">${p.char_count||0} chars</div></div>
+        <div style="display:flex;gap:6px"><button class="btn bg" style="font-size:10px" onclick="copy('${p.id}','li')">📋 Copy LinkedIn</button><button class="btn" style="font-size:10px" onclick="copy('${p.id}','tw')">🐦 Copy Twitter</button></div>
       </div>
-    </div>
-    <div style="font-size:11px;color:#94a3b8;line-height:1.6;white-space:pre-wrap">${(p.linkedin||"").slice(0,400)}${p.linkedin?.length>400?"...":""}</div>
-    <div style="font-size:10px;color:#4b5563;margin-top:6px">${timeAgo(p.created_at)} · ${p.char_count} chars</div>
-  </div>`).join("");
+      <div class="pcontent">${(p.linkedin||"").slice(0,500)}${(p.linkedin||"").length>500?"...":""}</div>
+      ${p.timing?`<div style="font-size:10px;color:#64748b">⏰ ${p.timing.slice(0,120)}</div>`:""}</div>`).join("");
 }
 
-function copyPost(id){
-  const p=posts.find(x=>x.id===id);if(!p)return;
-  navigator.clipboard.writeText(p.linkedin||"");toast("📋 LinkedIn post copied!");
-}
-function copyTwitter(id){
-  const p=posts.find(x=>x.id===id);if(!p)return;
-  navigator.clipboard.writeText(p.twitter||"");toast("🐦 Twitter thread copied!");
-}
-
-function renderTasks(){
-  const box=document.getElementById("task-list");
-  box.innerHTML=tasks.slice(0,20).map(t=>{
-    const [bg,fg]=agentColors[t.agent]||["#1a2a3a","#94a3b8"];
-    const bc=badgeClass[t.status]||"b-pending";
-    return`<div class="task${t.id===selectedTaskId?" sel":""}" onclick="selectTask('${t.id}')">
-      <div class="task-row"><span class="tag" style="background:${bg};color:${fg}">${t.agent}</span><span class="task-title">${t.title}</span><span class="task-time">${timeAgo(t.created_at)}</span></div>
-      <div><span class="badge ${bc}">${t.status}</span></div>
-    </div>`;}).join("")||'<div style="color:#4b5563;font-size:11px">No tasks yet.</div>';
+function renderFin(){
+  const won=leads.filter(l=>l.status==="won").length;const tot=leads.length;
+  document.getElementById("f1").textContent=$$(finance.mrr||0);
+  document.getElementById("f2").textContent=$$(leads.filter(l=>!["won","lost"].includes(l.status)).length*500);
+  document.getElementById("f3").textContent=tot;
+  document.getElementById("f4").textContent=leads.filter(l=>["sent","replied","call","won","sequence_complete"].includes(l.status)).length;
+  document.getElementById("f5").textContent=won;
+  document.getElementById("f6").textContent=tot>0?Math.round(won/tot*100)+"%":"0%";
 }
 
-function selectTask(id){
-  selectedTaskId=id;
-  const t=tasks.find(x=>x.id===id);if(!t)return;
-  document.getElementById("task-detail-out").textContent=t.output;
-  renderTasks();
-}
-
-function approveTask(){if(!selectedTaskId)return;const t=tasks.find(x=>x.id===selectedTaskId);if(!t)return;t.status="completed";toast("✓ Approved");renderTasks();}
-function rejectTask(){if(!selectedTaskId)return;const t=tasks.find(x=>x.id===selectedTaskId);if(!t)return;t.status="needs_revision";toast("↩ Revision requested");renderTasks();}
-
-function renderFinance(){
-  const conv=finance.leads_converted||0;
-  const total=finance.leads_total||0;
-  document.getElementById("f-mrr").textContent=fmt$(finance.mrr||0);
-  document.getElementById("f-pipeline").textContent=fmt$(finance.pipeline||0);
-  document.getElementById("f-cost").textContent=fmt$(finance.api_cost||0);
-  document.getElementById("f-leads").textContent=Math.max(total,leads.length);
-  document.getElementById("f-sent").textContent=finance.emails_sent||leads.filter(l=>["sent","replied","call","won","sequence_complete"].includes(l.status)).length;
-  document.getElementById("f-conv").textContent=total>0?Math.round(conv/total*100)+"%":"0%";
-}
+function copy(id,type){const p=posts.find(x=>x.id===id);if(!p)return;navigator.clipboard.writeText(type==="li"?p.linkedin||"":p.twitter||"");toast(type==="li"?"LinkedIn post copied!":"Twitter thread copied!");}
+function toast(m){const el=document.getElementById("toast");el.textContent=m;el.style.display="block";setTimeout(()=>el.style.display="none",3000);}
 
 function showView(v){
-  currentView=v;
-  document.querySelectorAll(".nav-item").forEach(el=>el.classList.remove("active"));
+  curView=v;
+  document.querySelectorAll(".nav").forEach(el=>el.classList.remove("active"));
   document.querySelector(`[data-view="${v}"]`)?.classList.add("active");
-  ["dashboard","crm","emails","posts","tasks","finance"].forEach(name=>{
-    const el=document.getElementById(`view-${name}`);
-    if(el)el.style.display=name===v?"block":"none";
+  ["dashboard","leads","emails","sales-tasks","posts","marketing-tasks","finance-tasks","client-tasks","tech-tasks","finance"].forEach(n=>{
+    const el=document.getElementById("view-"+n);if(el)el.style.display=n===v?"block":"none";
   });
-  const titles={dashboard:"Dashboard",crm:"Lead pipeline",emails:"Email approvals",posts:"LinkedIn posts",tasks:"Agent tasks",finance:"Finance tracker"};
-  document.getElementById("view-title").textContent=titles[v]||v;
-  renderCurrentView();
+  document.getElementById("vtitle").textContent=TITLES[v]||v;
+  render();
 }
 
-function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.style.display="block";setTimeout(()=>el.style.display="none",3000);}
-
-// Nav clicks
-document.querySelectorAll(".nav-item").forEach(el=>{el.addEventListener("click",()=>showView(el.dataset.view));});
-
-// Load leads from localStorage first (faster), then refresh from GitHub
-const cached=localStorage.getItem("opsrunner_leads");
-if(cached){leads=JSON.parse(cached);}
-loadAll();
-setInterval(loadAll,60000);
+document.querySelectorAll(".nav").forEach(el=>el.addEventListener("click",()=>showView(el.dataset.view)));
+loadAll();setInterval(loadAll,60000);
 </script>
 </body>
 </html>
