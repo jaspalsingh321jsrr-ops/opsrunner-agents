@@ -1,1 +1,8 @@
-{"mrr":0,"pipeline":0,"leads_total":0,"leads_converted":0,"emails_sent":0,"api_cost":0}
+{
+  "mrr": 0,
+  "pipeline": 1500,
+  "leads_total": 3,
+  "leads_converted": 0,
+  "emails_sent": 0,
+  "api_cost": 0
+}
