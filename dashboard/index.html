@@ -247,9 +247,27 @@ function renderDash(){
 }
 
 function renderLeads(){
-  document.getElementById("pipeline-board").innerHTML=PS.map(s=>{
-    const sl=leads.filter(l=>l.status===s);
-    return`<div class="pcol"><div class="phead" style="color:${PC[s]}">${PL[s]} (${sl.length})</div>${sl.length===0?"<div style='color:#374151;font-size:10px'>Empty</div>":sl.map(l=>`<div class="lcard" onclick="showLead('${l.id}')"><div class="ln">${l.first_name} ${l.last_name}</div><div class="lc">${l.company}</div><div class="le">${l.email}</div></div>`).join("")}</div>`;}).join("");
+  // Segment filter
+const segFilter=window._segFilter||"all";
+if(!document.getElementById("seg-filter")){
+  const pb=document.getElementById("pipeline-board");
+  const fbar=document.createElement("div");
+  fbar.id="seg-filter";
+  fbar.style="margin-bottom:10px;display:flex;gap:6px";
+  fbar.innerHTML=`<span style="font-size:11px;color:#64748b;line-height:24px">Filter:</span>
+    <button onclick="window._segFilter='all';renderLeads()" style="padding:3px 10px;border-radius:6px;border:1px solid #2a2d3e;background:transparent;color:#94a3b8;cursor:pointer;font-size:11px">All leads</button>
+    <button onclick="window._segFilter='cpa_firm';renderLeads()" style="padding:3px 10px;border-radius:6px;border:1px solid #1a2d10;background:#1a2d10;color:#4ade80;cursor:pointer;font-size:11px">CPA Firms</button>
+    <button onclick="window._segFilter='small_business';renderLeads()" style="padding:3px 10px;border-radius:6px;border:1px solid #0c1a33;background:#0c1a33;color:#60a5fa;cursor:pointer;font-size:11px">Small Business</button>`;
+  pb.parentNode.insertBefore(fbar, pb);
+}
+const filtLeads=segFilter==="all"?leads:leads.filter(l=>l.segment===segFilter);
+document.getElementById("pipeline-board").innerHTML=PS.map(s=>{
+    const sl=filtLeads.filter(l=>l.status===s);
+    return`<div class="pcol"><div class="phead" style="color:${PC[s]}">${PL[s]} (${sl.length})</div>${sl.length===0?"<div style='color:#374151;font-size:10px'>Empty</div>":sl.map(l=>`<div class="lcard" onclick="showLead('${l.id}')">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">
+<div class="ln">${l.first_name} ${l.last_name}</div>
+<span style="font-size:8px;padding:1px 5px;border-radius:4px;background:${l.segment==='cpa_firm'?'#1a2d10':'#0c1a33'};color:${l.segment==='cpa_firm'?'#4ade80':'#60a5fa'}">${l.segment==='cpa_firm'?'CPA':'SMB'}</span>
+</div><div class="lc">${l.company}</div><div class="le">${l.email}</div></div>`).join("")}</div>`;}).join("");
 }
 
 function showLead(id){
