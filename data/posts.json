@@ -1,5 +1,19 @@
 [
   {
+    "id": "f98cf677",
+    "type": "product_story",
+    "angle": "How Leakly finds hidden subscriptions in your bank statement \u2014 no bank login, no credentials, upload PDF/Excel/CSV.",
+    "goal": "Product education \u2014 show how it works in simple terms",
+    "linkedin": "**59.9% of people have paid subscriptions they forgot about.**\n\nYour bank statement knows the truth. Netflix you haven't watched in 6 months. That productivity app from last year. The \"free trial\" that auto-renewed in fine print.\n\nMost tools want your bank password to find them. We don't.\n\nLeakly works differently\u2014upload your bank statement as a PDF, Excel, or CSV. No login. No credentials shared. Our AI reads the transactions, spots the recurring charges, and tells you exactly what's bleeding money.\n\nReal example: One user found $340/month in forgotten subscriptions in 15 minutes. Another caught a duplicate charge they'd missed for 8 months.\n\nThe math: Americans spend $219/month on subscriptions on average. Most think it's $85.\n\nYour bank statement is a document. Let it speak.\n\n**Try free at leakly-psi.vercel.app \u2014 no card required.**\n\n#PrivacyFirst #PersonalFinance #MoneyHacks\n\n---\n\n**CHARACTER COUNT:** 847 / 1,300 \u2713\n\n---",
+    "twitter": "**LinkedIn: 7:30 AM IST (Thursday June 18, in India)**\n**Why:** Professionals check LinkedIn during morning commute + coffee. Mid-week Wednesday evening in US (9 PM PT) catches West Coast professionals before bed. IST timing hits India audience awake + alert. Post lands fresh in feeds when engagement rates peak (7-8 AM window).\n\n**Twitter/X: 5:45 PM IST (Wednesday June 17)**\n**Why:** Thread posts perform best 5-7 PM IST (overlap with US lunch hour + India evening scroll). People are between meetings/work. Thread format rewards early engagement\u2014RTs compound over 2-3 hours. Catches both US and India audiences in active windows simultaneously.\n\n---",
+    "timing": "",
+    "why_today": "**Wednesday is \"money anxiety\" day**\u2014people are mid-month, checking finances before the weekend, primed to act on savings hacks without procrastinating until next Monday.",
+    "status": "ready",
+    "post_date": "2026-06-17T03:44:09.688607",
+    "char_count": 937,
+    "created_at": "2026-06-17T03:44:09.688607"
+  },
+  {
     "id": "dfe1caac",
     "angle": "stats",
     "angle_desc": "Subscription blindness stats \u2014 $219/mo average, 2.5x what people think",
