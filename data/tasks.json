@@ -1,5 +1,18 @@
 [
   {
+    "id": "71500179",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 17",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 17**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements are about to make sense \ud83d\udcca\n\n**Body:**\nHey! Welcome to Leakly.\n\nWe know uploading bank statements feels risky. That's why we built Leakly differently\u2014no login required. Just upload your PDF, Excel, or CSV.\n\nIn seconds, you'll see where your money's actually going. No surprises. No subscriptions yet.\n\nReady to peek?\n\n**CTA BUTTON:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Engaged Once, Silent Since)\n\n**Subject:** We found some interesting patterns in your statement\n\n**Body:**\nHi there,\n\nYou uploaded a statement 3 days ago. Our AI spotted some trends you should see\u2014recurring charges, spending spikes, hidden subscriptions.\n\nWe kept it simple. No jargon. Just what matters.\n\nCurious what we found?\n\n**CTA BUTTON:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (3-Upload Limit Hit)\n\n**Subject:** Keep the insights coming\u2014Go Pro\n\n**Body:**\nGreat news! You've hit the 3-upload limit on your free plan.\n\nBut we know you're not done analyzing yet.\n\nUpgrade to Pro for **unlimited uploads, AI-powered reports, and CSV exports**. Just $9.99/month. Cancel anytime.\n\n**No surprises. No long contracts.**\n\n**CTA BUTTON:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro Subscription)\n\n**Subject:** We miss you\u2014come back free for a month\n\n**Body:**\nWe noticed you cancelled your Pro plan.\n\nNo judgment. But we'd love another shot.\n\nHere's a full month of Pro access\u2014on us. No credit card needed. See if we fit better this time.\n\nIf not, no hard feelings. Just say the word.\n\n**CTA BUTTON:** Claim Your Free Month\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Your friends need Leakly (and so do we)\n\n**Body:**\nYou rated us 9/10. That means the world.\n\nWe're growing through word-of-mouth because word-of-mouth works.\n\nKnow someone drowning in bank statements? Send them our way.\n\nFor each friend who upgrades to Pro, you both get a free month. \n\n**CTA BUTTON:** Share Leakly with One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**For EMAIL 1 (Welcome):**\n\"Hi! Welcome to Leakly \ud83d\udcca No login needed. Upload your bank statement & see where your money goes instantly. Privacy-first. Try free: [link]\"\n\n**For EMAIL 3 (Pro Upgrade):**\n\"You've unlocked 3 uploads! \ud83c\udf89 Upgrade to Pro for unlimited analysis, AI reports & exports. $9.99/mo, cancel anytime. Go Pro now: [link]\"\n\n**For EMAIL 4 (Churn Save):**\n\"We miss you! \ud83d\udc99 Come back to Leakly & get 1 free month of Pro. No credit card. Give us another shot: [link]\"\n\n---\n\n**NOTES:**\n- All emails use conversational tone (warm, not salesy)\n- Short sentences for mobile readability\n- Clear single CTA per email\n- WhatsApp versions use emojis for engagement\n- Subject lines A/B testable\n- No jargon; focus on user outcomes",
+    "status": "completed",
+    "created_at": "2026-06-17T14:52:58.270454",
+    "updated_at": "2026-06-17T14:52:58.889870",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "86ea4110",
     "agent": "Finance agent",
     "manager": "VP Operations",
