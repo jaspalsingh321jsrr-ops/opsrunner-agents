@@ -1,5 +1,18 @@
 [
   {
+    "id": "6c1320ad",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 18",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 18, 2024**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (NEW FREE USER)\n\n**Subject:** Ready to see where your money goes? \ud83d\udc40\n\n**Body:**\nHey! Welcome to Leakly.\n\nYour bank statements hold secrets. Spending leaks. Recurring charges you forgot about. Hidden patterns.\n\nWe'll find them\u2014no login needed, no sketchy integrations. Just upload a PDF, Excel, or CSV and get instant insights.\n\nYour privacy stays yours.\n\nLet's start?\n\n**CTA:** \ud83d\udce4 Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n\n**Subject:** We're ready whenever you are\n\n**Body:**\nHey again!\n\nJust checking in. No pressure\u2014but we found something interesting in bank statement analysis last week: most people discover $200-400/month in leaks they didn't know about.\n\nTakes 2 minutes to upload. See what Leakly finds in yours.\n\n**CTA:** \ud83d\udd0d See What We Found For You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n\n**Subject:** Unlimited insights (3 uploads wasn't enough, right?)\n\n**Body:**\nLooks like you've hit your free limit.\n\nThat's a good sign\u2014means Leakly is useful.\n\nGo Pro for $9.99/month and unlock unlimited uploads, spend tracking, and recurring charge alerts. Real value. No fluff.\n\nPlus: 30-day money-back guarantee. Risk-free.\n\n**CTA:** \u2b50 Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n\n**Subject:** We miss you (and we want to make it right)\n\n**Body:**\nWe noticed you cancelled.\n\nNo hard feelings. But before you go: we'd love to keep you.\n\nCome back and get your next month free. Zero strings. Just enough time to see if Pro actually solves your money-leak problem.\n\n**CTA:** \ud83d\udd04 Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n\n**Subject:** Your friends need this (and so do we \ud83d\ude0a)\n\n**Body:**\nYou rated Leakly 9/10. That means everything to us.\n\nWant to spread the word? Share Leakly with one friend and we'll give you both a free month.\n\nThey get clarity. You get rewarded. Everyone wins.\n\n**CTA:** \ud83c\udf81 Share Leakly With One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS (160 chars max)\n\n**EMAIL 1 / WELCOME:**\nHey! \ud83d\udc4b Ready to find hidden spending leaks? Upload your first bank statement to Leakly (no login needed). See what's costing you: [link]\n\n**EMAIL 3 / FREE \u2192 PRO:**\nYou've maxed out free uploads! \ud83d\udcca Go Pro for $9.99/mo\u2014unlimited insights + recurring alerts. 30-day refund guarantee: [link]\n\n**EMAIL 4 / CHURN SAVE:**\nWe miss you! \ud83d\ude0a Come back to Pro and get next month free. No strings. [link]\n\n---\n\n**Ready to deploy?** All emails are warm, value-first, and conversion-focused. Each CTA is clear and low-friction.",
+    "status": "completed",
+    "created_at": "2026-06-18T02:43:36.383898",
+    "updated_at": "2026-06-18T02:43:37.078232",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "b10a70d1",
     "agent": "Sales agent",
     "manager": "VP Revenue",
