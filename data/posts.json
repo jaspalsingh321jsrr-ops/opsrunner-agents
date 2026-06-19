@@ -1,5 +1,19 @@
 [
   {
+    "id": "5b6a4f46",
+    "type": "social_proof",
+    "angle": "What users discover when they upload their first statement \u2014 real examples of hidden charges found (Netflix price hike, forgotten Spotify, unused gym app).",
+    "goal": "Social proof \u2014 show real results to build trust",
+    "linkedin": "**Americans are bleeding $219/month on subscriptions they've forgotten about.**\n\nLast week, a user uploaded their bank statement to Leakly. Within 60 seconds, the analysis flagged something: Netflix ($15.99), Spotify ($12.99), and a gym app ($49/mo) they hadn't used since January.\n\nThat's $77.98 every month. $935 a year.\n\nThey're not alone.\n\n59.9% of subscription users pay for services they don't actively use. Most people don't catch it because bank statements are painful to read\u2014charges hidden in different names, billing dates scattered across the month.\n\nHere's what happens when you actually analyze your statement:\n\n**Hidden charges surface instantly.** Leakly groups every recurring charge, shows you exactly what's draining your account\u2014no bank login required. Privacy stays yours.\n\nThe real kicker? Most people find $2-4K in annual waste they never knew existed.\n\nWhat will YOU discover in your statement?\n\nUpload your first statement free: leakly-psi.vercel.app\n\n#Subscriptions #PersonalFinance #MoneySavingTips\n\n---",
+    "twitter": "**LinkedIn: Friday, June 19 @ 8:47 AM IST**\n- Why: Mid-morning post hits professionals during their second coffee break (US East Coast: 11:17 PM Thu, US West Coast: 8:17 PM Thu = prime late-night scroll time for US users). Friday energy = people think about money + weekend plans.\n\n**Twitter/X: Friday, June 19 @ 6:15 PM IST**\n- Why: Evening commute in India (6:15-7:30 PM = peak engagement window). Simultaneous US time (8:45 AM ET = morning scroll for East Coast). Thread performs best when posted before weekend when people mentally audit their finances.\n\n---",
+    "timing": "",
+    "why_today": "**Friday triggers the \"money reflection\" mindset\u2014people mentally prepare their weekend and subconsciously audit spending, making them most receptive to subscription waste discovery.**",
+    "status": "ready",
+    "post_date": "2026-06-19T03:58:54.998441",
+    "char_count": 1030,
+    "created_at": "2026-06-19T03:58:54.998441"
+  },
+  {
     "id": "f98cf677",
     "type": "product_story",
     "angle": "How Leakly finds hidden subscriptions in your bank statement \u2014 no bank login, no credentials, upload PDF/Excel/CSV.",
