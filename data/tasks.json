@@ -1,5 +1,18 @@
 [
   {
+    "id": "80074823",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 19",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 19**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (NEW FREE USER)\n\n**Subject:** Your bank statements just got smarter \u2728\n\n**Body:**\nHey! Welcome to Leakly.\n\nWe're here to uncover where your money's actually going\u2014no bank login needed. Just upload a PDF, Excel file, or CSV from any US or India bank.\n\nYour first 3 uploads are free. No credit card. No stress.\n\nLet's find your hidden savings together.\n\n**CTA:** Upload your first statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n\n**Subject:** We found something interesting in your statement \ud83d\udc40\n\n**Body:**\nHi there!\n\nYou uploaded a statement, but we haven't shown you what we discovered yet.\n\nOur AI spotted spending patterns, recurring charges, and potential savings you might've missed.\n\nTakes 30 seconds to see the full breakdown. Seriously.\n\n**CTA:** See what we found for you\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n\n**Subject:** Unlock unlimited insights for $9.99/mo\n\n**Body:**\nYou've hit your 3 free uploads.\n\nHere's the thing: most people discover way more when they analyze regularly. Pro users upload monthly and catch subscription leaks, rising bills, and budget gaps others miss.\n\nJust $9.99/mo. Cancel anytime.\n\nWorth it for one discovery alone.\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n\n**Subject:** We miss you\u2014come back free for a month\n\n**Body:**\nWe noticed you cancelled. \n\nWhatever the reason, we'd love another shot. \n\nHere's our offer: come back, and we'll give you a full month of Pro free. No catches. Just re-analyze your statements and see if Leakly clicks for you.\n\nSound fair?\n\n**CTA:** Come back \u2014 1 month free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n\n**Subject:** Help someone save money (and we'll help you too)\n\n**Body:**\nYou clearly love Leakly\u2014and we love you for it.\n\nYour friends probably leak money on subscriptions and recurring charges too. Share Leakly with one person you think would benefit.\n\nThey get a bonus, you get one too. Win-win.\n\n**CTA:** Share Leakly with one friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS (160 chars max)\n\n**EMAIL 1 + EMAIL 3 + EMAIL 4 (SAME TONE):**\n\n\"Welcome to Leakly! \ud83d\udc4b Upload your bank statements (no login needed) to discover hidden savings. Start free\u20143 uploads included. Privacy-first. Privacy-first analytics. https://leakly-psi.vercel.app\"\n\n**EMAIL 3 (UPGRADE):**\n\n\"You've used 3 free uploads! Go Pro ($9.99/mo) for unlimited access. Most savings happen after month 1. Cancel anytime. https://leakly-psi.vercel.app\"\n\n**EMAIL 4 (CHURN):**\n\n\"We miss you! Come back to Leakly\u20141 month of Pro free (no credit card needed). Analyze your statements again, no commitment. https://leakly-psi.vercel.app\"\n\n---\n\n**Notes:**\n- All emails use Jaspal Singh's voice: helpful, brief, honest\n- CTAs are direct (no button bloat)\n- Privacy + value highlighted consistently\n- WhatsApp versions shorter, URL-included for easy mobile action",
+    "status": "completed",
+    "created_at": "2026-06-19T17:48:08.120918",
+    "updated_at": "2026-06-19T17:48:08.792177",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "d3520b79",
     "agent": "Sales agent",
     "manager": "VP Revenue",
