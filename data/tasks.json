@@ -1,5 +1,18 @@
 [
   {
+    "id": "469c3784",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 20",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 20, 2024**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \u2728\n\n**Body:**\nHey! Welcome to Leakly. We're excited to help you spot hidden spending patterns\u2014no login required, no fees.\n\nJust upload your bank statement (PDF, Excel, or CSV). Our AI will analyze it in seconds and show you exactly where your money's going.\n\nPrivacy is guaranteed. Your data never touches a bank's servers.\n\n**CTA Button:** \ud83d\udce4 Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once, Gone Dark)\n\n**Subject:** We found something in your statement\n\n**Body:**\nHi there! You uploaded a statement 3 days ago. We've finished analyzing it.\n\nWe spotted recurring charges you might not notice, subscription overlaps, and spending trends. Some users save hundreds just from what we flag.\n\nTake 2 minutes to see the full breakdown\u2014it's ready for you.\n\n**CTA Button:** \ud83d\udc40 See What We Found\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Ready for unlimited analysis?\n\n**Body:**\nYou've uploaded 3 statements\u2014great! You're seeing the real value now.\n\nPro ($9.99/mo) unlocks unlimited uploads, year-over-year tracking, and custom alerts. No hidden fees. Cancel anytime.\n\nMost Pro users say the first insight pays for the month.\n\n**CTA Button:** \u2b06\ufe0f Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Subscription)\n\n**Subject:** We'd love to have you back\n\n**Body:**\nWe noticed you paused your Pro subscription. No worries\u2014we get it.\n\nHere's the thing: we miss you. Come back this month on us. Explore Pro free. If it's not right, you can cancel anytime.\n\nWe're always improving. Your feedback matters.\n\n**CTA Button:** \ud83d\udd04 Reactivate + 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Know someone who needs this?\n\n**Body:**\nYou're loving Leakly\u2014and we're grateful. Your NPS score tells us you'd recommend us.\n\nHere's an idea: share Leakly with one friend who struggles with budgeting or expense tracking. They get $5 off Pro. You get $5 credit. Win-win.\n\n**CTA Button:** \ud83e\udd1d Share & Earn $5 Credit\n\n---\n\n## WHATSAPP MESSAGE VERSIONS (Under 160 chars)\n\n### EMAIL 1 \u2014 WELCOME\n\"Hey! Welcome to Leakly \ud83d\udc4b Ready to spot hidden spending? Upload your bank statement (PDF/Excel/CSV) in seconds\u2014zero login needed. Privacy first. \ud83d\udd12\"\n\n### EMAIL 3 \u2014 UPGRADE\n\"You're crushing it with 3 uploads! \ud83d\ude80 Go Pro ($9.99/mo) for unlimited analysis & year tracking. Cancel anytime. Most users break even instantly.\"\n\n### EMAIL 4 \u2014 CHURN SAVE\n\"We miss you! Come back to Pro this month\u2014on us. \ud83c\udf81 Explore unlimited uploads & tracking free. No strings. Thoughts on what went wrong? \ud83d\udcac\"\n\n---\n\n**Send Schedule Recommendation:**\n- Email 1: Immediately after signup\n- Email 2: Day 3 at 10 AM\n- Email 3: When 3rd upload completes\n- Email 4: Day 3 after cancellation\n- Email 5: Monthly for NPS 9-10 users",
+    "status": "completed",
+    "created_at": "2026-06-20T07:43:45.026985",
+    "updated_at": "2026-06-20T07:43:45.701088",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "b75411ad",
     "agent": "Sales agent",
     "manager": "VP Revenue",
