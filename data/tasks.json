@@ -1,5 +1,18 @@
 [
   {
+    "id": "022fb8f6",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 20",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 20, 2024**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (NEW FREE USER)\n\n**Subject:** Welcome to Leakly \u2014 Your bank statements, decoded.\n\n**Body:**\nHey! \ud83d\udc4b\n\nWe're excited to have you here. Leakly analyzes your bank statements\u2014no login needed, no passwords shared.\n\nJust upload a PDF, Excel, or CSV file and we'll show you:\n- Spending patterns\n- Recurring charges you might've missed\n- Money-saving opportunities\n\nPrivacy first. Always.\n\nReady to upload?\n\n**CTA:** Upload your first statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n\n**Subject:** You're missing insights into your money.\n\n**Body:**\nHi there,\n\nYou signed up on Leakly, but we haven't seen your bank statement yet.\n\nHere's what you're missing:\n- Hidden recurring subscriptions (that $9.99 charge you forgot about)\n- Spending trends over time\n- Actionable savings tips\n\nTakes 60 seconds to upload. No credit card needed.\n\n**CTA:** See what we found for you\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n\n**Subject:** You've loved Leakly. Here's what's next.\n\n**Body:**\nGreat news! You've hit your 3 free uploads.\n\nLeakly Pro unlocks:\n- Unlimited uploads\n- Advanced spending analytics\n- Recurring charge alerts\n- Year-round insights\n\nJust $9.99/month. Cancel anytime.\n\nStill free? No rush. Come back when you're ready.\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n\n**Subject:** We miss you. Come back for 1 month free.\n\n**Body:**\nWe noticed you cancelled your Pro subscription.\n\nNo hard feelings. We'd love to have you back though.\n\nUse code **COMEBACK30** for one free month of Pro. Try us again, no risk.\n\nMiss anything? Reply directly\u2014we're here to help.\n\n**CTA:** Come back \u2014 1 month free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n\n**Subject:** Love Leakly? Help us grow (+ earn credit).\n\n**Body:**\nYou clearly love what we're doing. \ud83d\ude0a\n\nKnow someone stressed about bank statement analysis? Share Leakly with them.\n\nWhen they upgrade to Pro, you both get $10 account credit.\n\nReferral link ready\u2014just reply and we'll send it.\n\n**CTA:** Share Leakly with one friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**EMAIL 1 (Welcome):**\nWelcome to Leakly! \ud83d\udc4b Upload your bank statement (PDF/Excel/CSV) and get instant insights on spending, recurring charges & savings opportunities. No login needed. Privacy first. \ud83d\udd12 [LINK]\n\n**EMAIL 3 (Pro Upgrade):**\nYou've used all 3 free uploads! Unlock unlimited uploads + advanced analytics with Leakly Pro\u2014just $9.99/mo. Cancel anytime. Try it \u2192 [LINK]\n\n**EMAIL 4 (Churn Save):**\nWe miss you! \ud83d\udc99 Come back to Leakly Pro with code COMEBACK30 for 1 FREE month. Questions? Reply here. [LINK]\n\n---\n\n**Notes for sending:**\n- Schedule Email 1 immediately upon signup\n- Schedule Email 2 for day 3 at 2 PM user's timezone\n- Trigger Email 3 when free upload limit reached\n- Trigger Email 4 within 48 hours of cancellation\n- Send Email 5 to users with NPS 9-10 after 30 days active",
+    "status": "completed",
+    "created_at": "2026-06-20T13:29:07.051343",
+    "updated_at": "2026-06-20T13:29:07.780255",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "65a48481",
     "agent": "Marketing agent",
     "manager": "VP Revenue",
