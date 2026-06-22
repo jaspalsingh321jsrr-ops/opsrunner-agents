@@ -1,5 +1,18 @@
 [
   {
+    "id": "a023ed54",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 22",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 22 | Ready to Send**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \ud83d\udd0d\n\n**Body:**\nHi [Name],\n\nWelcome to Leakly. We analyze your spending without touching your bank login.\n\nUpload your first statement (PDF, Excel, or CSV) and we'll show you:\n- Hidden subscription drains\n- Spending patterns you missed\n- Money-saving opportunities\n\nPrivacy guaranteed. Takes 2 minutes.\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n\n**Subject:** You're leaving $200+ on the table (we found it)\n\n**Body:**\nHi [Name],\n\nWe analyzed your statement and found recurring charges you might've forgotten about.\n\nSome users discover 3\u20135 sneaky subscriptions. Others catch duplicate transactions.\n\nYour results are ready. They're free to review.\n\nDon't leave money on the table.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n\n**Subject:** Unlock unlimited statement analysis\n\n**Body:**\nHi [Name],\n\nYou've hit your free limit (3 uploads). Great sign\u2014you're already using Leakly.\n\nPro members get:\n- Unlimited uploads\n- Advanced insights\n- Monthly spending reports\n- Priority support\n\nOnly $9.99/mo. Cancel anytime.\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n\n**Subject:** We miss you. Come back with 1 month free.\n\n**Body:**\nHi [Name],\n\nWe noticed you cancelled. No hard feelings\u2014we'd love to understand why.\n\nWas it price? Missing a feature? Let us know.\n\nAs a thank you, we're offering 1 month free (no credit card needed).\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n\n**Subject:** Your friends need to see this\n\n**Body:**\nHi [Name],\n\nYou're clearly using Leakly to control your spending. That's awesome.\n\nYour friends probably have the same money leaks you did.\n\nShare Leakly with just one person who'd benefit. We'll give you both a month free.\n\n**CTA Button:** Share Leakly with One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**EMAIL 1 (Welcome):**\n\"Hey! \ud83d\udc4b Upload your first bank statement to Leakly (no login needed). We'll find hidden subscriptions & money drains. Privacy first. \ud83d\udd12 https://leakly-psi.vercel.app\"\n\n**EMAIL 3 (Upgrade):**\n\"You've loved Leakly so far! \ud83c\udf89 Upgrade to Pro ($9.99/mo) for unlimited uploads & deeper insights. Cancel anytime. https://leakly-psi.vercel.app\"\n\n**EMAIL 4 (Churn Save):**\n\"We miss you! \ud83d\udc99 Come back to Leakly and get 1 month free (really free\u2014no card needed). https://leakly-psi.vercel.app\"\n\n---\n\n**\u2705 All emails:**\n- Warm & conversational (not salesy)\n- Under 100 words\n- Clear single CTA\n- Mobile-friendly\n- Privacy-first messaging\n- Value-focused (not feature-dumping)",
+    "status": "completed",
+    "created_at": "2026-06-22T16:29:55.375611",
+    "updated_at": "2026-06-22T16:29:56.099647",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "85a9606d",
     "agent": "Sales agent",
     "manager": "VP Revenue",
