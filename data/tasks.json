@@ -1,5 +1,18 @@
 [
   {
+    "id": "29a6b7eb",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 23",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**Date: June 23**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \ud83d\udd0d\n\n**Body:**\nHey! Welcome to Leakly.\n\nYour privacy is safe with us\u2014no login credentials needed. Just upload a PDF, Excel, or CSV of your bank statement.\n\nWe'll spot hidden spending patterns, recurring charges you forgot about, and savings opportunities in seconds.\n\nReady to take control?\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Uploaded Once, Not Returned)\n\n**Subject:** You left money on the table (and we found it)\n\n**Body:**\nHi there,\n\nYou uploaded one statement. We spotted some things worth seeing.\n\nHere's what Leakly found:\n- Recurring charges you might not need\n- Spending trends you should know about\n- Easy wins to save money\n\nLog back in for 60 seconds. It's worth it.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlimited uploads start here ($9.99/mo)\n\n**Body:**\nYou've hit your free uploads.\n\nPro users get:\n- Unlimited bank statement uploads\n- Detailed spending reports\n- Export your analysis (PDF/Excel)\n- Priority support\n\nThat's $9.99/month. Cancel anytime.\n\nNo risk. Full control of your data. Zero login required.\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro Subscription)\n\n**Subject:** We miss you\u2014here's 1 month free\n\n**Body:**\nWe noticed you cancelled. No hard feelings.\n\nWe'd love to have you back. Try Pro again for a full month\u2014free. No credit card needed to restart.\n\nMissing a feature? We listen to feedback hard.\n\nLet's talk.\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Help a friend save money (on us)\n\n**Body:**\nThanks for loving Leakly. We're so grateful.\n\nKnow someone drowning in bank statement chaos? Share Leakly.\n\nYou both get:\n- $10 credit when they upgrade\n- They get privacy-first analysis\n- No login. No nonsense.\n\n**CTA Button:** Share Leakly with One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS (Under 160 chars)\n\n**EMAIL 1 (Welcome):**\nHey! Your bank statements just got smarter with Leakly. No login needed. Upload a statement \u2192 get insights in 60 seconds. Try free: [link]\n\n**EMAIL 3 (Free \u2192 Pro):**\nUnlimited uploads start at $9.99/mo. Cancel anytime. Privacy-first analysis. No login required. Upgrade now: [link]\n\n**EMAIL 4 (Churn Save):**\nWe miss you! Come back to Leakly Pro for 1 month free. Restart here: [link]\n\n---\n\n**All emails ready to deploy. Keep warmth high, friction low.**",
+    "status": "completed",
+    "created_at": "2026-06-23T14:29:02.618339",
+    "updated_at": "2026-06-23T14:29:03.313360",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "184fe41b",
     "agent": "Sales agent",
     "manager": "VP Revenue",
