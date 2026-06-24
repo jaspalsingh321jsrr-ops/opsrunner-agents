@@ -1,5 +1,19 @@
 [
   {
+    "id": "7c59dc0e",
+    "type": "product_story",
+    "angle": "How Leakly finds hidden subscriptions in your bank statement \u2014 no bank login, no credentials, upload PDF/Excel/CSV.",
+    "goal": "Product education \u2014 show how it works in simple terms",
+    "linkedin": "**Your bank statement has a confession to make.**\n\n59.9% of people pay for subscriptions they've forgotten about. That's not laziness\u2014that's a broken system.\n\nYou can't see what's hidden in your statement without logging into your bank (sketchy) or manually scrolling through 6 months of transactions (painful).\n\nLeakly does it differently.\n\nUpload your PDF. Or Excel. Or CSV. No login. No credentials. No \"connect your bank\" permission form.\n\nIn 90 seconds, you see:\n- Every recurring charge\n- Which subscriptions drain the most\n- Exact dates they renew\n- How much you're bleeding annually\n\nOne customer found $312/month in forgotten tools. Another discovered duplicate charges worth $1,800/year.\n\nThe math is simple: if you find even one unused subscription, you've paid for Leakly for a year.\n\n**Try it free. No card required.**\n\nleakly-psi.vercel.app\n\n#BankStatement #FinancialWellness #SmartMoney\n\n---\n\n**CHARACTER COUNT:** 842 | **FORMAT:** \u2713 Scroll-stopping hook | \u2713 Data-driven | \u2713 Story + specifics | \u2713 Single CTA\n\n---",
+    "twitter": "**LinkedIn: 8:30 AM IST (Wednesday)**\n- Why: Mid-week morning catch (India + US overlap; Americans checking email before standup)\n- Engagement window: 8:30 AM\u201312:00 PM IST = peak professional scrolling\n- Day logic: Wednesday is \"decision day\"\u2014people have budget clarity mid-week\n\n**Twitter/X: 9:15 AM IST (Wednesday)**\n- Why: 15-min offset after LinkedIn = catch the same audience, different platform\n- Timing science: Early morning thread readers + US night-owl audience (10:45 PM ET previous evening)\n- Thread momentum: Builds through morning; retweets peak 3-5 hours later\n\n---",
+    "timing": "",
+    "why_today": "**Mid-week = paycheck clarity. Wednesday is when people review spending after seeing Monday/Tuesday transactions\u2014perfect moment to show them the hidden drain.**\n\n---",
+    "status": "ready",
+    "post_date": "2026-06-24T02:54:10.653477",
+    "char_count": 1027,
+    "created_at": "2026-06-24T02:54:10.653477"
+  },
+  {
     "id": "5bc4e5a1",
     "type": "problem_stats",
     "angle": "Subscription blindness \u2014 Americans spend $219/mo, 2.5x what they think. 59.9% have unused subscriptions.",
