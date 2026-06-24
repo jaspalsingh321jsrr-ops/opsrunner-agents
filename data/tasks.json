@@ -1,5 +1,18 @@
 [
   {
+    "id": "795ef2fd",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 24",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 24**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \ud83d\udd0d\n\n**Body:**\nHey! Welcome to Leakly.\n\nWe know uploading bank data feels risky. That's why we built this differently\u2014zero logins needed. Just upload your PDF, Excel, or CSV.\n\nIn seconds, you'll see where your money's actually going. No subscriptions. No tracking. Just clarity.\n\nReady to find your leaks?\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once)\n\n**Subject:** We found something in your statements\n\n**Body:**\nHi there,\n\nYou uploaded your first statement\u2014nice! Our AI already spotted spending patterns most people miss.\n\nRecurring charges eating your budget? Duplicate subscriptions? We caught them.\n\nLog back in to see the full breakdown. Takes 30 seconds.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlimited uploads. $9.99/month. Cancel anytime.\n\n**Body:**\nYou've hit your 3 free uploads\u2014and we love the engagement!\n\nPro users track spending monthly, catch fraud early, and keep 2 years of history. All without giving us your bank login.\n\nOnly $9.99/month. Cancel whenever.\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** Come back\u2014we miss you (+ 1 month free)\n\n**Body:**\nWe noticed you cancelled. That's okay\u2014we just want to help.\n\nTake 1 month free on us. No questions asked. See if Leakly fits back into your routine.\n\nStill not right? That's fine. But we'd love another shot.\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** You love Leakly. Help your friends too.\n\n**Body:**\nYour feedback means everything. Since you're crushing it with Leakly, we thought you'd like to share the love.\n\nRefer one friend \u2192 they get $10 off. You get $10 credit.\n\nNo spam. Just good humans helping good humans.\n\n**CTA Button:** Share Leakly with One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**VERSION A (Emails 1 & 3):**\n\"Hey! Upload your bank statements\u2014no login needed. Find spending leaks in 30 seconds. Privacy first. \ud83d\udd10 leakly-psi.vercel.app\"\n\n**VERSION B (Email 4):**\n\"We miss you! Get 1 month free on Leakly. No strings. Come back & see what changed. Cancel anytime. leakly-psi.vercel.app\"\n\n---\n\n**Notes for sending:**\n- Email 1: Send immediately upon signup\n- Email 2: Send on Day 3 at 9am (user timezone)\n- Email 3: Send when upload limit hit\n- Email 4: Send 3 days after cancellation\n- Email 5: Send to NPS 9-10 users (weekly batch)\n- WhatsApp: Use for high-intent segments only (warm audience)",
+    "status": "completed",
+    "created_at": "2026-06-24T21:17:17.685425",
+    "updated_at": "2026-06-24T21:17:18.448100",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "77806d92",
     "agent": "Sales agent",
     "manager": "VP Revenue",
