@@ -1,5 +1,18 @@
 [
   {
+    "id": "dd8dbbc0",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 24",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 24**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Welcome to Leakly \ud83d\udc4b Your first bank statement awaits\n\n**Body:**\nHey there! You're in. No bank login. No stress. Just upload your latest bank statement (PDF, Excel, or CSV) and we'll show you exactly where your money's going\u2014instantly.\n\nTakes 2 minutes. Zero data risk. That's the Leakly way.\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once)\n\n**Subject:** Quick question: did we miss something?\n\n**Body:**\nYou uploaded once. Good start! But here's the thing\u2014one statement tells part of the story. Upload your last 2-3 months and watch the patterns emerge.\n\nThat's where real insights live. Spending leaks. Recurring charges you forgot about. Savings hiding in plain sight.\n\nReady?\n\n**CTA Button:** See What We Found For You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** You've unlocked unlimited uploads\n\n**Body:**\nYou've maxed out free uploads. That means you're serious about understanding your finances. Love that.\n\nUpgrade to Pro ($9.99/mo) for unlimited uploads, custom alerts, and monthly spend reports. Cancel anytime\u2014no strings.\n\nYour next upload is waiting.\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We miss you. Come back free this month.\n\n**Body:**\nYou cancelled. No judgment\u2014life happens. But we'd love another chance.\n\nHere's the deal: come back and get your first month free. Full Pro access. All features. No credit card needed to restart.\n\nWe've improved things since you left.\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** You love Leakly. Your friends will too.\n\n**Body:**\nYou gave us a 9/10. That means you *get it*\u2014how powerful it is to see your money clearly, no logins, no games.\n\nKnow someone drowning in bank statements? Share Leakly. We'll give you both a free month when they upgrade.\n\n**CTA Button:** Share Leakly With One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS (160 chars max)\n\n**WhatsApp 1** (Email 1 \u2014 Welcome)\n> Hey! You're in Leakly. Upload your first bank statement (PDF/Excel/CSV) and we'll show you exactly where your money goes. Takes 2 mins. No risk. Start: [link]\n\n**WhatsApp 3** (Email 3 \u2014 Pro Upgrade)\n> You've hit your free uploads! Go Pro ($9.99/mo) for unlimited uploads, alerts & reports. Cancel anytime. Ready? [link]\n\n**WhatsApp 4** (Email 4 \u2014 Churn Save)\n> We miss you! Come back to Leakly and get your first month free. Full Pro access, zero commitment. Let's try again? [link]\n\n---\n\n**Send Times:** 9 AM on typical business days (adjust by timezone). Stagger Email 2 on day 3, Email 3 on detection trigger, Email 4 within 48 hrs of cancellation, Email 5 after 30+ days active use.",
+    "status": "completed",
+    "created_at": "2026-06-24T02:27:12.141413",
+    "updated_at": "2026-06-24T02:27:12.841240",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "2d57a55e",
     "agent": "Marketing agent",
     "manager": "VP Revenue",
