@@ -1,5 +1,18 @@
 [
   {
+    "id": "2eaf0f35",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 25",
+    "output": "# LEAKLY CLIENT SUCCESS EMAIL TOOLKIT\n**June 25**\n\n---\n\n## EMAIL 1 \u2014 WELCOME\n**Subject:** Your bank statements just got smarter \ud83d\udd0d\n\n**Body:**\nHey! Welcome to Leakly.\n\nWe make it simple to spot spending leaks\u2014no login, no hassle. Just upload your statement (PDF, Excel, or CSV) and we'll find where your money's actually going.\n\nPrivacy stays yours. Your data stays private.\n\nReady to take a look?\n\n**CTA:** Upload your first statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n**Subject:** We found something interesting (take 2 min to check)\n\n**Body:**\nHi there,\n\nYou uploaded a statement. We analyzed it. And we found some patterns worth knowing about.\n\nSpending leaks hide in plain sight. Most people find 15-25% they didn't realize they were spending.\n\nYour data's already there. Let's show you what it says.\n\n**CTA:** See what we found for you\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n**Subject:** Keep analyzing (upgrade to unlimited)\n\n**Body:**\nYou've maxed out your 3 free uploads.\n\nPro users get unlimited statements, 12-month history, and spending trends. That's $9.99/month.\n\nPerfect for anyone serious about their money. Or your team if you're an accountant.\n\nWant to keep going?\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n**Subject:** We miss you (come back for 1 month free)\n\n**Body:**\nWe noticed you cancelled. No judgment\u2014just sorry to see you go.\n\nWe'd love another shot. Here's a full month of Pro, free. No strings.\n\nLeakly's here whenever you need to understand your spending.\n\n**CTA:** Come back \u2014 1 month free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n**Subject:** Know someone who needs this?\n\n**Body:**\nYou love Leakly. (We saw your rating\u2014thank you!)\n\nLots of people stress about where their money goes. You know the answer now.\n\nIf you know one person who'd benefit, we'd love for you to share it. We'll give you both a month of Pro.\n\n**CTA:** Share Leakly with one friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**Message 1 (Welcome):**\nHey! Welcome to Leakly \ud83d\udc4b Upload your bank statement (PDF/Excel/CSV) and we'll find where your money's really going. No login needed. Privacy stays yours. Let's go \u2192 [link]\n\n**Message 3 (Pro Upgrade):**\nYou've used your 3 free uploads! \ud83d\udcca Go unlimited with Pro ($9.99/mo). Unlimited statements + 12-month history. Worth it? \u2192 [link]\n\n**Message 4 (Churn Save):**\nWe miss you! \ud83d\udc99 Come back for 1 month of Pro free\u2014no strings. Leakly's ready when you need it \u2192 [link]",
+    "status": "completed",
+    "created_at": "2026-06-25T07:34:53.192880",
+    "updated_at": "2026-06-25T07:34:53.951409",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "40e20325",
     "agent": "Sales agent",
     "manager": "VP Revenue",
