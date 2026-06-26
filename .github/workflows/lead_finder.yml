@@ -2,7 +2,7 @@ name: Lead Finder Agent
 
 on:
   schedule:
-    - cron: '0 */2 * * *'   # every 2 hours
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 jobs:
@@ -29,18 +29,9 @@ jobs:
         env:
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-        run: |
-          python3 -c "
-import os
-email = os.environ.get('GMAIL_EMAIL', 'NOT_SET')
-pwd = os.environ.get('GMAIL_PASSWORD', 'NOT_SET')
-print(f'Email value: {email}')
-print(f'Password length: {len(pwd)}')
-print(f'Has spaces: {chr(32) in pwd}')
-print(f'First 4 chars: {pwd[:4]}')
-"
+        run: python -c "import os; e=os.environ.get('GMAIL_EMAIL','NOT_SET'); p=os.environ.get('GMAIL_PASSWORD','NOT_SET'); print('Email:',e); print('Pwd length:',len(p)); print('Has spaces:',' ' in p); print('First4:',p[:4])"
 
-      - name: Send emails immediately (no approval needed)
+      - name: Send emails immediately
         env:
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
