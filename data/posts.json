@@ -1,5 +1,19 @@
 [
   {
+    "id": "252c6f99",
+    "type": "social_proof",
+    "angle": "What users discover when they upload their first statement \u2014 real examples of hidden charges found (Netflix price hike, forgotten Spotify, unused gym app).",
+    "goal": "Social proof \u2014 show real results to build trust",
+    "linkedin": "**Americans lose $2,628/year to subscriptions they forgot existed.**\n\nLast week, a user uploaded their bank statement to Leakly. Took 90 seconds.\n\nWithin minutes: Netflix price hike ($4.99 \u2192 $12.99). Spotify they hadn't opened since March. A gym app with a $19.99 monthly charge\u2014no visits since January.\n\nThis isn't unusual. 59.9% of paid subscriptions go unused.\n\nThe charges are small enough to ignore. Large enough to add up.\n\nOne user found $340/month in forgotten recurring payments. Another discovered their \"free trial\" had auto-renewed for 8 months.\n\nNo login. No credentials shared. Just upload your PDF, Excel, or CSV.\n\n**What will YOU find in your statement?**\n\nleakly-psi.vercel.app\n\n#SubscriptionAudit #FinancialWellness #MoneyHacks\n\n---\n\n**Character count: 487 / 1300**\n\n---",
+    "twitter": "| Platform | Expected Reach | Est. Clicks | Best Reply Angle |\n|----------|---|---|---|\n| LinkedIn | 2,800-4,200 | 120-180 | \"What was your biggest surprise?\" |\n| Twitter | 1,400-2,100 | 85-140 | Retweet data point + personal finding |",
+    "timing": "",
+    "why_today": "**Friday is when people mentally shift from work expenses to personal spending\u2014making subscription waste feel urgent before the weekend hits.**\n\n---",
+    "status": "ready",
+    "post_date": "2026-06-26T02:59:07.091677",
+    "char_count": 788,
+    "created_at": "2026-06-26T02:59:07.091677"
+  },
+  {
     "id": "7c59dc0e",
     "type": "product_story",
     "angle": "How Leakly finds hidden subscriptions in your bank statement \u2014 no bank login, no credentials, upload PDF/Excel/CSV.",
