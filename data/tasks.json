@@ -1,5 +1,18 @@
 [
   {
+    "id": "eaae11cb",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 26",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 June 26\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \u2728\n\n**Body:**\nHey! Welcome to Scroll_land_find. \n\nWe make bank statement analysis dead simple\u2014no login, no sharing credentials. Just upload a PDF, Excel, or CSV, and we'll spot spending patterns, anomalies, and savings opportunities in seconds.\n\nYour first 3 uploads are free. No credit card needed.\n\nReady to see what we find?\n\n**CTA:** Upload your first statement \u2192\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed up, uploaded once, not back)\n\n**Subject:** You left money on the table (literally)\n\n**Body:**\nHi there,\n\nYou uploaded one statement. That's a start! But the real insights come when we analyze multiple months side-by-side.\n\nUpload your last 2-3 statements and we'll show you:\n- Where your spending spiked\n- Recurring charges you forgot about\n- Patterns your bank won't tell you\n\nTakes 2 minutes.\n\n**CTA:** See what we found for you \u2192\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-upload limit)\n\n**Subject:** Love Scroll_land_find? Go Pro for $9.99/mo\n\n**Body:**\nYou've used all 3 free uploads\u2014great sign!\n\nPro users get unlimited uploads, monthly trend reports, and custom spending alerts. Perfect if you manage multiple accounts or run a business.\n\n$9.99/month. Cancel anytime. No surprises.\n\nA lot cheaper than hiring someone to do this manually.\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo \u2192\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We'll miss you. Here's 1 month free. \ud83d\udc99\n\n**Body:**\nSorry to see you go.\n\nIf price was the issue\u2014we get it. Here's 1 free month of Pro. No strings. Use it to analyze as much as you need.\n\nIf something else didn't work, reply and tell us. We listen.\n\nEither way, we're here whenever you need us.\n\n**CTA:** Come back \u2014 Claim your free month \u2192\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** You love us. Your friends will too.\n\n**Body:**\nYour NPS score says you're a fan. That means the world.\n\nHere's the thing: most people don't know they can analyze bank statements without logging in. You do now.\n\nKnow a friend, colleague, or another business owner who'd benefit? Share this with them\u2014and we'll give you both 1 month Pro free.\n\n**CTA:** Share Scroll_land_find with one friend \u2192\n\n---\n\n# WHATSAPP VERSIONS (Under 160 chars)\n\n**EMAIL 1 WHATSAPP:**\nHey! Welcome to Scroll_land_find \ud83d\udc4b Upload a bank statement (PDF/Excel/CSV) and see spending patterns in seconds. 3 free uploads\u2014no login needed. Start now \u2192 [link]\n\n**EMAIL 3 WHATSAPP:**\nLove Scroll_land_find? Go Pro for $9.99/mo \ud83d\udcaa Unlimited uploads, trend reports, alerts. Perfect for multiple accounts. Cancel anytime. \u2192 [link]\n\n**EMAIL 4 WHATSAPP:**\nWe miss you! \ud83d\udc99 1 free month of Pro if you come back. No questions. Reply if there's anything we should fix \u2192 [link]",
+    "status": "completed",
+    "created_at": "2026-06-26T21:13:31.241204",
+    "updated_at": "2026-06-26T21:13:31.949414",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "09cc8866",
     "agent": "Sales agent",
     "manager": "VP Revenue",
