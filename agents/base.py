@@ -6,7 +6,7 @@ MAX_TOKENS = 1200
 
 PRODUCTS = """
 Scroll_land_find — Bank statement analyzer. No bank login needed. Upload PDF/Excel/CSV.
-URL: https://scroll-land-find.vercel.app | Free tier + Pro plan
+URL: https://scrollandfind.com | Free tier + Pro plan
 Differentiator: Privacy-first. No credentials. Works US + India.
 Competitors: Rocket Money (bank login required $7-14/mo), Copilot ($10.99/mo)
 
