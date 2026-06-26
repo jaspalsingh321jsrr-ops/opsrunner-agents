@@ -1,5 +1,18 @@
 [
   {
+    "id": "a287d2cb",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 26",
+    "output": "# LEAKLY \u2014 Client Success Email Toolkit\n**June 26**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \ud83d\udd0d\n\n**Body:**\nHey! Welcome to Leakly.\n\nWe're excited you're here. No bank login needed. No fees to start.\n\nUpload your first bank statement (PDF, Excel, or CSV) and we'll spot hidden spending patterns, recurring charges you missed, and money-saving opportunities\u2014instantly.\n\nTakes 2 minutes. No stress.\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n\n**Subject:** Your statements are ready to analyze\n\n**Body:**\nHi there!\n\nYou uploaded a statement, but haven't seen the insights yet. That's where the magic happens.\n\nOur AI finds:\n\u2022 Subscriptions you forgot about\n\u2022 Duplicate charges\n\u2022 Spending trends\n\nLog in and take a 60-second look. Bet you'll spot something.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n\n**Subject:** Ready for unlimited analysis?\n\n**Body:**\nGreat news\u2014you've hit your 3 free uploads.\n\nLeakly Pro unlocks unlimited statements, priority support, and detailed export reports. Perfect if you're tracking multiple accounts or sharing insights with your team.\n\nJust $9.99/month. Cancel anytime.\n\nStill testing? No pressure. Stay free. But when you're ready\u2014we're here.\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n\n**Subject:** We miss you (and we have an offer)\n\n**Body:**\nYou cancelled your Pro subscription. We get it\u2014maybe the timing wasn't right.\n\nWe'd love to have you back. Here's a reset: **1 month of Pro free.** No questions. Use it to re-explore your accounts.\n\nIf Leakly wasn't hitting the mark, reply\u2014we want to know why.\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n\n**Subject:** Help us reach people who need this\n\n**Body:**\nYou clearly get the value of Leakly (thanks for the love \u2764\ufe0f).\n\nWe're growing word-of-mouth because we don't do ads. If you know one friend, colleague, or business owner drowning in bank statements\u2014send them our way.\n\nWe'll give you both a free month of Pro.\n\n**CTA Button:** Share Leakly with One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**WHATSAPP 1 (Email 1 \u2014 Welcome)**\n\"Hey! \ud83d\udc4b Welcome to Leakly. Upload your first bank statement (PDF/Excel/CSV) in 2 mins and spot hidden spending patterns. No login needed. Get started: [link]\"\n*(158 chars)*\n\n**WHATSAPP 3 (Email 3 \u2014 Pro Upgrade)**\n\"You've hit 3 free uploads! \ud83c\udf89 Ready for unlimited? Leakly Pro = $9.99/mo. Unlimited statements + detailed reports. Try it: [link]\"\n*(130 chars)*\n\n**WHATSAPP 4 (Email 4 \u2014 Churn Save)**\n\"We miss you! \ud83d\ude22 Come back to Leakly & get 1 month Pro free\u2014no strings. Ready? [link]\"\n*(84 chars)*\n\n---\n\n**All 5 emails + WhatsApp versions ready to deploy. Focus: value-first, short, warm, clear CTAs.**",
+    "status": "completed",
+    "created_at": "2026-06-26T02:30:49.340017",
+    "updated_at": "2026-06-26T02:30:50.066822",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "34592152",
     "agent": "Sales agent",
     "manager": "VP Revenue",
