@@ -5,8 +5,8 @@ MODEL   = "claude-haiku-4-5-20251001"   # cheapest model — ~10x less than Sonn
 MAX_TOKENS = 1200
 
 PRODUCTS = """
-LEAKLY — Bank statement analyzer. No bank login needed. Upload PDF/Excel/CSV.
-URL: https://leakly-psi.vercel.app | Free tier + Pro plan
+Scroll_land_find — Bank statement analyzer. No bank login needed. Upload PDF/Excel/CSV.
+URL: https://scroll-land-find.vercel.app | Free tier + Pro plan
 Differentiator: Privacy-first. No credentials. Works US + India.
 Competitors: Rocket Money (bank login required $7-14/mo), Copilot ($10.99/mo)
 
