@@ -1,8 +1,8 @@
 """
 Email Sender Agent — runs every 30 minutes
-Sends emails that Jaspal has approved in the dashboard
-Also handles auto follow-ups on day 3 and day 7
-Uses Gmail SMTP — no extra cost
+Sends all auto-approved leads immediately.
+Also handles follow-ups on day 3 and day 7.
+Fully automatic — no human approval needed.
 """
 import sys, os, json, datetime, smtplib
 from email.mime.text import MIMEText
@@ -19,13 +19,13 @@ FOLLOW_UP_TEMPLATES = {
         "subject": "Re: {original_subject}",
         "body": """Hi {first_name},
 
-Just following up on my previous message — wanted to make sure it didn't get buried.
+Just following up — wanted to make sure this didn't get buried.
 
-Happy to show you a quick 10-minute demo of how {product} works for firms like {company}.
+Happy to show you a quick 10-minute demo of how {product} works for {company}.
 
-Worth a quick look this week?
+Worth a look this week?
 
-— Jaspal
+— Jaspal Singh
 singhjaspal3460@gmail.com"""
     },
     7: {
@@ -34,7 +34,7 @@ singhjaspal3460@gmail.com"""
 
 Last follow-up — I know you're busy.
 
-If {product} isn't relevant right now, no worries at all. But if you're still dealing with {pain_point}, I'd love to help.
+If {product} isn't the right fit right now, no worries at all. But if you're still dealing with {pain_point}, I'd love to help.
 
 Free to chat for 15 minutes?
 
@@ -66,12 +66,12 @@ def update_finance_sent():
         pass
 
 def send_email(to_email, subject, body, from_name="Jaspal Singh"):
-    """Send email via Gmail SMTP."""
+    """Send via Gmail SMTP. Uses App Password stored in GitHub Secrets."""
     if not GMAIL_EMAIL or not GMAIL_PASSWORD:
-        print(f"[EMAIL] No Gmail credentials — cannot send to {to_email}")
+        print(f"[EMAIL] ✗ No Gmail credentials — skipping {to_email}")
         return False
     try:
-        msg = MIMEMultipart("alternative")
+        msg            = MIMEMultipart("alternative")
         msg["Subject"] = subject
         msg["From"]    = f"{from_name} <{GMAIL_EMAIL}>"
         msg["To"]      = to_email
@@ -80,10 +80,14 @@ def send_email(to_email, subject, body, from_name="Jaspal Singh"):
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(GMAIL_EMAIL, GMAIL_PASSWORD)
             server.sendmail(GMAIL_EMAIL, to_email, msg.as_string())
-        print(f"[EMAIL] ✓ Sent to {to_email}: {subject}")
+        print(f"[EMAIL] ✓ Sent → {to_email} | {subject}")
         return True
+    except smtplib.SMTPAuthenticationError:
+        print(f"[EMAIL] ✗ Gmail auth failed — check GMAIL_PASSWORD is an App Password, not your normal password")
+        print(f"[EMAIL]   How to fix: Google Account → Security → 2-Step Verification → App passwords → create one")
+        return False
     except Exception as e:
-        print(f"[EMAIL] ✗ Failed to send to {to_email}: {e}")
+        print(f"[EMAIL] ✗ Failed → {to_email}: {e}")
         return False
 
 def days_since(iso_date):
@@ -95,13 +99,20 @@ def days_since(iso_date):
     except:
         return 999
 
+def get_product_name(lead):
+    """Pick the right product name based on segment."""
+    if lead.get("segment") == "cpa_firm":
+        return "OpsRunner"
+    return "Scroll_land_find"
+
 def run():
-    leads   = load_leads()
-    updated = False
+    leads      = load_leads()
+    updated    = False
     sent_count = 0
 
     for lead in leads:
-        # Send approved emails
+
+        # ── Send auto-approved emails immediately ──
         if lead.get("status") == "approved":
             ok = send_email(
                 to_email=lead["email"],
@@ -119,17 +130,16 @@ def run():
                 lead["status"] = "send_failed"
                 updated = True
 
-        # Auto follow-up day 3
+        # ── Auto follow-up day 3 ──
         elif lead.get("status") == "sent" and lead.get("follow_up_count", 0) == 0:
-            days = days_since(lead.get("emailed_at"))
-            if days >= 3:
-                tmpl = FOLLOW_UP_TEMPLATES[3]
+            if days_since(lead.get("emailed_at")) >= 3:
+                tmpl    = FOLLOW_UP_TEMPLATES[3]
                 subject = tmpl["subject"].format(original_subject=lead["email_subject"])
                 body    = tmpl["body"].format(
-                    first_name=lead["first_name"],
-                    company=lead["company"],
-                    product="Leakly" if "privacy" in lead.get("email_body","").lower() else "OpsRunner",
-                    pain_point="manual reconciliation and high staff costs",
+                    first_name=lead.get("first_name", "there"),
+                    company=lead.get("company", "your firm"),
+                    product=get_product_name(lead),
+                    pain_point=lead.get("pain_point", "manual reconciliation"),
                 )
                 ok = send_email(lead["email"], subject, body)
                 if ok:
@@ -139,17 +149,16 @@ def run():
                     sent_count += 1
                     updated = True
 
-        # Auto follow-up day 7
+        # ── Auto follow-up day 7 ──
         elif lead.get("status") == "sent" and lead.get("follow_up_count", 0) == 1:
-            days = days_since(lead.get("emailed_at"))
-            if days >= 7:
-                tmpl = FOLLOW_UP_TEMPLATES[7]
+            if days_since(lead.get("emailed_at")) >= 7:
+                tmpl    = FOLLOW_UP_TEMPLATES[7]
                 subject = tmpl["subject"].format(original_subject=lead["email_subject"])
                 body    = tmpl["body"].format(
-                    first_name=lead["first_name"],
-                    company=lead["company"],
-                    product="Leakly" if "privacy" in lead.get("email_body","").lower() else "OpsRunner",
-                    pain_point="manual reconciliation",
+                    first_name=lead.get("first_name", "there"),
+                    company=lead.get("company", "your firm"),
+                    product=get_product_name(lead),
+                    pain_point=lead.get("pain_point", "the manual work"),
                 )
                 ok = send_email(lead["email"], subject, body)
                 if ok:
@@ -163,7 +172,7 @@ def run():
     if updated:
         save_leads(leads)
 
-    print(f"[EMAIL SENDER] Sent {sent_count} emails this run")
+    print(f"[EMAIL SENDER] ✓ Sent {sent_count} emails this run")
     return sent_count
 
 if __name__ == "__main__":
