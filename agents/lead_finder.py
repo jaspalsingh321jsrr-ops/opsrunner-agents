@@ -1,8 +1,7 @@
 """
 Lead Finder Agent — runs every 2 hours
-Targets TWO customer types:
-1. Small CPA firms (5-20 staff) → sell OpsRunner
-2. Small business owners → sell Leakly + OpsRunner
+Finds leads, writes personalised email, auto-approves for immediate sending.
+No human approval needed — fully automatic pipeline.
 """
 import sys, os, json, uuid, datetime, requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -12,7 +11,7 @@ HUNTER_KEY = os.environ.get("HUNTER_API_KEY", "")
 LEADS_DB   = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "leads.json")
 FINANCE_DB = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "finance.json")
 
-# ── TARGET 1: Small CPA firms (sell OpsRunner) ──
+# ── TARGET 1: Small CPA firms ──
 CPA_DOMAINS = [
     "padgettbusiness.com", "bookkeeping-express.com", "beachfleischman.com",
     "hhcpa.com", "grfcpa.com", "mhtcpa.com", "wrcpa.com", "mkdcpa.com",
@@ -20,7 +19,7 @@ CPA_DOMAINS = [
     "solomoncpa.com", "westcpa.com", "localcpafirm.com",
 ]
 
-# ── TARGET 2: Small business owners (sell Leakly + OpsRunner) ──
+# ── TARGET 2: Small business owners ──
 SMB_DOMAINS = [
     "shopify.com", "etsy.com", "squarespace.com", "wix.com",
     "restaurantowner.com", "salonowner.com", "fitnessowner.com",
@@ -31,25 +30,21 @@ SMB_DOMAINS = [
 ICP_CPA = """
 IDEAL CUSTOMER — CPA FIRM:
 - Small CPA / bookkeeping firm, 3-20 staff
-- Handles books for 10-50 small business clients  
 - Uses QBO, Xero, or Sage manually
 - Spends 20+ hours/week on reconciliation and data entry
 - Annual revenue: $200K-$2M
 - Pain: too much manual work, can't scale, staff turnover
-- PRODUCT TO SELL: OpsRunner (AI automates 90% of accounting work)
-- NOT: Big 4, KPMG, Deloitte, RSM, BDO, Grant Thornton — too big
+- PRODUCT: OpsRunner (AI automates 90% of accounting work)
+- NOT: Big 4, KPMG, Deloitte, RSM — too big
 """
 
 ICP_SMB = """
 IDEAL CUSTOMER — SMALL BUSINESS OWNER:
 - Business owner with 1-20 employees
 - Pays for 5-15 SaaS subscriptions they may have forgotten about
-- Handles their own books OR pays a bookkeeper
 - Frustrated with bank login requirements for finance apps
-- Annual revenue: $100K-$2M
 - Pain: losing money on unused subscriptions, messy bank statements
-- PRODUCT TO SELL: Leakly (finds hidden subscriptions, no bank login)
-  Also: OpsRunner if they do their own bookkeeping
+- PRODUCT: Scroll_land_find (finds hidden subscriptions from bank statement, no login needed)
 """
 
 def load_leads():
@@ -67,20 +62,18 @@ def save_leads(leads):
         json.dump(leads[:1000], f, indent=2, default=str)
 
 def get_domains_for_run():
-    """Alternate between CPA and SMB targets each run."""
     import hashlib
-    seed  = datetime.datetime.utcnow().strftime("%Y-%m-%d-%H")
-    idx   = int(hashlib.md5(seed.encode()).hexdigest(), 16)
-    # Alternate: even hours = CPA, odd hours = SMB
-    hour  = datetime.datetime.utcnow().hour
+    seed = datetime.datetime.utcnow().strftime("%Y-%m-%d-%H")
+    idx  = int(hashlib.md5(seed.encode()).hexdigest(), 16)
+    hour = datetime.datetime.utcnow().hour
     if hour % 2 == 0:
-        domains  = [CPA_DOMAINS[idx % len(CPA_DOMAINS)], CPA_DOMAINS[(idx+1) % len(CPA_DOMAINS)]]
-        icp      = ICP_CPA
-        segment  = "cpa_firm"
+        domains = [CPA_DOMAINS[idx % len(CPA_DOMAINS)], CPA_DOMAINS[(idx+1) % len(CPA_DOMAINS)]]
+        icp     = ICP_CPA
+        segment = "cpa_firm"
     else:
-        domains  = [SMB_DOMAINS[idx % len(SMB_DOMAINS)], SMB_DOMAINS[(idx+1) % len(SMB_DOMAINS)]]
-        icp      = ICP_SMB
-        segment  = "small_business"
+        domains = [SMB_DOMAINS[idx % len(SMB_DOMAINS)], SMB_DOMAINS[(idx+1) % len(SMB_DOMAINS)]]
+        icp     = ICP_SMB
+        segment = "small_business"
     return domains, icp, segment
 
 def hunter_search(domain):
@@ -90,9 +83,10 @@ def hunter_search(domain):
         r = requests.get("https://api.hunter.io/v2/domain-search", params={
             "domain": domain, "api_key": HUNTER_KEY, "limit": 3,
         }, timeout=15)
-        data = r.json()
+        data   = r.json()
         emails = data.get("data", {}).get("emails", [])
         org    = data.get("data", {}).get("organization", domain)
+        # Only use emails with 70%+ confidence to reduce bounces
         return [{
             "email":      e.get("value", ""),
             "first_name": e.get("first_name", ""),
@@ -103,14 +97,13 @@ def hunter_search(domain):
             "linkedin":   e.get("linkedin", ""),
             "confidence": e.get("confidence", 0),
             "source":     "hunter_verified",
-        } for e in emails if e.get("confidence", 0) >= 60 and e.get("value")]
+        } for e in emails if e.get("confidence", 0) >= 70 and e.get("value")]
     except Exception as e:
         print(f"[HUNTER] Error: {e}")
         return []
 
 def claude_generate_leads(domains, icp, segment):
-    """Claude generates realistic leads when Hunter finds nothing."""
-    system = f"""You are a B2B lead researcher. Generate realistic US leads.
+    system = """You are a B2B lead researcher. Generate realistic US leads.
 Return ONLY valid JSON array. No markdown. No explanation. No comments."""
 
     if segment == "cpa_firm":
@@ -151,7 +144,7 @@ JSON array format:
   "source": "claude_research",
   "segment": "small_business",
   "pain_point": "Specific: e.g. Paying for 12 SaaS tools, forgot about 4 of them, loses $340/month",
-  "why_us": "Leakly finds all hidden subscriptions from their bank statement in 2 minutes, no bank login"
+  "why_us": "Scroll_land_find finds all hidden subscriptions from their bank statement in 2 minutes, no bank login"
 }}]"""
 
     result = call_claude(system, prompt)
@@ -167,31 +160,36 @@ JSON array format:
         return []
 
 def write_cold_email(lead, segment):
-    system = f"""You are a sales copywriter. Write very short cold emails.
+    system = f"""You are a sales copywriter for Jaspal Singh, founder of Scroll_land_find and OpsRunner.
 {PRODUCTS}
-Rules: MAX 90 words in body. Start with their specific pain. One number. End with yes/no question.
-Friendly peer tone. NOT corporate. Sign as Jaspal, singhjaspal3460@gmail.com
-Return ONLY:
-SUBJECT: [under 8 words]
+Rules:
+- MAX 90 words in body
+- Start with their specific pain point
+- Include one specific number or stat
+- End with a simple yes/no question
+- Friendly peer tone, NOT corporate
+- Sign off: Jaspal Singh, singhjaspal3460@gmail.com
+Return ONLY this format (no extra text):
+SUBJECT: [under 8 words, specific to their business]
 BODY:
-[body]"""
+[email body]"""
 
     if segment == "cpa_firm":
-        prompt = f"""Cold email for small CPA firm owner:
+        prompt = f"""Write a cold email for this CPA firm owner:
 Name: {lead['first_name']} {lead['last_name']}
-Company: {lead['company']} (small CPA firm)
-Pain: {lead.get('pain_point', 'manual bookkeeping taking too many staff hours')}
-Product: OpsRunner — AI automates 90% of reconciliation, categorisation, reporting
-Benefit: {lead.get('why_us', 'saves 30+ hours/week per bookkeeper')}
-Tone: peer-to-peer, like one founder to another"""
+Company: {lead['company']}
+Pain: {lead.get('pain_point', 'spending too many staff hours on manual bookkeeping')}
+Product: OpsRunner — AI automates 90% of reconciliation and reporting
+Benefit: {lead.get('why_us', 'saves 30+ hours/week per bookkeeper, clients get reports 5x faster')}
+Tone: one founder to another, direct and honest"""
     else:
-        prompt = f"""Cold email for small business owner:
+        prompt = f"""Write a cold email for this small business owner:
 Name: {lead['first_name']} {lead['last_name']}
 Business: {lead['company']}
 Pain: {lead.get('pain_point', 'paying for forgotten subscriptions every month')}
-Product: Leakly — upload bank statement, finds all hidden subscriptions in 2 min, no bank login needed
-Benefit: {lead.get('why_us', 'finds $200-500/month in forgotten charges on average')}
-Tone: friendly, simple, like a helpful friend"""
+Product: Scroll_land_find — upload your bank statement, find all hidden subscriptions in 2 minutes. No bank login needed, totally private.
+Benefit: {lead.get('why_us', 'average user finds $200-500/month in forgotten charges')}
+Tone: friendly and helpful, like a useful tip from a friend"""
 
     result = call_claude(system, prompt)
     lines   = result.strip().split("\n")
@@ -205,7 +203,16 @@ Tone: friendly, simple, like a helpful friend"""
             in_body = True
         elif in_body:
             body.append(line)
-    return subject, "\n".join(body).strip()
+
+    body_text = "\n".join(body).strip()
+
+    # Fallback if parsing failed
+    if not subject:
+        subject = f"Quick question about {lead.get('company', 'your business')}"
+    if not body_text:
+        body_text = result.strip()
+
+    return subject, body_text
 
 def run():
     existing        = load_leads()
@@ -215,14 +222,14 @@ def run():
 
     print(f"[LEAD FINDER] Segment: {segment} | Domains: {', '.join(domains)}")
 
-    # Try Hunter first
+    # Try Hunter first (real verified emails)
     contacts = []
     for domain in domains:
         contacts.extend(hunter_search(domain))
 
     fresh = [c for c in contacts if c["email"].lower() not in existing_emails]
 
-    # Fallback to Claude
+    # Fallback to Claude-generated leads
     if not fresh:
         print("[LEAD FINDER] Hunter empty — using Claude research")
         fresh = claude_generate_leads(domains, icp, segment)
@@ -235,8 +242,8 @@ def run():
         # Build LinkedIn if missing
         linkedin = contact.get("linkedin", "")
         if not linkedin:
-            fn = contact.get("first_name","").lower().replace(" ","-")
-            ln = contact.get("last_name","").lower().replace(" ","-")
+            fn     = contact.get("first_name","").lower().replace(" ","-")
+            ln     = contact.get("last_name","").lower().replace(" ","-")
             suffix = "-cpa" if segment == "cpa_firm" else ""
             linkedin = f"https://www.linkedin.com/in/{fn}-{ln}{suffix}"
 
@@ -259,7 +266,8 @@ def run():
             "why_us":          contact.get("why_us",""),
             "email_subject":   subject,
             "email_body":      body,
-            "status":          "new",
+            # AUTO-APPROVED — no manual step needed
+            "status":          "approved",
             "follow_up_count": 0,
             "notes":           "",
             "created_at":      datetime.datetime.utcnow().isoformat(),
@@ -269,7 +277,7 @@ def run():
         }
         new_leads.append(lead)
         existing_emails.add(contact["email"].lower())
-        print(f"[LEAD FINDER] ✓ {segment}: {contact.get('first_name')} {contact.get('last_name')} <{contact['email']}> — {contact.get('company')}")
+        print(f"[LEAD FINDER] ✓ {segment}: {contact.get('first_name')} {contact.get('last_name')} <{contact['email']}> — {contact.get('company')} [AUTO-APPROVED]")
 
     if new_leads:
         all_leads = new_leads + existing
@@ -283,7 +291,7 @@ def run():
                 json.dump(fin, f, indent=2)
         except:
             pass
-        print(f"[LEAD FINDER] ✓ Added {len(new_leads)} new {segment} leads")
+        print(f"[LEAD FINDER] ✓ Added {len(new_leads)} new leads — all auto-approved for sending")
     else:
         print("[LEAD FINDER] No new leads this run")
 
