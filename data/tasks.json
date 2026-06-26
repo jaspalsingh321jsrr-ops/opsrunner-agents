@@ -1,5 +1,18 @@
 [
   {
+    "id": "285e4e97",
+    "agent": "Finance agent",
+    "manager": "VP Operations",
+    "task_type": "financial_report",
+    "title": "Finance report \u2014 June 26 2026",
+    "output": "# DAILY FINANCE INTELLIGENCE REPORT\n**Leakly + OpsRunner Financial Analysis**  \n*June 26, 2026 | Prepared for: Jaspal Singh*\n\n---\n\n## 1. LEAKLY SAAS \u2014 12-MONTH REVENUE MODEL\n\n**Assumptions:**\n- Free tier: 3 uploads/month (acquisition funnel)\n- Pro: $9.99/mo (target: SMEs, freelancers, individual CFOs)\n- Business: $29.99/mo (target: small firms, teams)\n- Conservative conversion: Free \u2192 Pro = 3-5%, Free \u2192 Business = 0.5-1%\n- Monthly churn: 7% (SaaS benchmark for $10 tier)\n- CAC payback period goal: 4 months\n\n| Month | Free Users | Pro Paid | Business Paid | MRR (Pro) | MRR (Business) | Total MRR | ARR Projection |\n|-------|-----------|---------|---------------|-----------|----------------|-----------|-----------------|\n| M1 (Jun) | 150 | 5 | 0 | $50 | $0 | $50 | $600 |\n| M2 (Jul) | 420 | 18 | 1 | $179 | $30 | $209 | $2,508 |\n| M3 (Aug) | 890 | 42 | 3 | $419 | $90 | $509 | $6,108 |\n| M4 (Sep) | 1,680 | 88 | 8 | $878 | $240 | $1,118 | $13,416 |\n| M5 (Oct) | 2,890 | 156 | 18 | $1,557 | $540 | $2,097 | $25,164 |\n| M6 (Nov) | 4,230 | 242 | 35 | $2,419 | $1,050 | $3,469 | $41,628 |\n| M7 (Dec) | 5,800 | 335 | 58 | $3,341 | $1,740 | $5,081 | $60,972 |\n| M8 (Jan) | 7,350 | 425 | 82 | $4,240 | $2,460 | $6,700 | $80,400 |\n| M9 (Feb) | 8,700 | 502 | 108 | $5,015 | $3,240 | $8,255 | $99,060 |\n| M10 (Mar) | 9,850 | 565 | 132 | $5,639 | $3,960 | $9,599 | $115,188 |\n| M11 (Apr) | 10,600 | 612 | 154 | $6,108 | $4,620 | $10,728 | $128,736 |\n| M12 (May) | 11,000 | 645 | 172 | $6,437 | $5,160 | $11,597 | **$139,164** |\n\n**Cumulative Revenue (12 months): $59,082**\n\n---\n\n## 2. PRICING DECISION \u2014 LEAKLY PRO\n\n**Scenario Analysis at 500 Paid Users (Pro tier only):**\n\n| Price Point | Monthly Revenue | Annual Revenue | Implied Churn (%) | LTV Impact |\n|-------------|-----------------|-----------------|-------------------|-----------|\n| **$7.99** | $3,995 | $47,940 | 8.5% | $79.80 |\n| **$9.99** | $4,995 | $59,940 | 7.0% | $99.80 |\n| **$12.99** | $6,495 | $77,940 | 5.5% | $129.80 |\n\n### RECOMMENDATION: **$9.99/month** \u2713\n\n**Rationale:**\n1. **Goldilocks pricing** \u2014 Not \"too cheap\" (devalues privacy advantage), not \"too premium\" (Copilot $10.99 is direct competitor)\n2. **Psychological anchor** \u2014 $9.99 feels like entry-level SaaS; justifies feature parity vs. Rocket Money\n3. **Churn assumption** \u2014 7% is realistic for self-serve, sticky product (bank statement uploads = recurring need)\n4. **Conversion math** \u2014 At 3-4% free\u2192paid, 500 users = ~13K-17K free users (achievable in 6 months with organic + some paid)\n5. **Upgrade path** \u2014 Creates mental bandwidth for Business tier ($29.99) later; $20 jump is acceptable\n\n**Revenue impact of moving from $9.99 to $12.99:**  \n+$1.5K/mo revenue, but expect 15-20",
+    "status": "completed",
+    "created_at": "2026-06-26T17:57:42.658357",
+    "updated_at": "2026-06-26T17:57:43.401338",
+    "revision_note": "\u2713 VP Operations approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "0dede29a",
     "agent": "Client success agent",
     "manager": "VP Revenue",
