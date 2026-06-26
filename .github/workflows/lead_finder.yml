@@ -12,16 +12,26 @@ jobs:
       - uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/setup-python@v5.4.0
         with:
           python-version: '3.11'
+
       - run: pip install anthropic requests python-dotenv
-      - name: Run lead finder
+
+      - name: Find leads + write emails
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
         run: python agents/lead_finder.py
-      - name: Run manager review
+
+      - name: Send emails immediately (no approval needed)
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: python agents/email_sender.py
+
+      - name: Manager review
         run: python agents/manager.py
 
       - name: Save results
@@ -29,5 +39,5 @@ jobs:
           git config user.name "OpsRunner Bot"
           git config user.email "bot@opsrunner.ai"
           git add data/leads.json data/finance.json
-          git diff --staged --quiet || git commit -m "Lead finder run — $(date -u +%Y-%m-%d-%H%M)"
+          git diff --staged --quiet || git commit -m "Lead finder + auto-send — $(date -u +%Y-%m-%d-%H%M)"
           git push
