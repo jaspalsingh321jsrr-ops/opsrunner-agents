@@ -25,7 +25,21 @@ jobs:
           HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
         run: python agents/lead_finder.py
 
-      - name: Send emails immediately (no approval needed)
+      - - name: Debug Gmail credentials
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: |
+          python3 -c "
+import os
+email = os.environ.get('GMAIL_EMAIL', 'NOT_SET')
+pwd = os.environ.get('GMAIL_PASSWORD', 'NOT_SET')
+print(f'Email set: {email != chr(78)+chr(79)+chr(84)+chr(95)+chr(83)+chr(69)+chr(84)}')
+print(f'Email value: {email}')
+print(f'Password set: {pwd != chr(78)+chr(79)+chr(84)+chr(95)+chr(83)+chr(69)+chr(84)}')
+print(f'Password length: {len(pwd)}')
+print(f'Has spaces: {chr(32) in pwd}')
+name: Send emails immediately (no approval needed)
         env:
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
