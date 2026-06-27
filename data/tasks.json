@@ -1,5 +1,18 @@
 [
   {
+    "id": "7a4daa77",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 27",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 JUNE 27\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got easier \u2728\n\n**Body:**\nHey! Welcome to Scroll_land_find. We're stoked you're here.\n\nNo login needed. No sketchy connections. Just upload your PDF, Excel, or CSV\u2014and we'll show you exactly where your money goes.\n\nTakes 2 minutes. Zero friction.\n\nYour first 3 uploads are free. Let's find some insights.\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Uploaded Once, Not Returning)\n\n**Subject:** Found something interesting in your statement \ud83d\udc40\n\n**Body:**\nHi [Name]!\n\nWe processed your first upload. There's stuff worth knowing\u2014spending patterns, recurring charges, potential savings.\n\nBut you won't see it until you log back in.\n\nQuick 30-second visit. Promise.\n\n**CTA Button:** See What We Found For You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** You've unlocked Pro features (try free for 7 days)\n\n**Body:**\nGreat news\u2014you've used all 3 free uploads. That means Scroll_land_find is working for you.\n\nPro gives you unlimited uploads + AI summaries + categorization magic + export reports.\n\n$9.99/month. First week free.\n\nReady to go deeper?\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We miss you\u2014come back for 1 month free\n\n**Body:**\n[Name], we noticed you cancelled.\n\nNo hard feelings. But we'd love to have you back.\n\nHere's the deal: come back, and we'll credit one month free. No strings.\n\nWhether you need it for tax season or just checking in occasionally\u2014Scroll_land_find is here when you need us.\n\n**CTA Button:** Come Back \u2014 Claim 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Help us find more people like you\n\n**Body:**\n[Name], you gave us a 9/10. That means the world.\n\nWe're growing through word-of-mouth\u2014real people telling real people.\n\nKnow a friend or colleague who hates logging into their bank? One accountant tired of manual work?\n\nShare your unique referral link. They get $5 off. You get $10 credit when they sign up.\n\n**CTA Button:** Share Scroll_land_find With One Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS\n\n**Email 1 (Welcome):**\nHey! \ud83d\udc4b Welcome to Scroll_land_find. Upload your bank statement (PDF/Excel/CSV) - no login needed. 3 free uploads to start. https://scrollandfind.com\n\n**Email 3 (Pro Upgrade):**\nYou've maxed your free uploads! \ud83c\udf89 Try Pro free for 7 days\u2014unlimited uploads, AI summaries, smart categorization. Just $9.99/mo after. Ready? https://scrollandfind.com/upgrade\n\n**Email 4 (Churn Save):**\nWe miss you! \ud83d\ude22 Come back to Scroll_land_find & get 1 month free. Privacy-first bank analysis. No login needed. https://scrollandfind.com/comeback\n\n---\n\n**Sent by:** Jaspal Singh | Scroll_land_find  \n**Questions?** singhjaspal3460@gmail.com",
+    "status": "completed",
+    "created_at": "2026-06-27T13:11:18.258873",
+    "updated_at": "2026-06-27T13:11:19.013078",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "72df2385",
     "agent": "Sales agent",
     "manager": "VP Revenue",
