@@ -1,5 +1,18 @@
 [
   {
+    "id": "236a6b53",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 28",
+    "output": "# SCROLL_LAND_FIND \u2014 CLIENT SUCCESS EMAIL TOOLKIT\n**Date: June 28**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User, No Upload Yet)\n\n**Subject:** Your bank statements. Private. Instant insights.\n\n**Body:**\nHey! Welcome to Scroll_Land_Find.\n\nNo login. No sharing passwords. Just upload your bank statement (PDF, Excel, or CSV) and we'll analyze it in seconds.\n\nSee where your money goes. Spot savings. Take control.\n\nYour privacy is ours to protect.\n\nReady?\n\n**CTA:** Upload your first statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once, Silent)\n\n**Subject:** You're missing these spending insights \ud83d\udc40\n\n**Body:**\nHey there!\n\nYou uploaded one statement. Good start.\n\nBut the real magic happens when you upload a few months\u2014trends emerge. Patterns show. You'll see exactly where money leaks.\n\nTakes 30 seconds. No passwords needed.\n\n**CTA:** See what we found for you\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlimited uploads. Same privacy. Just $9.99/mo.\n\n**Body:**\nLove Scroll_Land_Find?\n\nYou've hit your free limit (3 uploads). But your financial story isn't over.\n\nPro unlocks unlimited statements. Monthly trends. Export reports. All private. Always.\n\nOne month free. No credit card for first 30 days.\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro Subscription)\n\n**Subject:** We miss you. One month free to come back.\n\n**Body:**\nSorry to see you go.\n\nWe built Scroll_Land_Find for people who value privacy. If something wasn't right, we want to know.\n\nCome back. One month free. No strings.\n\nOr just reply\u2014we're listening.\n\n**CTA:** Come back \u2014 1 month free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** You love us. Your friends will too.\n\n**Body:**\nThanks for the love.\n\nYou get it\u2014privacy matters. Bank statements shouldn't require passwords.\n\nKnow someone drowning in spending chaos? Share Scroll_Land_Find.\n\nThey get free uploads. You both win.\n\n**CTA:** Share Scroll_Land_Find with one friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS (Under 160 Characters)\n\n**Email 1 (Welcome):**\nHey! Welcome to Scroll_Land_Find. No login. Upload your bank statement (PDF/Excel/CSV) and get instant spending insights. Privacy first. Ready? \u2192 [link]\n\n**Email 3 (Free \u2192 Pro):**\nLove Scroll_Land_Find? You've hit your free limit. Go Pro\u2014unlimited uploads, same privacy, just $9.99/mo. 1 month free to try. \u2192 [link]\n\n**Email 4 (Churn Save):**\nWe miss you! Come back to Scroll_Land_Find. Get 1 month free. No credit card. No strings. Your privacy matters to us. \u2192 [link]\n\n---\n\n**Tone:** Warm, human, value-first. No pressure. Privacy is the hero. Each email has a clear next step.",
+    "status": "completed",
+    "created_at": "2026-06-28T16:59:08.679063",
+    "updated_at": "2026-06-28T16:59:09.442573",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "f550c935",
     "agent": "Sales agent",
     "manager": "VP Revenue",
