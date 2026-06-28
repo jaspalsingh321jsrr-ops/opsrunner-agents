@@ -1,5 +1,18 @@
 [
   {
+    "id": "40c68625",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 28",
+    "output": "# SCROLL_LAND_FIND \u2014 CLIENT SUCCESS EMAIL TOOLKIT\n**Date: June 28**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User, No Upload Yet)\n\n**Subject:** Your bank statements just got easier \ud83d\udcca\n\n**Body:**\nHey! Welcome to Scroll_land_find.\n\nNo login needed. No sharing passwords. Just upload your PDF, Excel, or CSV file\u2014we'll analyze it instantly.\n\nSee spending patterns. Spot duplicate charges. Find hidden opportunities.\n\nTakes 2 minutes.\n\nReady?\n\n**CTA:** Upload your first statement free\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, One Upload, Silent)\n\n**Subject:** We found something in your statement\n\n**Body:**\nRemember that bank file you uploaded?\n\nWe've already identified key insights\u2014recurring charges, spending patterns, potential savings.\n\nMost users spot 2-3 things they didn't know about their accounts.\n\nSee your analysis now. It's ready.\n\n**CTA:** See what we found for you\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlock unlimited bank analysis\n\n**Body:**\nYou've hit your 3 free uploads.\n\nGood news? Pro users analyze unlimited statements\u2014monthly, quarterly, whenever you need.\n\nPlus faster processing. Priority support. Export reports.\n\n$9.99/month. Cancel anytime.\n\nPerfect for tracking accounts, tax prep, or monthly reviews.\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We miss you\u2014here's 1 month free\n\n**Body:**\nWe noticed you paused your subscription.\n\nNo hard feelings. But we'd love to have you back.\n\nUse code COMEBACK for 1 free month of Pro. No strings. Full access to unlimited uploads, exports, and insights.\n\nIf something didn't work, reply\u2014we're here to help.\n\n**CTA:** Come back \u2014 1 month free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Know someone who needs this?\n\n**Body:**\nYou've been amazing. Your feedback helps us build better.\n\nWe're growing one happy user at a time. If you know someone managing finances or prepping taxes, they'd probably love Scroll_land_find too.\n\nSend them your referral link\u2014they get $10 off Pro, you get a free month.\n\n**CTA:** Share Scroll_land_find with one friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS\n\n## WhatsApp \u2014 EMAIL 1 (Welcome)\n**160 chars:** Hey! No bank login needed. Upload your bank PDF/CSV to Scroll_land_find\u2014see spending patterns & savings in 2 min. Free. Try now: [link] \ud83d\udcca\n\n## WhatsApp \u2014 EMAIL 3 (Free \u2192 Pro)\n**160 chars:** Loved Scroll_land_find? Go Pro for unlimited uploads, faster analysis & exports. Just $9.99/mo. Try free: [link] \ud83d\ude80\n\n## WhatsApp \u2014 EMAIL 4 (Churn Save)\n**160 chars:** We miss you! Come back to Pro for 1 FREE month. Code: COMEBACK. Unlimited bank analysis + priority support: [link] \ud83d\udc99\n\n---\n\n**Ready to deploy. All copy is warm, benefit-focused, and respects user privacy (Scroll_land_find's key differentiator).**",
+    "status": "completed",
+    "created_at": "2026-06-28T02:36:41.095560",
+    "updated_at": "2026-06-28T02:36:41.826278",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "0cf707d5",
     "agent": "Sales agent",
     "manager": "VP Revenue",
