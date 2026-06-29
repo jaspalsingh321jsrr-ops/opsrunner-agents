@@ -1,5 +1,18 @@
 [
   {
+    "id": "38d5273e",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 29",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT\n**Date: June 29**\n\n---\n\n## EMAIL 1 \u2014 WELCOME (NEW FREE USER)\n\n**Subject:** Your bank statements just got smarter \ud83d\udd0d\n\n**Body:**\nHey! Welcome to Scroll & Find.\n\nWe make bank statement analysis simple. No login. No hassle. Just upload your PDF or CSV, and we'll uncover spending patterns, tax deductions, and cash flow insights in seconds.\n\nYour privacy stays with you\u2014always.\n\nReady to try it?\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE\n\n**Subject:** You have 3 free uploads waiting \u23f0\n\n**Body:**\nHi there,\n\nYou created your account, but haven't explored your statements yet. Here's what you're missing:\n\n\u2713 Real spending categories (not guesses)\n\u2713 Tax-deductible expenses flagged\n\u2713 Monthly trends you can act on\n\nIt takes 60 seconds. No credit card. No login required.\n\nLet's dig in.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE\n\n**Subject:** You've unlocked unlimited uploads \ud83c\udf89\n\n**Body:**\nGreat news\u2014you've hit your free limit, and it's working.\n\nPro users analyze unlimited statements, track 12+ months of data, and export custom reports. That's $9.99/month (less than one coffee).\n\nAccounting firms and CFOs use Pro to save 5+ hours monthly on reconciliation.\n\nReady to go deeper?\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE\n\n**Subject:** Let's get you back on track \ud83d\udc99\n\n**Body:**\nWe noticed you cancelled your Pro plan. No judgment\u2014just want to make sure we didn't miss something.\n\nWhat would help? More features? Better support? Different price?\n\nWe'd love to earn you back. Try 1 month free. No strings. Just great analysis and your peace of mind.\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK\n\n**Subject:** Your friends need this (and so do we!) \ud83d\ude4c\n\n**Body:**\nYou clearly love Scroll & Find\u2014your feedback proves it.\n\nKnow a CFO, accountant, or business owner tired of manual statement work? Share your unique referral link. They get $10 off. You get $10 credit.\n\nEveryone wins. Privacy stays protected.\n\n**CTA Button:** Share Leakly with One Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS\n\n**For Email 1 (Welcome):**\nWelcome to Scroll & Find! \ud83d\udd0d Upload your bank statement (PDF/CSV) in 60 seconds. No login needed. We'll show you spending patterns & deductions. Privacy first. Start free \u2192 [link]\n\n**For Email 3 (Pro Upgrade):**\n\ud83c\udf89 Unlimited uploads unlock at Pro! Track 12+ months, export reports, save 5+ hours/mo. Only $9.99/mo. Perfect for firms & CFOs. Upgrade now \u2192 [link]\n\n**For Email 4 (Churn Save):**\nWe miss you! \ud83d\udc99 Your Pro account has been cancelled. Come back + get 1 month free (no strings). Let's get your statements sorted \u2192 [link]",
+    "status": "completed",
+    "created_at": "2026-06-29T15:32:03.576485",
+    "updated_at": "2026-06-29T15:32:04.429777",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "1f57f7ae",
     "agent": "Finance agent",
     "manager": "VP Operations",
