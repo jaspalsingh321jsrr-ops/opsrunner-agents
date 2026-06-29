@@ -1,5 +1,18 @@
 [
   {
+    "id": "c5ca3df9",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 29",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 June 29\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \u2728\n\n**Body:**\nHey! Welcome to Scroll_land_find. \n\nWe analyze your bank statements in seconds\u2014no login, no passwords shared. Just upload a PDF, Excel, or CSV and see exactly where your money goes.\n\nPrivacy-first. Simple. Free.\n\nReady to start?\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Not Back)\n\n**Subject:** We found some interesting patterns in your data\n\n**Body:**\nHi there,\n\nYou uploaded a statement, and we already spotted some insights\u2014recurring charges you might have missed, spending trends, cash flow patterns.\n\nYour data's still here. Want to see what we found?\n\nTakes 30 seconds to check.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Keep analyzing\u2014upgrade to Pro\n\n**Body:**\nGreat news: you've hit your free tier limit (3 uploads).\n\nWith Pro, you get unlimited uploads, multi-month analysis, and export reports for your accountant or CFO.\n\nJust $9.99/month. Cancel anytime.\n\nReady to keep going?\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We miss you\u2014come back free for a month\n\n**Body:**\nWe noticed you cancelled your Pro subscription.\n\nNo judgment. Just wanted to say: we miss your data. \n\nCome back for one month completely free. No card required. See if Pro fits better now.\n\n**CTA Button:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Help a friend take control of their finances\n\n**Body:**\nYou love Scroll_land_find\u2014we love that about you.\n\nKnow someone buried in spreadsheets or worried about sharing bank login? Share our link. They get free access. You both get $10 Pro credit.\n\nIt's that simple.\n\n**CTA Button:** Share Scroll_land_find with One Friend\n\n---\n\n## WHATSAPP MESSAGE VERSIONS\n\n**For Email 1 (Welcome):**\nWelcome to Scroll_land_find! \ud83d\udcca Upload your bank statement (PDF/Excel/CSV)\u2014no login needed. Privacy first. Start free: [link]\n\n**For Email 3 (Upgrade):**\nYou've loved analyzing your data! \ud83c\udfaf Go unlimited with Pro ($9.99/mo). Unlimited uploads + multi-month insights. Upgrade now: [link]\n\n**For Email 4 (Churn Save):**\nWe miss you! \ud83d\ude22 Come back to Scroll_land_find\u20141 month FREE. No card needed. Let's get you back on track: [link]",
+    "status": "completed",
+    "created_at": "2026-06-29T02:36:40.681033",
+    "updated_at": "2026-06-29T02:36:41.427978",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "362d1260",
     "agent": "Marketing agent",
     "manager": "VP Revenue",
