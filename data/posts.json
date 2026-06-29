@@ -1,5 +1,19 @@
 [
   {
+    "id": "d75601d8",
+    "type": "problem_stats",
+    "angle": "Subscription blindness \u2014 Americans spend $219/mo, 2.5x what they think. 59.9% have unused subscriptions.",
+    "goal": "Problem awareness \u2014 make people realise they have this problem",
+    "linkedin": "**$219/month. You have no idea where it's going.**\n\nMost Americans think they spend $87 on subscriptions. Reality? They're spending $219. That's 2.5x higher than their own estimate.\n\nAnd here's the brutal part: 59.9% of those subscriptions sit completely unused.\n\nThat's $2,628 a year bleeding out of your account while you sleep.\n\nYou're not bad with money. You're just not *seeing* the problem.\n\nNetflix. Gym. Slack. HubSpot. Adobe. Notion. That app you tried once. The \"free trial\" that auto-converted.\n\nThey stack quietly. Autopay hides them. You stop noticing.\n\nUntil one day your CFO (or worse, your spouse) asks: \"What IS this $18.99 charge?\"\n\nThe gap between what you think you spend and what you actually spend? That's where your money disappears.\n\nStop guessing. See it.\n\n**Upload your bank statement free \u2014 takes 2 minutes. No login required.**\n\nleakly-psi.vercel.app\n\n#SubscriptionAudit #FinancialAwareness #MoneySense\n\n---",
+    "twitter": "**LinkedIn: 9:47 AM IST**\n- Early morning (post-commute) = peak engagement window\n- Monday morning = people in \"reset mode\" \u2014 more receptive to financial problems\n- Accounting firms & CFOs check LinkedIn over morning coffee (high relevance to target)\n\n**Twitter/X: 11:30 AM IST**\n- Higher retweet velocity during mid-morning desk time\n- Thread readership peaks when people have 15 min to consume thread\n- Better for viral potential before lunch scroll drop\n\n---",
+    "timing": "",
+    "why_today": "**Monday = financial reset mindset.** People start their week thinking about money (budget review, expenses, cash flow). Your problem stat lands when their brain is primed to care.",
+    "status": "ready",
+    "post_date": "2026-06-29T03:34:22.784946",
+    "char_count": 935,
+    "created_at": "2026-06-29T03:34:22.784946"
+  },
+  {
     "id": "697554b9",
     "type": "opsrunner",
     "angle": "Accounting firms spend $30K-$80K/month on staff for work that AI can do. OpsRunner automates 9 departments \u2014 reconciliation, categorisation, compliance, reporting.",
