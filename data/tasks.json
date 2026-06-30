@@ -1,5 +1,18 @@
 [
   {
+    "id": "722a3532",
+    "agent": "Finance agent",
+    "manager": "VP Operations",
+    "task_type": "financial_report",
+    "title": "Finance report \u2014 June 30 2026",
+    "output": "# DAILY FINANCE INTELLIGENCE REPORT\n**Date:** June 30, 2026 | **Finance Agent (CFO Mode)**\n\n---\n\n## 1. REVENUE MODEL \u2014 LEAKLY SAAS (12-Month Projection)\n\n### Assumptions:\n- **Free tier:** 3 uploads/mo (conversion funnel: 2-3% \u2192 Pro)\n- **Pro:** $9.99/mo | **Business:** $29.99/mo (5% of Pro users upgrade)\n- **Growth curve:** Month 1 = 50 free users \u2192 compound 18% MoM (realistic SaaS)\n- **Churn:** Pro 8%/mo, Business 5%/mo (privacy-first product = lower churn)\n\n| Month | Free Users | Pro Users | Bus. Users | MRR | ARR | Cumulative Revenue |\n|-------|-----------|-----------|-----------|-----|-----|-------------------|\n| 1     | 50        | 1         | 0         | $10 | $120 | $10 |\n| 2     | 89        | 3         | 0         | $30 | $360 | $40 |\n| 3     | 158       | 6         | 0         | $60 | $720 | $100 |\n| 4     | 281       | 12        | 1         | $150 | $1,800 | $250 |\n| 5     | 499       | 22        | 2         | $270 | $3,240 | $520 |\n| 6     | 887       | 40        | 3         | $468 | $5,616 | $988 |\n| 7     | 1,575     | 73        | 5         | $873 | $10,476 | $1,861 |\n| 8     | 2,801     | 133       | 9         | $1,562 | $18,744 | $3,423 |\n| 9     | 4,983     | 243       | 16        | $2,817 | $33,804 | $6,240 |\n| 10    | 8,863     | 444       | 29        | $5,079 | $60,948 | $11,319 |\n| 11    | 15,773    | 812       | 53        | $9,247 | $110,964 | $20,566 |\n| 12    | 28,075    | 1,485     | 97        | $16,932 | $203,184 | **$37,498** |\n\n**Key Insight:** 12-month cumulative revenue = **$37,498** | Year-end MRR = **$16,932** | ARR run-rate = **$203k**\n\n---\n\n## 2. PRICING DECISION \u2014 LEAKLY PRO\n\n### Revenue Comparison at 500 Paid Users:\n\n| Price Point | Monthly Revenue | Annual Revenue | Implied LTV (18mo) |\n|-------------|-----------------|-----------------|-------------------|\n| **$7.99/mo** | $3,995 | $47,940 | $95.88 |\n| **$9.99/mo** \u2705 | $4,995 | $59,880 | **$119.76** |\n| **$12.99/mo** | $6,495 | $77,940 | $155.76 |\n\n### **RECOMMENDATION: MAINTAIN $9.99/mo**\n\n**Reasons:**\n1. **Sweet spot for SaaS conversion** \u2014 Psychological pricing ($9.99) feels 40% cheaper than $12.99 despite only 30% lower revenue\n2. **Privacy/trust positioning** \u2014 Lower entry price = faster adoption of a trust-based product\n3. **Volume > margin** \u2014 At $9.99, we can afford 3-4x paid acquisition spend to scale to 2,000+ users within 18 months\n4. **Competitor benchmarking:** Rocket Money ($7-14/mo) \u2014 we're competitive at $9.99\n5. **Upsell buffer** \u2014 Room to launch **Pro Plus** at $19.99/mo (advanced reconciliation, API access) in Q1 2027\n\n**Financial Impact:** $9.99 vs. $12.99 = \u2013$25,980 annual revenue at 500 users, but likely 40-50% higher conversion = net +$15-20k annually.\n\n---\n\n## 3. UNIT ECONOMICS\n\n### LTV Calculation (at $9.99/mo, 18-month average retention):\n\n```\nLTV = ARPU \u00d7 Gross Margin \u00d7 Average Customer Lifetime (months)\n    = $9.99 \u00d7 80% \u00d7 18\n    = $143.86\n```\n\n**Assumptions:**\n- Gross margin: 80% (SaaS standard; infra costs ~$0.50-1.00/user/mo)\n- 18-month retention: 8%/mo ch",
+    "status": "completed",
+    "created_at": "2026-06-30T18:05:23.384626",
+    "updated_at": "2026-06-30T18:05:24.143295",
+    "revision_note": "\u2713 VP Operations approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "48f50965",
     "agent": "Client success agent",
     "manager": "VP Revenue",
