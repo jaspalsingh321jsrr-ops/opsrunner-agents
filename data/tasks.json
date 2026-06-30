@@ -1,5 +1,18 @@
 [
   {
+    "id": "70575407",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 June 30",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 June 30\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got simpler \u2728\n\n**Body:**\nHey! Thanks for joining Scroll_land_find.\n\nWe're different\u2014no login needed, no credential sharing. Just upload your PDF, Excel, or CSV and we'll analyze everything in seconds.\n\nSee where your money's actually going. Spot hidden fees. Catch duplicate charges.\n\nReady to get started?\n\n**CTA:** Upload your first statement \u2192\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Uploaded Once, Not Back)\n\n**Subject:** We found some insights in your statement\n\n**Body:**\nHi there,\n\nYou uploaded once\u2014nice! But there's more to uncover.\n\nYour full financial picture lives across multiple statements. Upload your last 3 months and we'll show you spending patterns, category breakdowns, and opportunities most people miss.\n\nIt takes 2 minutes.\n\n**CTA:** See what we found for you \u2192\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlimited insights await\u2014$9.99/mo\n\n**Body:**\nYou've maxed out your free uploads (nice work!).\n\nPro unlocks unlimited statements. Track spending over months. Get alerts for unusual activity. Export reports for your accountant.\n\nPerfect for freelancers, small biz owners, and CFOs who need real financial clarity\u2014fast.\n\nFirst month only $9.99.\n\n**CTA:** Upgrade to Pro \u2192\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We miss you\u2014come back for 1 month free\n\n**Body:**\nWe noticed you cancelled. No judgment!\n\nWe'd love another shot. Here's what changed: faster uploads, better categorization, and new export options.\n\nCome back for a month\u2014completely free. No credit card. See if it fits better now.\n\n**CTA:** Restart Pro free \u2192\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (NPS 9-10)\n\n**Subject:** Help your friends see their finances clearly\n\n**Body:**\nYou rated us 9/10. That means the world.\n\nWe're growing word-of-mouth because of users like you. Share Scroll_land_find with one friend who's curious about their bank activity.\n\nThey get their first month free. You both win.\n\n**CTA:** Share with one friend \u2192\n\n---\n\n# WHATSAPP MESSAGE VERSIONS\n\n**EMAIL 1 + EMAIL 3 + EMAIL 4 (Combined messaging):**\n\n\ud83d\udd10 No login needed. Upload your statement in seconds. See where your money goes. Try free \u2192 [link] #ScrollandFind\n\n**EMAIL 3 (Upgrade focus):**\n\nUnlimited insights. $9.99/mo. Track spending trends. Export for your accountant. Upgrade now \u2192 [link]\n\n**EMAIL 4 (Win-back):**\n\nWe miss you! 1 month free on Pro. No credit card. Come back and see what's new \u2192 [link]\n\n---\n\n**Notes for sending:**\n- Send EMAIL 1 immediately after signup\n- Send EMAIL 2 on day 3 (auto-trigger if no 2nd upload)\n- Send EMAIL 3 when user hits free tier limit\n- Send EMAIL 4 within 48 hours of cancellation\n- Send EMAIL 5 monthly to NPS 9-10 segment\n- WhatsApp versions 2-3 days after email send (higher open rates)",
+    "status": "completed",
+    "created_at": "2026-06-30T07:42:55.203529",
+    "updated_at": "2026-06-30T07:42:55.965367",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "70a74f4c",
     "agent": "Finance agent",
     "manager": "VP Operations",
