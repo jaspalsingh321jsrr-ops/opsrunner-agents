@@ -1,5 +1,19 @@
 [
   {
+    "id": "b4a5e5ad",
+    "type": "product_story",
+    "angle": "How Leakly finds hidden subscriptions in your bank statement \u2014 no bank login, no credentials, upload PDF/Excel/CSV.",
+    "goal": "Product education \u2014 show how it works in simple terms",
+    "linkedin": "**Why:** 15 minutes after LinkedIn post (staggered visibility). Twitter's morning engagement peaks when people check feeds during coffee. By 7:45 AM IST, US West Coast (10:15 PM previous night) overlaps with India morning\u2014dual audience sweet spot.\n\n---",
+    "twitter": "**1/7**\nYour bank statement is full of zombie subscriptions.\n\nSpotify you cancelled 6 months ago? Still charging.\nAdobe trial that \"ended\"? Still there.\nGym membership you forgot about? Yep.\n\nAmericans leak $2,628/year on subscriptions they don't use.\n\nBut your bank won't highlight them.\n\n---\n\n**2/7**\nHere's the problem: Banks show raw transaction data.\n\n\"SPOTIFY SA\" on June 15.\n\"ADOBE SYSTEMS\" on June 20.\n\"AMZN DIGITAL\" on June 22.\n\nYou're supposed to memorize which ones are subscriptions. Which ones you wanted. Which ones are fraud.\n\nSpoiler: You don't.\n\n---\n\n**3/7**\nMost people catch ghost subscriptions by accident.\n\nRandom scroll through statements.\nPartner says: \"Why are we still paying this?\"\nCredit card company calls about unusual activity.\n\nBy then, $100-500 is already gone.\n\nDetection should be automatic. Not luck.\n\n---\n\n**4/7**\nLeakly does the work for you.\n\nUpload your bank statement PDF. Excel. CSV.\nNo bank login. No credentials handed over.\nIn 30 seconds: every recurring charge flagged.\n\nYou see exactly which subscriptions are active. Cost. Frequency. Next charge date.\n\nPrivacy intact.\n\n---\n\n**5/7**\nReal example from users:\n\nOne person found $340/month in forgotten subscriptions.\nAnother caught a fraudulent charge before it became worse.\nMany just got clarity on where their money actually goes.\n\nTurns out that matters when you're bleeding cash monthly.\n\n---\n\n**6/7**\nWhy this works:\n\n\u2713 No bank login required (privacy-first)\n\u2713 Works with US + India statements\n\u2713 Reads PDF, Excel, CSV files\n\u2713 Takes 30 seconds\n\u2713 Free tier available\n\nYou control your data. You own the insights.\n\n---\n\n**7/7**\nStop paying for subscriptions you forgot about.\n\nTry Leakly free\u2014no credit card needed.\n\nleakly-psi.vercel.app\n\n#FinanceTools #SubscriptionAudit #PersonalFinance\n\n---",
+    "timing": "",
+    "why_today": "**Wednesday is \"mid-week money check\" psychology**\u2014users are halfway through pay period, thinking about budget leaks and Q3 financial planning begins the following week.\n\n---",
+    "status": "ready",
+    "post_date": "2026-07-01T03:29:54.857481",
+    "char_count": 252,
+    "created_at": "2026-07-01T03:29:54.857481"
+  },
+  {
     "id": "d75601d8",
     "type": "problem_stats",
     "angle": "Subscription blindness \u2014 Americans spend $219/mo, 2.5x what they think. 59.9% have unused subscriptions.",
