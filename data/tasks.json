@@ -1,5 +1,18 @@
 [
   {
+    "id": "1285b9b4",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 July 01",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 JULY 01\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \ud83d\udcca\n\n**Body:**\nHey! Welcome to Scroll & Find.\n\nNo login needed. No passwords shared. Just upload your PDF, Excel, or CSV\u2014and we'll instantly spot spending patterns, recurring charges, and hidden savings.\n\nYour privacy comes first. Always.\n\nUpload your first statement now. Takes 60 seconds.\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Not Returned)\n\n**Subject:** One user found $340 in recurring charges (you might too)\n\n**Body:**\nHi there,\n\nThree days ago you joined Scroll & Find. But we haven't seen your bank statements yet.\n\nHere's the thing: most users spot 2-3 charges they forgot about within minutes.\n\nYour statement is waiting. Let's find what you're missing.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlimited uploads. Only $9.99/month.\n\n**Body:**\nYou've hit your 3 free uploads.\n\nGood news: Pro unlocks everything. Unlimited statements. Monthly tracking. Export reports. All private. No login required.\n\n$9.99/month. Cancel anytime.\n\nMost users save that in their first week.\n\nReady to go deeper?\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Subscription)\n\n**Subject:** We miss you\u20141 month free to come back\n\n**Body:**\nWe noticed you paused your Pro subscription.\n\nNo judgment. But we'd love to have you back.\n\nHere's 1 month free\u2014no strings. Just re-activate and we'll credit it immediately.\n\nYour statements are still private. Still yours. And we're still the fastest way to understand your money.\n\n**CTA Button:** Come Back \u2014 Claim 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (NPS 9-10 / Active User)\n\n**Subject:** Know someone who'd love Scroll & Find?\n\n**Body:**\nYou gave us a 9/10. That means a lot.\n\nIf you know a friend, freelancer, or small business owner who's curious about their bank statements\u2014share them our link.\n\nThey get free uploads. You both get $10 credit when they go Pro.\n\nNo pressure. Just thought you'd know someone.\n\n**CTA Button:** Share Scroll & Find with One Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS (160 chars max)\n\n**EMAIL 1 \u2014 WELCOME:**\n\"Hey! No login needed. Upload your bank statement (PDF/Excel/CSV) and instantly spot spending patterns. Privacy-first. 60 seconds. Try free: [link]\"\n\n**EMAIL 3 \u2014 PRO UPGRADE:**\n\"You've hit 3 free uploads! Go Pro for $9.99/mo\u2014unlimited statements, tracking, exports. Most users save that in week one. [link]\"\n\n**EMAIL 4 \u2014 CHURN SAVE:**\n\"We miss you! Come back to Pro\u20141 month free. Your statements stay private. Re-activate now: [link]\"\n\n---\n\n**SEND TIMING RECOMMENDATION:**\n- Email 1: Immediately after signup\n- Email 2: Day 3, 2 PM user timezone\n- Email 3: When limit reached, within 2 hours\n- Email 4: 3 days after cancellation\n- Email 5: After 7+ days active + NPS submission",
+    "status": "completed",
+    "created_at": "2026-07-01T17:46:38.375945",
+    "updated_at": "2026-07-01T17:46:39.139124",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "e036fedf",
     "agent": "Sales agent",
     "manager": "VP Revenue",
