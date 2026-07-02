@@ -1,5 +1,18 @@
 [
   {
+    "id": "b9198fb6",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 July 02",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 JULY 02\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements are about to make sense \ud83d\udcca\n\n**Body:**\nHey! Welcome to Scroll & Find.\n\nNo login required. No passwords shared. Just upload your bank statement (PDF, Excel, or CSV) and we'll instantly show you spending patterns, savings opportunities, and hidden expenses.\n\nTakes 2 minutes. Works with US and India banks.\n\nYour privacy is safe with us.\n\n**CTA:** \ud83d\udc49 Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Uploaded Once, Gone Quiet)\n\n**Subject:** You left money on the table (we found it)\n\n**Body:**\nRemember that statement you uploaded? We analyzed it.\n\nFound recurring charges you might not need. Found spending patterns you should know about. Found exactly where your money goes each month.\n\nThe insights are waiting for you\u2014no pressure, just clarity.\n\nOne click to see.\n\n**CTA:** \ud83d\udc49 See What We Found For You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Ready for unlimited analysis? ($9.99/mo)\n\n**Body:**\nYou've hit your 3 free uploads. Good news: there's more.\n\nPro members analyze unlimited statements, export reports, track trends month-over-month, and never worry about limits again.\n\n$9.99/month. Cancel anytime. No commitment.\n\nPerfect for people serious about understanding their finances.\n\n**CTA:** \ud83d\udc49 Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Subscription)\n\n**Subject:** We miss you\u2014come back free for a month\n\n**Body:**\nWe noticed you cancelled. No hard feelings.\n\nWe want you back. Here's a full month free on us (no card required). Use it to track expenses, find savings, do whatever helped you before.\n\nIf Pro isn't right now, free tier is always here. We're just glad to help.\n\n**CTA:** \ud83d\udc49 Claim Your Free Month\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Know someone drowning in bank statements?\n\n**Body:**\nWe love that you're using Scroll & Find.\n\nYour feedback matters. And if you know someone who could use clarity on their finances (no login, no drama), we'd love an intro.\n\nSend them here. If they go Pro, you both save on your next month.\n\nGood karma.\n\n**CTA:** \ud83d\udc49 Share Scroll & Find With a Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS (160 chars max)\n\n**EMAIL 1 \u2014 WELCOME**\n\ud83d\udcca Hey! Upload your bank statement (PDF/Excel/CSV) to Scroll & Find. No login needed. See spending patterns + savings in 2 mins. Privacy-first. Start free: [link]\n\n**EMAIL 3 \u2014 UPGRADE**\n\ud83d\udd13 Hit your free uploads? Go Pro for $9.99/mo\u2014unlimited analysis, export reports, track trends. Cancel anytime. Ready? [link]\n\n**EMAIL 4 \u2014 CHURN SAVE**\n\u2764\ufe0f Come back to Scroll & Find. Free month on us. No card needed. Claim it: [link] We miss you!\n\n---\n\n**NOTES FOR DEPLOYMENT:**\n- Email 1 & 2: Send at 9 AM user's timezone\n- Email 3: Send immediately when limit hit\n- Email 4: Send 48 hours after churn\n- Email 5: Send only to NPS 9-10 respondents, 14+ days after signup",
+    "status": "completed",
+    "created_at": "2026-07-02T20:55:28.671709",
+    "updated_at": "2026-07-02T20:55:29.446268",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "afdb3dea",
     "agent": "Marketing agent",
     "manager": "VP Revenue",
