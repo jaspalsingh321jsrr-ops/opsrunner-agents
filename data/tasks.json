@@ -1,5 +1,18 @@
 [
   {
+    "id": "437d36a3",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 July 03",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 JULY 03\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Welcome to Scroll & Find \u2014 Let's analyze your first statement\n\n**Body:**\nHey!\n\nGlad you're here. Your bank statements hold insights\u2014spending patterns, hidden fees, unusual transactions.\n\nUpload your first PDF or Excel file to see what we find. Takes 60 seconds. No login needed. Your data stays private.\n\nReady?\n\n**CTA Button:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once, Inactive)\n\n**Subject:** Your statement analysis is ready \u2014 quick insights inside\n\n**Body:**\nHi,\n\nYou uploaded a statement 3 days ago. We've analyzed it.\n\nSee transaction patterns, categorized spending, and any unusual activity. One click to view everything.\n\nPrivacy-first. No bank login. No fees.\n\nCheck it out now.\n\n**CTA Button:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Unlock unlimited uploads \u2014 Pro is just $9.99/month\n\n**Body:**\nYou've hit your free limit (3 uploads).\n\nPro users get unlimited monthly uploads, advanced filtering, recurring expense tracking, and CSV exports.\n\nNo credit card tricks. Cancel anytime. Perfect for freelancers, small biz owners, and privacy seekers.\n\nWorth it?\n\n**CTA Button:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro)\n\n**Subject:** We miss you \u2014 come back with 1 month free\n\n**Body:**\nSaw you cancelled. We get it\u2014maybe the timing wasn't right.\n\nWe're offering one free month of Pro. Unlimited uploads. Advanced analytics. No strings attached.\n\nLet's make banking clearer for you.\n\n**CTA Button:** Claim 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Love Scroll & Find? Help us grow (+ $10 bonus)\n\n**Body:**\nYou're a power user. You get the value.\n\nKnow someone who hates bank login hassles or loves privacy? Share your unique link. You both get $10 credit when they upgrade.\n\nEasy wins.\n\n**CTA Button:** Share Leakly with One Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS (Under 160 Chars)\n\n**EMAIL 1 \u2014 WELCOME**\nHi! Upload your first bank statement to Scroll & Find and see spending insights in 60 seconds. No login. Private. \ud83d\udc49 [link]\n\n**EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE**\nHit your upload limit? Pro is $9.99/mo. Unlimited uploads, advanced analytics, CSV exports. Cancel anytime. Upgrade now \ud83d\udc49 [link]\n\n**EMAIL 4 \u2014 CHURN SAVE**\nWe miss you! Come back to Pro. Get 1 free month on us. No strings. Better banking clarity waiting. \ud83d\udc49 [link]",
+    "status": "completed",
+    "created_at": "2026-07-03T06:54:22.172793",
+    "updated_at": "2026-07-03T06:54:22.983947",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "764d43ec",
     "agent": "Sales agent",
     "manager": "VP Revenue",
