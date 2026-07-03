@@ -1,5 +1,19 @@
 [
   {
+    "id": "e54ea21b",
+    "type": "social_proof",
+    "angle": "What users discover when they upload their first statement \u2014 real examples of hidden charges found (Netflix price hike, forgotten Spotify, unused gym app).",
+    "goal": "Social proof \u2014 show real results to build trust",
+    "linkedin": "**Most people discover their first \"hidden\" subscription charge within 60 seconds of uploading a bank statement.**\n\nOne user found Netflix had auto-upgraded them to Premium ($19.99/mo instead of $6.99). They never clicked \"Upgrade.\" Happened 8 months ago. That's $104 they didn't know was leaving.\n\nAnother uploaded their last quarter's statements. Spotify was still charging $11.99/mo. They'd switched to Apple Music in 2024 but forgot to cancel. Three other apps\u2014gym membership, podcast app, cloud storage\u2014all quietly running.\n\nTotal damage: $340/year. Found in 90 seconds.\n\nThis isn't rare. It's the default.\n\nAmericans spend $219/month on subscriptions they think they're using. 59.9% admit they have paid subscriptions they never touch. By Friday, most people will have forgotten about half the apps they pay for.\n\nThe question isn't whether you have hidden charges.\n\nIt's whether you'll find them before next month's bill.\n\n**What will YOU uncover? No login required. Privacy-first. Takes 2 minutes.**\n\n[**leakly-psi.vercel.app**](https://leakly-psi.vercel.app)\n\n#HiddenCharges #PersonalFinance #SubscriptionAudit\n\n---",
+    "twitter": "- **LinkedIn:** Use line breaks exactly as formatted above. Add 1 LinkedIn native image: mockup of bank statement with charges highlighted in red circles (Netflix, Spotify, gym). Show \"NOT USING\" labels.\n\n- **Twitter:** Schedule thread for 7:15 PM IST. Pin Tweet 1 for 24 hours. Add 1 image to Tweet 7 (bank statement + \"What's hiding in yours?\" text).\n\n- **Follow-up:** Monitor comments on LinkedIn for the specific apps people discover. Respond with encouragement + ask them to share their \"biggest surprise\" find (social proof loop).",
+    "timing": "",
+    "why_today": "**Friday is when people finally have time to think about money\u2014before weekend spending hits and next week's chaos begins.**\n\n---",
+    "status": "ready",
+    "post_date": "2026-07-03T02:38:02.881153",
+    "char_count": 1124,
+    "created_at": "2026-07-03T02:38:02.881153"
+  },
+  {
     "id": "b4a5e5ad",
     "type": "product_story",
     "angle": "How Leakly finds hidden subscriptions in your bank statement \u2014 no bank login, no credentials, upload PDF/Excel/CSV.",
