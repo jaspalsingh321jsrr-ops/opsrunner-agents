@@ -1,5 +1,18 @@
 [
   {
+    "id": "37825933",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 July 04",
+    "output": "# SCROLL_LAND_FIND \u2014 CLIENT SUCCESS EMAIL TOOLKIT\n## July 04\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User, No Upload Yet)\n\n**Subject:** Your bank statements just got easier \ud83d\udcca\n\n**Body:**\nHey! Welcome to Scroll_land_find.\n\nNo login. No passwords shared. Just upload your PDF, Excel, or CSV\u2014and we'll instantly show you spending patterns, recurring charges, and hidden fees.\n\nTakes 2 minutes. Privacy guaranteed.\n\nReady to see what's hiding in your statements?\n\n**CTA BUTTON:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once, Gone Silent)\n\n**Subject:** We found something interesting in your statements\n\n**Body:**\nHey again!\n\nWe analyzed your first upload and spotted a few things worth knowing\u2014recurring subscriptions you might've forgotten about, category breakdowns, and cash flow trends.\n\nLog back in to see the full picture. Takes 30 seconds.\n\n**CTA BUTTON:** See What We Found For You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** Keep analyzing\u2014unlock unlimited uploads\n\n**Body:**\nYou've maxed out your free uploads.\n\nPro gives you unlimited statements + monthly spend reports + trend tracking + family account access.\n\nJust $9.99/month. Cancel anytime.\n\nPerfect for CFOs, freelancers, and anyone serious about understanding their finances.\n\n**CTA BUTTON:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro Subscription)\n\n**Subject:** We'll pay for your next month \u2764\ufe0f\n\n**Body:**\nWe noticed you cancelled. No pressure\u2014but we'd hate to lose you.\n\nHere's a free month on us. Use it to track what matters. If Pro isn't right, you can pause anytime.\n\nWe're here if you want feedback on how to improve.\n\n**CTA BUTTON:** Claim Your Free Month\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** Your friend needs this (and so do we \ud83d\ude4c)\n\n**Body:**\nYou're clearly loving Scroll_land_find\u2014and that means the world.\n\nIf you know someone who stresses about their finances, send them our way. They get $5 off. You get $5 credit.\n\nEasy win-win.\n\n**CTA BUTTON:** Share Scroll_land_find With a Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS (Under 160 chars)\n\n**MESSAGE 1 (EMAIL 1 \u2014 Welcome)**\nHey! \ud83d\udc4b No login needed. Just upload your bank statement PDF/CSV to see spending patterns & hidden fees. Privacy first. Try free: [link] \ud83d\udd12\n\n**MESSAGE 3 (EMAIL 3 \u2014 Free \u2192 Pro)**\nYou've hit your free uploads! \ud83d\udcca Unlimited access for just $9.99/mo. Monthly reports, trend tracking, family account. [link] Cancel anytime. \ud83d\udcaa\n\n**MESSAGE 4 (EMAIL 4 \u2014 Churn Save)**\nWe miss you! \ud83d\udc99 Come back\u2014free month on us. No strings. Just better financial clarity. [link] \u2764\ufe0f\n\n---\n\n**Ready to deploy?** All emails are warm, value-focused, zero sales jargon. WhatsApp versions fit constraints while hitting urgency & benefit.",
+    "status": "completed",
+    "created_at": "2026-07-04T02:00:03.786282",
+    "updated_at": "2026-07-04T02:00:04.552572",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "bdc7fe16",
     "agent": "Sales agent",
     "manager": "VP Revenue",
