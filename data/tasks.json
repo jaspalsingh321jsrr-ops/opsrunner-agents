@@ -1,5 +1,18 @@
 [
   {
+    "id": "28197ca2",
+    "agent": "Client success agent",
+    "manager": "VP Revenue",
+    "task_type": "client_emails",
+    "title": "Client email toolkit \u2014 July 04",
+    "output": "# CLIENT SUCCESS EMAIL TOOLKIT \u2014 July 04\n\n---\n\n## EMAIL 1 \u2014 WELCOME (New Free User)\n\n**Subject:** Your bank statements just got smarter \ud83d\ude80\n\n**Body:**\nHi there!\n\nWelcome to Scroll_land_find. We're glad you're here.\n\nNo login. No fees. Just upload your statements and we'll spot spending patterns, recurring charges, and savings opportunities in minutes.\n\nStart with any PDF, Excel, or CSV file. Privacy guaranteed\u2014your data never touches our servers.\n\nReady to see what you're missing?\n\n**CTA:** Upload Your First Statement\n\n---\n\n## EMAIL 2 \u2014 DAY 3 NUDGE (Signed Up, Uploaded Once, Not Back)\n\n**Subject:** One insight we found in your statement\n\n**Body:**\nHi [Name],\n\nYou uploaded a statement on [date]. We've already started analyzing it.\n\nHere's what you might want to know: recurring subscriptions, unusual spikes, and hidden fees often hide in plain sight.\n\nWe've flagged yours. Let's show you.\n\nTwo minutes. That's all it takes.\n\n**CTA:** See What We Found for You\n\n---\n\n## EMAIL 3 \u2014 FREE \u2192 PRO UPGRADE (Hit 3-Upload Limit)\n\n**Subject:** You've unlocked more with 3 uploads\u2014here's what's next\n\n**Body:**\nHi [Name],\n\nYou're clearly getting value from Scroll_land_find (3 uploads in [X] days\u2014nice!).\n\nOur free plan is great. But Pro gives you unlimited uploads, trend reports across months, and export-ready insights.\n\n$9.99/month. Cancel anytime.\n\nReady to go deeper?\n\n**CTA:** Upgrade to Pro \u2014 $9.99/mo\n\n---\n\n## EMAIL 4 \u2014 CHURN SAVE (Cancelled Pro Subscription)\n\n**Subject:** We'd love to have you back\n\n**Body:**\nHi [Name],\n\nWe noticed you cancelled. No judgment\u2014just want to know: did something not work? \n\nWe're always improving. And we'd like to offer you one month free to try us again.\n\nYour data's waiting. So's our team, if you need help.\n\n**CTA:** Come Back \u2014 1 Month Free\n\n---\n\n## EMAIL 5 \u2014 REFERRAL ASK (Active User, NPS 9-10)\n\n**Subject:** You love us\u2014help a friend see the same \u2728\n\n**Body:**\nHi [Name],\n\nYour feedback means everything. You rated us 9/10, and that fuel keeps us building.\n\nKnow someone drowning in statements? Share Scroll_land_find. They get free uploads. You both win.\n\nOne share. Real impact.\n\n**CTA:** Share Leakly With One Friend\n\n---\n\n---\n\n# WHATSAPP MESSAGE VERSIONS (Under 160 chars)\n\n**For EMAIL 1 (Welcome):**\nWelcome to Scroll_land_find! \ud83d\ude80 Upload your statement PDF/Excel/CSV\u2014no login needed. We'll spot savings in minutes. Privacy first. Start free \u2192 [link]\n\n**For EMAIL 3 (Free \u2192 Pro):**\nYou've uploaded 3 statements! \ud83c\udfaf Unlock unlimited uploads + trend reports. Pro: $9.99/mo. Try it risk-free \u2192 [link]\n\n**For EMAIL 4 (Churn Save):**\nWe miss you! Come back to Scroll_land_find. 1 month FREE + we'd love your feedback. \u2192 [link]\n\n---\n\n**NOTES:**\n- All emails use warm, non-salesy tone\n- Clear value prop (privacy, speed, no login)\n- Short paragraphs for mobile readability\n- CTAs are benefit-focused, not pushy\n- WhatsApp versions use emojis for engagement (tight char limit)\n- Personalization tokens: [Name], [date], [X], [link]",
+    "status": "completed",
+    "created_at": "2026-07-04T10:00:08.041691",
+    "updated_at": "2026-07-04T10:00:08.653992",
+    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "6f244551",
     "agent": "Tech agent",
     "manager": "VP Operations",
