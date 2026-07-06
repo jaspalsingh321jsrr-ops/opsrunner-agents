@@ -1,5 +1,18 @@
 [
   {
+    "id": "d2e18eff",
+    "agent": "Marketing agent",
+    "manager": "VP Revenue",
+    "task_type": "linkedin_post",
+    "title": "LinkedIn post \u2014 problem_stats \u2014 2026-07-06T02:51:21.578910",
+    "output": "POST TYPE: PROBLEM_STATS\nSCHEDULED: 2026-07-06T02:51:21.578910\n\n=== LINKEDIN POST ===\n\n**Your subscriptions are stealing $2,628 a year. You just don't know it yet.**\n\nThe average American thinks they spend $87/month on subscriptions.\n\nThey actually spend $219/month. That's 2.5x what they think they're paying.\n\n59.9% have paid subscriptions they never use. Netflix you forgot about. SaaS tools gathering dust. Gym memberships that became expensive regrets.\n\nYou're not bad with money. You're just not looking.\n\nMost people check their subscriptions once a year\u2014if at all. Banks don't flag recurring charges. Credit card apps bury them in transaction history.\n\nSo they pile up. Silently. Month after month.\n\n**The fix is stupidly simple:** upload your last 3 months of bank statements to see every subscription in one place. No bank login. No data sharing. Just clarity.\n\nFree. Takes 2 minutes.\n\nStop throwing money at ghosts.\n\n\ud83d\udc49 **[leakly-psi.vercel.app](https://leakly-psi.vercel.app)**\n\n#SubscriptionAudit #PersonalFinance #MoneyTips\n\n---\n\n=== TWITTER/X THREAD ===\n\n**LinkedIn: 9:00 AM IST (Monday, July 6)**\n- *Why:* Monday morning in US (10:30 PM ET Sunday) catches early-week anxiety + financial consciousness. Indians opening laptops for the week. Sweet spot between US East Coast late evening and India morning.\n\n**Twitter/X: 7:30 PM IST (Monday, July 6)**\n- *Why:* Bridges US lunch scroll (9:00 AM ET) + India evening commute. Thread visibility peaks. People are \"doom-scrolling\" before bed and making financial resolutions.\n\n---\n\n=== BEST TIME TO POST ===\n",
+    "status": "completed",
+    "created_at": "2026-07-06T02:51:21.578910",
+    "updated_at": "2026-07-06T02:51:21.578910",
+    "revision_note": "Auto-approved",
+    "approved_by": "CEO (auto)"
+  },
+  {
     "id": "682bc7ed",
     "agent": "Client success agent",
     "manager": "VP Revenue",
@@ -6484,19 +6497,6 @@
     "created_at": "2026-06-18T11:55:41.300626",
     "updated_at": "2026-06-18T11:55:41.976066",
     "revision_note": "\u2713 VP Operations approved: Quality checks passed \u2192 CEO approved",
-    "approved_by": "CEO (auto)"
-  },
-  {
-    "id": "b1ad1f05",
-    "agent": "Marketing agent",
-    "manager": "VP Revenue",
-    "task_type": "content_creation",
-    "title": "Content batch \u2014 India market \u2014 Jio/Airtel/Swiggy subscri \u2014 Thursday June 18",
-    "output": "# CONTENT BATCH \u2014 INDIA MARKET SUBSCRIPTIONS\n**Date: Thursday June 18**\n\n---\n\n## LINKEDIN POST (1,287 chars)\n\nIndians are bleeding \u20b95,000+ monthly on subscriptions they forgot they had.\n\nJio, Airtel, Swiggy+, Disney+Hotstar, Amazon Prime, Netflix. The list never ends. And most people? They can't tell you which ones are actually active.\n\nHere's the problem: Your bank app doesn't categorize these. Your credit card statement is a mess. You're manually scrolling through 3 months of charges trying to find duplicates.\n\nBy the time you realize you've been charged for Swiggy+ without using it for 6 months? \u20b92,400 gone.\n\nMultiply that across 50 million Indians with credit cards. That's \u20b912 BILLION wasted annually on forgotten subscriptions.\n\nThis is exactly why we built Leakly.\n\nNo bank login. No scary permissions. Just upload your bank statement (PDF, Excel, CSV) and within seconds, you see:\n\u2713 Every subscription flagged\n\u2713 Unused ones highlighted\n\u2713 Potential savings calculated\n\nWorks for US. Works for India. Works for privacy-conscious people who don't want banks selling their data.\n\nTry it free. No credit card needed.\n\nLeakly.co\n\n#FinancialWellness #SubscriptionTracking #IndiaFintechSolutions\n\n---\n\n## TWITTER/X THREAD (7 TWEETS)\n\n**TWEET 1 (Hook \u2014 258 chars)**\nIndians spend \u20b95,000+/month on subscriptions. Most can't name all of them.\n\nJio, Airtel, Swiggy+, Prime, Netflix, Disney+Hotstar\u2014all auto-renewing silently while you sleep.\n\n\u20b92,400 wasted per person annually on forgotten charges.\n\nWe fixed this. \ud83e\uddf5\n\n**TWEET 2 (Problem \u2014 267 chars)**\nYour bank statement doesn't categorize subscriptions. Your credit card app doesn't flag duplicates. You're manually hunting through 3 months of chaos trying to find what's bleeding money.\n\nMost people give up. And that's exactly what subscriptions count on.\n\n**TWEET 3 (Scale \u2014 251 chars)**\nDo the math: 50M Indians with credit cards \u00d7 \u20b92,400 wasted annually = \u20b912 BILLION lost to forgotten subscriptions.\n\nThat's not negligence. That's poor visibility meeting predatory auto-renewal practices.\n\n**TWEET 4 (Competitor shade \u2014 265 chars)**\nOther apps need your bank credentials. Full access to everything. Then they promise not to sell your data (wink wink).\n\nWe said no.\n\nUpload a PDF or CSV instead. No login. No permissions. No risk.\n\nPrivacy-first subscription tracking exists now.\n\n**TWEET 5 (Solution \u2014 243 chars)**\nLeakly takes your bank statement and does in 10 seconds what takes you 30 minutes:\n\n\u2192 Flags every subscription\n\u2192 Identifies unused ones  \n\u2192 Calculates your savings potential\n\u2192 Shows trends\n\nAll without seeing your salary, loans, or other sensitive data.\n\n**TWEET 6 (Social proof \u2014 248 chars)**\nWorks for US accounts. Works for Indian accounts. Works for anyone who's tired of paying for stuff they don't use.\n\nFree tier. Pro plan available.\n\nNo credit card to start.\n\nAlready helping people recover thousands in annual spending.\n\n**TWEET 7 (CTA \u2014 227 chars)**\nStop bleeding \u20b92,400/year to forgotten subscriptions.\n\nUpload your statement to Leakly. Takes 2 minutes. Free.\n\nleakly-psi.vercel.app\n\n#FinTech #India #SubscriptionTracking\n\n---\n\n## SHORT FORM (Instagram/Facebook Reel \u2014 148 chars + CTA)\n\n**Copy:**\n\u20b95,000/mo on subs you forgot. Jio, Airtel, Swiggy+, Netflix stacking up. Leakly finds them in 10 seconds. No bank login. No BS.\n\n**CTA:** Link in bio \u2192 Leakly.co\n\n---\n\n## GOOGLE ADS COPY\n\n**Keyword:** \"subscription tracker no bank login\"\n\n| Field | Copy |\n|-------|------|\n| **Headline 1** (30 chars) | Stop Losing \u20b92,400/Year |\n| **Headline 2** (30 chars) | Subscriptions No Login Needed |\n| **Headline 3** (30 chars) | Privacy-First Tracking Tool |\n| **Description** (90 chars) | Upload bank statement (PDF/CSV). Find unused subscriptions in 10 seconds. Free. No credentials required. |\n\n---\n\n## BEST TIME TO POST TODAY\n\n| Platform | Time | Reason |\n|----------|------|--------|\n| **LinkedIn** | 9:45 AM IST | Peak B2C engagement post-morning coffee; Indian professionals checking feed before meetings |\n| **Twitter/X** | 6:30 PM",
-    "status": "completed",
-    "created_at": "2026-06-18T10:39:53.977713",
-    "updated_at": "2026-06-18T10:39:54.664043",
-    "revision_note": "\u2713 VP Revenue approved: Quality checks passed \u2192 CEO approved",
     "approved_by": "CEO (auto)"
   }
 ]
