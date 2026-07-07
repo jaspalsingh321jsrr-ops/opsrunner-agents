@@ -1203,6 +1203,7 @@ jobs:
           elif [ "${{ steps.cmd.outputs.cmd }}" = "auto" ]; then
             python scroll_and_find.py run due
             python scroll_and_find.py outreach
+            python scroll_and_find.py listening
           else
             python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
           fi
