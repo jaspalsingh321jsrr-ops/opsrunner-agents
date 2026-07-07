@@ -1,0 +1,9 @@
+created_at,department,from,id,priority,request,status
+2026-07-07T00:30:10,Compliance,documentation,cd28fba1,P2,"Supply completed audits, lead opt-in verification, CAN-SPAM checklist sign-off, and any process docs finalized.",open
+2026-07-07T00:30:10,Marketing,documentation,26d3e187,P1,"Supply completed work: email sequences deployed, nurture cadence status, analytics (open/click/unsubscribe rates for 176 leads). Confirm live sequences.",open
+2026-07-07T00:30:10,Engineering,documentation,c93668fc,P1,"Supply list of completed tasks (last 7 days): GitHub Actions deployed, API changes, infra updates, config files added. Include task IDs and brief outcomes.",open
+2026-07-07T00:29:59,Engineering,analytics,390fa9b9,P2,"Resolve 2 pending cross-dept approvals (Compliance sign-off + DevOps GitHub Actions alert). Low-lift, required for monitoring visibility.",open
+2026-07-07T00:29:59,Marketing,analytics,c9a9e370,P1,"Confirm email nurture cadence is running. Check: open rate, click rate, unsubscribe rate for the 176 leads. Are sequences deployed?",open
+2026-07-07T00:29:59,Sales,analytics,78e2a43f,P1,Audit lead scoring: reconcile 176 total leads vs. $88K pipeline value. What % are MQL (qualified) vs. unqualified? By source?,open
+2026-07-07T00:29:41,Engineering,compliance,1f78effb,P2,"Compliance sign-off on GitHub Actions failure alert (DevOps request 3abb73cb): confirm Slack webhook does not expose PII in logs or alert payload. Low-lift, required before deployment.",open
+2026-07-07T00:28:39,Engineering,devops,3abb73cb,P2,"Add GitHub Actions failure alert (Slack webhook to COO on 2+ failures in 24h). Low lift, high visibility.",open

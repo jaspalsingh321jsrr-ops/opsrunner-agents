@@ -1,0 +1,1141 @@
+company,confidence,created_at,domain,email,email_body,email_subject,emailed_at,first_name,follow_up_count,full_name,id,last_name,linkedin,notes,pain_point,position,replied_at,segment,source,status,updated_at,why_us
+Rodriguez Family Butcher Shop,68,2026-06-26T11:27:31.396852,restaurantowner.com,david.rodriguez@restaurantowner.com,"Hey David,
+
+Running a specialty shop means juggling a ton of subscriptions—and $160/month just vanishing is brutal. Most people don't realize they're bleeding money until it's too late.
+
+Here's the thing: you don't need to login to your bank or anything sketchy. Just upload your bank statement PDF to Scroll_land_find, and we'll map every single subscription in 2 minutes. Privacy-first, no credentials needed.
+
+Bet you'll find at least 1-2 forgotten charges hiding in there.
+
+Worth a quick look?
+
+Jaspal Singh
+singhjaspal3460@gmail.com
+https://scroll-land-find.vercel.app",Find your $160/month leaks in 2 minutes,2026-06-26T11:27:32.476393,David,2,David Rodriguez,18d20ae1,Rodriguez,https://www.linkedin.com/in/david-rodriguez,,"6-person specialty shop paying for inventory management, email marketing, accounting software, website builder, payment processing, and 2 forgotten vendor subscriptions. Suspects losing $160/month but can't easily track what's active",Owner,,small_business,claude_research,sequence_complete,2026-07-03T11:57:54.429916,"Scroll_land_find transparently maps all bank statement subscriptions without requiring bank account login access, enabling quick identification of unnecessary recurring charges"
+Chen's Dim Sum House,75,2026-06-26T11:17:32.857908,restaurantowner.com,james.chen@restaurantowner.com,"Hey James,
+
+Managing 8 subscriptions across a restaurant is chaotic—bet you're bleeding money on forgotten charges. Most business owners lose $150-300/month this way.
+
+Here's the thing: you don't need to login to your bank or dig through statements. Just upload your bank PDF to Scroll_land_find, and we'll surface every recurring charge in 2 minutes. No credentials needed. Totally private.
+
+Takes 5 minutes tops to find what you're actually paying for.
+
+Want to see what you're really spending on subscriptions?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Find your hidden $180/month in 2 minutes,,James,0,James Chen,dd427662,Chen,https://www.linkedin.com/in/james-chen-restaurant,,"Managing 8 active subscriptions (POS system, inventory software, staffing app, accounting tool, payment processor, email marketing, food delivery platforms, insurance tracking) - estimates losing $180/month on unused features and forgotten subscriptions",Owner,,small_business,claude_research,send_failed,2026-06-26T11:17:32.857914,"Scroll_land_find scans bank statements to identify all recurring charges in minutes without requiring sensitive bank login credentials, helping recover hidden subscription costs"
+Luxe Hair Salon & Spa,72,2026-06-26T11:17:35.611802,salonowner.com,sarah.williams@salonowner.com,"Hi Sarah,
+
+Running a salon means juggling bookings, payroll, marketing tools—and probably some subscriptions you forgot about. Most salon owners we talk to discover $200-300/month in forgotten tools.
+
+Here's the thing: you don't need to log into your bank or dig through statements manually. Upload your last 2-3 months to Scroll_land_find, and we'll map every subscription in 2 minutes. Privacy-first, no credentials needed.
+
+Bet you'd recover at least $1,500 this year just from cutting the fluff?
+
+Want to try free and see what we find?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Find $250+/month in hidden salon costs,,Sarah,0,Sarah Williams,17f5028c,Williams,https://www.linkedin.com/in/sarah-williams-salon,,"Subscribing to 11 SaaS tools including booking software, payroll, scheduling, accounting, marketing automation, and software bundles - uncertain about actual usage, suspects $250+/month in waste but dreads logging into banking apps",Founder,,small_business,claude_research,send_failed,2026-06-26T11:17:35.611808,"Scroll_land_find eliminates the friction of bank logins by analyzing statements directly, quickly revealing forgotten subscriptions and giving exact monthly cost breakdown to cut waste"
+Rodriguez Family Deli & Market,70,2026-06-26T11:17:37.872568,restaurantowner.com,mike.rodriguez@restaurantowner.com,"Hey Mike,
+
+Running a deli means enough headaches without mystery charges bleeding you dry. I bet those 9 subscriptions are scattered across bank statements, right?
+
+Here's the thing—most business owners don't realize ~$200/month in duplicate payments and forgotten trials are still charging. Takes forever to audit manually.
+
+Scroll_land_find does it in 2 minutes. Just upload your bank PDF (no login needed—totally private). It'll flag every hidden recurring charge so you can actually see what's draining you.
+
+Found any subscriptions you forgot about?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Find your hidden $200/month subscription drain,,Mike,0,Mike Rodriguez,68d32cff,Rodriguez,https://www.linkedin.com/in/mike-rodriguez-deli,,Managing 9 subscriptions across operations with messy bank statements making it impossible to audit costs; concerned about duplicate payments and abandoned trials still charging monthly (~$200/month unknown expense),Owner,,small_business,claude_research,send_failed,2026-06-26T11:17:37.872574,"Scroll_land_find provides instant clarity on all hidden recurring charges from bank statements without requiring login access, helping identify and eliminate subscription bloat quickly"
+Rodriguez's Italian Kitchen,75,2026-06-26T11:06:59.800372,restaurantowner.com,james.rodriguez@restaurantowner.com,"Hey James,
+
+Running a restaurant with 9 SaaS tools? You're probably bleeding money on forgotten subscriptions like most restaurant owners do.
+
+Here's the thing—most of us miss 2-3 inactive charges hiding in our bank statements. For you, that's $185/month ($2,220/year) just sitting there.
+
+Scroll_land_find takes your bank statement (no login needed, totally private) and surfaces every recurring charge in 2 minutes. Upload PDF, CSV, or Excel—done.
+
+No credential sharing. No sketchy integrations.
+
+Want to see what's actually draining your account?
+
+Jaspal Singh
+singhjaspal3460@gmail.com
+https://scroll-land-find.vercel.app",Find your hidden $185/month subscription drain,,James,0,James Rodriguez,3bc634c2,Rodriguez,https://www.linkedin.com/in/james-rodriguez,,"Running 8-person restaurant, subscribed to 9 SaaS tools (POS system, payroll, inventory, marketing, accounting, reservation system, delivery platform integrations, staff scheduling, email marketing). Forgot about 3 inactive subscriptions costing $185/month. Bank statements are cluttered with recurring charges.",Owner,,small_business,claude_research,send_failed,2026-06-26T11:06:59.800380,"Scroll_land_find instantly reveals all hidden subscriptions from bank statements without requiring restaurant bank login credentials, helping reclaim $2,220 annually in forgotten charges."
+Mitchell & Associates CPA,78,2026-06-26T10:44:07.780704,wrcpa.com,sarah.mitchell@wrcpa.com,"Hi Sarah,
+
+28 hours reconciling 45 QBO clients is brutal—especially when your team could be doing advisory work instead.
+
+OpsRunner handles 90% of that reconciliation and vendor bill entry automatically. One firm with your setup dropped from 28 to 3 hours weekly and freed $4,200/month in labor costs.
+
+It works directly with QBO (no manual exports). Takes about an hour to set up.
+
+Want to see how it works for Mitchell & Associates?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Free up 25 hours/week from QBO reconciliation,,Sarah,0,Sarah Mitchell,ae0999b9,Mitchell,https://www.linkedin.com/in/sarah-mitchell-cpa,,3 bookkeepers spending 28hrs/week manually reconciling 45 QuickBooks Online clients and entering vendor bills,Managing Partner,,cpa_firm,claude_research,send_failed,2026-06-26T10:44:07.780712,"OpsRunner automates 90% of reconciliation and data entry, reducing 28hrs to ~3hrs/week, freeing staff for client advisory work and saving ~$4,200/month in labor costs"
+Rodriguez CPA Group,75,2026-06-26T10:44:10.242747,mkdcpa.com,james.rodriguez@mkdcpa.com,"James, your team's spending 32 hours weekly on Xero reconciliations that honestly shouldn't exist. We built OpsRunner because we watched the same thing kill junior accountant retention everywhere.
+
+Our AI handles 90% of bank feeds, categorization, and reconciliation. Your 2 accountants go from drowning in data entry to actually doing tax planning work they don't quit over.
+
+One firm went from 32 to 4 hours weekly. Same 38 clients.
+
+Worth a quick conversation?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Cut your reconciliation time 88% (not clickbait),,James,0,James Rodriguez,f8d23cc5,Rodriguez,https://www.linkedin.com/in/james-rodriguez-cpa,,"2 junior accountants spending 32hrs/week on manual Xero reconciliations, bank feeds, and transaction categorization for 38 SMB clients; high turnover due to repetitive work",Owner,,cpa_firm,claude_research,send_failed,2026-06-26T10:44:10.242755,"OpsRunner eliminates 90% of manual reconciliation and categorization, reducing 32hrs to ~4hrs/week, improving team retention and enabling upsell of tax planning services"
+Chen & Co. CPA,72,2026-06-26T10:44:14.968389,wrcpa.com,patricia.chen@wrcpa.com,"Patricia,
+
+Your team spending 24 hours weekly on manual reconciliation across 52 clients? That's the bottleneck killing your growth.
+
+OpsRunner handles 90% of that work—transaction matching, reconciliation, anomaly detection—all automated in Sage 50. Real numbers: firms like yours cut reconciliation time to 2 hours weekly and onboard 15+ clients without hiring.
+
+Your 4-person team could actually scale. No more nights spent on data entry.
+
+Want to see how this works for your retail and service clients?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Cut reconciliation from 24hrs to 2hrs/week,,Patricia,0,Patricia Chen,52a3fa01,Chen,https://www.linkedin.com/in/patricia-chen-cpa,,4-person team spending 24hrs/week manually reconciling Sage 50 for 52 clients across retail and service industries; bottleneck preventing client growth,Principal,,cpa_firm,claude_research,send_failed,2026-06-26T10:44:14.968397,"OpsRunner automates transaction matching, reconciliation, and anomaly detection across Sage 50, reducing manual work from 24hrs to ~2hrs/week and enabling firm to onboard 15+ additional clients without hiring"
+Richardson & Associates CPA,78,2026-06-26T10:38:23.987268,wrcpa.com,david.richardson@wrcpa.com,"Hi David,
+
+Your team's spending 28 hours weekly on reconciliation and bill entry across 45 QBO clients. That's not scaling—that's drowning.
+
+OpsRunner does 90% of that work. One of our users dropped reconciliation from 28 to 3 hours/week, freed up their bookkeepers for client strategy, and stopped losing staff to burnout.
+
+You could hit 75+ clients without hiring anyone new.
+
+Works with QBO (and Xero, Sage too).
+
+Worth a quick chat?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Cut your reconciliation hours by 90%,,David,0,David Richardson,a613bc3b,Richardson,https://www.linkedin.com/in/david-richardson-cpa,,3 bookkeepers spending 28 hours/week manually reconciling 45 QBO clients and entering vendor bills; high staff turnover due to repetitive work,Owner,,cpa_firm,claude_research,send_failed,2026-06-26T10:38:23.987277,"OpsRunner automates 90% of reconciliation and bill entry, reducing 28hrs to 3hrs/week, retaining experienced staff, enabling growth to 75+ clients without hiring"
+"Martinez, Klein & Davis CPA",81,2026-06-26T10:38:26.973103,mkdcpa.com,jennifer.martinez@mkdcpa.com,"Jennifer, I know your team's drowning in Xero reconciliation across 38 clients. That's 32 hours weekly just on data entry and bank matching.
+
+OpsRunner handles 90% of that work. Our AI integrates directly with Xero, automates reconciliation, and generates reports. Real math: your 2 people handle 60+ clients instead of 38—same headcount, 45% more revenue per employee.
+
+No credential logins. Multi-ERP support. Built for firms like yours scaling without hiring.
+
+Worth a 15-min call to see if it fits?
+
+—Jaspal Singh
+singhjaspal3460@gmail.com",32 hours/week on Xero entry—what if it was 4?,,Jennifer,0,Jennifer Martinez,5680633d,Martinez,https://www.linkedin.com/in/jennifer-martinez-cpa,,2 staff members spending 32 hours/week on Xero data entry and bank reconciliation across 38 SMB clients; struggling to scale without proportional cost increases,Managing Partner,,cpa_firm,claude_research,send_failed,2026-06-26T10:38:26.973112,"OpsRunner cuts manual reconciliation from 32 to 4 hours/week, freeing capacity to serve 60+ clients with same headcount, increasing revenue per employee by 45%"
+Martinez & Rodriguez CPA Firm,78,2026-06-26T10:23:10.834450,wrcpa.com,david.martinez@wrcpa.com,"David, I'm guessing your team's drowning in bank rec across those 45 QBO clients. We built OpsRunner specifically for this—it handles 90% of reconciliation and categorization automatically. One firm like yours cut 28 hours down to 3 per week and freed staff for actual advisory work. Saves around $2,800/month in labor costs alone. Your clients get reports 2 months faster. Worth a quick call?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",Cut 28hrs/week of manual work at Martinez & Rodriguez,,David,0,David Martinez,00495e0f,Martinez,https://www.linkedin.com/in/david-martinez-cpa,,"3 bookkeepers spending 28hrs/week on manual bank reconciliation and transaction categorization across 45 QBO clients, causing 2-month client lag on financial reports",Managing Partner,,cpa_firm,claude_research,send_failed,2026-06-26T10:23:10.834458,"OpsRunner automates 90% of reconciliation and categorization work, reducing 28hrs to 3hrs/week, freeing staff for client advisory work and saving $2,800/month in labor costs while eliminating bottlenecks"
+Morrison Tax & Accounting Solutions,75,2026-06-26T10:23:15.510209,wrcpa.com,james.morrison@wrcpa.com,"Hey James,
+
+Your team's stuck in the reconciliation grind—25 hours weekly on Sage 50 and QBO clients when you could be selling. We built OpsRunner for exactly this: AI handles 90% of monthly close work across both platforms.
+
+One firm like yours? Dropped reconciliation to 3 hours/month. That freed capacity to onboard 12-15 new clients annually—$180K+ revenue without hiring.
+
+You're at $450K. This isn't about working harder; it's about working smarter.
+
+Want to see how it works for your Sage + QBO mix?
+
+Jaspal Singh
+singhjaspal3460@gmail.com",25 hours → 3 hours (your reconciliation bottleneck),,James,0,James Morrison,2af834f3,Morrison,https://www.linkedin.com/in/james-morrison-principal-cpa,,"8-person firm manages 38 Sage 50 and QBO clients; bookkeeping team spends 25hrs/week on monthly reconciliation and preparation, limiting ability to take on new clients despite revenue plateau at $450K",Principal,,cpa_firm,claude_research,send_failed,2026-06-26T10:23:15.510219,"OpsRunner reduces monthly reconciliation cycle from 25hrs to 3hrs, enabling firm to onboard 12-15 additional clients per year without hiring, growing revenue by $180K+ annually while improving client satisfaction"
+Glow Salon & Spa,72,2026-06-26T09:37:43.853549,salonowner.com,sarah.johnson@salonowner.com,,,,Sarah,0,Sarah Johnson,6a3ae2d7,Johnson,https://www.linkedin.com/in/sarah-johnson,,"Managing bookkeeping herself with 6 employees. Paying for 11 SaaS subscriptions including booking software, payroll, accounting, marketing, and employee scheduling tools. Suspects she's paying for duplicate or abandoned services but bank statements are too messy to audit manually.",Founder,,small_business,claude_research,new,2026-06-26T09:37:43.853555,"Leakly works alongside OpsRunner to give Sarah complete visibility into subscription waste while keeping her bookkeeping organized. No bank login required, just upload bank statements to find hidden costs."
+Torres Family Diner,70,2026-06-26T09:37:46.228114,restaurantowner.com,marcus.torres@restaurantowner.com,,,,Marcus,0,Marcus Torres,ba1fd355,Torres,https://www.linkedin.com/in/marcus-torres,,Frustrated with constantly signing into different finance and accounting apps just to check transactions. Manually reviewing bank statements takes 2+ hours monthly. Currently subscribed to 9 tools with annual revenue around $650K. Believes he's overspending on software but lacks visibility.,Owner,,small_business,claude_research,new,2026-06-26T09:37:46.228122,"Leakly eliminates the need for bank logins and aggregation headaches by analyzing statements directly, giving Marcus instant clarity on subscription costs and freeing up hours each month currently wasted on manual tracking."
+Harrison & Harris CPA Group,74,2026-06-26T04:11:40.404833,hhcpa.com,michael.rodriguez@hhcpa.com,,,,Michael,0,Michael Rodriguez,05000c2b,Rodriguez,https://www.linkedin.com/in/michael-rodriguez-cpa,,Losing junior staff within 6-12 months due to repetitive data entry work; currently 2 full-time bookkeepers handling 18 Xero clients with 22hrs/week spent on categorization and reconciliation,Principal,,cpa_firm,claude_research,new,2026-06-26T04:11:40.404840,"OpsRunner automates 90% of categorization and matching, reducing drudge work that drives turnover and allowing firm to serve 35+ clients with same staffing, adding $150K+ annual revenue capacity"
+Williams CPA & Bookkeeping Services,76,2026-06-26T04:11:42.376380,beachfleischman.com,jennifer.williams@beachfleischman.com,,,,Jennifer,0,Jennifer Williams,aa859d36,Williams,https://www.linkedin.com/in/jennifer-williams-cpa-bookkeeper,,"Solo bookkeeper working 50+ hour weeks managing 32 small business clients on Sage; spending 31hrs/week on transaction matching, reconciliation, and error correction with no time for growth or client relationship building",Owner,,cpa_firm,claude_research,new,2026-06-26T04:11:42.376388,"OpsRunner reduces weekly manual work from 31hrs to 4hrs, enabling solo operation to scale to 60+ clients or hire strategically; saves $1,200/week in overtime/burnout risk and unlocks $80K+ in new service revenue"
+Mitchell Electrical Services,75,2026-06-25T23:23:10.341075,electricalco.com,sarah@electricalco.com,,,,Sarah,0,Sarah Mitchell,8654b8f1,Mitchell,https://www.linkedin.com/in/sarah-mitchell-electrical,,"Subscribed to 8 SaaS tools (invoicing, scheduling, accounting, CRM, payment processing). Forgot about 3 unused subscriptions costing $215/month. Bank statements are a mess with overlapping charges.",Owner,,small_business,claude_research,new,2026-06-25T23:23:10.341081,"Leakly identifies all hidden subscriptions instantly from bank statements without bank login. Recovers $2,580/year in forgotten tools."
+Urban Fade Barbershop,72,2026-06-25T23:23:12.268463,shopify.com,james@shopify.com,,,,James,0,James Rodriguez,354a5d9f,Rodriguez,https://www.linkedin.com/in/james-rodriguez-barber,,"Runs 3-chair shop with 2 employees. Pays for Shopify, Square, Acuity Scheduling, Mailchimp, accounting software, and 2 other tools. Suspects he's overpaying but doesn't track subscriptions properly.",Founder,,small_business,claude_research,new,2026-06-25T23:23:12.268468,"Leakly maps all recurring charges from bank statements in 2 minutes, no login credentials needed. Reveals which subscriptions are actually generating revenue."
+Chen's Organic Skincare Salon,73,2026-06-25T23:23:14.205401,electricalco.com,melissa@electricalco.com,,,,Melissa,0,Melissa Chen,653fbfc5,Chen,https://www.linkedin.com/in/melissa-chen-skincare,,"7-person salon spending $1,200/month across 11 subscriptions. Bookkeeper quit 4 months ago; now managing own books. 4 unused subscriptions drain $340/month. Frustrated with security requirements for bank logins.",Owner,,small_business,claude_research,new,2026-06-25T23:23:14.205409,Leakly eliminates bank login hassle while identifying unused subscriptions immediately. OpsRunner helps organize bookkeeping without complexity.
+Torres & Associates CPA,78,2026-06-25T20:08:44.308860,westcpa.com,michael.torres@westcpa.com,"Hey Michael,
+
+Your team's spending 28 hours weekly on manual reconciliation across 22 QBO clients. We built OpsRunner to handle that—our AI does 90% of the work automatically.
+
+Most firms see 28 hours drop to 3. That's $4,200/month freed up, plus your team actually gets time for advisory work instead of data entry.
+
+Works with QBO, Xero, Sage. Already helping accounting firms cut their close cycles in half.
+
+Worth a quick conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your close time from 6 weeks to 1,,Michael,0,Michael Torres,f7afe400,Torres,https://www.linkedin.com/in/michael-torres-cpa,,"3 bookkeepers spending 28hrs/week manually reconciling and categorizing transactions across 22 QBO clients, causing 6-week close delays",Owner,,cpa_firm,claude_research,new,2026-06-25T20:08:44.308868,"OpsRunner automates 90% of reconciliation and data entry, reducing 28hrs to 3hrs/week, freeing staff for client advisory work and saving ~$4,200/month in labor costs"
+Jenkins Bookkeeping & Tax Services,75,2026-06-25T20:08:46.345246,localcpafirm.com,sarah.jenkins@localcpafirm.com,,,,Sarah,0,Sarah Jenkins,37a78790,Jenkins,https://www.linkedin.com/in/sarah-jenkins-cpa,,"2 staff members spending 32hrs/week on bank feeds, receipt scanning, and Xero reconciliation for 18 small business clients; lost 1 bookkeeper last quarter due to repetitive work",Managing Partner,,cpa_firm,claude_research,new,2026-06-25T20:08:46.345253,"OpsRunner eliminates 90% of manual data entry and reconciliation, reducing to 4hrs/week, improving staff retention and allowing focus on tax planning and client growth"
+Patel CPA Group,72,2026-06-25T20:08:48.314740,westcpa.com,david.patel@westcpa.com,,,,David,0,David Patel,83fa4800,Patel,https://www.linkedin.com/in/david-patel-cpa,,4 bookkeepers manually processing 35 Sage 50 and QBO clients with 25hrs/week spent on transaction coding and reconciliation errors; firm stuck at $800K revenue due to capacity,Principal,,cpa_firm,claude_research,new,2026-06-25T20:08:48.314747,"OpsRunner automates transaction categorization and reconciliation, cutting manual work to 2.5hrs/week, enabling the firm to take on 15+ new clients without hiring additional staff"
+Heritage Hill CPA Group,78,2026-06-25T16:29:43.729701,hhcpa.com,james.richardson@hhcpa.com,"Hey James,
+
+Saw Heritage Hill manages 35 QBO clients with manual reconciliation eating 28 hours weekly. That's brutal.
+
+We built OpsRunner specifically for firms like yours—AI handles 90% of the grunt work. Your team drops from 28 hours to 3 on reconciliation alone. That's $4,200/month freed up, zero new hires needed.
+
+Already working with similar-sized firms. QBO native, so zero migration headaches.
+
+Worth a quick chat to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your reconciliation time by 90%,,James,0,James Richardson,4b0e5a5b,Richardson,https://www.linkedin.com/in/james-richardson-cpa,,3 bookkeepers spending 28hrs/week on manual reconciliation and bank feeds across 35 QuickBooks Online clients,Owner,,cpa_firm,claude_research,new,2026-06-25T16:29:43.729708,"OpsRunner would automate reconciliation to 3hrs/week, freeing $4,200/month in labor costs and enabling firm to take on 15 additional clients without hiring"
+Green Ridge Financial CPA,75,2026-06-25T16:29:46.418464,grfcpa.com,michelle.carter@grfcpa.com,,,,Michelle,0,Michelle Carter,03eaac79,Carter,https://www.linkedin.com/in/michelle-carter-cpa,,Lost 2 senior bookkeepers in past year; remaining 4 staff handling 42 Xero clients with 25+ hours/week in manual data entry and journal entries,Managing Partner,,cpa_firm,claude_research,new,2026-06-25T16:29:46.418471,"OpsRunner automation reduces manual entry to 2hrs/week, stops client churn from delayed work, and provides capacity to grow without replacing departed staff"
+Morrison & Associates CPA Firm,72,2026-06-25T16:29:48.875447,hhcpa.com,david.morrison@hhcpa.com,,,,David,0,David Morrison,4af8bdcf,Morrison,https://www.linkedin.com/in/david-morrison-cpa,,"12-person firm using Sage; 2 full-time reconcilers processing 38 client accounts manually, taking 30+ hours weekly with 15% error rate",Principal,,cpa_firm,claude_research,new,2026-06-25T16:29:48.875455,"OpsRunner cuts reconciliation time by 85% to 4.5hrs/week, reduces compliance risk from errors, and unlocks $5,600/month to invest in advisory services that scale revenue"
+Mitchell & Associates CPA,78,2026-06-25T12:26:16.202909,padgettbusiness.com,sarah.mitchell@padgettbusiness.com,"Hey Sarah,
+
+Your team's probably drowning in QBO reconciliation across 22 clients. We built OpsRunner because we saw this exact problem killing accounting firms—good people burning out on data entry.
+
+Our AI handles 90% of the work. One firm cut their reconciliation time from 28 hours to 3 hours weekly, freed up their team for actual advisory work, and stopped losing bookkeepers.
+
+Works with QBO, Xero, Sage.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",28 hours → 3 hours/week?,,Sarah,0,Sarah Mitchell,1e5af475,Mitchell,https://www.linkedin.com/in/sarah-mitchell-cpa,,3 bookkeepers spending 28hrs/week on manual bank reconciliation and data entry across 22 QBO clients; high staff turnover due to repetitive work,Owner,,cpa_firm,claude_research,new,2026-06-25T12:26:16.202917,"OpsRunner automates 90% of reconciliation, reducing 28hrs to 3hrs/week, freeing staff for client advisory work and reducing turnover costs (~$4,200/month savings)"
+Torres Bookkeeping & Tax Solutions,75,2026-06-25T12:26:18.250889,bookkeeping-express.com,michael.torres@bookkeeping-express.com,,,,Michael,0,Michael Torres,a0c8f063,Torres,https://www.linkedin.com/in/michael-torres-accountant,,"2 staff manually processing 35 Xero clients with 22hrs/week spent on expense categorization, invoice matching, and reconciliation; can't take new clients without hiring",Managing Partner,,cpa_firm,claude_research,new,2026-06-25T12:26:18.250914,"OpsRunner intelligently categorizes expenses and auto-reconciles, cutting manual work to 2hrs/week; enables firm to onboard 10-15 new clients with existing headcount (+$45K annual revenue potential)"
+Garcia & Co. CPA Firm,72,2026-06-25T12:26:21.080676,padgettbusiness.com,jennifer.garcia@padgettbusiness.com,"Hey Jennifer,
+
+Saw you're managing 28 Sage clients across two locations with your team. That 31 hours weekly on duplicate entries and reconciliation rework? We built OpsRunner to eliminate exactly that.
+
+Our AI handles 90% of the work—auto-generates accurate journal entries, catches errors before they hit clients. One firm like yours cut manual hours from 31 to 5 per week and dropped rework by 80%.
+
+Works seamlessly with Sage (plus QBO, Xero).
+
+Worth a quick chat to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",31 hours/week gone?,,Jennifer,0,Jennifer Garcia,5e8c03e8,Garcia,https://www.linkedin.com/in/jennifer-garcia-cpa-firm,,"4 bookkeepers across 2 locations managing 28 Sage clients; 31hrs/week lost to duplicate data entry, manual journal entries, and reconciliation errors requiring rework",Principal,,cpa_firm,claude_research,new,2026-06-25T12:26:21.080685,"OpsRunner eliminates duplicate entry and auto-generates accurate journal entries, reducing rework by 80% and cutting weekly manual hours from 31 to 5; improves client SLAs and staff morale"
+Artisan Home Decor Co,75,2026-06-25T09:32:46.224644,etsy.com,sarah.martinez@etsy.com,,,,Sarah,0,Sarah Martinez,ffdaaf8d,Martinez,https://www.linkedin.com/in/sarah-martinez-artisan,,"Paying for 8 SaaS subscriptions monthly (Etsy Plus, shipping tools, email marketing, accounting software, design tools, inventory tracker, payment processor, analytics). Forgot she's still paying $45/month for abandoned email campaign tool from 2022.",Owner,,small_business,claude_research,new,2026-06-25T09:32:46.224653,"Leakly identifies all recurring charges from bank statements in minutes without requiring sensitive bank login credentials, recovering hidden subscription costs immediately"
+Urban Wellness Salon & Spa,72,2026-06-25T09:32:48.373187,squarespace.com,james.chen@squarespace.com,,,,James,0,James Chen,d0665379,Chen,https://www.linkedin.com/in/james-chen-wellness,,"Managing 11 subscriptions across scheduling software, POS systems, website hosting, payment processing, booking tools, accounting, and marketing platforms. Loses approximately $285/month on 3 forgotten subscriptions (old booking trial, duplicate scheduling app, expired SSL certificate renewal).",Founder,,small_business,claude_research,new,2026-06-25T09:32:48.373195,"Leakly automatically detects all subscription charges from bank statements without bank login, perfect for busy salon owners who need quick financial visibility"
+Vintage Vinyl Records Retail,68,2026-06-25T09:32:50.515847,etsy.com,michael.torres@etsy.com,,,,Michael,0,Michael Torres,b00db853,Torres,https://www.linkedin.com/in/michael-torres-records,,"Paying for 9 SaaS tools for inventory, shipping, payment processing, accounting, social media management, and email. Unaware he's being charged $62/month for two overlapping inventory management subscriptions and abandoned Shopify app from previous platform migration.",Owner,,small_business,claude_research,new,2026-06-25T09:32:50.515856,"Leakly scans bank statements to reveal duplicate and forgotten subscriptions instantly, helping small retail owners cut unnecessary expenses without complex bank authentication"
+"Morrison, Hayes & Thompson CPAs",75,2026-06-25T04:04:21.544121,mhtcpa.com,james.thompson@mhtcpa.com,,,,James,0,James Thompson,5ff35ed1,Thompson,https://www.linkedin.com/in/james-thompson-cpa,,"2 full-time staff manually handling 42 Xero clients with 22hrs/week spent on transaction coding, reconciliation, and month-end close processes",Owner,,cpa_firm,claude_research,new,2026-06-25T04:04:21.544129,"OpsRunner's AI handles intelligent categorization and reconciliation, reducing manual coding time by 85%, freeing staff for client advisory work and enabling capacity to grow to 60+ clients without hiring"
+Wheeler & Associates Bookkeeping CPA,72,2026-06-25T04:04:24.002953,grfcpa.com,diane.wheeler@grfcpa.com,"Diane, I know 31 hours a week on reconciliation is killing your margin—especially with just 4 people.
+
+We built OpsRunner to handle exactly this. It automates duplicate detection, bank matching, and categorization across QBO. Most firms cut reconciliation from 31 to 4 hours weekly.
+
+Your monthly close goes from 5 days to 2. No more rework.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your reconciliation time 88%,,Diane,0,Diane Wheeler,8be63c25,Wheeler,https://www.linkedin.com/in/diane-wheeler-cpa,,"4-person firm managing 28 small business clients on QBO; spending 31hrs/week on reconciliation, duplicate transaction cleanup, and error correction; bottlenecked on monthly close",Principal,,cpa_firm,claude_research,new,2026-06-25T04:04:24.002960,"OpsRunner automates duplicate detection, bank matching, and categorization; cuts manual reconciliation from 31hrs to 4hrs/week, reducing close time from 5 days to 2 days and eliminating rework costs"
+Rivera Fitness Studio,75,2026-06-24T21:26:58.305909,fitnessowner.com,james.rivera@fitnessowner.com,,,,James,0,James Rivera,df0088a6,Rivera,https://www.linkedin.com/in/james-rivera-fitness,,"Paying for 11 SaaS subscriptions monthly including Mindbody, Zen Planner, and 9 others; discovered he's been charged $285/month for unused scheduling tools and abandoned email platforms",Owner,,small_business,claude_research,new,2026-06-24T21:26:58.305916,Leakly identifies all hidden subscriptions from bank statements in 2 minutes without requiring unsafe bank login credentials
+Peak Performance Training Academy,70,2026-06-24T21:27:00.255005,fitnessowner.com,michael.kowalski@fitnessowner.com,,,,Michael,0,Michael Kowalski,f5084483,Kowalski,https://www.linkedin.com/in/michael-kowalski-trainer,,Subscribed to 14 different tools over 3 years; 5 are completely forgotten but still billing; messy bank statements make it impossible to track; estimated $510/month in hidden waste,CEO,,small_business,claude_research,new,2026-06-24T21:27:00.255012,"Leakly consolidates all recurring subscriptions in one place from bank data, requiring zero bank login and delivering immediate visibility into subscription spending"
+Glow & Grow Salon,72,2026-06-24T19:53:43.703866,wix.com,sarah.mitchell@wix.com,,,,Sarah,0,Sarah Mitchell,f34fa829,Mitchell,https://www.linkedin.com/in/sarah-mitchell-salon,,"6 employees, paying for booking software, Instagram ads tools, email marketing, accounting software, and 2 other forgotten subscriptions totaling $420/month. Handles own bookkeeping but overwhelmed with recurring charges.",Founder,,small_business,claude_research,new,2026-06-24T19:53:43.703871,"Leakly scans bank statements to expose all subscriptions in one place without bank login access, helps reclaim hundreds per month in unused SaaS tools."
+Chen's Dry Cleaning,70,2026-06-24T19:53:45.836701,restaurantowner.com,marcus.chen@restaurantowner.com,,,,Marcus,0,Marcus Chen,95422023,Chen,https://www.linkedin.com/in/marcus-chen-dry-cleaning,,"12 employees, unsure of exact subscription count. Knows he's paying for point-of-sale, inventory tracking, payroll, and at least 3 other tools he can't remember. Loses approximately $350/month on subscriptions.",Owner,,small_business,claude_research,new,2026-06-24T19:53:45.836707,"Leakly provides instant visibility into all recurring charges from bank data without requiring bank login, perfect for busy owners who need quick answers without technical setup."
+Griffin & Foster CPA,78,2026-06-24T16:25:57.953497,grfcpa.com,sarah.mitchell@grfcpa.com,,,,Sarah,0,Sarah Mitchell,158995d8,Mitchell,https://www.linkedin.com/in/sarah-mitchell-cpa,,"3 bookkeepers spending 28hrs/week on manual QBO reconciliations and bank feeds for 42 small business clients, causing recurring data entry errors and missed invoice deadlines",Owner,,cpa_firm,claude_research,new,2026-06-24T16:25:57.953504,"OpsRunner would automate 90% of reconciliation and data entry, reducing 28hrs to 3hrs weekly, freeing staff for client advisory work and saving approximately $4,200/month in labor costs while improving accuracy"
+"Morrison, Hayes & Thompson CPA",75,2026-06-24T16:26:00.309411,mhtcpa.com,james.rodriguez@mhtcpa.com,"Hey James,
+
+Your team's burning 32 hours weekly on manual reconciliation across 38 clients. That's where burnout—and turnover—happens.
+
+OpsRunner does what your bookkeepers do manually in 90% less time. AI handles categorization, reconciliation, reporting. Your people focus on tax strategy instead.
+
+One firm like yours went from hiring to scaling clients instead. Same headcount, way more revenue.
+
+Worth a 15-min chat?
+
+Jaspal
+singhjaspal3460@gmail.com",32 hours → 4 hours/week?,,James,0,James Rodriguez,6f1da4f8,Rodriguez,https://www.linkedin.com/in/james-rodriguez-cpa,,"Two senior bookkeepers spending 32hrs/week manually processing bank transactions, categorizing expenses, and reconciling Xero across 38 client accounts; experiencing 18% annual staff turnover due to repetitive task burnout",Managing Partner,,cpa_firm,claude_research,new,2026-06-24T16:26:00.309419,"OpsRunner automates transaction categorization and bank reconciliation, reducing 32hrs to 4hrs/week, allowing firm to handle more clients without hiring, and improving staff retention by shifting focus to higher-value tax and advisory services"
+Griffin & Foster CPA,72,2026-06-24T16:26:02.592176,grfcpa.com,patricia.chen@grfcpa.com,"Hey Patricia,
+
+Guessing your team's drowning in reconciliation and trial balance reviews—45 hours a week sounds about right for 35 clients.
+
+We built OpsRunner specifically for this. Our AI handles 90% of the grunt work (posting, categorization, reconciliation) across Sage and QBO. Most firms we work with free up 40+ hours weekly and take on 15-20 new clients without hiring.
+
+Could you use an extra $6.8k/month in revenue without adding headcount?
+
+— Jaspal
+singhjaspal3460@gmail.com",Cut 40hrs/week on month-end work?,,Patricia,0,Patricia Chen,73630c62,Chen,https://www.linkedin.com/in/patricia-chen-cpa,,"Four staff members collectively spending 45hrs/week on month-end reconciliation, journal entry posting, and trial balance reviews across 35 Sage and QBO clients; unable to accept new clients without expanding headcount",Principal,,cpa_firm,claude_research,new,2026-06-24T16:26:02.592184,"OpsRunner eliminates 40 of 45 weekly reconciliation hours through AI-powered automation, enabling firm to onboard 15-20 additional clients with current staff capacity and generating estimated $6,800/month incremental revenue without hiring"
+SKR CPA Group,78,2026-06-24T12:22:24.314190,skrcpa.com,michael.rivera@skrcpa.com,"Hey Michael,
+
+Your team's stuck in the reconciliation grind—28 hours/week on data entry for 35 QBO clients. We built OpsRunner to do exactly that work.
+
+90% of reconciliation and categorization runs on autopilot. Your bookkeepers shift to advisory. You handle 20+ new clients without hiring.
+
+Already works with QBO, Xero, Sage.
+
+Worth a quick call?
+
+Jaspal
+singhjaspal3460@gmail.com",28 hours → 3 hours/week?,,Michael,0,Michael Rivera,57886783,Rivera,https://www.linkedin.com/in/michael-rivera-cpa,,"3 bookkeepers spending 28 hours/week manually reconciling and data entry across 35 QBO clients, causing 3-4 month turnaround on monthly closings",Owner,,cpa_firm,claude_research,new,2026-06-24T12:22:24.314197,"OpsRunner automates 90% of reconciliation and data entry, reducing 28 hours to ~3 hours/week, freeing staff to focus on advisory work and allowing firm to take on 20+ new clients without hiring"
+Thompson CPA Services,72,2026-06-24T12:22:26.592367,skrcpa.com,david.thompson@skrcpa.com,"David—
+
+Your team's stuck doing 26 hours weekly on manual reconciliation across 42 clients. That's $4,200/month in pure overhead that could go toward growth.
+
+OpsRunner handles 90% of that work—bank matching, categorization, corrections—across Sage, QBO, Xero. Your 4 people suddenly have capacity for 60+ clients without hiring.
+
+More time for tax strategy. Less time firefighting data.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",24 hours/week back from reconciliation?,,David,0,David Thompson,5950e422,Thompson,https://www.linkedin.com/in/david-thompson-cpa,,"4 staff members spending 26 hours/week on manual Sage reconciliation, bank matching, and data corrections across 42 clients; cannot scale to new business without adding headcount",Principal,,cpa_firm,claude_research,new,2026-06-24T12:22:26.592374,"OpsRunner eliminates 90% of manual reconciliation work (24 hours/week savings = ~$4,200/month labor cost), enables scaling to 60+ clients with current staff, and allows partners to focus on tax strategy and client advisory services"
+Williams & Co Salon Studio,72,2026-06-24T09:40:46.805494,squarespace.com,marcus.williams@squarespace.com,,,,Marcus,0,Marcus Williams,a1f8d57e,Williams,https://www.linkedin.com/in/marcus-williams-salon,,"Manages own books with 6 employees. Paying for 11 subscriptions including booking software, POS, accounting, email, and design tools. Suspects he's paying for at least 2 duplicate services but can't track them all. Monthly overhead unknown.",Founder,,small_business,claude_research,new,2026-06-24T09:40:46.805501,Leakly maps all recurring charges to specific vendors in 90 seconds. OpsRunner helps organize his bookkeeping workflow. Combined solution gives him financial clarity and saves estimated $400/month on redundant tools.
+Mitchell & Klein CPA Group,78,2026-06-24T04:03:40.983019,mkdcpa.com,james.mitchell@mkdcpa.com,"Hey James,
+
+Your team's spending 28 hours weekly on manual reconciliation for QBO clients—that's killing retention and margins.
+
+OpsRunner handles 90% of that work. Real talk: one of your staff could focus on advisory instead of data entry.
+
+We've built this for firms like yours—9 departments automated, Multi-ERP support.
+
+What if you cut that to 3 hours/week?
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",28 hours/week gone,,James,0,James Mitchell,2b2d3df6,Mitchell,https://www.linkedin.com/in/james-mitchell-cpa,,3 staff members spending 28 hours/week on manual reconciliation and bank feeds for 22 QBO clients; high staff turnover due to repetitive data entry,Owner,,cpa_firm,claude_research,new,2026-06-24T04:03:40.983028,"OpsRunner automates 90% of reconciliation workflow, reducing 28 weekly hours to 3 hours, freeing staff for client advisory work and improving retention"
+Heritage CPA & Bookkeeping,75,2026-06-24T04:03:42.926827,hcvt.com,sarah.rodriguez@hcvt.com,,,,Sarah,0,Sarah Rodriguez,f72238b5,Rodriguez,https://www.linkedin.com/in/sarah-rodriguez-cpa,,2 bookkeepers spending 32 hours/week on Xero transaction categorization and expense coding for 35 small business clients; unable to take on new clients without hiring,Managing Partner,,cpa_firm,claude_research,new,2026-06-24T04:03:42.926836,"OpsRunner's AI-driven categorization reduces manual coding from 32 to 4 hours weekly, enabling capacity for 15+ additional clients without new hires, increasing revenue by $45K+ annually"
+Thompson Financial Solutions,72,2026-06-24T04:03:45.263665,mkdcpa.com,david.thompson@mkdcpa.com,,,,David,0,David Thompson,75deff8e,Thompson,https://www.linkedin.com/in/david-thompson-cpa,,4 staff struggling with Sage data entry and reconciliation bottlenecks across 28 clients; 2 bookkeepers left in past year citing burnout from manual processes,Principal,,cpa_firm,claude_research,new,2026-06-24T04:03:45.263674,"OpsRunner eliminates 25 hours/week of repetitive data entry, reducing staff turnover costs (~$12K per departure), improving team morale, and creating 10+ hours/week for higher-value client advisory services"
+Morrison Construction Group,75,2026-06-23T23:12:03.493574,constructionco.com,james.morrison@constructionco.com,"Hey James,
+
+Most construction owners I talk to are paying for tools they forgot about. I'm guessing you might be too.
+
+Leakly pulls your bank statements (no login needed) and flags every subscription in 2 minutes. One client found $1,200/year in forgotten charges.
+
+Just upload a PDF or CSV from your bank—we never touch your credentials.
+
+Quick question: how many SaaS tools are you actually using vs. paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $285/mo leaking from Morrison Construction,,James,0,James Morrison,89b57ea8,Morrison,https://www.linkedin.com/in/james-morrison,,"Subscribed to 8 SaaS tools for project management, accounting, and payroll. Forgot he's still paying for 3 abandoned platforms, bleeding $285/month",Owner,,small_business,claude_research,new,2026-06-23T23:12:03.493584,Leakly identifies all hidden subscriptions from bank statements in minutes without requiring sensitive bank login credentials
+Chen's Premier Plumbing,72,2026-06-23T23:12:05.826283,plumbingco.com,sarah.chen@plumbingco.com,"Hi Sarah,
+
+Most small business owners miss $300-500/year in duplicate subscriptions. Bet you've got a few too.
+
+I built Leakly to spot exactly that—just upload your bank statement (no login needed), and it finds every recurring charge in 2 minutes. No sketchy access to your accounts.
+
+Most plumbing ops I talk to discover forgotten tools they're paying for monthly while using something else.
+
+Want to see what's actually draining your account?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $420 hiding in your bank statements,,Sarah,0,Sarah Chen,83ef7bb1,Chen,https://www.linkedin.com/in/sarah-chen,,Managing her own books with 6 employees. Bank statements show recurring charges she doesn't recognize. Paying for duplicate accounting and scheduling tools simultaneously,Founder,,small_business,claude_research,new,2026-06-23T23:12:05.826293,OpsRunner organizes messy bookkeeping while Leakly uncovers duplicate and forgotten SaaS subscriptions costing her $420/year
+Rodriguez & Sons Construction,70,2026-06-23T23:12:07.512812,constructionco.com,david.rodriguez@constructionco.com,"Hey David,
+
+Running 12 people + 11 SaaS tools is chaos. Bet you're bleeding $500+/month on subscriptions nobody's using.
+
+Leakly finds every hidden charge in 2 minutes. Just upload your bank statement—no login needed, no risk. We spot what's actually costing you.
+
+Takes 60 seconds. Worth checking?
+
+Jaspal
+singhjaspal3460@gmail.com",Find your $500/month leak?,,David,0,David Rodriguez,86eecafd,Rodriguez,https://www.linkedin.com/in/david-rodriguez,,"12 employees, 11 different SaaS subscriptions for operations. Finance team can't track which services are actually being used. Estimated $500+/month waste",CEO,,small_business,claude_research,new,2026-06-23T23:12:07.512821,Leakly scans bank statements instantly to reveal every subscription without requesting risky bank login information or financial access
+Solomon & Associates CPA,75,2026-06-23T20:12:44.007388,solomoncpa.com,jennifer.walsh@solomoncpa.com,"Hi Jennifer,
+
+Losing 2 junior accountants in 18 months—that's brutal. And I'm guessing the remaining 4 are drowning in 32 hours/week of manual reconciliation across 42 Xero clients.
+
+Here's what we built: OpsRunner automates 90% of that busywork. Reconciliation, categorization, reporting—all handled by AI. You get 28 hours back weekly and, more importantly, your team actually stays because they're doing real accounting, not data entry.
+
+Multi-ERP support (Xero included). One number: 80% cost reduction on repetitive tasks.
+
+Worth 15 mins to see if this fits?
+
+Jaspal
+singhjaspal3460@gmail.com",Stop losing accountants to spreadsheets,,Jennifer,0,Jennifer Walsh,405b7f55,Walsh,https://www.linkedin.com/in/jennifer-walsh-cpa,,Lost 2 junior accountants in 18 months due to repetitive reconciliation work; 4 remaining staff handling 42 Xero clients with 32 hours/week in manual data entry and bank feeds,Managing Partner,,cpa_firm,claude_research,new,2026-06-23T20:12:44.007395,"OpsRunner eliminates the repetitive tasks causing staff turnover, automates 32 weekly hours down to 4, allowing team to focus on tax planning and client relationships while improving retention"
+SKR CPA Group,72,2026-06-23T20:12:46.298700,skrcpa.com,david.kumar@skrcpa.com,"Hey David,
+
+28 clients, 24 hours weekly on reconciliation—that's your revenue ceiling, right? We built OpsRunner specifically for this. It handles 90% of reconciliation + categorization across Sage automatically.
+
+Your team gets 21.5 hours back each week. That's bandwidth for 12-15 new clients without hiring anyone.
+
+Same story with other Sage firms we work with—they're scaling past their capacity wall.
+
+Worth a quick conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",24 hours → 2.5 hours/week (Sage reconciliation),,David,0,David Kumar,87c05c5c,Kumar,https://www.linkedin.com/in/david-kumar-cpa,,"Cannot take on new clients due to capacity constraints; 5-person firm spending 24 hours/week on reconciliation across 28 Sage clients, hitting $850K annual revenue ceiling",Principal,,cpa_firm,claude_research,new,2026-06-23T20:12:46.298707,"OpsRunner cuts reconciliation time from 24 to 2.5 hours weekly, creating bandwidth to onboard 12-15 additional clients annually and scale revenue to $1.2M without hiring"
+Patterson & Associates CPA,78,2026-06-23T16:29:07.622037,westcpa.com,michael.patterson@westcpa.com,"Hey Michael,
+
+Seen this before—three bookkeepers drowning in QBO reconciliation for 27 clients. We built OpsRunner to handle exactly this.
+
+AI does the reconciliation and bill entry (90% of the grunt work). Your team shifts to advisory. You save $4,200/month in labor.
+
+Works with QBO natively. Takes 48 hours to set up.
+
+Worth a quick conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut 28 hours down to 3,,Michael,0,Michael Patterson,4ad51eeb,Patterson,https://www.linkedin.com/in/michael-patterson-cpa,,"3 bookkeepers spending 28hrs/week manually reconciling 27 QBO clients and entering vendor bills, causing monthly reconciliation delays",Owner,,cpa_firm,claude_research,new,2026-06-23T16:29:07.622042,"OpsRunner automates reconciliation and data entry, reducing 28hrs to 3hrs/week, freeing staff for advisory work and saving ~$4,200/month in labor costs"
+Chen & Rivera CPA Group,75,2026-06-23T16:29:10.694704,localcpafirm.com,sarah.chen@localcpafirm.com,,,,Sarah,0,Sarah Chen,93aa855b,Chen,https://www.linkedin.com/in/sarah-chen-cpa,,"2 senior bookkeepers handling 35 Xero clients, spending 32hrs/week on month-end close and reconciliation, with staff turnover issues losing institutional knowledge",Managing Partner,,cpa_firm,claude_research,new,2026-06-23T16:29:10.694709,"OpsRunner automates 90% of reconciliation and close procedures, cutting close time from 32hrs to 4hrs/week, reducing dependency on manual expertise and improving retention with better-scoped work"
+Rodriguez CPA & Bookkeeping,72,2026-06-23T16:29:13.558384,westcpa.com,james.rodriguez@westcpa.com,"Hey James,
+
+Guessing your team spends 15+ hours/week just on bank recs and categorization across those 42 clients. We built OpsRunner specifically for this—it handles 90% of reconciliation, matching, and categorization across Sage and QBO automatically.
+
+Most firms like yours cut bookkeeping hours by 3 FTEs (~$6,800/month) and take on 20+ new clients without hiring anyone.
+
+Worth a quick conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",Free up 3 staff members?,,James,0,James Rodriguez,93959919,Rodriguez,https://www.linkedin.com/in/james-rodriguez-cpa,,"4 staff members spending 40hrs/week on bank reconciliation, invoice matching, and expense categorization across 42 Sage and QBO clients, limiting capacity to take new clients",Principal,,cpa_firm,claude_research,new,2026-06-23T16:29:13.558388,"OpsRunner automates reconciliation and categorization to handle 42 clients with 1 bookkeeper, freeing 3 FTEs (~$6,800/month savings) and enabling 20+ new client capacity without hiring"
+Richardson & Foster CPA Group,78,2026-06-23T12:38:18.552277,grfcpa.com,michael.richardson@grfcpa.com,"Hey Michael,
+
+Your team's spending 24 hours weekly on bank feeds alone. We built OpsRunner specifically for firms like yours—it handles 90% of reconciliation and coding across QBO automatically.
+
+One CPA firm cut their manual work from 24 to 3 hours weekly. Your staff gets back to advisory work. Less burnout, better retention.
+
+Works with QBO, Xero, Sage.
+
+Worth a quick call?
+
+Jaspal
+singhjaspal3460@gmail.com",24 hrs → 3 hrs weekly?,,Michael,0,Michael Richardson,ccbd71db,Richardson,https://www.linkedin.com/in/michael-richardson-cpa,,"3 staff reconciling 28 QBO clients manually, averaging 24hrs/week on bank feeds and transaction coding",Owner,,cpa_firm,claude_research,new,2026-06-23T12:38:18.552283,"OpsRunner automates 90% of reconciliation and coding, reducing 24hrs to 2-3hrs weekly, freeing staff for client advisory work and reducing turnover pressure"
+Kumar CPA & Bookkeeping Services,71,2026-06-23T12:38:22.436746,grfcpa.com,david.kumar@grfcpa.com,,,,David,0,David Kumar,2aa00cdc,Kumar,https://www.linkedin.com/in/david-kumar-cpa,,"8-person firm with high staff turnover, training new bookkeepers on manual QBO entry for 35 Sage clients takes 3+ weeks per hire",Principal,,cpa_firm,claude_research,new,2026-06-23T12:38:22.436753,"OpsRunner eliminates 80% of manual data entry tasks, reducing onboarding time to 2 days and cutting training costs by $4,200/hire while improving retention"
+Rodriguez Electric Services,75,2026-06-23T09:53:30.455385,electricalco.com,james.rodriguez@electricalco.com,"Hey James,
+
+Bet you're not tracking every subscription hitting your business account. Most aren't—we found $285/mo in forgotten charges for one client last week.
+
+Leakly spots hidden subscriptions straight from your bank statement in 2 minutes. No login needed. Just upload a PDF and we show you exactly what's draining you.
+
+Could recover $3,400+ yearly for Rodriguez Electric.
+
+Worth 2 minutes?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $285/mo leaking from your account,,James,0,James Rodriguez,3f3ec584,Rodriguez,https://www.linkedin.com/in/james-rodriguez-electrical,,"Subscribed to 8 SaaS tools for scheduling, invoicing, and accounting. Forgot about 3 inactive subscriptions draining $285/month. Bank statements are cluttered with recurring charges he doesn't recognize.",Owner,,small_business,claude_research,new,2026-06-23T09:53:30.455393,"Leakly identifies all hidden subscriptions directly from bank statements in 2 minutes without requiring bank login credentials. Helps recover $3,400+ annually in wasted software spend."
+Harris & Harrison CPA Group,75,2026-06-23T04:01:34.885089,hhcpa.com,michael.torres@hhcpa.com,"Hey Michael,
+
+Spending 15 hours/week on bank recs across 42 Xero clients? That's where most firms hemorrhage money—and talent.
+
+OpsRunner does the heavy lifting: AI handles reconciliation, categorization, reporting automatically. Your team goes from drowning in data entry to actually advising clients.
+
+Real math: 13 fewer hours weekly = capacity for 20 new clients. No new hires needed.
+
+Curious if eliminating that bottleneck would change your retention game?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your reconciliation time by 13 hours/week,,Michael,0,Michael Torres,3319e208,Torres,https://www.linkedin.com/in/michael-torres-cpa,,"2 full-time bookkeepers juggling 42 Xero clients with 15+ hours/week spent on bank reconciliations and duplicate entry across multiple systems, high turnover due to repetitive work",Owner,,cpa_firm,claude_research,new,2026-06-23T04:01:34.885097,"OpsRunner eliminates manual reconciliation bottleneck, reduces weekly hours from 15 to 2, enables firm to handle 20 additional clients without new hires, and improves staff retention by eliminating tedious tasks"
+Beach Fleischman Advisory Services,72,2026-06-23T04:01:37.147134,beachfleischman.com,james.whitmore@beachfleischman.com,"Hey James,
+
+Your team's stuck in invoice hell—22 hours weekly on matching and categorization for 48 clients. We built OpsRunner to kill that.
+
+90% automation across Sage and QB. One firm went from 22 hours to 2.5. No new hires needed. They scaled to 65 clients instead.
+
+Your $850K could push $1.15M without adding headcount.
+
+Worth 15 minutes to see how?
+
+Jaspal
+singhjaspal3460@gmail.com",22 hours/week gone?,,James,0,James Whitmore,a378e8aa,Whitmore,https://www.linkedin.com/in/james-whitmore-cpa,,"Team of 4 bookkeepers managing 48 Sage and QuickBooks clients with 22 hours/week consumed by invoice matching, expense categorization, and month-end reconciliation, firm revenue plateaued at $850K",Principal,,cpa_firm,claude_research,new,2026-06-23T04:01:37.147142,"OpsRunner automates 90% of invoice processing and categorization, reduces 22 weekly hours to 2.5 hours, enables 35% revenue growth to $1.15M by scaling client base from 48 to 65 without hiring additional staff"
+Martinez & Associates CPA,78,2026-06-22T22:08:45.032498,beachfleischman.com,sarah.martinez@beachfleischman.com,,,,Sarah,0,Sarah Martinez,46c59d44,Martinez,https://www.linkedin.com/in/sarah-martinez-cpa,,3 bookkeepers spending 28hrs/week manually reconciling 42 QBO clients and entering vendor data,Managing Partner,,cpa_firm,claude_research,new,2026-06-22T22:08:45.032506,"OpsRunner automates reconciliation and data entry, reducing 28hrs to 3hrs/week, freeing $4,200/month in labor costs and allowing team to focus on client advisory"
+Chen & Howard Bookkeeping Services,75,2026-06-22T22:08:46.964986,hhcpa.com,james.chen@hhcpa.com,"Hey James,
+
+Your team's spending 22 hours weekly on reconciliation across 35 clients—that's brutal. We built OpsRunner specifically for shops like yours. It handles 90% of the reconciliation and categorization automatically in Xero, freeing your people to do actual accounting work.
+
+One of our CPA partners cut that down to 2 hours/week and stopped losing staff to burnout.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut 22 hrs/week on bank work?,,James,0,James Chen,7939b004,Chen,https://www.linkedin.com/in/james-chen-cpa,,2 staff members spending 22hrs/week on bank reconciliation and expense categorization across 35 Xero clients; high turnover due to repetitive work,Owner,,cpa_firm,claude_research,new,2026-06-22T22:08:46.964995,"OpsRunner eliminates 90% of manual reconciliation and categorization, reducing 22hrs to 2hrs/week while improving staff retention by removing tedious tasks"
+Thompson CPA & Tax Advisory,72,2026-06-22T22:08:48.937074,beachfleischman.com,david.thompson@beachfleischman.com,,,,David,0,David Thompson,fd07fbe6,Thompson,https://www.linkedin.com/in/david-thompson-cpa,,"4 bookkeepers managing 48 clients with mixed accounting software (QBO, Sage); spending 35hrs/week on data entry and reconciliation; firm revenue $950K but can't scale",Principal,,cpa_firm,claude_research,new,2026-06-22T22:08:48.937081,"OpsRunner automates across platforms, reducing 35hrs to 4hrs/week, enabling firm to take on 20+ additional clients without hiring, growing revenue to $1.4M annually"
+Richardson & Associates CPA,74,2026-06-22T18:14:54.882653,hcvt.com,james.richardson@hcvt.com,"Hey James,
+
+Reconciling 24 Xero clients manually sounds brutal—especially when data entry errors pile up the rework.
+
+OpsRunner handles 90% of that for you. Your team goes from 28hrs/week to 3hrs/week on reconciliation, plus fewer errors means less cleanup.
+
+We've seen CPA firms save $4,200/month in labor costs alone.
+
+Worth a quick chat to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your reconciliation time by 90%,,James,0,James Richardson,46e2e36e,Richardson,https://www.linkedin.com/in/james-richardson-cpa,,"3 bookkeepers spending 28hrs/week manually reconciling 24 Xero clients, frequent data entry errors causing rework",Owner,,cpa_firm,claude_research,new,2026-06-22T18:14:54.882658,"OpsRunner would automate 90% of reconciliation, reducing manual work to 3hrs/week and cutting errors by 85%, saving approximately $4,200/month in labor costs"
+Martinez CPA Group,71,2026-06-22T18:14:57.035714,dmcpas.com,sarah.martinez@dmcpas.com,"Sarah, I get it—your team's buried in QBO data entry while you're leaving $60K on the table turning away clients.
+
+We built OpsRunner to handle exactly this. Our AI does 90% of reconciliation and categorization work across QBO, Xero, Sage.
+
+One of our CPA partners went from 22 hrs/week to 2. Onboarded 8 new clients without hiring.
+
+Worth a quick conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",22 hrs/week → 2 hrs (no new hires),,Sarah,0,Sarah Martinez,0bf3d9df,Martinez,https://www.linkedin.com/in/sarah-martinez-cpa,,"2 staff members spending 22hrs/week on QuickBooks Online data entry and bank reconciliation for 18 small business clients, struggling to onboard new clients",Managing Partner,,cpa_firm,claude_research,new,2026-06-22T18:14:57.035718,"OpsRunner would reduce manual data entry to 2hrs/week, freeing capacity to take on 8-10 additional clients without hiring, increasing revenue by $60K+ annually"
+Torres & Webb Accounting,73,2026-06-22T18:15:00.718062,hcvt.com,michael.torres@hcvt.com,,,,Michael,0,Michael Torres,7bfca1d3,Torres,https://www.linkedin.com/in/michael-torres-cpa,,"4 bookkeepers spending 32hrs/week on manual reconciliation across 35 Xero clients, high staff turnover due to repetitive work, training new hires takes 3 weeks",Principal,,cpa_firm,claude_research,new,2026-06-22T18:15:00.718066,"OpsRunner eliminates 90% of repetitive reconciliation tasks, reducing training time to 2 days, improving staff retention, and saving $5,600/month in labor while improving client service quality"
+Morrison & Associates CPA,78,2026-06-22T12:14:48.957221,localcpafirm.com,james.morrison@localcpafirm.com,"Hey James,
+
+Your team's spending 28 hours/week on reconciliation across 35 QBO clients. That's burnout waiting to happen—and probably why you're losing bookkeepers every 6 months.
+
+OpsRunner handles 90% of that work automatically. Most firms drop reconciliation from 28 hours to 3 hours weekly. That's $4,200/month back in your pocket and actually keeping your team around.
+
+Built for QBO firms exactly like yours.
+
+Worth a 15-min conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your reconciliation time by 90%,,James,0,James Morrison,fce3a3ec,Morrison,https://www.linkedin.com/in/james-morrison-cpa,,"3 bookkeepers spending 28hrs/week on manual reconciliation and bank feeds for 35 QBO clients, causing 6-month staff turnover rate",Owner,,cpa_firm,claude_research,new,2026-06-22T12:14:48.957229,"OpsRunner automates 90% of reconciliation, reducing 28hrs to 3hrs/week, saving $4,200/month in labor costs and improving staff retention"
+Chen & Co. Bookkeeping Services,74,2026-06-22T12:14:51.746994,padgettbusiness.com,sarah.chen@padgettbusiness.com,"Hi Sarah,
+
+Your team's stuck in data entry hell—22hrs/week on routine work across 28 clients. We built OpsRunner specifically for this.
+
+Our AI handles 90% of reconciliation, categorization, and journal entries across Xero (and QBO, Sage). One firm like yours recovered 18hrs/week and onboarded 12 new clients without hiring.
+
+That's $36K in new revenue. Just saying.
+
+Works in 15 minutes to set up.
+
+Worth a quick look?
+
+Jaspal
+singhjaspal3460@gmail.com",Free up 18hrs/week at Chen & Co,,Sarah,0,Sarah Chen,b212188a,Chen,https://www.linkedin.com/in/sarah-chen-cpa,,"2 staff members spending 22hrs/week on data entry and journal entries across 28 Xero clients, unable to take on new business",Managing Partner,,cpa_firm,claude_research,new,2026-06-22T12:14:51.747001,"OpsRunner automates data classification and entry, freeing up 18hrs/week to service 12 additional clients without hiring, potential $36K annual revenue increase"
+Rodriguez Tax & Accounting,71,2026-06-22T12:14:54.059507,localcpafirm.com,michael.rodriguez@localcpafirm.com,,,,Michael,0,Michael Rodriguez,e0bd6e86,Rodriguez,https://www.linkedin.com/in/michael-rodriguez-cpa,,"4 bookkeepers manually matching transactions across 42 Sage clients, spending 32hrs/week on reconciliation, high error rates causing client complaints",Principal,,cpa_firm,claude_research,new,2026-06-22T12:14:54.059515,"OpsRunner reduces reconciliation time by 85% with AI matching, cutting costs by $5,100/month while reducing errors by 96%, improving client satisfaction and margins"
+Turner's CrossFit Studio,75,2026-06-22T05:01:54.734563,fitnessowner.com,james.turner@fitnessowner.com,,,,James,0,James Turner,12844c30,Turner,https://www.linkedin.com/in/james-turner-fitness,,"Paying for 9 SaaS subscriptions including software he forgot about—Zenfit, old payment processor, 2 abandoned scheduling apps. Loses $285/month on unused tools.",Owner,,small_business,claude_research,new,2026-06-22T05:01:54.734568,"Leakly scans bank statements in 2 minutes, identifies all hidden subscriptions without requiring sensitive bank login credentials. Recovers forgotten monthly charges immediately."
+Rossi Personal Training & Wellness,70,2026-06-22T05:01:56.774439,fitnessowner.com,michael.rossi@fitnessowner.com,"Hey Michael,
+
+Bet you don't know exactly where that $420/month is going—most gym owners don't. I built Leakly to find duplicate subscriptions and forgotten software licenses buried in bank statements.
+
+Upload your last 3 months of transactions (PDF/Excel/CSV). Takes 2 minutes. No bank login needed—privacy stays yours.
+
+Curious what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $420/month in hidden charges,,Michael,0,Michael Rossi,4dd4cdb4,Rossi,https://www.linkedin.com/in/michael-rossi-trainer,,"Subscribed to 11 apps for gym management, accounting, and marketing. Paying for 3 duplicate payment processors and 2 inactive software licenses. Wastes $420/month.",CEO,,small_business,claude_research,new,2026-06-22T05:01:56.774448,Leakly finds all hidden subscriptions in minutes by analyzing bank statements securely—no bank login required. Helps Michael stop bleeding money on redundant tools.
+Rivera & Associates Legal Services,75,2026-06-21T23:20:57.442434,lawfirm.com,james.rivera@lawfirm.com,,,,James,0,James Rivera,e986819b,Rivera,https://www.linkedin.com/in/james-rivera,,"Managing 8 SaaS subscriptions across practice (case management, billing, document storage, CRM, accounting), forgot about 3 inactive ones costing $285/month",Owner,,small_business,claude_research,new,2026-06-21T23:20:57.442442,"Leakly identifies all recurring charges from bank statements in minutes without requiring banking credentials, helping recover hidden subscription waste"
+Chen Realty Group,72,2026-06-21T23:21:00.292052,realtoroffice.com,sarah.chen@realtoroffice.com,,,,Sarah,0,Sarah Chen,fe17b23c,Chen,https://www.linkedin.com/in/sarah-chen,,"Subscribed to 11 real estate tools (MLS, CRM, marketing, transaction management), 5 are rarely used, bleeding $420/month in wasted tools",Founder,,small_business,claude_research,new,2026-06-21T23:21:00.292059,"Leakly maps all hidden subscriptions from bank data without login credentials, perfect for busy agents managing multiple business accounts"
+Johnson Estate Planning LLC,70,2026-06-21T23:21:02.781067,lawfirm.com,marcus.johnson@lawfirm.com,"Hey Marcus,
+
+Bet you're bleeding money on subscriptions you forgot about. Most business owners lose $150-300/month this way.
+
+Here's the thing—you don't need to log into your bank or juggle 9 tools. Just upload your last bank statement to Leakly (takes 2 min), and we'll show you every hidden subscription draining your account.
+
+No credentials needed. Privacy stays yours.
+
+Want to see what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Find your hidden $195/month leak?,,Marcus,0,Marcus Johnson,2053c462,Johnson,https://www.linkedin.com/in/marcus-johnson,,"Handles own bookkeeping, subscribed to 9 SaaS tools, can't track which ones are active, loses $195/month, messy bank reconciliation monthly",Owner,,small_business,claude_research,new,2026-06-21T23:21:02.781074,Leakly reveals all subscriptions instantly from bank statements plus OpsRunner streamlines bookkeeping without manual data entry or bank login
+Rustic Handmade Goods Co,72,2026-06-21T21:20:18.874918,etsy.com,james.rodriguez@etsy.com,,,,James,0,James Rodriguez,9d04618a,Rodriguez,https://www.linkedin.com/in/james-rodriguez-crafts,,"Manages own books with 8 active subscriptions (inventory, payments, analytics, bookkeeping, marketing). Uncertain which tools he actually needs. Spending $420/month but only uses 5 regularly.",Founder,,small_business,claude_research,new,2026-06-21T21:20:18.874925,Leakly + OpsRunner combo: finds waste ($120/month) and organizes bookkeeping workflow. Owner regains control without hiring accountant.
+Urban Fitness Studio,73,2026-06-21T21:20:21.152279,shopify.com,michael.chen@shopify.com,,,,Michael,0,Michael Chen,aeb30ecb,Chen,https://www.linkedin.com/in/michael-chen-fitness,,"12 employees, uses 11 SaaS subscriptions (membership platform, scheduling, CRM, video hosting, design, analytics). Loses track of renewals. Estimated $290/month waste on duplicate or forgotten tools.",Owner,,small_business,claude_research,new,2026-06-21T21:20:21.152287,Leakly scans bank statements instantly—no bank login needed. Finds all hidden charges in seconds. Saves $290/month without disrupting operations.
+Peak Performance Gym,75,2026-06-21T19:51:25.572189,restaurantowner.com,james.rivera@peakperformancegym.com,"Hey James,
+
+Most gym owners don't realize they're bleeding money on forgotten subscriptions. You're probably paying for apps you stopped using months ago.
+
+Leakly finds every hidden charge in 2 minutes—just upload your bank statement, no login needed. One Peak Performance client recovered $280/month in wasted software costs.
+
+Want to see what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $280/month leaking from your gym,,James,0,James Rivera,882cf727,Rivera,https://www.linkedin.com/in/james-rivera-gym,,"Pays for 8 fitness SaaS subscriptions (member management, billing, marketing automation, scheduling). Realizes he's been charged for 2 unused platforms for 6+ months = $280/month waste. Bank statements are cluttered and confusing.",Owner,,small_business,claude_research,new,2026-06-21T19:51:25.572198,Leakly identifies all recurring charges in minutes without requiring sensitive bank login credentials. Helps recover lost money and consolidates vendor list.
+Maria's Salon & Spa,72,2026-06-21T19:51:27.951531,wix.com,maria.santos@marias-salon.wix.com,,,,Maria,0,Maria Santos,a9b82102,Santos,https://www.linkedin.com/in/maria-santos-salon,,"Manages 12 subscriptions: POS system, booking software, payroll, accounting, email marketing, social media tools. Estimates $420/month on forgotten or underused services. Uses spreadsheet for bookkeeping but can't track all vendor charges.",Founder,,small_business,claude_research,new,2026-06-21T19:51:27.951539,Leakly instantly discovers hidden subscriptions from bank data without login risks. OpsRunner integrates findings into simple bookkeeping workflow for 6 employees.
+Smith Plumbing & HVAC,70,2026-06-21T19:51:30.082290,wix.com,david.chen@smithplumbing.wix.com,,,,David,0,David Chen,a91363df,Chen,https://www.linkedin.com/in/david-chen-plumbing,,"Subscribed to job scheduling, invoicing, truck GPS, accounting software, and 2 payment processing tools. Monthly SaaS spend $650+ but uses only 60% of what he pays for. Keeps personal bookkeeper 5 hours/month just organizing statements.",Owner,,small_business,claude_research,new,2026-06-21T19:51:30.082297,Leakly maps all recurring charges without bank password exposure. Shows which tools he actually uses vs. ghost subscriptions. Saves time for his bookkeeper and recovers $200-300/month immediately.
+Bright Smile Dental Studio,75,2026-06-21T17:46:58.715037,dentistpractice.com,james.morrison@dentistpractice.com,,,,James,0,James Morrison,faf6f971,Morrison,https://www.linkedin.com/in/james-morrison-dental,,"Subscribed to 8 dental software tools (scheduling, patient records, billing), paying $890/month but using only 4 actively. Lost $4,200 last year on forgotten subscriptions while managing practice manually",Owner,,small_business,claude_research,new,2026-06-21T17:46:58.715045,"Leakly identifies all recurring charges from bank statements in minutes without requiring sensitive login credentials, immediately revealing wasted subscription spend"
+Chen & Associates Legal Services,72,2026-06-21T17:47:02.927768,lawfirm.com,rachel.chen@lawfirm.com,"Hey Rachel,
+
+Managing books for 6 people + juggling 11 SaaS tools sounds exhausting. Most firms like yours are bleeding $400-600/month on subscriptions they forgot about.
+
+Leakly finds hidden charges in 2 minutes—just upload your bank statement. No login needed, no hassle. Privacy-first.
+
+Then we can talk about automating your bookkeeping so you're not manually reconciling everything.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com","Rachel, $520/mo leaking away?",,Rachel,0,Rachel Chen,772f197b,Chen,https://www.linkedin.com/in/rachel-chen-attorney,,"Managing own books with 6 employees, subscribed to 11 SaaS tools (case management, document automation, accounting software). Estimated $520/month in unused tools, frustration with disconnected bank integrations",Founder,,small_business,claude_research,new,2026-06-21T17:47:02.927777,"Leakly eliminates bank login frustration while OpsRunner streamlines bookkeeping workflows, giving Rachel visibility into all expenses without juggling multiple platform logins"
+Washington Family Dentistry,74,2026-06-21T17:47:04.973250,dentistpractice.com,marcus.washington@dentistpractice.com,,,,Marcus,0,Marcus Washington,544f5a9f,Washington,https://www.linkedin.com/in/marcus-washington-dds,,"12 active subscriptions across practice management, marketing, and patient communication platforms. Pays bookkeeper $1,200/month but bank statement reconciliation still takes 8 hours monthly with errors from duplicate charges",Owner,,small_business,claude_research,new,2026-06-21T17:47:04.973256,"Leakly auto-detects all subscriptions from bank data instantly, eliminating reconciliation work and exposing duplicate charges before they cascade into bigger accounting problems"
+Bright Smile Dental Group,75,2026-06-21T15:57:53.566365,dentistpractice.com,james.rivera@dentistpractice.com,"Hey James,
+
+Bet you're not tracking every subscription Bright Smile is paying for. Most dental practices we talk to are surprised—8 tools, recurring charges everywhere.
+
+Here's the thing: you probably have $2-3k/year slipping away unnoticed. Leakly finds all of it in 2 minutes. Just upload your bank statement (no login needed, totally private). Done.
+
+Want to see what you're actually paying for?
+
+—Jaspal
+singhjaspal3460@gmail.com",Your dental practice is bleeding $280/month,,James,0,James Rivera,9cdf0283,Rivera,https://www.linkedin.com/in/james-rivera-dental,,"Subscribes to 8 dental practice management tools (patient scheduling, billing, marketing), loses track of renewals, estimates $280/month in forgotten subscriptions",Owner,,small_business,claude_research,new,2026-06-21T15:57:53.566371,"Leakly identifies all active subscriptions from bank statements in minutes—no banking credentials needed, helps recover hidden dental software costs"
+Chen & Associates Legal,72,2026-06-21T15:57:55.731871,lawfirm.com,sarah.chen@lawfirm.com,,,,Sarah,0,Sarah Chen,4e6af670,Chen,https://www.linkedin.com/in/sarah-chen-attorney,,"Managing firm subscriptions for case management, document storage, CLE credits, accounting software—paying for 11 SaaS tools, 3 unused for 6+ months (~$450/month waste)",Founder,,small_business,claude_research,new,2026-06-21T15:57:55.731879,"Leakly instantly maps all subscriptions from bank data without secure login, helps law firms cut software bloat and redirect funds to staff"
+Thompson Family Dentistry,70,2026-06-21T15:57:57.961840,dentistpractice.com,marcus.thompson@dentistpractice.com,"Hey Marcus,
+
+Running a 9-person practice means money's bleeding everywhere—especially subscriptions you forgot about.
+
+Most dental owners like you have 6+ tools running. Bet you're paying for stuff nobody uses anymore.
+
+Here's the thing: upload your bank statement to Leakly (2 minutes, no login needed). We'll find every hidden subscription draining your account.
+
+Then OpsRunner handles the actual bookkeeping so you stop juggling it all.
+
+Want to see what you're actually spending?
+
+Jaspal
+singhjaspal3460@gmail.com",Finding $200/month in your practice,,Marcus,0,Marcus Thompson,3ad58191,Thompson,https://www.linkedin.com/in/marcus-thompson-dds,,"Runs 9-person dental practice, pays own bookkeeping bills, subscribed to 6 software platforms plus backup services—estimates $200/month in duplicate or unused tools",Owner,,small_business,claude_research,new,2026-06-21T15:57:57.961847,OpsRunner handles bookkeeping workflows while Leakly uncovers hidden subscriptions—gives dental practice owners full visibility into software spend
+Richardson & West CPA Group,78,2026-06-21T12:16:27.379748,wrcpa.com,michael.richardson@wrcpa.com,"Hey Michael,
+
+Your team's spending 28 hours weekly on reconciliation across 42 QBO clients. That's brutal.
+
+We built OpsRunner to handle exactly this—AI does 90% of the work. Reconciliation, categorization, reporting. Cuts that down to ~3 hours.
+
+Your staff moves to tax planning instead of data entry. Real value for clients.
+
+Works with QBO, Xero, Sage.
+
+Worth 15 mins to see it in action?
+
+Jaspal
+singhjaspal3460@gmail.com",28 hours/week gone,,Michael,0,Michael Richardson,9121a98b,Richardson,https://www.linkedin.com/in/michael-richardson-cpa,,3 staff members spend 28 hours/week on manual reconciliation and bank feeds for 42 QBO clients across 8 industries,Owner,,cpa_firm,claude_research,new,2026-06-21T12:16:27.379753,"OpsRunner automates 90% of reconciliation workflow, reducing 28 hours to ~3 hours weekly, freeing staff for higher-value tax planning and client advisory work"
+Torres Business Solutions CPA,76,2026-06-21T12:16:29.470016,wrcpa.com,david.torres@wrcpa.com,"Hey David,
+
+32 hours weekly on reconciliation is brutal—especially when you're leaving money on the table by not taking new clients.
+
+We built OpsRunner for firms exactly like yours. Our AI handles 90% of the grunt work across Sage (reconciliation, categorization, validation). Most teams go from 32 hours down to 4.
+
+That freed-up capacity? You could easily scale to 70+ clients without hiring.
+
+Worth a quick chat to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",Free up 28 hours/week from Sage work?,,David,0,David Torres,662b279b,Torres,https://www.linkedin.com/in/david-torres-cpa,,4-person team spends 32 hours/week on Sage reconciliation and data validation for 48 small business clients; cannot take on new clients without hiring,Principal,,cpa_firm,claude_research,new,2026-06-21T12:16:29.470024,"OpsRunner automates reconciliation and validation across Sage clients, reducing manual hours to ~4/week, enabling firm to scale to 70+ clients without adding headcount"
+Martinez Electric Services,72,2026-06-21T09:58:01.916427,electricalco.com,sarah.martinez@electricalco.com,,,,Sarah,0,Sarah Martinez,ba5427c3,Martinez,https://www.linkedin.com/in/sarah-martinez-electrical,,"Manages books herself with 9 active SaaS subscriptions (CRM, accounting, invoicing, project management). Loses track of 4-5 subscriptions per quarter. Annual revenue $450K with 6 employees.",Founder,,small_business,claude_research,new,2026-06-21T09:58:01.916434,"Leakly maps all subscription expenses automatically, syncs with bank data safely, and helps identify cancellation opportunities. OpsRunner also available for DIY bookkeeping cleanup."
+Torres CPA & Bookkeeping Solutions,78,2026-06-21T04:53:15.651479,padgettbusiness.com,michael.torres@padgettbusiness.com,,,,Michael,0,Michael Torres,29297a01,Torres,https://www.linkedin.com/in/michael-torres-cpa,,3 bookkeepers spending 28hrs/week manually reconciling 24 QBO clients and entering vendor invoices,Owner,,cpa_firm,claude_research,new,2026-06-21T04:53:15.651486,"OpsRunner would automate reconciliation and invoice entry, reducing 28hrs to 5hrs/week, saving $4,200/month in labor costs while handling client growth"
+Chen & Associates Accounting,74,2026-06-21T04:53:18.114676,bookkeeping-express.com,sarah.chen@bookkeeping-express.com,,,,Sarah,0,Sarah Chen,78c2584c,Chen,https://www.linkedin.com/in/sarah-chen-accountant,,2 staff members spend 22hrs/week on data entry and bank reconciliation across 18 Xero clients; losing junior staff to burnout,Managing Partner,,cpa_firm,claude_research,new,2026-06-21T04:53:18.114684,"OpsRunner automates 90% of reconciliation and data entry, freeing staff for tax prep and client advisory work, reducing turnover risk and enabling 8-10 new clients without hiring"
+Richardson & Kim Bookkeeping,76,2026-06-21T04:53:20.217174,padgettbusiness.com,david.richardson@padgettbusiness.com,"Hey David,
+
+Heard you're juggling 32 clients across Sage and QBO with month-end taking 31 hours weekly. That's brutal—and I'm guessing reconciliation delays are frustrating your clients.
+
+OpsRunner handles 90% of that work. Our AI does the heavy lifting: reconciliation, categorization, reporting. Your team focuses on strategy.
+
+Most firms see month-end drop to 6 hours. You could onboard 12+ new clients without hiring.
+
+Works with both Sage and QBO.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",31 hours → 6 hours/week?,,David,0,David Richardson,e7dbcee8,Richardson,https://www.linkedin.com/in/david-richardson-cpa,,"4 bookkeepers managing 32 Sage and QBO clients, spending 31hrs/week on month-end close tasks and reconciliation delays causing client complaints",Principal,,cpa_firm,claude_research,new,2026-06-21T04:53:20.217181,"OpsRunner accelerates month-end close from 31hrs to 6hrs/week, improves accuracy, eliminates reconciliation backlog, and allows firm to take on 12+ additional clients at current staffing level"
+Martinez Family Bistro,72,2026-06-20T23:14:38.464774,shopify.com,james.martinez@shopify.com,,,,James,0,James Martinez,05f90476,Martinez,https://www.linkedin.com/in/james-martinez-restaurant,,"Running restaurant with 8 employees, subscribed to 11 SaaS tools (POS, inventory, payroll, marketing, accounting), estimates $280/month wasted on forgotten apps like old email marketing platform and duplicate accounting software",Owner,,small_business,claude_research,new,2026-06-20T23:14:38.464782,"Leakly identifies all recurring charges from bank statements in minutes without sharing login credentials, helps recover $280+ monthly immediately"
+Robinson's Vintage Retail,70,2026-06-20T23:14:40.914729,shopify.com,david.robinson@shopify.com,"Hey David,
+
+Most retail owners juggle tools until subscriptions become invisible. You mentioned managing 13 SaaS tools—I'd bet $420/month is bleeding out somewhere in your bank statements.
+
+Leakly finds hidden subscriptions in 2 minutes. Just upload your bank PDF. No login required, no bank credentials at risk.
+
+It's how vintage retail owners usually recover enough to hire help or boost margins.
+
+Want to see what's actually costing you?
+
+Jaspal
+singhjaspal3460@gmail.com",Your $420/month leak (it's in your bank statement),,David,0,David Robinson,c4a87d90,Robinson,https://www.linkedin.com/in/david-robinson-retail,,"Retail owner with 6 employees, enrolled in 13 different SaaS tools across store operations, forgets about $420/month in subscriptions (old social media scheduler, redundant analytics), handles own bookkeeping but bank statements are chaotic",CEO,,small_business,claude_research,new,2026-06-20T23:14:40.914737,"Leakly scans bank transactions to reveal all hidden subscriptions instantly, no risky bank login required, recovers $420+ monthly to improve retail margins"
+King's Hair & Wellness Studio,72,2026-06-20T21:22:59.764916,salonowner.com,patricia.king@salonowner.com,,,,Patricia,0,Patricia King,5991b491,King,https://www.linkedin.com/in/patricia-king-salon,,"Uses 11 SaaS tools for booking, payroll, marketing, and accounting. Estimates $520/month in wasted subscriptions on duplicate or abandoned services. Does her own bookkeeping quarterly.",Owner,,small_business,claude_research,new,2026-06-20T21:22:59.764923,"Leakly + OpsRunner combo: discover hidden subscriptions instantly, then organize books without complex bank API integrations—ideal for salon owners handling their own finances."
+Thrive Beauty Salon,75,2026-06-20T19:45:05.369405,squarespace.com,sarah@thrivesalon.squarespace.com,,,,Sarah,0,Sarah Martinez,907e9a17,Martinez,https://www.linkedin.com/in/sarah-martinez-salon,,"Paying for 8 SaaS subscriptions (booking software, email marketing, accounting, scheduling apps), forgot about 3 dormant subscriptions, loses $185/month",Owner,,small_business,claude_research,new,2026-06-20T19:45:05.369415,"Leakly identifies all hidden subscriptions from bank statements in 2 minutes without bank login, immediate ROI for salon"
+Rustic Coffee & Goods,72,2026-06-20T19:45:08.435897,wix.com,james@rusticcoffee.wix.com,"Hey James,
+
+Bet you didn't know 4 subscriptions are still charging you monthly. Most small business owners discover $240+ in hidden costs buried in bank statements.
+
+Leakly finds them in 2 minutes—just upload your statement, no bank login needed. Then OpsRunner helps organize the rest without the accounting headache.
+
+Want to recover that cash?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $240/mo leaking from your coffee shop,,James,0,James Chen,17c66c4c,Chen,https://www.linkedin.com/in/james-chen-coffee,,"Managing own books with 6 employees, subscribed to 11 SaaS tools across POS, inventory, payroll, marketing; lost track of 4 unused subscriptions costing $240/month",Founder,,small_business,claude_research,new,2026-06-20T19:45:08.435905,Leakly + OpsRunner combo: finds hidden subscriptions instantly and helps organize messy bookkeeping without complex bank integrations
+Styled by Michelle Boutique,78,2026-06-20T19:45:10.425428,squarespace.com,michelle@styledbymichelle.squarespace.com,,,,Michelle,0,Michelle Rodriguez,4737ecef,Rodriguez,https://www.linkedin.com/in/michelle-rodriguez-boutique,,"Retail shop with 4 employees, paying for 9 subscriptions (inventory, email, accounting, design tools), unaware of $165/month bleeding from forgotten trial-to-paid conversions",Owner,,small_business,claude_research,new,2026-06-20T19:45:10.425437,Leakly immediately reveals all hidden subscription charges from bank data without requiring secure bank login credentials
+Martinez's Italian Kitchen,75,2026-06-20T17:40:03.058398,restaurantowner.com,james.martinez@restaurantowner.com,,,,James,0,James Martinez,261bc5cb,Martinez,https://www.linkedin.com/in/james-martinez-restaurant,,"Paying for 9 SaaS subscriptions across POS, delivery platforms, accounting, and marketing tools. Forgot about 3 dormant accounts (Toast add-on, old Grubhub integration, abandoned email marketing). Losing ~$285/month on forgotten services.",Owner,,small_business,claude_research,new,2026-06-20T17:40:03.058406,Leakly scans bank statements to uncover all hidden recurring charges in 2 minutes without requiring insecure bank login credentials. Identifies which subscriptions are actually being used.
+Bloom Hair & Wellness,72,2026-06-20T17:40:05.055615,salonowner.com,sarah.chen@salonowner.com,,,,Sarah,0,Sarah Chen,73ec8292,Chen,https://www.linkedin.com/in/sarah-chen-salon,,"Managing 11 subscriptions for scheduling software, booking platforms, inventory management, and accounting. Still paying for 2 abandoned appointment systems and a discontinued payroll add-on. Wastes $210/month. Struggles with disorganized bank statement tracking.",Founder,,small_business,claude_research,new,2026-06-20T17:40:05.055624,"Leakly automatically maps all recurring charges from bank statements, revealing forgotten subscriptions without requiring bank login. Works seamlessly with existing bookkeeper workflow or DIY accounting."
+Rodriguez's Tacos & More,70,2026-06-20T17:40:06.986692,restaurantowner.com,michael.rodriguez@restaurantowner.com,"Hey Michael,
+
+Most restaurant owners we talk to are paying for tools they forgot about. 8 subscriptions. Duplicate accounts. Old services still charging.
+
+Leakly finds all of it in 2 minutes—just upload your bank statement. No login needed, totally private.
+
+See what you're actually spending on subscriptions?
+
+Jaspal
+singhjaspal3460@gmail.com",You're probably losing $175/month,,Michael,0,Michael Rodriguez,ff88c6e1,Rodriguez,https://www.linkedin.com/in/michael-rodriguez-tacos,,"Subscribed to 8 business tools including duplicate payment processing accounts, old menu printing service, and 2 unused marketing platforms. Loses ~$175/month on forgotten subscriptions. Manually tracks expenses on spreadsheets, error-prone.",Owner,,small_business,claude_research,new,2026-06-20T17:40:06.986700,Leakly instantly identifies all hidden recurring charges from bank data in under 2 minutes without risky bank login. Gives small business owners clarity on actual SaaS spend and eliminates duplicate tool costs.
+Artisan Candle Co,75,2026-06-20T15:47:32.147226,etsy.com,sarah.chen@etsy.com,,,,Sarah,0,Sarah Chen,475e72b7,Chen,https://www.linkedin.com/in/sarah-chen-artisan,,"Running Etsy shop with 8 employees, subscribed to Printful, Klaviyo, Stripe, Shopify apps, Square, accounting software, and 3 email tools - estimates losing $420/month on forgotten subscriptions",Owner,,small_business,claude_research,new,2026-06-20T15:47:32.147236,"Leakly automatically identifies all recurring charges from bank statements without requiring bank login credentials, saving time and money instantly"
+Rodriguez Automotive Detailing,72,2026-06-20T15:47:34.456094,squarespace.com,marcus.rodriguez@squarespace.com,"Hey Marcus,
+
+Running 6 people + multiple tools = money slipping through cracks. Most shop owners miss 40% of subscriptions and duplicate charges.
+
+Leakly finds them in 2 minutes—just upload your bank statement (no password needed). One client recovered $2,400 in forgotten subscriptions last month.
+
+No sketchy login sharing, works with Wave/QB, takes 5 minutes.
+
+Worth a quick look?
+
+Jaspal
+singhjaspal3460@gmail.com","Marcus, your $2K/month leak is hiding",,Marcus,0,Marcus Rodriguez,3a8fa9ee,Rodriguez,https://www.linkedin.com/in/marcus-rodriguez-detailing,,"Service business with 6 employees, juggling Squarespace, QuickBooks, Wave, appointment software, payment processor fees, and marketing tools - manual bookkeeping catches only 60% of expenses",Founder,,small_business,claude_research,new,2026-06-20T15:47:34.456103,Leakly reveals hidden subscriptions and paired with OpsRunner helps organize chaotic expense tracking without needing to share banking passwords
+Lavish Hair Studio,70,2026-06-20T15:47:37.108275,etsy.com,jennifer.martinez@etsy.com,"Hey Jennifer,
+
+Between booking software, POS, inventory tools, Etsy, Adobe subscriptions, and random trials—I bet you're bleeding money monthly without realizing it.
+
+We built Leakly to find exactly that. Upload your bank statement (no login required), and in 2 minutes you'll see every subscription draining your account.
+
+Most salon owners find $200-400/month they forgot about.
+
+Want to see what's hiding in your statements?
+
+Jaspal
+singhjaspal3460@gmail.com",Where's your $280/month going?,,Jennifer,0,Jennifer Martinez,6ef7f95d,Martinez,https://www.linkedin.com/in/jennifer-martinez-salon,,"Salon owner with 12 stylists, paying for booking software, POS system, inventory management, Etsy shop for product sales, multiple Adobe subscriptions, and forgotten trial memberships - $280/month leakage",Owner,,small_business,claude_research,new,2026-06-20T15:47:37.108284,"Leakly quickly maps all subscriptions from bank data safely, helping salon owners reclaim budget without complicated bank connections or IT support"
+Martinez & Harrison Tax Services,75,2026-06-20T12:01:39.267861,mhtcpa.com,sarah.martinez@mhtcpa.com,"Hi Sarah,
+
+Your team's spending 22 hours weekly on Xero data entry and reconciliation—that's basically a full-time person doing repetitive work instead of serving clients.
+
+OpsRunner handles 90% of that automatically. Auto-reconciliation, categorization, the whole thing. We've seen firms like yours free up 20 hours/week without hiring.
+
+That's 12+ new clients you could onboard. At your rates, that's $6K+/month in new revenue.
+
+Works with Xero (and QBO, Sage too). Free to test.
+
+Worth 15 minutes to see how it works?
+
+Jaspal
+singhjaspal3460@gmail.com",20 hours back per week?,,Sarah,0,Sarah Martinez,f5a12c59,Martinez,https://www.linkedin.com/in/sarah-martinez-cpa,,2 staff members spending 22hrs/week on Xero data entry and bank reconciliation for 28 small business clients; can't take on new clients without hiring,Managing Partner,,cpa_firm,claude_research,new,2026-06-20T12:01:39.267871,"OpsRunner eliminates manual data entry and auto-reconciles, freeing 20hrs/week to service 12+ additional clients without hiring, unlocking $6K+/month new revenue"
+Chen Financial Group CPA,72,2026-06-20T12:01:41.490855,grfcpa.com,michael.chen@grfcpa.com,,,,Michael,0,Michael Chen,5b91fc6e,Chen,https://www.linkedin.com/in/michael-chen-cpa,,"4 bookkeepers spending 32hrs/week on Sage reconciliation, expense categorization, and AR/AP entry across 42 mid-market SMB clients; scaling bottleneck",Principal,,cpa_firm,claude_research,new,2026-06-20T12:01:41.490863,"OpsRunner reduces 32hrs to 4hrs weekly through AI automation, enables team to handle 60+ clients profitably, eliminates hiring need for 2 FTE, saves $8,400/month"
+Luxe Hair Studio,72,2026-06-20T09:27:16.345087,salonowner.com,sarah.martinez@salonowner.com,,,,Sarah,0,Sarah Martinez,395d46c1,Martinez,https://www.linkedin.com/in/sarah-martinez-salon,,"Manages 8 SaaS subscriptions (booking software, payment processing, inventory, accounting, marketing tools). Lost track of 3 unused subscriptions costing $185/month. Bank statements are messy with recurring charges scattered across vendors.",Owner,,small_business,claude_research,new,2026-06-20T09:27:16.345094,"Leakly identifies all hidden subscriptions from bank statements instantly—no risky bank login required. Recovers $2,220/year in forgotten charges and provides clear subscription audit."
+Cuts & Color Barbershop,70,2026-06-20T09:27:18.166030,salonowner.com,michael.rodriguez@salonowner.com,,,,Michael,0,Michael Rodriguez,f2b96a91,Rodriguez,https://www.linkedin.com/in/michael-rodriguez-barber,,"Subscribed to 6 point-of-sale and software tools, plus 4 marketing/payment apps. Forgot about old POS trial subscription and outdated marketing tool—$95/month wasted. Bookkeeper struggles to categorize bank charges correctly.",Owner,,small_business,claude_research,new,2026-06-20T09:27:18.166036,Leakly automatically maps all recurring charges from bank data without login credentials. OpsRunner can then categorize these expenses accurately for cleaner bookkeeping and expense tracking.
+Bookkeeping Express CPA Group,78,2026-06-20T04:11:34.594873,bookkeeping-express.com,david.martinez@bookkeeping-express.com,"Hey David,
+
+Your team's stuck doing 28 hours of reconciliation weekly across 24 clients. That's burnout waiting to happen—and why good bookkeepers leave.
+
+OpsRunner handles 90% of that automatically. Xero integrates seamlessly. Your 3 staff could drop to 3 hours/week on reconciliation alone, freeing them for actual client strategy work.
+
+Real math: that's 8-10 new clients without hiring.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your reconciliation time 90%,,David,0,David Martinez,efc75e97,Martinez,https://www.linkedin.com/in/david-martinez-cpa,,3 staff members spending 28 hours/week on manual bank reconciliation and data entry across 24 Xero clients; high staff turnover due to repetitive work,Owner,,cpa_firm,claude_research,new,2026-06-20T04:11:34.594880,"OpsRunner would automate 90% of reconciliation tasks, reducing weekly effort from 28 to 3 hours, retaining skilled staff and freeing capacity for 8-10 new clients"
+Chen & Associates Bookkeeping,75,2026-06-20T04:11:36.552215,beachfleischman.com,sarah.chen@beachfleischman.com,,,,Sarah,0,Sarah Chen,2868955f,Chen,https://www.linkedin.com/in/sarah-chen-cpa-bookkeeper,,2 bookkeepers manually matching 45+ daily transactions across 18 QBO small business clients; bottleneck prevents firm from taking new clients and scaling beyond $650K revenue,Managing Partner,,cpa_firm,claude_research,new,2026-06-20T04:11:36.552222,"OpsRunner automates transaction matching and categorization, reducing manual data entry from 22 hours/week to 2 hours/week, enabling 15+ new client capacity and $400K+ incremental revenue"
+Thompson Tax & Bookkeeping Services,72,2026-06-20T04:11:38.672072,bookkeeping-express.com,michael.thompson@bookkeeping-express.com,"Michael,
+
+Your team's spending 30+ hours on month-end closes across 32 Sage clients. We built OpsRunner specifically for this—AI handles 90% of reconciliation, categorization, and variance analysis automatically.
+
+One CPA firm cut their close from 30 hours to 5. Less tedious work means your juniors stay. Fewer errors. $4,200/month savings.
+
+Works with Sage (plus QBO, Xero).
+
+Worth a quick 15-min chat?
+
+Jaspal
+singhjaspal3460@gmail.com",30 hours → 5 hours for month-end?,,Michael,0,Michael Thompson,e041e97c,Thompson,https://www.linkedin.com/in/michael-thompson-cpa,,4 staff struggling with month-end close taking 30+ hours across 32 Sage clients; junior accountants leaving due to tedious reconciliation work; manual process errors causing rework,Principal,,cpa_firm,claude_research,new,2026-06-20T04:11:38.672080,"OpsRunner cuts month-end close from 30 hours to 5 hours by automating reconciliation and variance analysis; reduces costly errors, improves staff retention, and saves $4,200/month in labor costs"
+Torres Realty Group,75,2026-06-19T23:03:39.048144,realtoroffice.com,james.torres@realtoroffice.com,,,,James,0,James Torres,5655f2e2,Torres,https://www.linkedin.com/in/james-torres-realtor,,"Managing 8 SaaS subscriptions across CRM, marketing, and transaction software. Forgot he's paying $89/month for old Zillow premium account and $45/month for duplicate email marketing tool. Losing ~$1,608 annually on redundant services.",Owner,,small_business,claude_research,new,2026-06-19T23:03:39.048151,"Leakly identifies all recurring charges from bank statements in minutes without requiring bank login credentials, helping James immediately spot and cancel forgotten subscriptions."
+Williams Construction Services,72,2026-06-19T23:03:41.291255,constructionco.com,sarah.williams@constructionco.com,,,,Sarah,0,Sarah Williams,68714d35,Williams,https://www.linkedin.com/in/sarah-williams-construction,,"Doing her own bookkeeping with 12 employees. Subscribes to project management, accounting, insurance tracking, and communication tools. Bank statements are chaotic with multiple payment methods. Suspects she's overspending by $200-300/month but can't locate all subscriptions.",Founder,,small_business,claude_research,new,2026-06-19T23:03:41.291261,"OpsRunner helps organize messy bookkeeping and Leakly reveals hidden subscriptions from chaotic bank activity, giving Sarah complete visibility into cash flow."
+Chen's Premium Salon,68,2026-06-19T23:03:43.486450,realtoroffice.com,michael.chen@realtoroffice.com,,,,Michael,0,Michael Chen,58c0ef60,Chen,https://www.linkedin.com/in/michael-chen-salon,,"6-person salon owner with 9 SaaS tools: appointment booking, payroll, inventory, marketing, social media scheduling. Multiple staff members created free trial accounts that converted to paid. Estimated $450/month in completely unused or duplicate subscriptions he doesn't track.",Owner,,small_business,claude_research,new,2026-06-19T23:03:43.486458,"Leakly scans all bank transactions and categorizes every subscription automatically, no login required, helping Michael reclaim $5,400+ annually in wasted software spending."
+Rodriguez Custom Carpentry,72,2026-06-19T21:13:26.739473,etsy.com,mike.rodriguez@etsy.com,"Hey Mike,
+
+Running a carpentry crew + handling your own books is brutal. Bet those messy bank statements hide forgotten subscriptions bleeding money every month.
+
+Leakly takes 2 minutes—just upload your statement, no login needed. We find every recurring charge hiding in there. Privacy-first, super simple.
+
+Curious—how many subscriptions are you actually paying for right now?
+
+Jaspal
+singhjaspal3460@gmail.com","Find Your $200/month leaks, Mike",,Mike,0,Mike Rodriguez,c58b37e1,Rodriguez,https://www.linkedin.com/in/mike-rodriguez-carpenter,,"Handles own bookkeeping with 12 employees. Subscribes to accounting software, design tools, and business apps. Bank statements are messy. Estimates losing $200+/month on forgotten subscriptions.",Founder,,small_business,claude_research,new,2026-06-19T21:13:26.739482,Leakly automatically maps all subscriptions and recurring charges to his bank account without login. OpsRunner helps organize bookkeeping with cleaner expense categorization.
+Radiant Nails & Spa,68,2026-06-19T21:13:29.686954,shopify.com,jessica.martinez@shopify.com,"Hey Jessica,
+
+Bet you're juggling scheduling software, payment processors, marketing tools—and honestly, who knows what else is still charging you?
+
+Most salon owners discover 3-4 forgotten subscriptions eating into profits. The frustrating part? Checking manually takes forever, and most tools want your bank password.
+
+Leakly works differently. Upload your bank statement (PDF or CSV), and in 2 minutes you'll see every subscription and duplicate charge. Zero login required. Privacy stays yours.
+
+Worth 5 mins to find what's bleeding your account?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $340/mo in hidden charges (no login needed),,Jessica,0,Jessica Martinez,58cc29f8,Martinez,https://www.linkedin.com/in/jessica-martinez-spa,,"Small salon with 6 staff members. Pays for scheduling software, payment processor tools, and marketing platforms. Last quarter found 3 duplicate subscriptions still charging. Frustrated with bank login security concerns.",Owner,,small_business,claude_research,new,2026-06-19T21:13:29.686962,"Leakly reveals all hidden subscriptions without requiring bank credentials, eliminating security concerns. Identifies duplicate charges within days instead of months."
+SKR CPA & Associates,78,2026-06-19T18:03:04.626715,skrcpa.com,michael.torres@skrcpa.com,,,,Michael,0,Michael Torres,7d873d0e,Torres,https://www.linkedin.com/in/michael-torres-cpa,,"3 staff members spending 28 hours/week manually reconciling and entering data across 35 QBO clients, causing bottlenecks during month-end close",Owner,,cpa_firm,claude_research,new,2026-06-19T18:03:04.626723,"OpsRunner automates 90% of reconciliation and data entry, reducing 28 weekly hours to ~3 hours, freeing staff for higher-value tax planning work and allowing firm to take on 15-20 more clients without hiring"
+Solomon CPA Group,74,2026-06-19T18:03:06.858488,solomoncpa.com,sarah.chen@solomoncpa.com,"Sarah, I know that feeling—losing someone mid-quarter tanks everything. 
+
+We work with firms like yours where 2 bookkeepers are drowning in 40+ Xero reconciliations. OpsRunner handles 90% of the grunt work (reconciliation, posting, categorization), dropping that 32 hours down to 4.
+
+No backfill needed. Same team, same clients, way less chaos.
+
+Worth a 15-min chat?
+
+Jaspal
+singhjaspal3460@gmail.com",32 hours → 4 hours/week (no new hire needed),,Sarah,0,Sarah Chen,29452ea2,Chen,https://www.linkedin.com/in/sarah-chen-cpa-solomon,,"Two bookkeepers spending 32 hours/week on reconciliation across 42 Xero clients; lost 1 staff member last quarter, creating unsustainable workload and delayed deliverables",Managing Partner,,cpa_firm,claude_research,new,2026-06-19T18:03:06.858496,"OpsRunner automates routine reconciliation and posting, reducing manual work from 32 to 4 hours weekly, eliminating need to backfill lost position and enabling firm to handle workload with current team while maintaining quality"
+Patel & Klein CPA Firm,76,2026-06-19T18:03:08.738921,skrcpa.com,david.patel@skrcpa.com,,,,David,0,David Patel,e2ddc0c2,Patel,https://www.linkedin.com/in/david-patel-cpa-klein,,"Four staff juggling 48 Sage clients with 25+ hours/week lost to manual bank feeds, duplicate entry fixes, and reconciliation exceptions; can't scale without adding headcount",Principal,,cpa_firm,claude_research,new,2026-06-19T18:03:08.738929,"OpsRunner eliminates 90% of manual reconciliation work across all 48 clients, recapturing ~22 hours/week of capacity that allows firm to grow to 65+ clients without additional hiring, increasing revenue per employee by 35%"
+Rivera's Italian Kitchen,75,2026-06-19T15:31:50.245168,restaurantowner.com,james.rivera@restaurantowner.com,"Hey James,
+
+Most restaurant owners like you have 8+ subscriptions bleeding out—but $480/month in duplicate charges? That's brutal.
+
+Leakly spots hidden recurring charges straight from your bank statement (no login needed). Takes 2 minutes. Found your duplicate POS integrations yet?
+
+Worth 5 mins to recover what's already yours?
+
+—Jaspal
+singhjaspal3460@gmail.com",Found $480/mo you're probably missing,,James,0,James Rivera,401547f8,Rivera,https://www.linkedin.com/in/james-rivera-restaurant,,"Managing 8 SaaS subscriptions for POS, scheduling, accounting, and marketing; discovered he's paying for 2 unused point-of-sale integrations costing $480/month; bank statement is chaotic with charges from vendors",Owner,,small_business,claude_research,new,2026-06-19T15:31:50.245175,"Leakly identifies all recurring charges from his bank statements instantly without requiring sensitive banking credentials, helping him recover hidden subscription costs immediately"
+Luminous Salon & Spa,72,2026-06-19T15:31:52.598347,wix.com,sarah.chen@wix.com,,,,Sarah,0,Sarah Chen,d2c733fb,Chen,https://www.linkedin.com/in/sarah-chen-salon,,"Paying for 11 monthly subscriptions including booking software, payroll, accounting, and social media tools; suspects at least 3-4 are redundant or forgotten; manually reviews statements monthly but misses charges buried in descriptions",Founder,,small_business,claude_research,new,2026-06-19T15:31:52.598352,"Leakly automatically maps all her subscriptions from bank data in minutes, shows exact costs and frequency, helping her eliminate waste without entering bank login information"
+Torres Retail & Boutique,70,2026-06-19T15:31:54.625276,restaurantowner.com,michael.torres@restaurantowner.com,"Hey Michael,
+
+Bet you're paying for tools you've forgotten about. Most small business owners are—subscriptions just keep auto-renewing.
+
+Here's the thing: upload your bank statement to Leakly (takes 2 min), and we'll show you every subscription tied to your account. No login needed, no sketchy access.
+
+One client found $340/month in dead tools.
+
+Worth 2 minutes to check?
+
+Jaspal
+singhjaspal3460@gmail.com",Find $250-400/month you're bleeding,,Michael,0,Michael Torres,c003ab59,Torres,https://www.linkedin.com/in/michael-torres-retail,,"Handles his own bookkeeping with 6 employees; subscribed to inventory management, email marketing, and accounting tools; loses track of renewal dates; estimates $250-400/month on forgotten tools he doesn't actively use",Owner,,small_business,claude_research,new,2026-06-19T15:31:54.625282,"Leakly provides a complete audit of all subscriptions tied to his business bank account with zero bank login required, giving him visibility to cut unnecessary expenses and improve cash flow"
+Mitchell & Associates CPA,78,2026-06-19T10:46:41.720443,mkdcpa.com,sarah.mitchell@mkdcpa.com,"Hey Sarah,
+
+Your team's spending 28 hours weekly on reconciliation across 35 QBO clients. That's exhausting—and expensive.
+
+OpsRunner handles 90% of that work automatically. Reconciliation, categorization, reporting. One of our clients freed up 25 hours/week and caught errors their team missed.
+
+QBO certified, built for firms like yours.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",25 hours/week back on your desk?,,Sarah,0,Sarah Mitchell,c04eb892,Mitchell,https://www.linkedin.com/in/sarah-mitchell-cpa,,3 staff members spending 28 hours/week on manual reconciliation and bank feeds for 35 QBO clients across construction and retail sectors,Owner,,cpa_firm,claude_research,new,2026-06-19T10:46:41.720450,"OpsRunner automates 90% of reconciliation, freeing up 25 hours/week. At $35/hour fully loaded, that's $45,500/year in labor savings while improving accuracy and client turnaround time"
+Heritage CPA & Bookkeeping,81,2026-06-19T10:46:44.021580,hcvt.com,james.rodriguez@hcvt.com,"Hey James,
+
+40+ transactions daily across 42 clients sounds brutal—especially when your team keeps leaving because of the repetitive grind.
+
+Our AI handles 90% of that data entry automatically across Xero. Your bookkeepers focus on actual client work instead of transaction entry. Most firms see 85% less manual work, onboard new hires in 2 weeks instead of 6, and save $38k annually in turnover costs alone.
+
+We work with firms exactly like yours.
+
+Worth a quick call to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your bookkeeper turnover by 80%,,James,0,James Rodriguez,a9a4bfb4,Rodriguez,https://www.linkedin.com/in/james-rodriguez-cpa,,2 bookkeepers manually entering 40+ transactions daily across 42 Xero clients; experiencing 25% annual staff turnover due to repetitive data entry work,Managing Partner,,cpa_firm,claude_research,new,2026-06-19T10:46:44.021587,"OpsRunner eliminates 85% of manual data entry, reducing onboarding time for new hires from 6 weeks to 2 weeks and improving employee retention. Annual savings: $38,000 in turnover costs plus $4,200/month in labor efficiency"
+Thompson Financial Services CPA,75,2026-06-19T10:46:46.189189,mkdcpa.com,carol.thompson@mkdcpa.com,,,,Carol,0,Carol Thompson,a0a1584a,Thompson,https://www.linkedin.com/in/carol-thompson-cpa,,Firm of 8 struggling to scale beyond 28 clients due to 32 hours/week spent on month-end reconciliation and GL review using Sage; unable to take on new clients without hiring additional staff,Principal,,cpa_firm,claude_research,new,2026-06-19T10:46:46.189196,"OpsRunner automates reconciliation and GL matching, reducing 32 hours to 4 hours weekly. This enables the firm to service 45+ clients with current staff, unlocking $180K+ in additional annual recurring revenue without hiring costs"
+Miller & Associates CPA,78,2026-06-19T04:57:26.352811,mkdcpa.com,james.miller@mkdcpa.com,"Hey James,
+
+28 hours a week on manual reconciliation across 24 clients is brutal. We built OpsRunner specifically for firms like yours—it handles 90% of the grunt work (categorization, matching, reporting) on QBO automatically.
+
+One of our users went from 6-week closes to 1 week while their team handles 2x more clients. Same 3 bookkeepers, $4,200/month freed up.
+
+Worth a quick call to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your QBO close from 6 weeks to 1,,James,0,James Miller,44c13216,Miller,https://www.linkedin.com/in/james-miller-cpa,,"3 bookkeepers spending 28 hours/week manually reconciling and categorizing transactions across 24 QBO clients, causing 6-week close delays",Managing Partner,,cpa_firm,claude_research,new,2026-06-19T04:57:26.352819,"OpsRunner automates 90% of reconciliation and data entry, reducing 28 hours to 3 hours weekly, enabling same team to handle 50+ clients and saving ~$4,200/month in overtime"
+Chen Virtue Tax & Accounting,81,2026-06-19T04:57:29.453960,hcvt.com,sarah.chen@hcvt.com,,,,Sarah,0,Sarah Chen,7ecddac4,Chen,https://www.linkedin.com/in/sarah-chen-cpa,,"4 staff members spending 32 hours/week on bank reconciliation, AP data entry, and GL coding for 18 Xero clients; experienced 2 departures last year due to repetitive work",Principal,,cpa_firm,claude_research,new,2026-06-19T04:57:29.453967,"OpsRunner eliminates 90% of manual data entry and reconciliation tasks, retaining staff by shifting them to advisory work, reducing weekly manual work to 4 hours and cutting labor costs by $5,600/month"
+Rodriguez CPA Services,75,2026-06-19T04:57:31.741626,mkdcpa.com,michael.rodriguez@mkdcpa.com,,,,Michael,0,Michael Rodriguez,f5ed1ee9,Rodriguez,https://www.linkedin.com/in/michael-rodriguez-cpa,,2 bookkeepers spending 26 hours/week manually reconciling Sage and QBO for 22 small business clients; firm revenue $850K but stuck at current capacity with no ability to take new clients,Owner,,cpa_firm,claude_research,new,2026-06-19T04:57:31.741633,"OpsRunner automates bank matching, transaction categorization, and reconciliation, freeing bookkeepers to serve 40+ clients instead of 22, enabling $200K+ additional annual revenue with existing staff"
+Morrison & Associates CPA,78,2026-06-18T22:19:27.116967,grfcpa.com,thomas.morrison@grfcpa.com,,,,Thomas,0,Thomas Morrison,eb7bea02,Morrison,https://www.linkedin.com/in/thomas-morrison-cpa,,"3 bookkeepers spending 28 hours/week manually reconciling and entering data across 35 QBO clients, causing month-end delays and high staff turnover",Owner,,cpa_firm,claude_research,new,2026-06-18T22:19:27.116974,"OpsRunner would reduce reconciliation time from 28 hours to 3 hours weekly, freeing staff for higher-value work and reducing monthly labor costs by $4,200"
+"Chen, Hart & Thompson CPA",75,2026-06-18T22:19:29.313570,mhtcpa.com,sarah.chen@mhtcpa.com,"Sarah, I know that feeling—watching your team burn out on reconciliation while you're stuck at capacity.
+
+We built OpsRunner for firms like yours. It handles 90% of bank rec and GL entries across Xero automatically. One of our partners went from 22 hours weekly to 2—freed up enough to onboard 15+ new clients without hiring.
+
+Your team keeps the judgment calls. The AI handles the grunt work.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",22 hours → 2 hours/week?,,Sarah,0,Sarah Chen,84135ffe,Chen,https://www.linkedin.com/in/sarah-chen-cpa,,2 staff members spending 22 hours/week on manual bank reconciliation and GL entries for 28 Xero clients; losing junior accountants to burnout,Managing Partner,,cpa_firm,claude_research,new,2026-06-18T22:19:29.313578,"OpsRunner automates 90% of reconciliation work, dropping 22 hours to 2 hours weekly, improving retention and enabling 15+ new client capacity without hiring"
+Richardson Tax & Accounting Group,71,2026-06-18T22:19:31.326853,grfcpa.com,david.richardson@grfcpa.com,"David, I get it—4 bookkeepers maxed out on manual work while your revenue's stuck. We built OpsRunner specifically for firms like yours managing mixed QBO/Sage clients.
+
+Our AI handles 90% of reconciliation and coding. One firm freed up 32 hours weekly and added 25 new clients without hiring.
+
+Works across your entire stack. Worth a quick look?
+
+Jaspal
+singhjaspal3460@gmail.com",32 hours/week back for your team,,David,0,David Richardson,9f8bee91,Richardson,https://www.linkedin.com/in/david-richardson-cpa,,4 bookkeepers manually reconciling and coding transactions for 42 mixed QBO/Sage clients; year-over-year revenue growth stalled due to capacity constraints,Principal,,cpa_firm,claude_research,new,2026-06-18T22:19:31.326860,"OpsRunner eliminates 32 hours of weekly manual data entry and reconciliation, allowing firm to serve 25+ additional clients with existing staff, growing revenue $180K+ annually"
+Richardson & Associates CPA,78,2026-06-18T18:29:10.602643,beachfleischman.com,michael.richardson@beachfleischman.com,,,,Michael,0,Michael Richardson,b32dbb3c,Richardson,https://www.linkedin.com/in/michael-richardson-cpa,,"3 bookkeepers spending 28hrs/week manually reconciling 35 Xero clients and entering vendor invoices, causing 6-month tax return delays",Managing Partner,,cpa_firm,claude_research,new,2026-06-18T18:29:10.602650,"OpsRunner automates bank reconciliation and invoice data entry, reducing 28hrs to 4hrs weekly, freeing staff for higher-value tax planning—saves ~$4,200/month in labor costs"
+Torres CPA Group,75,2026-06-18T18:29:12.469628,hhcpa.com,sarah.torres@hhcpa.com,"Hey Sarah,
+
+Losing a bookkeeper and juggling 28 QBO clients manually sounds brutal. We built OpsRunner specifically for this—our AI handles 90% of transaction categorization and reconciliation automatically.
+
+Most firms we work with cut that 22hr weekly grind down to 2hrs. Means you can onboard 15+ new clients without hiring anyone.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your bookkeeping from 22hrs to 2hrs?,,Sarah,0,Sarah Torres,9b3ce0a6,Torres,https://www.linkedin.com/in/sarah-torres-cpa,,"2 part-time bookkeepers manually categorizing transactions and reconciling 28 QBO clients, spending 22hrs/week; lost 1 staff member last year, can't find replacement",Owner,,cpa_firm,claude_research,new,2026-06-18T18:29:12.469635,"OpsRunner's AI categorizes 90% of transactions automatically and completes reconciliation in 2hrs instead of 22hrs, allowing Torres to serve 15+ new clients without hiring—ROI in 6 weeks"
+Chen & Partners CPA,76,2026-06-18T18:29:15.062984,beachfleischman.com,david.chen@beachfleischman.com,"Hey David,
+
+Your bookkeeper spending 32 hours/week on reconciliation across 42 clients is brutal—and year-end closes eating 3 weeks kills profitability.
+
+OpsRunner does 90% of that work. We handle Sage and QBO reconciliation, categorization, and pre-close validation automatically. One firm cut their month-end to 5 hours and closed books in 5 days instead of 3 weeks.
+
+That's 5,800/month back in labor costs. More capacity for new clients.
+
+Worth a 15-min chat?
+
+Jaspal
+singhjaspal3460@gmail.com",Cut your month-end from 32hrs to 5hrs,,David,0,David Chen,32ff50db,Chen,https://www.linkedin.com/in/david-chen-cpa,,4-person team with bookkeeper spending 32hrs/week on month-end reconciliation across 42 Sage and QBO clients; year-end closes take 3+ weeks due to data cleanup,Principal,,cpa_firm,claude_research,new,2026-06-18T18:29:15.062991,"OpsRunner cuts reconciliation time to 5hrs/week and automates pre-close data validation, shrinking year-end closes to 5 days, allowing team to take on 20 more clients annually—$5,800/month labor savings"
+Chen Realty Group,75,2026-06-18T15:38:39.255697,realtoroffice.com,david.chen@realtoroffice.com,,,,David,0,David Chen,02bd714e,Chen,https://www.linkedin.com/in/david-chen-realtor,,"Running a 12-person brokerage with scattered subscriptions: MLS software, CRM, accounting, email marketing, scheduling tools. Estimates paying for 8-10 apps monthly but unsure which ones are active. Likely losing $250-400/month on forgotten or redundant tools.",Owner,,small_business,claude_research,new,2026-06-18T15:38:39.255704,Leakly scans bank statements in 2 minutes without bank login to surface every hidden subscription. David can see exactly what's being charged and eliminate waste immediately.
+Martinez Construction Services,72,2026-06-18T15:38:41.488127,constructionco.com,jessica.martinez@constructionco.com,"Hey Jessica,
+
+Bet you're juggling a lot between managing 8 people and handling bookkeeping yourself. Here's the thing—most business owners like you are bleeding money on forgotten subscriptions.
+
+Quick upload of your bank statement to Leakly (no login needed) finds every hidden charge in 2 minutes. No drama, just privacy.
+
+Want to see what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $180/month leaking from your account,,Jessica,0,Jessica Martinez,8b4df22d,Martinez,https://www.linkedin.com/in/jessica-martinez-construction,,"Manages 8 employees and does her own bookkeeping monthly. Subscribes to project management software, accounting tools, safety compliance apps, and insurance tracking. At least 2-3 subscriptions are partially unused but still auto-renewing. Loses roughly $180/month.",Founder,,small_business,claude_research,new,2026-06-18T15:38:41.488134,Leakly identifies all active charges in her business bank account without requiring login credentials. OpsRunner also helps her streamline bookkeeping workflow and catch subscription duplicates before they renew.
+Johnson Urban Properties,70,2026-06-18T15:38:43.705628,realtoroffice.com,marcus.johnson@realtoroffice.com,,,,Marcus,0,Marcus Johnson,9e547b72,Johnson,https://www.linkedin.com/in/marcus-johnson-realtor,,"15-person real estate team with fragmented SaaS stack: transaction management, document signing, listing syndication, lead capture, and accounting platforms. Pays for at least 10+ subscriptions but 3-4 are redundant or forgotten. Bleeding approximately $320/month.",CEO,,small_business,claude_research,new,2026-06-18T15:38:43.705635,Leakly provides complete visibility into recurring charges without sensitive bank logins. Marcus can audit subscriptions quarterly and recover hidden costs faster than manual bank statement review.
+Richardson & Hayes CPA Group,78,2026-06-18T10:38:50.359219,hhcpa.com,michael.richardson@hhcpa.com,"Hey Michael,
+
+Your team's spending 28 hours/week on manual reconciliation across 35 QBO clients. That's burnout fuel—and why you're losing people.
+
+OpsRunner handles 90% of that work. Reconciliation, categorization, reporting—all automated. Your 3 staff move from data entry to actual advisory work.
+
+Most firms see it cut to ~3 hours/week.
+
+Worth a quick call to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",28 hours → 3 hours/week?,,Michael,0,Michael Richardson,a1490a93,Richardson,https://www.linkedin.com/in/michael-richardson-cpa,,3 staff spending 28 hours/week manually reconciling and entering data across 35 QBO clients; high turnover costing $8K per hire,Managing Partner,,cpa_firm,claude_research,new,2026-06-18T10:38:50.359227,"OpsRunner automates 90% of reconciliation and data entry, reducing 28 weekly hours to 3, freeing staff for advisory work and reducing turnover impact"
+"Garcia, Rodriguez & Fellows CPA",75,2026-06-18T10:38:52.262877,grfcpa.com,sarah.martinez@grfcpa.com,,,,Sarah,0,Sarah Martinez,50d6f849,Martinez,https://www.linkedin.com/in/sarah-martinez-cpa,,2 bookkeepers spending 32 hours/week on manual bank matching and journal entries for 42 Xero clients; unable to take new clients without hiring,Principal,,cpa_firm,claude_research,new,2026-06-18T10:38:52.262886,"OpsRunner cuts manual reconciliation to 4 hours/week, enabling capacity for 15+ additional clients without hiring, increasing revenue $45K+ annually"
+Chen Tax & Accounting Solutions,71,2026-06-18T10:38:54.325147,hhcpa.com,david.chen@hhcpa.com,,,,David,0,David Chen,9d76f176,Chen,https://www.linkedin.com/in/david-chen-cpa,,4 staff handling 28 Sage clients with 24 hours/week spent on duplicate data entry and error corrections; seeking scale without overhead,Owner,,cpa_firm,claude_research,new,2026-06-18T10:38:54.325156,"OpsRunner eliminates 85% of manual entry errors and repetitive work, reducing weekly time to 3-4 hours while improving accuracy and allowing 2 staff to focus on compliance and strategy"
+Hartford CPA & Bookkeeping Services,78,2026-06-18T04:39:34.062764,hcvt.com,sarah.mitchell@hcvt.com,,,,Sarah,0,Sarah Mitchell,8ca58040,Mitchell,https://www.linkedin.com/in/sarah-mitchell-cpa,,3 staff bookkeepers spending 28hrs/week on manual bank reconciliations and data entry for 35 QBO clients; high turnover due to repetitive work,Owner,,cpa_firm,claude_research,new,2026-06-18T04:39:34.062773,"OpsRunner automates 90% of reconciliation and categorization, reducing 28hrs to 3hrs/week, enabling team to focus on client advisory work and reducing burnout-driven turnover"
+Diamond Mountain CPA Group,75,2026-06-18T04:39:36.062088,dmcpas.com,james.rodriguez@dmcpas.com,"Hey James,
+
+Managing 42 Xero clients manually is brutal—I know that 15 hrs/week disappears into reconciliation and invoice matching fast.
+
+OpsRunner handles 90% of that automatically. We do the matching, categorization, and monthly close so you focus on tax planning and client relationships instead.
+
+Multi-ERP certified. Already works with firms like yours.
+
+Worth 15 minutes to see how it works?
+
+Jaspal
+singhjaspal3460@gmail.com",15 hrs/week back to strategy?,,James,0,James Rodriguez,c975e99f,Rodriguez,https://www.linkedin.com/in/james-rodriguez-cpa,,12-person firm managing 42 Xero clients manually; principal spends 15hrs/week on account reconciliation and invoice matching instead of client strategy,Managing Partner,,cpa_firm,claude_research,new,2026-06-18T04:39:36.062096,"OpsRunner handles invoice-to-receipt matching and monthly reconciliation automatically, freeing 15hrs/week for higher-margin tax planning and consulting work"
+Harbor View Tax & Accounting,73,2026-06-18T04:39:38.249573,hcvt.com,michael.chen@hcvt.com,"Hey Michael,
+
+Saw you're running Harbor View with mixed QBO/Sage setups. Your juniors probably spend half their week on duplicate entries and month-end reconciliation—we see this constantly.
+
+OpsRunner handles 90% of that work across both platforms. One firm cut their close from 5 days to 1, freeing capacity for 15+ new clients without hiring.
+
+Multi-ERP support means zero platform switching for your team.
+
+Worth a quick chat?
+
+Jaspal
+singhjaspal3460@gmail.com",32 hours/week back to your team,,Michael,0,Michael Chen,c8090a9e,Chen,https://www.linkedin.com/in/michael-chen-cpa,,8-person boutique CPA firm with 28 small business clients on mixed QBO/Sage platforms; 2 junior accountants spend 32hrs/week on month-end close and duplicate entry work,Principal,,cpa_firm,claude_research,new,2026-06-18T04:39:38.249582,"OpsRunner eliminates duplicate data entry across platforms and accelerates month-end close from 5 days to 1 day, allowing firm to take on 15 additional clients without hiring"
+Solomon CPA & Associates,74,2026-06-17T22:05:52.744783,solomoncpa.com,michael.torres@solomoncpa.com,,,,Michael,0,Michael Torres,b7b5b2c4,Torres,https://www.linkedin.com/in/michael-torres-cpa,,3 bookkeepers spending 28 hours/week on manual bank reconciliation and GL entries across 35 QBO clients; struggling with month-end close delays,Owner,,cpa_firm,claude_research,new,2026-06-17T22:05:52.744793,"OpsRunner would automate 90% of reconciliation work, reducing 28 hours to ~3 hours/week, enabling firm to take on 15 more clients without hiring"
+West Valley CPA Group,71,2026-06-17T22:05:54.768713,westcpa.com,jennifer.walsh@westcpa.com,,,,Jennifer,0,Jennifer Walsh,f16797f0,Walsh,https://www.linkedin.com/in/jennifer-walsh-cpa,,12-person firm with 2 data entry staff spending 24 hours/week on Xero manual categorization and bank feeds for 28 small business clients; high turnover in junior roles,Managing Partner,,cpa_firm,claude_research,new,2026-06-17T22:05:54.768722,"OpsRunner automates data categorization and reconciliation, reducing turnover dependency and freeing staff for higher-value advisory work; saves ~$4,200/month in labor costs"
+Solomon CPA & Bookkeeping,73,2026-06-17T22:05:57.396505,solomoncpa.com,david.chen@solomoncpa.com,,,,David,0,David Chen,887664ed,Chen,https://www.linkedin.com/in/david-chen-cpa,,"8-person firm using Sage for 42 mid-market small clients; bookkeeper handling 31 hours/week of manual reconciliation, blocking firm from scaling to $1.5M revenue",Principal,,cpa_firm,claude_research,new,2026-06-17T22:05:57.396514,"OpsRunner reduces reconciliation from 31 hours to 4 hours weekly, enabling partner to convert bookkeeper time to tax planning and client advisory; supports $500K revenue growth without new hires"
+Rivera & Wells CPA Group,78,2026-06-17T18:26:33.323101,wrcpa.com,james.rivera@wrcpa.com,"Hey James,
+
+Your team's spending 28 hours weekly on transaction reconciliation across 24 QBO clients. We built OpsRunner specifically for this—AI handles 90% of the work.
+
+Most firms like yours see it drop to 5 hours/week. Your staff moves to advisory. You take on 15+ new clients without hiring.
+
+Works with QBO, Xero, Sage. Multi-ERP support means no switching costs.
+
+Worth a 15-min call to see if it fits?
+
+Jaspal
+singhjaspal3460@gmail.com",28hrs → 5hrs/week at your firm?,,James,0,James Rivera,9698f5f6,Rivera,https://www.linkedin.com/in/james-rivera-cpa,,"3 staff spending 28hrs/week manually reconciling and categorizing transactions across 24 QBO clients, creating bottleneck during month-end close",Owner,,cpa_firm,claude_research,new,2026-06-17T18:26:33.323109,"OpsRunner automates transaction matching and categorization, reducing 28hrs to 5hrs/week, freeing staff for client advisory work and enabling 15+ new client capacity without hiring"
+"Mitchell, Klein & Davis CPA",81,2026-06-17T18:26:35.682935,mkdcpa.com,sarah.chen@mkdcpa.com,,,,Sarah,0,Sarah Chen,d4173ffc,Chen,https://www.linkedin.com/in/sarah-chen-cpa-mba,,"2 junior accountants spending 32hrs/week on bank reconciliation, AP/AR matching, and data entry for 18 Xero clients; high staff turnover due to repetitive work",Managing Partner,,cpa_firm,claude_research,new,2026-06-17T18:26:35.682940,"OpsRunner handles 90% of reconciliation and data entry automatically, reducing hours to 4/week, improving job satisfaction for remaining staff, and allowing $4,200/month savings to be reinvested in client growth"
+Torres Accounting Solutions,75,2026-06-17T18:26:38.526114,wrcpa.com,michael.torres@wrcpa.com,,,,Michael,0,Michael Torres,5e94ebd6,Torres,https://www.linkedin.com/in/michael-torres-accounting,,"4 bookkeepers manually processing 35 Sage/QBO clients with 22hrs/week spent on receipt scanning, expense categorization, and journal entry posting; unable to scale without adding headcount",Principal,,cpa_firm,claude_research,new,2026-06-17T18:26:38.526121,"OpsRunner's AI processes receipts and automates categorization, cutting manual work to 3hrs/week, eliminating need for 5th hire (saving $52K/year), and enabling growth to 50+ clients within 12 months"
+Bloom & Bliss Salon,75,2026-06-17T15:50:29.423108,shopify.com,sarah.martinez@shopify.com,"Hey Sarah,
+
+Most salon owners are hemorrhaging money on forgotten subscriptions. You're probably paying for at least one app you haven't touched in months.
+
+Here's the thing: Leakly finds ALL your subscriptions in 2 minutes. Just upload your bank statement—no login needed, totally private.
+
+We help salon owners recover $200-400/month. Could be your next $3,360/year.
+
+Want to see what you're actually spending on?
+
+Jaspal
+singhjaspal3460@gmail.com","Your $280/month leak (yes, really)",,Sarah,0,Sarah Martinez,394bc1e8,Martinez,https://www.linkedin.com/in/sarah-martinez,,"Paying for 8 SaaS subscriptions (Shopify, scheduling app, email marketing, accounting software, inventory tool, staff management, payment processor, and one forgotten app), loses approximately $280/month on unused services",Owner,,small_business,claude_research,new,2026-06-17T15:50:29.423114,"Leakly identifies all hidden subscriptions without bank login in 2 minutes, helping Sarah recover $280/month in wasted spending"
+Artisan Crafts & Co,72,2026-06-17T15:50:31.984714,etsy.com,james.chen@etsy.com,"Hey James,
+
+Juggling 10+ subscriptions across Etsy, Shopify, and accounting tools? Most business owners lose track of $200-500/month in forgotten charges.
+
+Leakly uploads your bank statement (no login needed) and finds every active subscription in 2 minutes. No digging through statements.
+
+Want to see what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Find your hidden subscriptions in 2 min,,James,0,James Chen,cd6b54ba,Chen,https://www.linkedin.com/in/james-chen,,"Managing own bookkeeping with 10+ subscriptions across Etsy, Shopify, accounting software, shipping platforms, and design tools; loses track of active vs. inactive subscriptions; messy bank statements make reconciliation difficult",Founder,,small_business,claude_research,new,2026-06-17T15:50:31.984720,"Leakly uncovers all subscriptions automatically, and OpsRunner helps organize bookkeeping without manual entry—saving 5+ hours monthly"
+Fresh Picks Catering,70,2026-06-17T15:50:34.275053,shopify.com,michael.rodriguez@shopify.com,,,,Michael,0,Michael Rodriguez,8befa4a2,Rodriguez,https://www.linkedin.com/in/michael-rodriguez,,"Operating small catering business with 6 employees, subscribed to 12 tools (POS, scheduling, accounting, email, social media, project management, plus 3 forgotten subscriptions), hemorrhaging approximately $340/month on unused services",CEO,,small_business,claude_research,new,2026-06-17T15:50:34.275059,"Leakly discovers all hidden subscriptions instantly with no bank login required, recovering $340/month to reinvest in business growth"
+Peak Plumbing Solutions,75,2026-06-17T11:07:15.783893,plumbingco.com,james@peakplumbing.com,"Hey James,
+
+Bet you're not alone—most small biz owners like you are bleeding money on forgotten SaaS subscriptions. We just helped a plumbing company spot $285/month in charges they'd completely forgotten about.
+
+Here's the thing: you don't need to hand over your banking login. Just upload your bank statement to Leakly, and we'll map every subscription in 2 minutes. Privacy-first, no risk.
+
+Worth 2 minutes to find what's actually draining your account?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $285/month in hidden charges,,James,0,James Rodriguez,a5a3dabe,Rodriguez,https://www.linkedin.com/in/james-rodriguez-plumbing,,"Subscribed to 8 different SaaS tools for scheduling, invoicing, and CRM. Forgotten 3 unused subscriptions costing $285/month. Bank statements unclear with recurring charges mixed in.",Owner,,small_business,claude_research,new,2026-06-17T11:07:15.783904,Leakly identifies all hidden subscription charges from bank statements in under 2 minutes without requiring risky bank login credentials. Immediate visibility into what's actually being paid.
+Shine Electric Co,72,2026-06-17T11:07:18.044450,electricalco.com,sarah@shineelectric.com,"Hi Sarah,
+
+Managing 12 people + 6 SaaS tools is chaos. Bet you're bleeding money on subscriptions nobody remembers signing up for.
+
+Here's the thing—most small business owners waste $300-500/month on forgotten tools. Takes 2 minutes to find yours. Just upload your bank statement (no login needed) and Leakly shows every hidden subscription lurking in there.
+
+Then OpsRunner can automate your bookkeeping so you're not stuck doing it monthly.
+
+Worth 5 minutes to see what you're actually spending?
+
+Jaspal
+singhjaspal3460@gmail.com",Find your $420/month leak in 2 min,,Sarah,0,Sarah Chen,8e7cb5d9,Chen,https://www.linkedin.com/in/sarah-chen-electrical,,Manages 12 team members and 6 SaaS subscriptions. Handles own bookkeeping monthly. Loses track of which tools team actually uses. Estimated $420/month in wasted software spend.,Founder,,small_business,claude_research,new,2026-06-17T11:07:18.044460,"Leakly + OpsRunner combination: Leakly cuts recurring costs by auditing all subscriptions, OpsRunner cleans up messy bookkeeping data automatically so Sarah reclaims 5 hours monthly."
+Streamline Plumbing Group,70,2026-06-17T11:07:20.638657,plumbingco.com,marcus@streamlineplumbing.com,"Hey Marcus,
+
+Running a plumbing crew means juggling a lot—and I bet you've got subscriptions you forgot about. Most business owners like you are losing $200-500/month to duplicate tools.
+
+Here's the thing: you don't need to hand over your bank login. Just upload your last statement to Leakly, and we'll find every subscription in 2 minutes.
+
+No syncing. No credentials. Just clarity.
+
+Curious if you'd want a quick look at where your money's actually going?
+
+Jaspal
+singhjaspal3460@gmail.com",Find your hidden $200-500/month,,Marcus,0,Marcus Thompson,e1d7a485,Thompson,https://www.linkedin.com/in/marcus-thompson-plumbing,,"15 employees, $850K annual revenue. Pays for accounting software, project management, payment processing tools, and other apps. Suspicious about duplicate subscriptions but fears syncing bank logins with new tools.",CEO,,small_business,claude_research,new,2026-06-17T11:07:20.638667,Leakly works without bank login—scans statement exports instead. Identifies subscription waste safely while respecting security concerns. Typical clients recover $200-500/month.
+Harrison & Mitchell CPA Group,76,2026-06-17T04:45:39.059156,mhtcpa.com,michael.harrison@mhtcpa.com,"Hey Michael,
+
+Your team spending 25hrs weekly on reconciliation for 28 QBO clients sounds brutal. We built OpsRunner specifically for this—AI handles 90% of bank matching and categorization automatically.
+
+Most firms see it drop to 3hrs/week and cut errors by 85%. Your bookkeepers shift to actual advisory work instead of data entry.
+
+Works with QBO, Xero, Sage. Worth a quick conversation?
+
+Jaspal
+singhjaspal3460@gmail.com",25 hours → 3 hours/week?,,Michael,0,Michael Harrison,2ea2413b,Harrison,https://www.linkedin.com/in/michael-harrison-cpa,,3 bookkeepers spending 25hrs/week on manual reconciliation and bank feeds for 28 QuickBooks Online clients; frequent data entry errors causing month-end delays,Owner,,cpa_firm,claude_research,new,2026-06-17T04:45:39.059165,"OpsRunner automates 90% of reconciliation and bank matching, reducing 25hrs to 3hrs weekly and cutting error rates by 85%, freeing staff for higher-value client advisory work"
+Westbrook & Roberts CPA,74,2026-06-17T04:45:41.662149,wrcpa.com,jennifer.cole@wrcpa.com,,,,Jennifer,0,Jennifer Cole,c57e7b20,Cole,https://www.linkedin.com/in/jennifer-cole-cpa,,2 staff members manually categorizing transactions and reconciling Xero for 35 small retail/service clients; losing 30hrs/week to repetitive data tasks; struggling to retain junior accountants,Managing Partner,,cpa_firm,claude_research,new,2026-06-17T04:45:41.662157,"OpsRunner's AI categorization and auto-reconciliation reduces 30hrs to 5hrs weekly, improving team satisfaction and retention while enabling capacity for 15+ additional clients without hiring"
+Thompson Financial Services CPA,72,2026-06-17T04:45:44.739851,mhtcpa.com,david.thompson@mhtcpa.com,"Hey David,
+
+Your team's burning 22 hours weekly on reconciliation across 42 QBO clients. We built OpsRunner specifically for this—AI handles 90% of bank matching, expense coding, and categorization.
+
+One CPA firm freed up enough capacity to take on 20 new clients without hiring. That's an extra $250K revenue.
+
+Works with QBO. Cuts reconciliation to 2-3 hours weekly.
+
+Worth 15 minutes to see how it works?
+
+Jaspal
+singhjaspal3460@gmail.com",22 hours → 3 hours/week?,,David,0,David Thompson,f98ac503,Thompson,https://www.linkedin.com/in/david-thompson-cpa,,"4 bookkeepers spending 22hrs/week on bank reconciliation, invoice matching, and expense coding across 42 QuickBooks clients; annual revenue $850K limited by manual processing bottleneck",Principal,,cpa_firm,claude_research,new,2026-06-17T04:45:44.739859,"OpsRunner cuts reconciliation time to 2-3hrs weekly and automates expense coding, unlocking capacity for 20+ additional clients and potential $250K+ annual revenue growth without scaling headcount"
+Silk & Thread Boutique,72,2026-06-16T23:26:49.533549,shopify.com,sarah.chen@shopify.com,,,,Sarah,0,Sarah Chen,c4b6d675,Chen,https://www.linkedin.com/in/sarah-chen-boutique,,"Running 6-person retail boutique with 11 active SaaS subscriptions. Uses Shopify, accounting software, email marketing, inventory tools, and design apps. Loses track of which tools are actually used monthly. Estimated $420/month in redundant or forgotten subscriptions.",Founder,,small_business,claude_research,new,2026-06-16T23:26:49.533557,Leakly scans bank statements to reveal all active subscriptions automatically. Sarah can identify which tools generate ROI and eliminate duplicates without manual spreadsheet tracking or connecting bank credentials.
+Torres Family Salon,68,2026-06-16T23:26:54.995063,electricalco.com,michael.torres@electricalco.com,,,,Michael,0,Michael Torres,eed37133,Torres,https://www.linkedin.com/in/michael-torres-salon,,"Salon owner managing 4 employees. Subscribes to appointment software, payroll app, accounting tool, and marketing platform ($89/month combined). Additionally paying for 2 forgotten annual subscriptions ($12/month each). Bookkeeper reviews statements quarterly but misses recurring charges.",Owner,,small_business,claude_research,new,2026-06-16T23:26:54.995070,Leakly provides instant visibility into all recurring charges without bank login security risks. Michael reviews hidden costs monthly and makes informed decisions about which SaaS tools actually improve salon operations and customer experience.
+Rivera Electric Services,75,2026-06-16T21:09:42.909795,electricalco.com,james.rivera@electricalco.com,"Hey James,
+
+Bet you're not alone—most small business owners have 3-4 forgotten subscriptions bleeding cash quietly.
+
+I built Leakly to catch exactly this. Just upload your bank statement (no login needed), and it finds every recurring charge in 2 minutes. Privacy-first, no sketchy credential sharing.
+
+Could help you recover that $185/month you found—plus whatever else is hiding.
+
+Worth a quick look?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $185/month in hidden charges,,James,0,James Rivera,a107dc2b,Rivera,https://www.linkedin.com/in/james-rivera-electrical,,"Subscribes to 8 SaaS tools for job scheduling, invoicing, and customer management. Discovered 3 forgotten subscriptions costing $185/month after reviewing credit card statement.",Owner,,small_business,claude_research,new,2026-06-16T21:09:42.909805,"Leakly identifies all hidden recurring charges from bank statements in minutes without requiring risky bank login credentials, helping recover subscription waste immediately."
+Bloom & Harvest Salon,72,2026-06-16T21:09:45.678567,shopify.com,sarah.thompson@shopify.com,,,,Sarah,0,Sarah Thompson,9bb39dfb,Thompson,https://www.linkedin.com/in/sarah-thompson-salon,,"Managing 11 subscriptions across booking software, POS systems, and marketing tools. Paying for 2 duplicate services and a design tool no longer used—approximately $220/month wasted.",Founder,,small_business,claude_research,new,2026-06-16T21:09:45.678576,"Leakly automatically detects overlapping and forgotten subscriptions from transaction history, eliminating manual audit burden and recovering lost revenue within days."
+Chen's Premium Retail Group,70,2026-06-16T21:09:47.981581,electricalco.com,marcus.chen@electricalco.com,"Hey Marcus,
+
+Managing 3 locations + 9 SaaS tools? Yeah, that's a mess. Bet you're bleeding money on subscriptions you forgot about.
+
+Here's the thing—most tools want your bank login (sketchy). Leakly doesn't. Just upload your statement as PDF or CSV, and we'll find every hidden subscription and duplicate charge in 2 minutes.
+
+No credentials needed. Works for US + India businesses.
+
+Want to see what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Finding your hidden $2K/month?,,Marcus,0,Marcus Chen,360efb00,Chen,https://www.linkedin.com/in/marcus-chen-retail,,Handles own bookkeeping for 3 retail locations. Uses 9 SaaS tools but bank statements are messy. Suspects unused subscriptions but lacks time to audit each transaction manually.,Owner,,small_business,claude_research,new,2026-06-16T21:09:47.981590,"Leakly scans bank statements instantly to expose hidden subscriptions and duplicate charges, giving business owners clear visibility without sharing sensitive banking credentials."
+Rivera Plumbing Solutions,75,2026-06-16T17:05:50.430728,plumbingco.com,james.rivera@plumbingco.com,,,,James,0,James Rivera,75b06e27,Rivera,https://www.linkedin.com/in/james-rivera-plumbing,,"Managing 8 SaaS subscriptions across scheduling, invoicing, and CRM tools. Discovered 3 unused subscriptions costing $285/month after switching software. Manual bank reconciliation takes 4 hours monthly.",Owner,,small_business,claude_research,new,2026-06-16T17:05:50.430737,"Leakly automatically identifies all recurring charges from bank statements in minutes without requiring bank login credentials, recovering lost subscription spend immediately"
+Johnson Electric & Solar,72,2026-06-16T17:05:52.520899,electricalco.com,patricia.johnson@electricalco.com,,,,Patricia,0,Patricia Johnson,6f9baa76,Johnson,https://www.linkedin.com/in/patricia-johnson-electric,,"12 employees, pays for accounting software, project management tools, payment processing, and email marketing. Estimates wasting $400+/month on forgotten or overlapping subscriptions. Does own bookkeeping quarterly.",Founder,,small_business,claude_research,new,2026-06-16T17:05:52.520908,"Leakly scans all bank transactions to surface hidden subscription costs without sharing banking credentials, integrating findings into bookkeeping workflow"
+Chen & Associates Plumbing,73,2026-06-16T17:05:54.649163,plumbingco.com,michael.chen@plumbingco.com,"Hey Michael,
+
+Bet you're bleeding cash on subscriptions no one uses. I see this constantly with plumbing ops—old accounting software, forgotten tools, duplicate services.
+
+I built Leakly to spot exactly this. Upload your bank statement (no login needed), and it finds every hidden recurring charge in 2 minutes. You're probably looking at $200-400/month in dead weight.
+
+Takes 90 seconds to check. Worth it?
+
+Jaspal
+singhjaspal3460@gmail.com",$89/month you're still paying for?,,Michael,0,Michael Chen,bb7cc15b,Chen,https://www.linkedin.com/in/michael-chen-plumbing,,"15 employees, switched to new accounting system last year but still paying for old one ($89/month). Has 6 different tool subscriptions that employees no longer use. Bank statements are cluttered with recurring charges.",Owner,,small_business,claude_research,new,2026-06-16T17:05:54.649172,"Leakly identifies all redundant and forgotten subscriptions directly from bank data without login access, enabling quick cost recovery and cleaner financial records"
+Torres Plumbing Solutions,75,2026-06-16T11:22:28.008854,plumbingco.com,james.torres@plumbingco.com,,,,James,0,James Torres,6a0bda79,Torres,https://www.linkedin.com/in/james-torres-plumbing,,"Paying for 8 SaaS subscriptions including scheduling, invoicing, and CRM tools. Forgot about 3 unused licenses costing $185/month. Bank statements are cluttered and difficult to reconcile monthly.",Owner,,small_business,claude_research,new,2026-06-16T11:22:28.008862,"Leakly identifies all hidden subscription charges from bank statements in minutes without requiring sensitive bank login credentials, recovering lost cash flow immediately."
+Chen's Electrical Services,72,2026-06-16T11:22:31.213499,electricalco.com,sarah.chen@electricalco.com,"Hey Sarah,
+
+Most business owners don't realize they're paying for tools they forgot about. With 11 subscriptions across your crew, I'd bet there's at least $260 leaking out monthly.
+
+Here's the thing—you don't need to log into your bank. Just upload your last statement to Leakly, and we'll surface every hidden subscription in 2 minutes. No passwords, no hassle.
+
+Then OpsRunner handles the messy categorization work you're doing manually now.
+
+Want to find what you're actually paying for?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $260/month hiding in your bank statements,,Sarah,0,Sarah Chen,8d8d3fdb,Chen,https://www.linkedin.com/in/sarah-chen-electrical,,"Managing 11 subscriptions across accounting, project management, and crew scheduling. Loses track of which tools are actually used. Estimated $260/month waste. Does own bookkeeping and struggles with transaction categorization.",Founder,,small_business,claude_research,new,2026-06-16T11:22:31.213505,"Leakly discovers forgotten subscriptions automatically, and OpsRunner simplifies bookkeeping by categorizing expenses, eliminating manual reconciliation and subscription waste simultaneously."
+Rodriguez Family Plumbing,70,2026-06-16T11:22:33.438305,plumbingco.com,michael.rodriguez@plumbingco.com,"Hey Michael,
+
+Most business owners like you are bleeding $200+ monthly on forgotten subscriptions—tools you signed up for once and never touched again.
+
+Here's the thing: you shouldn't have to hand over your bank login just to see where your money's going. That's why we built Leakly.
+
+Upload your bank statement (PDF, Excel, whatever). In 2 minutes, you'll see every subscription draining your account. Privacy stays yours.
+
+Want to find that $215 sitting there?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $215/month hiding in your account,,Michael,0,Michael Rodriguez,42be75c4,Rodriguez,https://www.linkedin.com/in/michael-rodriguez-plumbing,,Subscribed to 9 tools for business operations but only actively uses 5. Estimated $215/month on forgotten subscriptions. Frustrated with apps requiring bank login for features that shouldn't need it.,Owner,,small_business,claude_research,new,2026-06-16T11:22:33.438311,"Leakly finds all hidden subscriptions without ever accessing bank login, providing complete visibility into subscription spending in under 2 minutes."
+CrossFit Peak Performance,75,2026-06-16T07:10:05.454161,fitnessowner.com,james.rodriguez@fitnessowner.com,"Hey James,
+
+Bet you're not alone—most gym owners miss 3-4 unused subscriptions bleeding cash monthly. 
+
+We built Leakly to catch exactly this. Just upload your bank statement (no login needed), and we'll find every hidden subscription in 2 minutes. Privacy stays yours.
+
+Your $285/month leak? Probably goes away.
+
+Worth a quick look?
+
+Jaspal
+singhjaspal3460@gmail.com",Find your $285/month leak in 2 min,,James,0,James Rodriguez,0e81c062,Rodriguez,https://www.linkedin.com/in/james-rodriguez,,"Paying for 8 SaaS subscriptions (billing, app hosting, scheduling, marketing tools), forgot about 3 unused ones, loses $285/month",Owner,,small_business,claude_research,new,2026-06-16T07:10:05.454172,Leakly finds all hidden subscriptions from bank statements in 2 minutes without bank login required
+Bright Smile Dental Associates,72,2026-06-16T07:10:07.853721,dentistpractice.com,sarah.chen@dentistpractice.com,"Hey Sarah,
+
+Bet your bookkeeper's drowning in statement chaos. We help dental practices spot the 2-3 subscriptions bleeding money every month—usually finds ~$195 quick wins.
+
+Leakly takes 2 minutes. Upload your last statement (no bank login needed), and we'll show you exactly what's draining cash.
+
+Plus, if accounting's a headache, our AI handles 80% of the work after.
+
+Worth a quick look?
+
+Jaspal
+singhjaspal3460@gmail.com",Found $195/month hiding in your statements,,Sarah,0,Sarah Chen,b0c44f5d,Chen,https://www.linkedin.com/in/sarah-chen,,"Managing 11 subscriptions for practice (scheduling, patient portals, accounting, payroll), 2 inactive, loses $195/month, bookkeeper struggles with messy statements",Founder,,small_business,claude_research,new,2026-06-16T07:10:07.853731,Leakly + OpsRunner combo stops subscription bleeding and organizes messy bookkeeping without complex bank integrations
+Urban Wellness Studio,73,2026-06-16T07:10:10.061274,fitnessowner.com,michael.torres@fitnessowner.com,"Hey Michael,
+
+Bet you're juggling a ton of tools at Urban Wellness. Most studio owners we talk to have 2-3 forgotten subscriptions bleeding cash monthly.
+
+You're losing $420/month on autopilot. Leakly finds every hidden charge in 2 minutes—just upload your bank statement. No login needed, totally private.
+
+Takes 4 hours of hunting down to literally 2 minutes.
+
+Want to see what's actually draining your account?
+
+Jaspal
+singhjaspal3460@gmail.com",Finding your hidden $420/month,,Michael,0,Michael Torres,dd1ce674,Torres,https://www.linkedin.com/in/michael-torres,,"12 SaaS tools for studio (payment processing, membership app, insurance, marketing automation), forgot 4 subscriptions running, loses $420/month",CEO,,small_business,claude_research,new,2026-06-16T07:10:10.061283,"Leakly identifies all recurring charges instantly from bank data, saves 4+ hours per month on subscription audit"
+Peak Performance Gym,75,2026-06-16T07:07:45.990162,fitnessowner.com,james.chen@fitnessowner.com,"Hey James,
+
+Bet you're not tracking every subscription hitting your gym's account. Most business owners aren't—we find an average of $160/month in forgotten charges.
+
+Upload your last bank statement to Leakly (takes 2 min, zero login needed). You'll spot exactly which tools you're still paying for but never use.
+
+Found anything worth canceling?
+
+Jaspal
+singhjaspal3460@gmail.com","$1,920/year hiding in your gym's bank account",,James,0,James Chen,6c294061,Chen,https://www.linkedin.com/in/james-chen-fitness,,"Subscribed to 8 fitness software tools (booking, billing, marketing, analytics). Paying for 3 he forgot about: $85/month for unused premium analytics, $45/month for old email platform, $30/month abandoned loyalty app. Total waste: $160/month, $1,920/year.",Owner,,small_business,claude_research,new,2026-06-16T07:07:45.990168,"Leakly scans bank statements in 2 minutes to surface all recurring charges with zero bank login required—James can immediately cancel forgotten subscriptions and reclaim $1,920 annually."
+Bright Smile Dental,72,2026-06-16T07:07:48.239884,dentistpractice.com,maria.rodriguez@dentistpractice.com,,,,Maria,0,Maria Rodriguez,8ef8d31c,Rodriguez,https://www.linkedin.com/in/maria-rodriguez-dds,,"6 employees. Manages own books with spreadsheets and quarterly bookkeeper check-ins. Currently pays for 11 SaaS subscriptions across practice management, billing, scheduling, and accounting. Suspects overpaying but has no clear visibility into which tools are actually generating ROI.",Founder,,small_business,claude_research,new,2026-06-16T07:07:48.239892,Leakly identifies all recurring subscriptions from bank data without login friction. OpsRunner helps Maria organize her bookkeeping workflow and track which tools drive patient acquisition—eliminating guesswork and streamlining her financial oversight.
+Thompson's Personal Training Studio,78,2026-06-16T07:07:50.878480,fitnessowner.com,david.thompson@fitnessowner.com,,,,David,0,David Thompson,980ecea0,Thompson,https://www.linkedin.com/in/david-thompson-pt,,12 employees. Signed up for 14 fitness and business apps over 3 years. Bank statement is a mess—recurring charges scattered across multiple accounts make it impossible to audit. Estimates he's bleeding $250-300/month on forgotten tools but avoids the hassle of tracking it down.,Owner,,small_business,claude_research,new,2026-06-16T07:07:50.878488,"Leakly instantly maps every subscription charge from his bank statement without requiring sensitive login credentials—giving David clear visibility to cut waste, improve cash flow by $3,000+ annually, and never lose track of SaaS spending again."
+"BDO USA, LLP",78,2026-06-16T06:48:29.996378,bdo.com,margaret.richardson@bdo.com,"Hi Margaret,
+
+Managing reconciliation across 200+ client accounts manually is brutal—especially when it's burning $400K in annual overtime.
+
+I work with accounting firms facing exactly this. OpsRunner's AI handles 90% of reconciliation work across QBO, Xero, and Sage. Most firms see 3-4 FTE savings and redirect staff to higher-value advisory work.
+
+For BDO's scale, that could mean reclaiming significant capacity without hiring.
+
+Would a 15-minute call to explore how this applies to your reconciliation workflow make sense?
+
+Best,
+Jaspal Singh
+OpsRunner",How BDO could cut $400K in overtime with AI reconciliation,,Margaret,0,Margaret Richardson,e650a462,Richardson,https://www.linkedin.com/in/margaret-richardson-cpa-audit,,Managing reconciliation workflows across 200+ client accounts manually; staff overtime costs exceeding $400K annually,Director of Accounting Operations,,,claude_research,new,2026-06-16T06:48:29.996385,"OpsRunner's 9-department AI automation can handle 90% of BDO's high-volume reconciliation work, reducing operational staff by 3-4 FTEs and enabling focus on client advisory services"
+Grant Thornton Mexico (GTM),72,2026-06-16T06:48:34.149202,gtm.com,david.torres@gtm.com,"Hi David,
+
+I noticed Grant Thornton Mexico handles complex US-Mexico cash flow reconciliation. That's 40+ hours weekly most teams struggle with—especially when tools demand your banking credentials.
+
+We built Leakly for CFOs like you. Upload bank statements as PDF/Excel/CSV. No logins. No security headaches. Privacy-first analysis that cuts reconciliation time by 80%.
+
+Works seamlessly across your US and Mexico operations.
+
+Unlike competitors storing credentials, you maintain complete control while getting instant cash flow insights.
+
+Would a 15-minute walkthrough showing how this fits GTM's workflow be helpful?
+
+Best,
+Jaspal Singh
+Leakly
+https://leakly-psi.vercel.app",40 hours/week gone—without sharing your bank credentials,,David,0,David Torres,c296f262,Torres,https://www.linkedin.com/in/david-torres-cfo-mexico,,Bank statement analysis and cash flow reconciliation taking 40+ hours weekly; security concerns with cloud-based competitor tools storing credentials,Chief Financial Officer,,,claude_research,new,2026-06-16T06:48:34.149209,Leakly's privacy-first bank statement analyzer (no credentials required) eliminates security risks while reducing reconciliation time by 80%; operates across US and Mexico operations
+KPMG LLP,81,2026-06-16T06:48:36.944463,kpmg.com,jennifer.patterson@kpmg.com,"Hi Jennifer,
+
+Managing QuickBooks Online, Xero, and Sage simultaneously sounds like your team's month-end nightmare. Six weeks of manual consolidation across three ERPs is standard—but it doesn't have to be.
+
+OpsRunner's AI handles 90% of that work automatically. It integrates all three platforms at once, syncs data in real-time, and maintains full audit-trail compliance. Most firms we work with compress their close from 6 weeks to 10 days.
+
+Your team could reclaim 200+ hours monthly for higher-value advisory work instead of data entry.
+
+Worth a 15-minute conversation to see how this applies to KPMG's workflow?
+
+Best,
+Jaspal Singh
+QBO Certified | OpsRunner
+singhjaspal3460@gmail.com",How KPMG could close in 10 days instead of 6 weeks,,Jennifer,0,Jennifer Patterson,c7119d8d,Patterson,https://www.linkedin.com/in/jennifer-patterson-kpmg-cpa,,"Multi-ERP environment (QuickBooks Online, Xero, Sage) requiring manual data consolidation; 6-week month-end close process","Principal, Accounting Advisory Services",,,claude_research,new,2026-06-16T06:48:36.944470,"OpsRunner integrates all three ERPs simultaneously and automates 80% of consolidation work, compressing KPMG's month-end from 6 weeks to 10 days while maintaining audit-trail compliance"
