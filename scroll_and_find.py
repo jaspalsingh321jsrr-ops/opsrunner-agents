@@ -59,6 +59,8 @@ AUTO_APPROVE       = True    # quality-passed work completes instantly, no human
 MAX_EMAILS_PER_RUN = 3       # outreach throttle (protects Gmail reputation)
 MAX_EMAILS_PER_DAY = 12
 MIN_LEAD_CONFIDENCE = 80     # only email verified, high-confidence leads
+SMTP_HOST          = os.environ.get("SMTP_HOST", "smtp.gmail.com")   # e.g. smtp.zoho.com for domain email
+SMTP_PORT          = int(os.environ.get("SMTP_PORT", "465"))
 GMAIL_EMAIL        = os.environ.get("GMAIL_EMAIL", "")
 GMAIL_PASSWORD     = os.environ.get("GMAIL_PASSWORD", "")
 DIGEST_EMAIL       = os.environ.get("DIGEST_EMAIL", GMAIL_EMAIL or "jaspalsingh321jsrr@gmail.com")
@@ -622,7 +624,7 @@ def send_emails():
             msg = MIMEMultipart()
             msg["From"], msg["To"], msg["Subject"] = gmail, e["to"], e["subject"]
             msg.attach(MIMEText(e["body"], "plain"))
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+            with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as s:
                 s.login(gmail, pwd)
                 s.sendmail(gmail, e["to"], msg.as_string())
             e["status"], e["sent_at"] = "sent", now()
@@ -643,7 +645,7 @@ def _smtp_send(to, subject, body):
     msg = MIMEMultipart()
     msg["From"], msg["To"], msg["Subject"] = GMAIL_EMAIL, to, subject
     msg.attach(MIMEText(body, "plain"))
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as s:
         s.login(GMAIL_EMAIL, GMAIL_PASSWORD)
         s.sendmail(GMAIL_EMAIL, to, msg.as_string())
 
@@ -1060,6 +1062,8 @@ jobs:
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
           COMPANY_ADDRESS: ${{ secrets.COMPANY_ADDRESS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
         run: |
           if [ "${{ steps.cmd.outputs.cmd }}" = "daily" ]; then
             python scroll_and_find.py director
