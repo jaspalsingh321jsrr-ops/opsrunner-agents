@@ -1,13 +1,13 @@
 name: Scroll and Find — AI Workforce OS
 on:
   schedule:
-    - cron: '15 */6 * * *'    # every 6h: run all due employees (cadence-throttled)
-    - cron: '45 13 * * *'     # daily: Workforce Director audit
+    - cron: '10 */2 * * *'    # every 2h: run due employees + auto outreach
+    - cron: '45 13 * * *'     # daily: Workforce Director audit + daily status email
   workflow_dispatch:
     inputs:
       command:
-        description: 'run due | run <role> | director | manager | dashboard | send-emails'
-        default: 'run due'
+        description: 'auto | run due | run <role> | director | manager | dashboard | daily-report | outreach | export'
+        default: 'auto'
 
 concurrency:
   group: scroll-and-find
@@ -30,18 +30,29 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "cmd=${{ github.event.inputs.command }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "45 13 * * *" ]; then
-            echo "cmd=director" >> $GITHUB_OUTPUT
+            echo "cmd=daily" >> $GITHUB_OUTPUT
           else
-            echo "cmd=run due" >> $GITHUB_OUTPUT
+            echo "cmd=auto" >> $GITHUB_OUTPUT
           fi
       - name: Execute
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          COMPANY_ADDRESS: ${{ secrets.COMPANY_ADDRESS }}
         run: |
-          python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
+          if [ "${{ steps.cmd.outputs.cmd }}" = "daily" ]; then
+            python scroll_and_find.py director
+            python scroll_and_find.py daily-report
+          elif [ "${{ steps.cmd.outputs.cmd }}" = "auto" ]; then
+            python scroll_and_find.py run due
+            python scroll_and_find.py outreach
+          else
+            python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
+          fi
           python scroll_and_find.py manager
+          python scroll_and_find.py export
           python scroll_and_find.py dashboard
       - name: Commit results (race-safe)
         run: |
