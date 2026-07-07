@@ -1,12 +1,12 @@
 name: Scroll and Find — AI Workforce OS
 on:
   schedule:
-    - cron: '10 */2 * * *'    # every 2h: run due employees + auto outreach
+    - cron: '10 */2 * * *'    # every 2h: run due employees + outreach + listening
     - cron: '45 13 * * *'     # daily: Workforce Director audit + daily status email
   workflow_dispatch:
     inputs:
       command:
-        description: 'auto | run due | run <role> | director | manager | dashboard | daily-report | outreach | export'
+        description: 'auto | run due | run <role> | director | manager | dashboard | daily-report | outreach | listening | export'
         default: 'auto'
 
 concurrency:
@@ -50,6 +50,7 @@ jobs:
           elif [ "${{ steps.cmd.outputs.cmd }}" = "auto" ]; then
             python scroll_and_find.py run due
             python scroll_and_find.py outreach
+            python scroll_and_find.py listening
           else
             python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
           fi
