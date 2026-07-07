@@ -41,7 +41,7 @@ from email.mime.multipart import MIMEMultipart
 # CONFIG
 # ----------------------------------------------------------------------------
 MODEL              = "claude-haiku-4-5-20251001"
-MAX_TOKENS         = 1500
+MAX_TOKENS         = 2500
 PRICE_IN_PER_MTOK  = 1.00   # USD per 1M input tokens  (haiku)
 PRICE_OUT_PER_MTOK = 5.00   # USD per 1M output tokens (haiku)
 API_KEY            = os.environ.get("ANTHROPIC_API_KEY", "")
