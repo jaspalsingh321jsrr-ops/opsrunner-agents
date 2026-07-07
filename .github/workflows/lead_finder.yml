@@ -1,64 +1,40 @@
-name: Scroll and Find — AI Workforce OS
+name: Lead Finder Agent
+
 on:
   schedule:
-    - cron: '10 */2 * * *'    # every 2h: run due employees + auto outreach
-    - cron: '45 13 * * *'     # daily: Workforce Director audit + daily status email
+    - cron: '0 */2 * * *'    # every 2h: find Hunter-verified leads
   workflow_dispatch:
-    inputs:
-      command:
-        description: 'auto | run due | run <role> | director | manager | dashboard | daily-report | outreach | export'
-        default: 'auto'
+
+permissions:
+  contents: write
 
 concurrency:
   group: scroll-and-find
   cancel-in-progress: false
-
-permissions:
-  contents: write
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
+
       - uses: actions/setup-python@v5.4.0
-        with: { python-version: '3.11' }
-      - run: pip install anthropic
-      - name: Decide command
-        id: cmd
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "cmd=${{ github.event.inputs.command }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "45 13 * * *" ]; then
-            echo "cmd=daily" >> $GITHUB_OUTPUT
-          else
-            echo "cmd=auto" >> $GITHUB_OUTPUT
-          fi
-      - name: Execute
+        with:
+          python-version: '3.11'
+
+      - run: pip install anthropic requests python-dotenv
+
+      - name: Find leads + write emails
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
-          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
-          COMPANY_ADDRESS: ${{ secrets.COMPANY_ADDRESS }}
+          HUNTER_API_KEY: ${{ secrets.HUNTER_API_KEY }}
+        run: python agents/lead_finder.py
+
+      - name: Save results
         run: |
-          if [ "${{ steps.cmd.outputs.cmd }}" = "daily" ]; then
-            python scroll_and_find.py director
-            python scroll_and_find.py daily-report
-          elif [ "${{ steps.cmd.outputs.cmd }}" = "auto" ]; then
-            python scroll_and_find.py run due
-            python scroll_and_find.py outreach
-          else
-            python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
-          fi
-          python scroll_and_find.py manager
-          python scroll_and_find.py export
-          python scroll_and_find.py dashboard
-      - name: Commit results (race-safe)
-        run: |
-          git config user.name "ScrollAndFind Bot"
-          git config user.email "bot@scrollandfind.com"
-          git add data/ docs/
+          git config user.name "OpsRunner Bot"
+          git config user.email "bot@opsrunner.ai"
+          git add data/leads.json data/finance.json
           git diff --staged --quiet && exit 0
-          git commit -m "SF workforce run — $(date -u +%Y-%m-%d-%H%M)"
+          git commit -m "Lead finder — $(date -u +%Y-%m-%d-%H%M)"
           for i in 1 2 3; do git pull --rebase && git push && break || sleep $((i*5)); done
