@@ -16,20 +16,28 @@
       (Optional for outreach: GMAIL_EMAIL + GMAIL_PASSWORD app password.)
    4. Enable GitHub Pages: Settings > Pages > deploy from branch /docs.
 
- DAILY USE (all also run automatically on schedule):
-   python scroll_and_find.py run due            # run every AI employee due now
-   python scroll_and_find.py run marketing      # run one AI employee
-   python scroll_and_find.py director           # Workforce Director audit
-   python scroll_and_find.py manager            # rule-based manager review
-   python scroll_and_find.py dashboard          # rebuild docs/index.html
-   python scroll_and_find.py status             # terminal status report
-   python scroll_and_find.py approve <task_id>  # human approval gate
-   python scroll_and_find.py reject  <task_id> "reason"
-   python scroll_and_find.py approve-email <email_id>
-   python scroll_and_find.py send-emails        # sends ONLY human-approved
+ FULL-AUTO MODE (everything runs itself; nothing waits for a human):
+   - Every 2h: all due AI employees run + auto-outreach to VERIFIED leads
+   - Daily 13:45 UTC: Workforce Director audit + status email to you
+   - Every run: manager review, CSV/JSON export to data/exports/, dashboard
 
- COST: claude-haiku, 1 API call per employee run, cadence-throttled.
- Default schedule ~= 8-10 calls/day  ->  roughly $0.05-0.15/day.
+ SECRETS (repo Settings > Secrets and variables > Actions):
+   ANTHROPIC_API_KEY  (required)
+   GMAIL_EMAIL + GMAIL_PASSWORD  (app password — enables outreach + daily email)
+   COMPANY_ADDRESS  (your mailing address — legally required on outreach emails)
+   HUNTER_API_KEY   (used by lead_finder to discover REAL verified leads)
+   DIGEST_EMAIL     (optional, where the daily report goes; default = GMAIL_EMAIL)
+
+ MANUAL COMMANDS (optional):
+   python scroll_and_find.py auto | run due | run <role> | director | manager
+   python scroll_and_find.py dashboard | status | export | outreach | daily-report
+   python scroll_and_find.py suppress someone@example.com   # never email them
+
+ SAFETY RAILS (kept even in full-auto — they protect your Gmail account):
+   outreach only to Hunter-VERIFIED addresses (confidence >= 80), max 3 per run,
+   12 per day, suppression list honored, unsubscribe line on every email.
+
+ COST: claude-haiku, cadence-throttled ~= $0.20-0.40/day.
 ===============================================================================
 """
 
@@ -45,6 +53,18 @@ MAX_TOKENS         = 2500
 PRICE_IN_PER_MTOK  = 1.00   # USD per 1M input tokens  (haiku)
 PRICE_OUT_PER_MTOK = 5.00   # USD per 1M output tokens (haiku)
 API_KEY            = os.environ.get("ANTHROPIC_API_KEY", "")
+
+# --- FULL-AUTO MODE ---------------------------------------------------------
+AUTO_APPROVE       = True    # quality-passed work completes instantly, no human gate
+MAX_EMAILS_PER_RUN = 3       # outreach throttle (protects Gmail reputation)
+MAX_EMAILS_PER_DAY = 12
+MIN_LEAD_CONFIDENCE = 80     # only email verified, high-confidence leads
+GMAIL_EMAIL        = os.environ.get("GMAIL_EMAIL", "")
+GMAIL_PASSWORD     = os.environ.get("GMAIL_PASSWORD", "")
+DIGEST_EMAIL       = os.environ.get("DIGEST_EMAIL", GMAIL_EMAIL or "jaspalsingh321jsrr@gmail.com")
+COMPANY_ADDRESS    = os.environ.get("COMPANY_ADDRESS", "")   # required by CAN-SPAM before outreach sends
+REPO_URL           = os.environ.get("REPO_URL", "https://github.com/jaspalsingh321jsrr-ops/opsrunner-agents")
+PAGES_URL          = os.environ.get("PAGES_URL", "https://jaspalsingh321jsrr-ops.github.io/opsrunner-agents")
 
 ROOT      = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR  = os.path.join(ROOT, "data")
@@ -437,16 +457,16 @@ def run_employee(role):
     passed, reason = quality_check(role, output)
     task["quality"] = reason
 
-    # --- Approval routing ---
+    # --- Approval routing (AUTO_APPROVE = no human gate, nothing ever pends) ---
     if not passed:
         task["status"] = "needs_revision"
-        task["note"] = f"Manager({spec['manager']}) rejected: {reason}"
-    elif spec["high_risk"]:
+        task["note"] = f"Manager({spec['manager']}) rejected: {reason} (auto-retries next cycle)"
+    elif spec["high_risk"] and not AUTO_APPROVE:
         task["status"] = "pending_human_approval"
-        task["note"] = "High-risk output (external communication). Run: python scroll_and_find.py approve " + task["id"]
+        task["note"] = "Run: python scroll_and_find.py approve " + task["id"]
     else:
         task["status"] = "completed"
-        task["approved_by"] = spec["manager"]
+        task["approved_by"] = spec["manager"] + (" (auto-policy)" if spec["high_risk"] else "")
 
     # --- Completion + Reporting + KB + Analytics + Collaboration ---
     contract = parse_contract(output)
@@ -490,6 +510,12 @@ def queue_outreach_from(task):
 # ----------------------------------------------------------------------------
 def run_manager():
     n = 0
+    # full-auto: clear anything pending immediately (nothing pends > 2 min)
+    if AUTO_APPROVE:
+        for t in load_tasks():
+            if t.get("status") == "pending_human_approval":
+                update_task(t["id"], {"status": "completed", "approved_by": "AUTO-POLICY"})
+                n += 1
     for t in load_tasks():
         if t.get("status") == "in_progress":  # crashed mid-run
             passed, reason = quality_check(t["agent"], t.get("output", "")) if t.get("agent") in WORKFORCE else (False, "unknown role")
@@ -607,80 +633,330 @@ def send_emails():
     print(f"[SF] sent {sent} human-approved email(s)")
 
 # ----------------------------------------------------------------------------
+# AUTO OUTREACH — every 2h, ZERO human dependency, with safety rails:
+# only Hunter-VERIFIED real addresses, confidence >= 80, 3/run, 12/day cap,
+# suppression list honored, CAN-SPAM footer (needs COMPANY_ADDRESS secret).
+# ----------------------------------------------------------------------------
+F_SUPPRESS = os.path.join(DATA_DIR, "sf_suppression.json")
+
+def _smtp_send(to, subject, body):
+    msg = MIMEMultipart()
+    msg["From"], msg["To"], msg["Subject"] = GMAIL_EMAIL, to, subject
+    msg.attach(MIMEText(body, "plain"))
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+        s.login(GMAIL_EMAIL, GMAIL_PASSWORD)
+        s.sendmail(GMAIL_EMAIL, to, msg.as_string())
+
+def _sent_today():
+    today = now()[:10]
+    return [e for e in load_outreach() if e.get("status") == "sent" and str(e.get("sent_at", ""))[:10] == today]
+
+def run_outreach():
+    if not GMAIL_EMAIL or not GMAIL_PASSWORD:
+        print("[SF] outreach: GMAIL_EMAIL/GMAIL_PASSWORD secrets missing — skipped")
+        return
+    if not COMPANY_ADDRESS:
+        print("[SF] outreach: COMPANY_ADDRESS secret missing (required by CAN-SPAM) — skipped")
+        return
+    budget = min(MAX_EMAILS_PER_RUN, MAX_EMAILS_PER_DAY - len(_sent_today()))
+    if budget <= 0:
+        print("[SF] outreach: daily cap reached — skipped")
+        return
+    leads = _load(F_LEADS, [])
+    suppress = set(_load(F_SUPPRESS, []))
+    contacted = {e.get("to") for e in load_outreach()}
+    eligible = [l for l in leads
+                if l.get("source") == "hunter_verified"
+                and int(l.get("confidence") or 0) >= MIN_LEAD_CONFIDENCE
+                and l.get("status") == "new"
+                and "@" in str(l.get("email", ""))
+                and l["email"] not in suppress and l["email"] not in contacted]
+    if not eligible:
+        print("[SF] outreach: 0 verified eligible leads (need HUNTER_API_KEY lead runs) — nothing sent")
+        return
+    q, sent = load_outreach(), 0
+    for l in eligible[:budget]:
+        subject = l.get("email_subject") or f"Quick question for {l.get('company','your firm')}"
+        body = (l.get("email_body") or "").strip()
+        if len(body) < 80:
+            out, _, _ = call_claude(BUSINESS_DNA + "\n" + kb_context(),
+                f"Write ONLY the body of a cold email (max 110 words, one CTA, brand voice) to "
+                f"{l.get('first_name','')} ({l.get('position','')}) at {l.get('company','')}. "
+                f"Pain point: {l.get('pain_point','manual bookkeeping workload')}. "
+                f"Why us: {l.get('why_us','OpsRunner automates ~90% of accounting ops')}.", role="outreach")
+            if out.startswith("ERROR:"):
+                continue
+            body = out.strip()
+        body += (f"\n\n—\nJaspal Singh · OpsRunner · {COMPANY_ADDRESS}"
+                 f"\nDon't want these emails? Reply UNSUBSCRIBE and you'll never hear from me again.")
+        rec = {"id": str(uuid.uuid4())[:8], "to": l["email"], "subject": subject,
+               "lead_id": l.get("id"), "company": l.get("company"), "created_at": now()}
+        try:
+            _smtp_send(l["email"], subject, body)
+            rec.update({"status": "sent", "sent_at": now()})
+            l["status"], l["emailed_at"] = "emailed", now()
+            sent += 1
+        except Exception as ex:
+            rec.update({"status": "error", "error": str(ex)[:200]})
+            l["status"] = "send_failed"
+        q.insert(0, rec)
+    _save(F_OUTREACH, q[:400])
+    _save(F_LEADS, leads)
+    print(f"[SF] outreach: sent {sent} email(s) to verified leads ({len(_sent_today())}/{MAX_EMAILS_PER_DAY} today)")
+
+def suppress_email(addr):
+    s = _load(F_SUPPRESS, [])
+    if addr not in s:
+        s.append(addr)
+    _save(F_SUPPRESS, s)
+    print(f"[SF] {addr} added to suppression list — will never be emailed")
+
+# ----------------------------------------------------------------------------
+# DATA EXPORT — CSV + JSON of everything, refreshed every run -> data/exports/
+# ----------------------------------------------------------------------------
+def export_data():
+    import csv
+    exp = os.path.join(DATA_DIR, "exports")
+    os.makedirs(exp, exist_ok=True)
+    sets = {"tasks": load_tasks(), "leads": _load(F_LEADS, []), "recommendations": load_recs(),
+            "requests": load_requests(), "outreach": load_outreach(),
+            "analytics_runs": load_analytics().get("runs", [])}
+    for name, rows in sets.items():
+        _save(os.path.join(exp, f"{name}.json"), rows)
+        if rows and isinstance(rows[0], dict):
+            keys = sorted({k for r in rows for k in r})
+            with open(os.path.join(exp, f"{name}.csv"), "w", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
+                w.writeheader()
+                for r in rows:
+                    w.writerow({k: (json.dumps(v) if isinstance(v, (dict, list)) else v) for k, v in r.items()})
+    print(f"[SF] exported {len(sets)} datasets (CSV+JSON) -> data/exports/")
+
+# ----------------------------------------------------------------------------
+# DAILY STATUS EMAIL — what every agent did today, with direct links
+# ----------------------------------------------------------------------------
+def daily_report():
+    if not GMAIL_EMAIL or not GMAIL_PASSWORD:
+        print("[SF] daily report: GMAIL secrets missing — skipped")
+        return
+    today = now()[:10]
+    tasks = [t for t in load_tasks() if str(t.get("created_at", ""))[:10] == today]
+    a = load_analytics()
+    cost_today = sum(r.get("cost", 0) for r in a.get("runs", []) if str(r.get("ts", ""))[:10] == today)
+    sent = _sent_today()
+    recs_open = [r for r in load_recs() if r.get("status") == "open"]
+    by_agent = {}
+    for t in tasks:
+        by_agent.setdefault(t["agent"], []).append(t["status"])
+    lines = [f"SCROLL AND FIND — daily status for {today}", "",
+             f"Dashboard (everything, clickable): {PAGES_URL}",
+             f"Exports (CSV/JSON):                {REPO_URL}/tree/main/data/exports",
+             f"Run history:                       {REPO_URL}/actions", "",
+             f"Agent runs today: {len(tasks)} | completed: {sum(1 for t in tasks if t['status']=='completed')} "
+             f"| needs revision: {sum(1 for t in tasks if t['status']=='needs_revision')}",
+             f"Outreach emails sent today: {len(sent)}" + (f" -> {', '.join(e['company'] or e['to'] for e in sent[:5])}" if sent else ""),
+             f"API cost today: ${cost_today:.4f} (total ${a.get('cost_usd',0):.4f})",
+             f"Open Director recommendations: {len(recs_open)}", "",
+             "WHAT EACH AGENT DID TODAY:"]
+    for agent, sts in sorted(by_agent.items()):
+        t0 = next(t for t in tasks if t["agent"] == agent)
+        first_line = next((ln.strip("# ").strip() for ln in t0.get("output", "").splitlines() if ln.strip() and not ln.startswith("```")), "")[:110]
+        lines.append(f"  - {agent}: {', '.join(sts)} — {first_line}")
+    if recs_open:
+        lines += ["", "TOP DIRECTOR RECOMMENDATIONS:"]
+        lines += [f"  - [{r.get('priority','P2')}] {r.get('problem','')[:100]}" for r in recs_open[:5]]
+    if not COMPANY_ADDRESS:
+        lines += ["", "ACTION NEEDED: add COMPANY_ADDRESS secret (your mailing address) to enable auto-outreach (CAN-SPAM)."]
+    if not any(l.get("source") == "hunter_verified" for l in _load(F_LEADS, [])):
+        lines += ["", "NOTE: 0 verified leads in pipeline. Add HUNTER_API_KEY secret so lead_finder can find real, emailable leads."]
+    try:
+        _smtp_send(DIGEST_EMAIL, f"[Scroll and Find] {today}: {len(tasks)} agent runs, {len(sent)} emails sent, ${cost_today:.2f}", "\n".join(lines))
+        print(f"[SF] daily report emailed to {DIGEST_EMAIL}")
+    except Exception as ex:
+        print(f"[SF] daily report failed: {ex}")
+
+# ----------------------------------------------------------------------------
 # EXECUTIVE + DEPARTMENT DASHBOARDS (static build -> docs/index.html on Pages)
 # ----------------------------------------------------------------------------
 DASH_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Scroll and Find — AI Workforce OS</title>
+<title>Scroll and Find — Your AI Company</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f1117;color:#e2e8f0;font-size:13px}
-.app{display:flex;min-height:100vh}
-.side{width:210px;background:#1a1d27;border-right:1px solid #2a2d3e;flex-shrink:0;padding-bottom:20px}
-.logo{padding:16px;border-bottom:1px solid #2a2d3e}.logo h1{font-size:15px}.logo p{font-size:10px;color:#64748b;margin-top:2px}
-.sec{padding:12px 14px 4px;font-size:9px;font-weight:700;color:#4b5563;text-transform:uppercase;letter-spacing:.08em}
-.nav{display:block;padding:7px 14px;font-size:12px;cursor:pointer;color:#94a3b8;border-left:2px solid transparent}
-.nav:hover{background:#222535;color:#e2e8f0}.nav.on{background:#222535;color:#7f77dd;border-left-color:#7f77dd;font-weight:600}
-.main{flex:1;padding:16px 20px;overflow-x:hidden}
-h2{font-size:15px;margin-bottom:2px}.sub{font-size:10px;color:#64748b;margin-bottom:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:16px}
-.stat{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:10px 12px}
-.stat .v{font-size:20px;font-weight:700;font-family:ui-monospace,monospace}.stat .l{font-size:9px;color:#64748b;margin-top:3px;text-transform:uppercase;letter-spacing:.04em}
-.card{background:#1a1d27;border:1px solid #2a2d3e;border-radius:8px;padding:12px;margin-bottom:14px}
-.card h3{font-size:12px;margin-bottom:8px;color:#a5b4fc}
-table{width:100%;border-collapse:collapse;font-size:11px}
-th{text-align:left;color:#64748b;font-size:9px;text-transform:uppercase;padding:4px 6px;border-bottom:1px solid #2a2d3e}
-td{padding:5px 6px;border-bottom:1px solid #1f2230;vertical-align:top}
-.b{display:inline-block;padding:1px 7px;border-radius:9px;font-size:9px;font-weight:700}
-.g{background:#14532d;color:#4ade80}.y{background:#422006;color:#fbbf24}.r{background:#450a0a;color:#f87171}.bl{background:#0c1a33;color:#60a5fa}.p{background:#2e1065;color:#c4b5fd}
-pre{white-space:pre-wrap;font-family:inherit;font-size:11px;color:#cbd5e1;max-height:260px;overflow-y:auto;background:#111827;border-radius:6px;padding:8px;margin-top:6px}
-.hide{display:none}.mut{color:#64748b}
-</style></head><body><div class="app">
-<div class="side"><div class="logo"><h1>Scroll and Find</h1><p>AI Workforce OS · OpsRunner DNA</p></div>
-<div class="sec">Company</div><div class="nav on" data-v="exec">Executive Dashboard</div>
-<div class="sec">Departments</div><div id="deptnav"></div></div>
-<div class="main"><h2 id="title">Executive Dashboard</h2><div class="sub">Built __BUILT__ UTC · auto-refreshes on every agent run</div>
-<div id="view"></div></div></div>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#f5f5f5;font-size:15px;line-height:1.55}
+.wrap{max-width:1020px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:26px;letter-spacing:-.5px}
+.tag{color:#8a8a8a;font-size:13px;margin-top:4px}
+.hello{background:linear-gradient(135deg,#101613,#0d1110);border:1px solid #1f3328;border-radius:16px;padding:18px 20px;margin:20px 0;font-size:16px}
+.hello b{color:#34d399}
+h2{font-size:17px;margin:30px 0 4px}
+.sub{color:#8a8a8a;font-size:13px;margin-bottom:12px}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.step{background:#141414;border:1px solid #262626;border-radius:14px;padding:14px}
+.step .n{display:inline-block;background:#1f3328;color:#34d399;font-weight:700;font-size:12px;border-radius:8px;padding:2px 8px;margin-bottom:8px}
+.step b{display:block;font-size:14px;margin-bottom:4px}
+.step p{color:#8a8a8a;font-size:12.5px}
+.step .live{margin-top:8px;font-size:13px;color:#34d399;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:#141414;border:1px solid #262626;border-radius:14px;padding:14px}
+.stat .v{font-size:24px;font-weight:700;letter-spacing:-.5px}
+.stat .l{font-size:12px;color:#c9c9c9;margin-top:2px;font-weight:600}
+.stat .d{font-size:11.5px;color:#7a7a7a;margin-top:3px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.pill{border:1px solid #2c2c2c;background:#141414;color:#bdbdbd;border-radius:999px;padding:5px 13px;font-size:12.5px;cursor:pointer}
+.pill.on{background:#1f3328;border-color:#2f5c44;color:#34d399;font-weight:600}
+.emp{background:#141414;border:1px solid #262626;border-radius:14px;padding:13px 15px;margin-bottom:9px}
+.emp .top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.emp .name{font-weight:700;font-size:14px}
+.emp .dept{color:#7a7a7a;font-size:12px}
+.chip{margin-left:auto;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.ok{background:#12291d;color:#34d399}.warn{background:#2b2010;color:#fbbf24}.bad{background:#2b1212;color:#f87171}.info{background:#101c2b;color:#60a5fa}.zzz{background:#1c1c1c;color:#8a8a8a}
+.emp .what{color:#b9b9b9;font-size:13px;margin-top:6px}
+details{margin-top:8px}
+summary{cursor:pointer;color:#34d399;font-size:12.5px;font-weight:600}
+pre{white-space:pre-wrap;font-family:inherit;font-size:12.5px;color:#c9c9c9;background:#0f0f0f;border:1px solid #222;border-radius:10px;padding:12px;margin-top:8px;max-height:300px;overflow-y:auto}
+.idea{background:#141414;border:1px solid #262626;border-radius:14px;padding:14px 16px;margin-bottom:9px}
+.idea b{font-size:13.5px}
+.idea p{color:#9a9a9a;font-size:12.5px;margin-top:4px}
+.idea .meta{margin-top:8px;font-size:11.5px;color:#7a7a7a}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:#7a7a7a;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:6px 8px;border-bottom:1px solid #262626}
+td{padding:8px;border-bottom:1px solid #1b1b1b;vertical-align:top}
+.card{background:#141414;border:1px solid #262626;border-radius:14px;padding:16px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:1px solid #2c2c2c;background:#181818;color:#e5e5e5;border-radius:10px;padding:8px 14px;font-size:13px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{border-color:#34d399;color:#34d399}
+.good{color:#34d399}.mut{color:#8a8a8a}
+.foot{color:#5f5f5f;font-size:12px;margin-top:34px;text-align:center}
+@media(max-width:600px){h1{font-size:21px}.stat .v{font-size:20px}}
+</style></head><body><div class="wrap">
+
+<h1>Scroll and Find · <span class="good">Your AI Company</span></h1>
+<div class="tag">21 AI employees running OpsRunner for you, around the clock · powered by OpsRunner Business DNA</div>
+<div class="hello" id="hello"></div>
+
+<h2>How your company works</h2>
+<div class="sub">This whole loop repeats every 2 hours, automatically. You don't have to do anything.</div>
+<div class="flow" id="flow"></div>
+
+<h2>Today's numbers</h2>
+<div class="sub">Click any card's section below to see the details behind it.</div>
+<div class="grid" id="stats"></div>
+
+<h2 id="team">Your AI employees</h2>
+<div class="sub">What each one did in their latest shift. Tap "Read their work" to see the full output.</div>
+<div class="pills" id="pills"></div>
+<div id="emps"></div>
+
+<h2 id="ideas">Ideas from your AI Director</h2>
+<div class="sub">Every day the Director studies your company and suggests improvements. Newest first.</div>
+<div id="recs"></div>
+
+<h2 id="emails">Emails sent to potential clients</h2>
+<div class="sub">Only real, verified addresses get emailed — maximum 12 per day to keep your Gmail safe.</div>
+<div class="card" id="outreach"></div>
+
+<h2 id="attention">Anything needing attention?</h2>
+<div id="issues"></div>
+
+<h2>Your data — download anytime</h2>
+<div class="card">Everything your AI company produces belongs to you. Download it as Excel-friendly CSV files:
+<div class="btns">
+<span class="btn" onclick="exp('tasks','csv')">⬇ All work (CSV)</span>
+<span class="btn" onclick="exp('outreach','csv')">⬇ Emails sent (CSV)</span>
+<span class="btn" onclick="exp('recs','csv')">⬇ Director ideas (CSV)</span>
+<span class="btn" onclick="exp('all','json')">⬇ Everything (JSON)</span>
+<a class="btn" id="lnk-exp" target="_blank">📁 Exports folder on GitHub</a>
+<a class="btn" id="lnk-act" target="_blank">▶ Run history</a>
+</div></div>
+
+<div class="foot" id="foot"></div>
+</div>
 <script>
-const D = __DATA__;
-const S = {completed:'g',pending_human_approval:'y',needs_revision:'r',in_progress:'bl',open:'y',draft:'y',approved:'bl',sent:'g',error:'r',stale:'r'};
-const b = s => `<span class="b ${S[s]||'bl'}">${(s||'').replace(/_/g,' ')}</span>`;
-const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
-function stat(v,l){return `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`}
-function taskRows(ts){return ts.map(t=>`<tr><td><b>${esc(t.agent)}</b><div class="mut">${esc(t.id)} · ${esc((t.created_at||'').slice(0,16))}</div></td><td>${b(t.status)}<div class="mut">${esc(t.quality||'')}</div></td><td><details><summary style="cursor:pointer">output</summary><pre>${esc(t.output)}</pre></details></td></tr>`).join('')}
-function exec(){
- const t=D.tasks, pend=t.filter(x=>x.status==='pending_human_approval'), rev=t.filter(x=>x.status==='needs_revision');
- const openReq=D.requests.filter(r=>r.status==='open'), openRec=D.recs.filter(r=>r.status==='open');
- const eng=openReq.filter(r=>/engineer/i.test(r.department));
- let h='<div class="grid">';
- h+=stat('$'+(D.finance.mrr||D.finance.revenue||0),'Revenue / MRR')+stat(D.leads,'Leads')+stat(D.finance.clients||0,'Clients')+stat(D.finance.projects||0,'Projects');
- h+=stat(Object.keys(D.workforce).length,'AI Workforce')+stat(t.filter(x=>x.status==='completed').length,'Workflows Done')+stat(pend.length,'Pending Approvals')+stat(eng.length,'Engineering Tasks');
- h+=stat(rev.length,'Errors / Revisions')+stat(D.analytics.healthOk+'/'+D.analytics.healthAll,'API Health')+stat((D.analytics.input_tokens+D.analytics.output_tokens).toLocaleString(),'Tokens Used')+stat('$'+(D.analytics.cost_usd||0).toFixed(3),'API Cost To Date');
- h+='</div>';
- if(pend.length){h+=`<div class="card"><h3>⚠ Pending Human Approvals — run: python scroll_and_find.py approve &lt;id&gt;</h3><table><tr><th>Agent</th><th>Status</th><th>Output</th></tr>${taskRows(pend)}</table></div>`}
- h+=`<div class="card"><h3>AI Workforce Status</h3><table><tr><th>Employee</th><th>Dept</th><th>Cadence</th><th>Last Run</th><th>Health</th></tr>${Object.entries(D.workforce).map(([k,w])=>{const hh=D.analytics.health[k];return `<tr><td><b>${k}</b><div class="mut">${esc(w.mission.slice(0,70))}…</div></td><td>${w.dept}</td><td>${w.hours}h</td><td>${hh?esc(hh.last_run.slice(0,16)):'<span class=mut>never</span>'}</td><td>${hh?(hh.ok?b('completed'):b('error')):b('open')}</td></tr>`}).join('')}</table></div>`;
- h+=`<div class="card"><h3>Workforce Director — Open Recommendations</h3>${openRec.length?`<table><tr><th>Problem / Impact</th><th>Solution</th><th>Pri</th><th>Effort</th><th>ROI</th></tr>${openRec.map(r=>`<tr><td><b>${esc(r.problem)}</b><div class="mut">${esc(r.business_impact)}</div></td><td>${esc(r.recommended_solution)}<div class="mut">deps: ${esc(r.dependencies||'—')}</div></td><td>${b(r.priority==='P1'?'error':'open')} ${esc(r.priority)}</td><td>${esc(r.estimated_effort)}</td><td>${esc(r.expected_roi)}</td></tr>`).join('')}</table>`:'<span class="mut">None — run: python scroll_and_find.py director</span>'}</div>`;
- h+=`<div class="card"><h3>Automation Queue — Cross-Department Requests</h3>${openReq.length?`<table><tr><th>From → Dept</th><th>Request</th><th>Pri</th><th>Status</th></tr>${openReq.map(r=>`<tr><td>${esc(r.from)} → <b>${esc(r.department)}</b></td><td>${esc(r.request)}</td><td>${esc(r.priority)}</td><td>${b(r.status)}</td></tr>`).join('')}</table>`:'<span class="mut">Queue empty</span>'}</div>`;
- h+=`<div class="card"><h3>Outreach Queue (human-gated)</h3>${D.outreach.length?`<table><tr><th>Id</th><th>To</th><th>Status</th><th>Created</th></tr>${D.outreach.slice(0,10).map(e=>`<tr><td>${esc(e.id)}</td><td>${esc(e.to||'— fill in sf_outreach.json')}</td><td>${b(e.status)}</td><td>${esc((e.created_at||'').slice(0,16))}</td></tr>`).join('')}</table>`:'<span class="mut">Empty</span>'}</div>`;
- h+=`<div class="card"><h3>Notifications & Errors</h3>${D.analytics.errors.length?`<table><tr><th>When</th><th>Role</th><th>Error</th></tr>${D.analytics.errors.slice(0,8).map(e=>`<tr><td>${esc(e.ts.slice(0,16))}</td><td>${esc(e.role)}</td><td class="mut">${esc(e.error)}</td></tr>`).join('')}</table>`:'<span class="mut">No errors 🎉</span>'}</div>`;
- h+=`<div class="card"><h3>Recent Activity</h3><table><tr><th>Agent</th><th>Status</th><th>Output</th></tr>${taskRows(t.slice(0,12))}</table></div>`;
- return h;
+const D=__DATA__;
+const BUILT="__BUILT__";
+const EMOJI={"Executive":"👔","Product":"📦","Marketing":"📣","Sales":"🤝","Customer Success":"💬","Accounting Ops":"📚","Finance":"💰","HR":"🧑‍💼","Engineering":"🛠️","Security":"🔒","Compliance":"⚖️","Analytics":"📊","Knowledge":"📖"};
+const STATUS={completed:["✅ Done","ok"],needs_revision:["🔁 Redoing next run","warn"],in_progress:["⏳ Working now","info"],pending_human_approval:["⏸ Waiting","warn"],sent:["📤 Sent","ok"],error:["⚠️ Problem","bad"],open:["🟡 Open","warn"],draft:["📝 Draft","zzz"],stale:["💤 Expired","zzz"]};
+const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const nice=k=>k.split('_').map(w=>w==='ceo'?'CEO':w==='coo'?'COO':w==='hr'?'HR':w==='qa'?'QA':w[0].toUpperCase()+w.slice(1)).join(' ')+' AI';
+const chip=s=>{const[t,c]=STATUS[s]||[s,'zzz'];return `<span class="chip ${c}">${t}</span>`};
+const latestOf=r=>D.tasks.find(t=>t.agent===r);
+const dayKey=(D.tasks[0]?.created_at||BUILT).slice(0,10);
+const todayTasks=D.tasks.filter(t=>(t.created_at||'').slice(0,10)===dayKey);
+const doneToday=todayTasks.filter(t=>t.status==='completed').length;
+const redoToday=todayTasks.filter(t=>t.status==='needs_revision').length;
+const openRecs=D.recs.filter(r=>r.status==='open');
+const sentAll=D.outreach.filter(e=>e.status==='sent');
+
+/* hello */
+document.getElementById('hello').innerHTML=
+ `👋 Hi Jaspal. On <b>${dayKey}</b> your AI team finished <b>${doneToday} pieces of work</b>, sent <b>${D.sentToday} email${D.sentToday==1?'':'s'}</b> to potential clients, and it cost you <b>$${(D.analytics.cost_usd||0).toFixed(2)} total so far</b>. `+
+ (redoToday?`${redoToday} task${redoToday==1?' is':'s are'} being redone automatically — no action needed. `:'Everything ran cleanly. ')+
+ `Your next daily summary email arrives around 7:15 PM IST.`;
+
+/* flow */
+const flow=[
+ ["Step 1","🔎 Find clients","Every 2 hours, the Lead Finder searches for accounting firms and verifies real email addresses.",`${D.leads} leads in pipeline`],
+ ["Step 2","✍️ Write & send","Sales AI writes a personal email for each verified lead and sends it — max 12/day.",`${sentAll.length} sent so far`],
+ ["Step 3","🏢 Run the company","All 21 AI employees do their daily jobs: marketing, finance, engineering, and more.",`${doneToday} tasks done today`],
+ ["Step 4","📬 Report to you","You get a daily email summary, and this page refreshes itself after every run.",`Updated ${BUILT} UTC`]];
+document.getElementById('flow').innerHTML=flow.map(f=>`<div class="step"><span class="n">${f[0]}</span><b>${f[1]}</b><p>${f[2]}</p><div class="live">${f[3]}</div></div>`).join('');
+
+/* stats */
+const stats=[
+ [D.sentToday,"Emails sent today","Real verified clients contacted",'#emails'],
+ [D.leads,"Leads found","Potential clients in your pipeline",'#emails'],
+ [doneToday,"Tasks finished today","Work completed by your AI team",'#team'],
+ [openRecs.length,"Ideas waiting","Improvements your Director suggests",'#ideas'],
+ [redoToday+D.analytics.errors.length,"Needs attention","Things being fixed automatically",'#attention'],
+ ["$"+(D.analytics.cost_usd||0).toFixed(2),"Total spend","Everything since day one",'#attention']];
+document.getElementById('stats').innerHTML=stats.map(s=>`<a href="${s[3]}" style="text-decoration:none;color:inherit"><div class="stat"><div class="v">${s[0]}</div><div class="l">${s[1]}</div><div class="d">${s[2]}</div></div></a>`).join('');
+
+/* employees + department pills */
+const depts=['All',...new Set(Object.values(D.workforce).map(w=>w.dept))];
+let cur='All';
+function renderPills(){document.getElementById('pills').innerHTML=depts.map(d=>`<span class="pill ${d===cur?'on':''}" onclick="pick('${d}')">${d==='All'?'👥 Everyone':EMOJI[d]+' '+d}</span>`).join('')}
+window.pick=d=>{cur=d;renderPills();renderEmps()};
+function renderEmps(){
+ document.getElementById('emps').innerHTML=Object.entries(D.workforce)
+ .filter(([k,w])=>cur==='All'||w.dept===cur)
+ .map(([k,w])=>{const t=latestOf(k);
+  return `<div class="emp"><div class="top"><span>${EMOJI[w.dept]||'🤖'}</span><span class="name">${nice(k)}</span><span class="dept">${w.dept} · works every ${w.hours>=48?Math.round(w.hours/24)+' days':w.hours+' hours'}</span>${t?chip(t.status):'<span class="chip zzz">💤 Not run yet</span>'}</div>`+
+  `<div class="what">${esc(w.mission.replace(/^Act as [^.]*\. /,''))}</div>`+
+  (t?`<details><summary>Read their work (${(t.created_at||'').slice(0,16).replace('T',' ')} UTC)</summary><pre>${esc(t.output)}</pre></details>`:'')+
+  `</div>`}).join('');
 }
-function dept(name){
- const roles=Object.entries(D.workforce).filter(([k,w])=>w.dept===name).map(([k])=>k);
- const t=D.tasks.filter(x=>roles.includes(x.agent)||x.dept===name);
- const req=D.requests.filter(r=>r.department.toLowerCase().includes(name.toLowerCase().split(' ')[0]));
- let h='<div class="grid">'+stat(roles.length,'AI Employees')+stat(t.length,'Tasks')+stat(t.filter(x=>x.status==='completed').length,'Completed')+stat(t.filter(x=>x.status==='pending_human_approval').length,'Awaiting Approval')+'</div>';
- h+=`<div class="card"><h3>Open Requests For This Department</h3>${req.filter(r=>r.status==='open').map(r=>`<div style="padding:4px 0">${b('open')} <b>${esc(r.priority)}</b> ${esc(r.request)} <span class="mut">(from ${esc(r.from)})</span></div>`).join('')||'<span class="mut">None</span>'}</div>`;
- h+=`<div class="card"><h3>Tasks</h3><table><tr><th>Agent</th><th>Status</th><th>Output</th></tr>${taskRows(t.slice(0,15))||''}</table></div>`;
- return h;
-}
-const depts=[...new Set(Object.values(D.workforce).map(w=>w.dept))];
-document.getElementById('deptnav').innerHTML=depts.map(d=>`<div class="nav" data-v="${d}">${d}</div>`).join('');
-document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>{document.querySelectorAll('.nav').forEach(x=>x.classList.remove('on'));n.classList.add('on');
- const v=n.dataset.v;document.getElementById('title').textContent=v==='exec'?'Executive Dashboard':v+' Dashboard';
- document.getElementById('view').innerHTML=v==='exec'?exec():dept(v);});
-document.getElementById('view').innerHTML=exec();
+renderPills();renderEmps();
+
+/* director ideas */
+document.getElementById('recs').innerHTML=openRecs.length?openRecs.map(r=>
+ `<div class="idea"><b>💡 ${esc(r.problem)}</b><p>${esc(r.business_impact)}</p><p><span class="good">Suggestion:</span> ${esc(r.recommended_solution)}</p>`+
+ `<div class="meta">Priority ${esc(r.priority||'P2')} · Effort: ${esc(r.estimated_effort||'—')} · Expected return: ${esc(r.expected_roi||'—')}</div></div>`).join('')
+ :'<div class="card mut">No open ideas right now. The Director reviews your whole company every day at 13:45 UTC (7:15 PM IST).</div>';
+
+/* outreach */
+document.getElementById('outreach').innerHTML=D.outreach.length?
+ `<table><tr><th>Sent to</th><th>Company</th><th>Status</th><th>When (UTC)</th></tr>`+D.outreach.slice(0,15).map(e=>
+ `<tr><td>${esc(e.to)}</td><td>${esc(e.company||'—')}</td><td>${chip(e.status)}</td><td>${esc((e.sent_at||e.created_at||'').slice(0,16).replace('T',' '))}</td></tr>`).join('')+`</table>`
+ :`<span class="mut">No emails sent yet. This starts automatically once the Lead Finder discovers verified addresses (it searches every 2 hours). If this stays empty for a few days, your Hunter key may need attention.</span>`;
+
+/* attention */
+const errs=D.analytics.errors.slice(0,6);
+const redos=todayTasks.filter(t=>t.status==='needs_revision');
+document.getElementById('issues').innerHTML=(errs.length||redos.length)?
+ `<div class="card">`+
+ redos.map(t=>`<div style="padding:5px 0">🔁 <b>${nice(t.agent)}</b> — work didn't pass the quality check (<span class="mut">${esc(t.quality)}</span>). It retries automatically on the next run. Nothing for you to do.</div>`).join('')+
+ errs.map(e=>`<div style="padding:5px 0">⚠️ <b>${nice(e.role)}</b> hit a technical error at ${esc(e.ts.slice(0,16))} — <span class="mut">${esc(e.error)}</span></div>`).join('')+
+ `</div>`
+ :'<div class="card good">✅ Nothing. Your company is running cleanly.</div>';
+
+/* links + export */
+document.getElementById('lnk-exp').href=D.repo+'/tree/main/data/exports';
+document.getElementById('lnk-act').href=D.repo+'/actions';
+document.getElementById('foot').textContent=`Scroll and Find AI Workforce OS · runs itself every 2 hours on GitHub Actions · total AI spend to date $${(D.analytics.cost_usd||0).toFixed(2)} · ${(D.analytics.input_tokens+D.analytics.output_tokens).toLocaleString()} tokens`;
+function dl(name,text,mime){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:mime}));a.download=name;a.click()}
+function csv(rows){if(!rows||!rows.length)return '';const ks=[...new Set(rows.flatMap(r=>Object.keys(r)))];return [ks.join(','),...rows.map(r=>ks.map(k=>JSON.stringify(typeof r[k]==='object'?JSON.stringify(r[k]||''):(r[k]??''))).join(','))].join('\n')}
+window.exp=(what,fmt)=>{const d=what==='all'?D:D[what];dl(`sf_${what}.${fmt}`,fmt==='csv'?csv(d):JSON.stringify(d,null,1),fmt==='csv'?'text/csv':'application/json')};
 </script></body></html>"""
 
 def build_dashboard():
@@ -699,6 +975,8 @@ def build_dashboard():
                       "healthAll": max(len(health), 1)},
         "finance": _load(F_FINANCE, {}),
         "leads": len(_load(F_LEADS, [])),
+        "repo": REPO_URL,
+        "sentToday": len(_sent_today()),
     }
     html = DASH_TEMPLATE.replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__BUILT__", now()[:16])
     os.makedirs(DOCS_DIR, exist_ok=True)
@@ -712,13 +990,13 @@ def build_dashboard():
 WORKFLOW_YML = """name: Scroll and Find — AI Workforce OS
 on:
   schedule:
-    - cron: '15 */6 * * *'    # every 6h: run all due employees (cadence-throttled)
-    - cron: '45 13 * * *'     # daily: Workforce Director audit
+    - cron: '10 */2 * * *'    # every 2h: run due employees + auto outreach
+    - cron: '45 13 * * *'     # daily: Workforce Director audit + daily status email
   workflow_dispatch:
     inputs:
       command:
-        description: 'run due | run <role> | director | manager | dashboard | send-emails'
-        default: 'run due'
+        description: 'auto | run due | run <role> | director | manager | dashboard | daily-report | outreach | export'
+        default: 'auto'
 
 concurrency:
   group: scroll-and-find
@@ -741,18 +1019,29 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "cmd=${{ github.event.inputs.command }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "45 13 * * *" ]; then
-            echo "cmd=director" >> $GITHUB_OUTPUT
+            echo "cmd=daily" >> $GITHUB_OUTPUT
           else
-            echo "cmd=run due" >> $GITHUB_OUTPUT
+            echo "cmd=auto" >> $GITHUB_OUTPUT
           fi
       - name: Execute
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          DIGEST_EMAIL: ${{ secrets.DIGEST_EMAIL }}
+          COMPANY_ADDRESS: ${{ secrets.COMPANY_ADDRESS }}
         run: |
-          python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
+          if [ "${{ steps.cmd.outputs.cmd }}" = "daily" ]; then
+            python scroll_and_find.py director
+            python scroll_and_find.py daily-report
+          elif [ "${{ steps.cmd.outputs.cmd }}" = "auto" ]; then
+            python scroll_and_find.py run due
+            python scroll_and_find.py outreach
+          else
+            python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
+          fi
           python scroll_and_find.py manager
+          python scroll_and_find.py export
           python scroll_and_find.py dashboard
       - name: Commit results (race-safe)
         run: |
@@ -772,20 +1061,16 @@ def install():
         _save(F_KNOWLEDGE, dict(DEFAULT_KNOWLEDGE))
     build_dashboard()
     print("[SF] installed: .github/workflows/scroll_and_find.yml + seeded knowledge base + dashboard")
-    print("[SF] next: commit + push, add ANTHROPIC_API_KEY secret, enable Pages from /docs")
 
 # ----------------------------------------------------------------------------
 # STATUS (terminal report)
 # ----------------------------------------------------------------------------
 def status():
     t, a, recs = load_tasks(), load_analytics(), load_recs()
-    pend = [x for x in t if x["status"] == "pending_human_approval"]
-    print(f"\n=== SCROLL AND FIND — AI WORKFORCE OS ===")
+    print(f"\n=== SCROLL AND FIND — AI WORKFORCE OS (full-auto) ===")
     print(f" employees: {len(WORKFORCE)} | tasks stored: {len(t)} | spend: ${a.get('cost_usd',0):.4f} "
           f"| tokens: {a.get('input_tokens',0)}/{a.get('output_tokens',0)}")
-    print(f" pending human approvals: {len(pend)}")
-    for x in pend[:10]:
-        print(f"   -> approve {x['id']}  ({x['agent']}, {x['created_at'][:16]})")
+    print(f" emails sent today: {len(_sent_today())}/{MAX_EMAILS_PER_DAY}")
     print(f" open director recommendations: {sum(1 for r in recs if r.get('status')=='open')}")
     due = [r for r in WORKFORCE if is_due(r)]
     print(f" due to run now: {', '.join(due) if due else 'none'}\n")
@@ -813,6 +1098,10 @@ def main():
                 run_employee(r)
         else:
             run_employee(target)
+    elif cmd == "auto":
+        for r in [r for r in WORKFORCE if is_due(r)]:
+            run_employee(r)
+        run_outreach()
     elif cmd == "director":
         run_director()
     elif cmd == "manager":
@@ -821,6 +1110,14 @@ def main():
         build_dashboard()
     elif cmd == "status":
         status()
+    elif cmd == "outreach":
+        run_outreach()
+    elif cmd == "daily-report":
+        daily_report()
+    elif cmd == "export":
+        export_data()
+    elif cmd == "suppress" and len(args) > 1:
+        suppress_email(args[1])
     elif cmd == "approve" and len(args) > 1:
         approve(args[1])
     elif cmd == "reject" and len(args) > 1:
