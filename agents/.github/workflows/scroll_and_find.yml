@@ -1,0 +1,53 @@
+name: Scroll and Find — AI Workforce OS
+on:
+  schedule:
+    - cron: '15 */6 * * *'    # every 6h: run all due employees (cadence-throttled)
+    - cron: '45 13 * * *'     # daily: Workforce Director audit
+  workflow_dispatch:
+    inputs:
+      command:
+        description: 'run due | run <role> | director | manager | dashboard | send-emails'
+        default: 'run due'
+
+concurrency:
+  group: scroll-and-find
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-python@v5.4.0
+        with: { python-version: '3.11' }
+      - run: pip install anthropic
+      - name: Decide command
+        id: cmd
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "cmd=${{ github.event.inputs.command }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "45 13 * * *" ]; then
+            echo "cmd=director" >> $GITHUB_OUTPUT
+          else
+            echo "cmd=run due" >> $GITHUB_OUTPUT
+          fi
+      - name: Execute
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: |
+          python scroll_and_find.py ${{ steps.cmd.outputs.cmd }}
+          python scroll_and_find.py manager
+          python scroll_and_find.py dashboard
+      - name: Commit results (race-safe)
+        run: |
+          git config user.name "ScrollAndFind Bot"
+          git config user.email "bot@scrollandfind.com"
+          git add data/ docs/
+          git diff --staged --quiet && exit 0
+          git commit -m "SF workforce run — $(date -u +%Y-%m-%d-%H%M)"
+          for i in 1 2 3; do git pull --rebase && git push && break || sleep $((i*5)); done
