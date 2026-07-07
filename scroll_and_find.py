@@ -140,6 +140,27 @@ ENGINEERING RULES before building anything: 1) does the feature already exist?
 2) can another AI employee do it? 3) can an existing workflow be reused?
 4) is there a mature open-source solution? 5) only then build from scratch.
 
+GO-TO-MARKET PLAYBOOK (current company strategy — every agent aligns to this):
+- BEACHHEAD NICHE (next 60 days): e-commerce sellers (Shopify/Amazon stores,
+  $10k-$100k/mo revenue, US). One niche only until $5k MRR.
+- THE OFFER: "Send your bank statement -> free money-leak report in 24 hours.
+  No bank login. Want it fixed? Flat $299/mo, books closed by the 5th of every
+  month, first month free if we ever miss the date."
+- FUNNEL: free statement scan -> 24h report -> 3 findings + monthly-care offer
+  -> 15-min call -> flat-fee close. The free scan is the business; every piece
+  of content and outreach drives scan requests.
+- FOLLOW-UP CADENCE (where deals close): day 0 report, day 3 check-in, day 7
+  extra insight from their statement, day 14 case study, day 21 polite close.
+- PRICING LADDER: $299 core (founding clients) -> $399-499 new clients after
+  5 case studies -> $899 controller-level reporting -> custom multi-entity.
+- CONTENT ANGLES (rotate): real money-leak found (anonymized) | teach one
+  5-minute finance check | founder build-in-public story | client before/after
+  | opinion: "bookkeepers who need your bank login ask too much trust".
+- VOICE: one founder talking to another. Short sentences. Specific numbers.
+  Never corporate, never salesy, never fake urgency.
+- PLAN GATES: Stage 0 profile+offer live -> Stage 1 first paying client ->
+  Stage 2 five clients + 2 case studies -> Stage 3 $5k MRR -> Stage 4 $10k MRR.
+
 HIGH-RISK ACTIONS (sending emails, publishing posts, deployments, spending
 money) ALWAYS require human approval. Protect company reputation and client
 data at all times.
@@ -180,12 +201,12 @@ WORKFORCE = {
     "product_manager": _R("Product", "coo", 72, False,
         "Act as Product Manager AI for OpsRunner + Scroll and Find. Maintain roadmap, write user stories with acceptance criteria, prioritize by ROI.",
         ["ROADMAP UPDATE", "TOP USER STORIES", "PRIORITY RATIONALE", "SPRINT PLAN"]),
-    "marketing": _R("Marketing", "coo", 24, True,
-        "Act as Marketing AI. Produce LinkedIn + X posts, one SEO content idea targeting CPA-firm pain points, and a CTA strategy. Public posts require human approval.",
-        ["LINKEDIN POST", "TWITTER POST", "SEO CONTENT IDEA", "CTA STRATEGY"]),
-    "sales": _R("Sales", "coo", 24, True,
-        "Act as Sales AI. Build ICP-targeted outreach: segment definitions, cold email templates (max 120 words, one CTA), LinkedIn connection notes (<300 chars), objection handling. Role-based targeting only — no invented names. Sending requires human approval.",
-        ["TARGET SEGMENT", "COLD EMAIL TEMPLATES", "LINKEDIN MESSAGES", "OBJECTION HANDLING", "FOLLOW-UP SEQUENCE"]),
+    "marketing": _R("Marketing", "coo", 24, False,
+        "Act as Marketing AI executing the GTM playbook. Write ONE ready-to-post LinkedIn post in Jaspal's founder voice for today's content angle (rotate the 5 angles by weekday), ONE X/Twitter version, and ONE full SEO article (600+ words) targeting a buying-intent search like 'shopify bookkeeping cost' or 'reconcile amazon settlements quickbooks'. Every piece ends with the free statement-scan CTA. Jaspal copies and posts these himself, so make them paste-ready.",
+        ["LINKEDIN POST", "TWITTER POST", "SEO ARTICLE", "CTA USED"]),
+    "sales": _R("Sales", "coo", 24, False,
+        "Act as Sales AI executing the GTM playbook for e-commerce sellers. Produce: today's cold email template offering the FREE statement scan (max 90 words, one yes/no question, no pitch of the paid service), 3 LinkedIn DM scripts Jaspal can send manually (<280 chars, offering the free scan), the day 3/7/14/21 follow-up messages, and objection handling for 'I already have a bookkeeper' / 'is my data safe' / 'why so cheap'. Role-based targeting only, never invented names.",
+        ["SCAN OFFER EMAIL", "LINKEDIN DM SCRIPTS", "FOLLOW-UP SEQUENCE", "OBJECTION HANDLING"]),
     "customer_success": _R("Customer Success", "coo", 48, False,
         "Act as Customer Success AI. Design onboarding sequences, check-in cadences, churn-risk playbooks and referral asks for accounting-firm clients.",
         ["ONBOARDING PLAYBOOK", "CHECK-IN TEMPLATES", "CHURN-RISK SIGNALS", "REFERRAL PLAY"]),
@@ -248,7 +269,7 @@ EXPANSION_CANDIDATES = [
 # ----------------------------------------------------------------------------
 DEFAULT_KNOWLEDGE = {
     "brand_voice": "Professional, consultative, accurate, helpful, modern, automation-first. Short sentences. No hype. Never overpromise or fabricate.",
-    "pricing": "OpsRunner: custom quotes by firm size (anchor: ~50-80% below a US bookkeeper's fully-loaded cost). Scroll and Find: Free tier + Pro plan.",
+    "pricing": "Core: $299/mo flat, books closed by the 5th, first month free if date missed. After 5 case studies: $399-499 new clients. $899 controller-level. Scroll and Find: free scan + $5/mo Pro.",
     "business_rules": [
         "Human approval required before any email is sent or post is published.",
         "Never invent real people's names or contact details.",
@@ -555,7 +576,7 @@ def run_director():
               f"Revision rates by agent: {json.dumps(fail_rate)}\n"
               f"Open cross-dept requests: {json.dumps([r for r in reqs if r.get('status')=='open'][:10])[:1200]}\n"
               f"Already-open recommendations (do NOT repeat): {json.dumps([r.get('problem','')[:80] for r in open_recs])}\n\n"
-              "Detect: missing features, missing workflows, missing departments, repetitive manual "
+              "FIRST: check progress against the GTM PLAN GATES in the playbook (scans delivered, clients, MRR) and flag the single biggest blocker to the current gate. THEN detect: missing features, missing workflows, missing departments, repetitive manual "
               "work, automation opportunities, needed AI employees, engineering / dashboard / "
               "architecture improvements.\n"
               "Return ONLY a fenced json block:\n"
@@ -670,7 +691,7 @@ def run_outreach():
     eligible = [l for l in leads
                 if l.get("source") == "hunter_verified"
                 and int(l.get("confidence") or 0) >= MIN_LEAD_CONFIDENCE
-                and l.get("status") == "new"
+                and l.get("status") in ("new", "approved")
                 and "@" in str(l.get("email", ""))
                 and l["email"] not in suppress and l["email"] not in contacted]
     if not eligible:
