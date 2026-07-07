@@ -1,8 +1,16 @@
 {
-  "input_tokens": 32273,
-  "output_tokens": 26389,
-  "cost_usd": 0.164218,
+  "input_tokens": 35675,
+  "output_tokens": 28651,
+  "cost_usd": 0.17893,
   "runs": [
+    {
+      "role": "director",
+      "ts": "2026-07-07T16:12:53",
+      "in": 3402,
+      "out": 2262,
+      "cost": 0.014712,
+      "ok": true
+    },
     {
       "role": "knowledge_base",
       "ts": "2026-07-07T00:30:25",
@@ -256,6 +264,10 @@
     },
     "knowledge_base": {
       "last_run": "2026-07-07T00:30:25",
+      "ok": true
+    },
+    "director": {
+      "last_run": "2026-07-07T16:12:53",
       "ok": true
     }
   }

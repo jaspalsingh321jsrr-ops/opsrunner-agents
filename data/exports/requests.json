@@ -1,5 +1,23 @@
 [
   {
+    "id": "e27034e7",
+    "from": "director",
+    "department": "Engineering",
+    "request": "[P2] Audit and update domain-specific agent prompts (Finance, Accounting, HR, Product) to include mandatory output sections: Finance → PRICING RECOMMENDATION (tiers + anchor logic); Accounting → COMMON ERRORS TO CATCH + CPA REVIEW FLAGS; HR → POLICY UPDATES (e.g., remote work, AI training); Product → FEA",
+    "priority": "P2",
+    "status": "open",
+    "created_at": "2026-07-07T16:12:53"
+  },
+  {
+    "id": "60d199d7",
+    "from": "director",
+    "department": "Engineering",
+    "request": "[P2] Deploy a lightweight Engineering Task Queue (GitHub Issues or Notion table): (1) every cross-dept request targeting Engineering is auto-logged with ID, priority, dependencies; (2) Fullstack/Backend/Frontend agents validate queue state before starting work; (3) daily dashboard widget shows queue dept",
+    "priority": "P2",
+    "status": "open",
+    "created_at": "2026-07-07T16:12:53"
+  },
+  {
     "id": "cd28fba1",
     "from": "documentation",
     "department": "Compliance",
