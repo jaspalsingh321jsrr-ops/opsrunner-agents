@@ -1,5 +1,27 @@
 [
   {
+    "id": "hn_47316687",
+    "source": "hackernews",
+    "title": "Ask HN: General API for accessing bank transactions?",
+    "url": "https://news.ycombinator.com/item?id=47316687",
+    "why": "Person manually tracking expenses via CSV imports, wants better transaction visibility across multiple accounts. Direct Scroll and Find use case: eliminate CSV hassle, real-time tracking.",
+    "reply": "The CSV import cycle is painful—you lose visibility mid-month and alignment issues pile up. A few people solve this by connecting to Plaid (despite the business focus) or using aggregate tools like YNAB, but honestly they all want your bank login. If you want to stay private, try uploading statements to a tool that categorizes and spots patterns without touching your credentials—no login needed, just the PDF. (I built one called Scroll and Find that does exactly this—free tier, US-based.)",
+    "score": 8,
+    "status": "new",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47306144",
+    "source": "hackernews",
+    "title": "Show HN: Finsight – A Privacy First, AI Credit Card and Bank Statement Analyzer",
+    "url": "https://github.com/AJ/FinSight",
+    "why": "Show HN post about privacy-first bank/credit card statement analyzer with PDF/CSV upload, recurring payment detection, and categorization. This is a direct competitor/adjacent tool; relevant for marke",
+    "reply": "Worth noting: Finsight is a solid local-first approach. If you're building or looking for statement analysis, the privacy-first model (no login, no cloud) is the right direction. The market's moving away from 'give us your password' tools. Recurring payment detection especially—that's where most people find money leaks they didn't know existed.",
+    "score": 8,
+    "status": "new",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
     "id": "hn_45793908",
     "source": "hackernews",
     "title": "I built an easier way to track personal spending",
@@ -91,5 +113,45 @@
     "id": "hn_37922153",
     "status": "discarded",
     "created_at": "2026-07-07T16:21:26"
+  },
+  {
+    "id": "hn_47634718",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47377333",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47135761",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47063150",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47260560",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47165602",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_47101212",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
+  },
+  {
+    "id": "hn_46069519",
+    "status": "discarded",
+    "created_at": "2026-07-07T18:09:59"
   }
 ]
