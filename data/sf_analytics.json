@@ -1,0 +1,262 @@
+{
+  "input_tokens": 32273,
+  "output_tokens": 26389,
+  "cost_usd": 0.164218,
+  "runs": [
+    {
+      "role": "knowledge_base",
+      "ts": "2026-07-07T00:30:25",
+      "in": 1931,
+      "out": 1500,
+      "cost": 0.009431,
+      "ok": true
+    },
+    {
+      "role": "documentation",
+      "ts": "2026-07-07T00:30:10",
+      "in": 1873,
+      "out": 972,
+      "cost": 0.006733,
+      "ok": true
+    },
+    {
+      "role": "analytics",
+      "ts": "2026-07-07T00:29:59",
+      "in": 1812,
+      "out": 1354,
+      "cost": 0.008582,
+      "ok": true
+    },
+    {
+      "role": "compliance",
+      "ts": "2026-07-07T00:29:41",
+      "in": 1633,
+      "out": 930,
+      "cost": 0.006283,
+      "ok": true
+    },
+    {
+      "role": "security",
+      "ts": "2026-07-07T00:29:30",
+      "in": 1632,
+      "out": 1500,
+      "cost": 0.009132,
+      "ok": true
+    },
+    {
+      "role": "designer",
+      "ts": "2026-07-07T00:29:12",
+      "in": 1623,
+      "out": 1500,
+      "cost": 0.009123,
+      "ok": true
+    },
+    {
+      "role": "qa",
+      "ts": "2026-07-07T00:28:55",
+      "in": 1616,
+      "out": 1500,
+      "cost": 0.009116,
+      "ok": true
+    },
+    {
+      "role": "devops",
+      "ts": "2026-07-07T00:28:39",
+      "in": 1466,
+      "out": 1016,
+      "cost": 0.006546,
+      "ok": true
+    },
+    {
+      "role": "fullstack_engineer",
+      "ts": "2026-07-07T00:28:29",
+      "in": 1428,
+      "out": 615,
+      "cost": 0.004503,
+      "ok": true
+    },
+    {
+      "role": "frontend_engineer",
+      "ts": "2026-07-07T00:28:22",
+      "in": 1427,
+      "out": 1500,
+      "cost": 0.008927,
+      "ok": true
+    },
+    {
+      "role": "backend_engineer",
+      "ts": "2026-07-07T00:28:08",
+      "in": 1429,
+      "out": 264,
+      "cost": 0.002749,
+      "ok": true
+    },
+    {
+      "role": "recruiter",
+      "ts": "2026-07-07T00:28:05",
+      "in": 1423,
+      "out": 1500,
+      "cost": 0.008923,
+      "ok": true
+    },
+    {
+      "role": "hr",
+      "ts": "2026-07-07T00:27:47",
+      "in": 1425,
+      "out": 1500,
+      "cost": 0.008925,
+      "ok": true
+    },
+    {
+      "role": "finance",
+      "ts": "2026-07-07T00:27:29",
+      "in": 1437,
+      "out": 1500,
+      "cost": 0.008937,
+      "ok": true
+    },
+    {
+      "role": "accounting",
+      "ts": "2026-07-07T00:27:15",
+      "in": 1457,
+      "out": 238,
+      "cost": 0.002647,
+      "ok": true
+    },
+    {
+      "role": "customer_success",
+      "ts": "2026-07-07T00:27:12",
+      "in": 1447,
+      "out": 1500,
+      "cost": 0.008947,
+      "ok": true
+    },
+    {
+      "role": "sales",
+      "ts": "2026-07-07T00:26:53",
+      "in": 1470,
+      "out": 1500,
+      "cost": 0.00897,
+      "ok": true
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-07-07T00:26:31",
+      "in": 1440,
+      "out": 1500,
+      "cost": 0.00894,
+      "ok": true
+    },
+    {
+      "role": "product_manager",
+      "ts": "2026-07-07T00:26:13",
+      "in": 1437,
+      "out": 1500,
+      "cost": 0.008937,
+      "ok": true
+    },
+    {
+      "role": "coo",
+      "ts": "2026-07-07T00:25:55",
+      "in": 1437,
+      "out": 1500,
+      "cost": 0.008937,
+      "ok": true
+    },
+    {
+      "role": "ceo",
+      "ts": "2026-07-07T00:25:39",
+      "in": 1430,
+      "out": 1500,
+      "cost": 0.00893,
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "health": {
+    "ceo": {
+      "last_run": "2026-07-07T00:25:39",
+      "ok": true
+    },
+    "coo": {
+      "last_run": "2026-07-07T00:25:55",
+      "ok": true
+    },
+    "product_manager": {
+      "last_run": "2026-07-07T00:26:13",
+      "ok": true
+    },
+    "marketing": {
+      "last_run": "2026-07-07T00:26:31",
+      "ok": true
+    },
+    "sales": {
+      "last_run": "2026-07-07T00:26:53",
+      "ok": true
+    },
+    "customer_success": {
+      "last_run": "2026-07-07T00:27:12",
+      "ok": true
+    },
+    "accounting": {
+      "last_run": "2026-07-07T00:27:15",
+      "ok": true
+    },
+    "finance": {
+      "last_run": "2026-07-07T00:27:29",
+      "ok": true
+    },
+    "hr": {
+      "last_run": "2026-07-07T00:27:47",
+      "ok": true
+    },
+    "recruiter": {
+      "last_run": "2026-07-07T00:28:05",
+      "ok": true
+    },
+    "backend_engineer": {
+      "last_run": "2026-07-07T00:28:08",
+      "ok": true
+    },
+    "frontend_engineer": {
+      "last_run": "2026-07-07T00:28:22",
+      "ok": true
+    },
+    "fullstack_engineer": {
+      "last_run": "2026-07-07T00:28:29",
+      "ok": true
+    },
+    "devops": {
+      "last_run": "2026-07-07T00:28:39",
+      "ok": true
+    },
+    "qa": {
+      "last_run": "2026-07-07T00:28:55",
+      "ok": true
+    },
+    "designer": {
+      "last_run": "2026-07-07T00:29:12",
+      "ok": true
+    },
+    "security": {
+      "last_run": "2026-07-07T00:29:30",
+      "ok": true
+    },
+    "compliance": {
+      "last_run": "2026-07-07T00:29:41",
+      "ok": true
+    },
+    "analytics": {
+      "last_run": "2026-07-07T00:29:59",
+      "ok": true
+    },
+    "documentation": {
+      "last_run": "2026-07-07T00:30:10",
+      "ok": true
+    },
+    "knowledge_base": {
+      "last_run": "2026-07-07T00:30:25",
+      "ok": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "brand_voice": "Professional, consultative, accurate, helpful, modern, automation-first. Short sentences. No hype. Never overpromise or fabricate.",
+  "pricing": "OpsRunner: custom quotes by firm size (anchor: ~50-80% below a US bookkeeper's fully-loaded cost). Scroll and Find: Free tier + Pro plan.",
+  "business_rules": [
+    "Human approval required before any email is sent or post is published.",
+    "Never invent real people's names or contact details.",
+    "Never give tax/legal advice without a professional-review disclaimer.",
+    "Check the engineering rules (reuse first) before building anything.",
+    "US market first; India secondary for Scroll and Find."
+  ],
+  "email_template_cold": "Subject: {pain} at {company_type}?\n\nHi {first_name},\n\n{specific_pain_observation}\n\nOpsRunner automates ~90% of that work across QBO/Xero/Zoho — firms cut ops cost ~80%.\n\nWorth a 10-minute look this week?\n\n— Jaspal Singh, OpsRunner (QBO certified)",
+  "sops": [
+    "Month-end close SOP v1: reconcile banks -> review uncategorized -> AR/AP aging -> accruals -> reports -> client summary email."
+  ],
+  "engineering_standards": "Python 3.11 stdlib-first. One Claude call per agent run. JSON-on-git storage. All schedules via GitHub Actions cron. Secrets only in GitHub Secrets.",
+  "prompt_library": {},
+  "case_studies": [],
+  "entries": [
+    {
+      "ts": "2026-07-07T00:30:10",
+      "by": "documentation",
+      "text": "Documentation workflow: always supply completed work details (task ID, title, outcome, dates) before requesting docs. Use meta-request approach if source material is incomplete."
+    },
+    {
+      "ts": "2026-07-07T00:29:59",
+      "by": "analytics",
+      "text": "Early-stage metrics baseline (month 1–2): 0% conversion is normal; focus is lead scoring accuracy, nurture cadence deployment, and sales pipeline reconciliation. At 176 leads, aim for 5% MQL rate within 30 days."
+    },
+    {
+      "ts": "2026-07-07T00:29:41",
+      "by": "compliance",
+      "text": "Standing compliance checklist: CAN-SPAM (unsubscribe, sender ID, physical address), Scroll and Find privacy positioning (no bank login, no data retention overstatement), accounting disclaimers (tax/legal waiver + professional referral), lead opt-in audit (176 leads)."
+    },
+    {
+      "ts": "2026-07-07T00:28:39",
+      "by": "devops",
+      "text": "DevOps baseline (2026-07): 0% infra cost, 0% failure rate, 18.7K tokens/run avg, secrets in GitHub Secrets only, Python 3.11 stdlib-first, one Claude call per agent lifecycle phase."
+    },
+    {
+      "ts": "2026-07-07T00:28:29",
+      "by": "fullstack_engineer",
+      "text": "Full Stack Engineer workflow: validate queue item exists before architecture planning"
+    }
+  ]
+}
