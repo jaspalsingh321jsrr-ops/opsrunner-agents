@@ -115,7 +115,7 @@ TARGET CLIENTS (US primary): small businesses, CPA / accounting / bookkeeping
 firms, professional services, real estate, construction, e-commerce, retail,
 healthcare, startups, multi-entity and growing companies.
 
-FOUNDER: Jaspal Singh — QBO certified. Contact: singhjaspal3460@gmail.com
+FOUNDER: Jaspal Singh — QBO certified. Contact: jaspal@scrollandfind.com
 
 BUSINESS GOALS (optimize every action for these): more qualified leads, more
 revenue, lower operating cost, better retention, faster bookkeeping turnaround,
@@ -687,7 +687,7 @@ def run_outreach():
             if out.startswith("ERROR:"):
                 continue
             body = out.strip()
-        body += (f"\n\n—\nJaspal Singh · OpsRunner · {COMPANY_ADDRESS}"
+        body += (f"\n\n—\nJaspal Singh · OpsRunner · jaspal@scrollandfind.com · {COMPANY_ADDRESS}"
                  f"\nDon't want these emails? Reply UNSUBSCRIBE and you'll never hear from me again.")
         rec = {"id": str(uuid.uuid4())[:8], "to": l["email"], "subject": subject,
                "lead_id": l.get("id"), "company": l.get("company"), "created_at": now()}
