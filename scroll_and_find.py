@@ -856,6 +856,11 @@ td{padding:8px;border-bottom:1px solid #1b1b1b;vertical-align:top}
 <div class="sub">Only real, verified addresses get emailed — maximum 12 per day to keep your Gmail safe.</div>
 <div class="card" id="outreach"></div>
 
+<h2 id="leads">Your leads</h2>
+<div class="sub">Everyone the Lead Finder has discovered. Only verified leads get emailed - the rest are research.</div>
+<div class="pills" id="lpills"></div>
+<div class="card" id="leadsbox"></div>
+
 <h2 id="attention">Anything needing attention?</h2>
 <div id="issues"></div>
 
@@ -863,6 +868,7 @@ td{padding:8px;border-bottom:1px solid #1b1b1b;vertical-align:top}
 <div class="card">Everything your AI company produces belongs to you. Download it as Excel-friendly CSV files:
 <div class="btns">
 <span class="btn" onclick="exp('tasks','csv')">⬇ All work (CSV)</span>
+<span class="btn" onclick="exp('leadsList','csv')">&#11015; Leads (CSV)</span>
 <span class="btn" onclick="exp('outreach','csv')">⬇ Emails sent (CSV)</span>
 <span class="btn" onclick="exp('recs','csv')">⬇ Director ideas (CSV)</span>
 <span class="btn" onclick="exp('all','json')">⬇ Everything (JSON)</span>
@@ -896,7 +902,7 @@ document.getElementById('hello').innerHTML=
 
 /* flow */
 const flow=[
- ["Step 1","🔎 Find clients","Every 2 hours, the Lead Finder searches for accounting firms and verifies real email addresses.",`${D.leads} leads in pipeline`],
+ ["Step 1","🔎 Find clients","Every 2 hours, the Lead Finder searches for accounting firms and verifies real email addresses.",`${D.leadsList.length} leads in pipeline`],
  ["Step 2","✍️ Write & send","Sales AI writes a personal email for each verified lead and sends it — max 12/day.",`${sentAll.length} sent so far`],
  ["Step 3","🏢 Run the company","All 21 AI employees do their daily jobs: marketing, finance, engineering, and more.",`${doneToday} tasks done today`],
  ["Step 4","📬 Report to you","You get a daily email summary, and this page refreshes itself after every run.",`Updated ${BUILT} UTC`]];
@@ -905,7 +911,7 @@ document.getElementById('flow').innerHTML=flow.map(f=>`<div class="step"><span c
 /* stats */
 const stats=[
  [D.sentToday,"Emails sent today","Real verified clients contacted",'#emails'],
- [D.leads,"Leads found","Potential clients in your pipeline",'#emails'],
+ [D.leadsList.length,"Leads found","Potential clients in your pipeline",'#leads'],
  [doneToday,"Tasks finished today","Work completed by your AI team",'#team'],
  [openRecs.length,"Ideas waiting","Improvements your Director suggests",'#ideas'],
  [redoToday+D.analytics.errors.length,"Needs attention","Things being fixed automatically",'#attention'],
@@ -939,6 +945,27 @@ document.getElementById('outreach').innerHTML=D.outreach.length?
  `<table><tr><th>Sent to</th><th>Company</th><th>Status</th><th>When (UTC)</th></tr>`+D.outreach.slice(0,15).map(e=>
  `<tr><td>${esc(e.to)}</td><td>${esc(e.company||'—')}</td><td>${chip(e.status)}</td><td>${esc((e.sent_at||e.created_at||'').slice(0,16).replace('T',' '))}</td></tr>`).join('')+`</table>`
  :`<span class="mut">No emails sent yet. This starts automatically once the Lead Finder discovers verified addresses (it searches every 2 hours). If this stays empty for a few days, your Hunter key may need attention.</span>`;
+
+/* leads */
+const LSTAT={new:["\ud83c\udd95 New","info"],emailed:["\ud83d\udce4 Emailed","ok"],send_failed:["\u26a0\ufe0f Bad address","bad"],sequence_complete:["\u2705 Sequence done","ok"]};
+const lchip=s=>{const[t,c]=LSTAT[s]||[s,'zzz'];return `<span class="chip ${c}">${t}</span>`};
+const vchip=l=>l.source==='hunter_verified'?'<span class="chip ok">\u2705 Verified</span>':'<span class="chip zzz">\ud83d\udd0d Research only</span>';
+const lfilters=['All','Verified','Emailed','New'];let lcur='All';
+function lmatch(l){if(lcur==='All')return true;if(lcur==='Verified')return l.source==='hunter_verified';if(lcur==='Emailed')return l.status==='emailed'||l.status==='sequence_complete';return l.status==='new'}
+window.lpick=f=>{lcur=f;renderLeads()};
+function renderLeads(){
+ document.getElementById('lpills').innerHTML=lfilters.map(f=>`<span class="pill ${f===lcur?'on':''}" onclick="lpick('${f}')">${f}</span>`).join('');
+ const rows=D.leadsList.filter(lmatch);
+ document.getElementById('leadsbox').innerHTML=rows.length?
+  `<table><tr><th>Who</th><th>Email</th><th>Why they need us</th><th></th><th>Status</th></tr>`+rows.slice(0,40).map(l=>
+  `<tr><td><b>${esc(l.full_name||'-')}</b><div class="mut" style="font-size:11.5px">${esc(l.position||'')} \u00b7 ${esc(l.company||'')}</div></td>`+
+  `<td style="font-size:12px">${esc(l.email||'-')}</td>`+
+  `<td class="mut" style="font-size:12px;max-width:280px">${esc((l.pain_point||'').slice(0,120))}</td>`+
+  `<td>${vchip(l)}</td><td>${lchip(l.status)}</td></tr>`).join('')+`</table>`+
+  (rows.length>40?`<div class="mut" style="margin-top:8px;font-size:12px">Showing 40 of ${rows.length} - download the full list below.</div>`:'')
+  :'<span class="mut">No leads match this filter yet. The Lead Finder searches every 2 hours.</span>';
+}
+renderLeads();
 
 /* attention */
 const errs=D.analytics.errors.slice(0,6);
@@ -975,6 +1002,9 @@ def build_dashboard():
                       "healthAll": max(len(health), 1)},
         "finance": _load(F_FINANCE, {}),
         "leads": len(_load(F_LEADS, [])),
+        "leadsList": [{k: (str(l.get(k, ""))[:160]) for k in
+                       ("full_name", "position", "company", "email", "pain_point", "status", "source", "created_at")}
+                      for l in _load(F_LEADS, [])[:80]],
         "repo": REPO_URL,
         "sentToday": len(_sent_today()),
     }
