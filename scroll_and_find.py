@@ -735,6 +735,100 @@ def suppress_email(addr):
     print(f"[SF] {addr} added to suppression list — will never be emailed")
 
 # ----------------------------------------------------------------------------
+# LISTENING AI — finds people publicly asking the questions your app answers
+# (Reddit + Hacker News public APIs, stdlib only). Drafts replies; YOU post
+# them manually — auto-posting gets accounts banned and brands labeled spam.
+# ----------------------------------------------------------------------------
+F_MENTIONS = os.path.join(DATA_DIR, "sf_mentions.json")
+
+LISTEN_QUERIES = [
+    "where does my money go every month",
+    "track subscriptions I forgot",
+    "forgotten subscription charges",
+    "how to track my spending",
+    "bank statement analyzer",
+    "track business expenses",
+    "bookkeeping is a mess",
+    "cancel subscriptions",
+]
+
+def _fetch_json(url):
+    import urllib.request
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "ScrollAndFind-listener/1.0 (founder research; contact jaspal@scrollandfind.com)"})
+    with urllib.request.urlopen(req, timeout=15) as r:
+        return json.loads(r.read().decode("utf-8", "replace"))
+
+def _listen_sources():
+    """Collect candidate posts from Reddit + Hacker News. Fail soft per source."""
+    import urllib.parse, random
+    posts = []
+    queries = random.sample(LISTEN_QUERIES, 3)  # rotate to stay under rate limits
+    for q in queries:
+        qs = urllib.parse.quote(q)
+        try:  # Reddit public search
+            data = _fetch_json(f"https://www.reddit.com/search.json?q={qs}&sort=new&t=week&limit=10")
+            for c in data.get("data", {}).get("children", []):
+                d = c.get("data", {})
+                if d.get("over_18"):
+                    continue
+                posts.append({"id": "rd_" + str(d.get("id")), "source": "reddit r/" + str(d.get("subreddit")),
+                              "title": str(d.get("title", ""))[:200],
+                              "text": str(d.get("selftext", ""))[:500],
+                              "url": "https://www.reddit.com" + str(d.get("permalink", ""))})
+        except Exception as e:
+            print(f"[LISTEN] reddit '{q}': {e}")
+        try:  # Hacker News (Algolia)
+            data = _fetch_json(f"https://hn.algolia.com/api/v1/search_by_date?query={qs}&tags=story&hitsPerPage=5")
+            for h in data.get("hits", []):
+                posts.append({"id": "hn_" + str(h.get("objectID")), "source": "hackernews",
+                              "title": str(h.get("title") or "")[:200],
+                              "text": str(h.get("story_text") or "")[:500],
+                              "url": h.get("url") or f"https://news.ycombinator.com/item?id={h.get('objectID')}"})
+        except Exception as e:
+            print(f"[LISTEN] hn '{q}': {e}")
+    return posts
+
+def run_listening():
+    mentions = _load(F_MENTIONS, [])
+    seen = {m.get("id") for m in mentions}
+    candidates = [p for p in _listen_sources() if p["id"] not in seen and p["title"]]
+    if not candidates:
+        print("[SF] listening: no new candidate posts this run")
+        return
+    batch = candidates[:15]
+    system = BUSINESS_DNA + "\n" + kb_context()
+    prompt = ("YOU ARE THE LISTENING AI. Below are posts found on public forums. "
+              "Keep ONLY posts where a real person is asking about tracking their spending/"
+              "subscriptions/money leaks (Scroll and Find fits) or messy business bookkeeping "
+              "(OpsRunner fits). Discard news, ads, product launches, and anything off-topic.\n\n"
+              + json.dumps(batch, ensure_ascii=False)[:6000] +
+              "\n\nFor each KEPT post draft a reply Jaspal can paste MANUALLY: genuinely answer "
+              "their question first (real advice, 3-5 sentences), then at most ONE soft sentence "
+              "mentioning the free tool if it truly fits, transparent that he built it. Never salesy.\n"
+              "Return ONLY a fenced json block:\n"
+              '```json\n{"kept": [{"id": "", "score": 7, "why_relevant": "", "suggested_reply": ""}]}\n```')
+    output, tin, tout = call_claude(system, prompt, role="listening")
+    data = parse_contract(output)
+    kept = {k.get("id"): k for k in data.get("kept", []) if isinstance(k, dict)} if isinstance(data, dict) else {}
+    added = 0
+    for p in batch:
+        k = kept.get(p["id"])
+        if not k or int(k.get("score") or 0) < 6:
+            continue
+        mentions.insert(0, {"id": p["id"], "source": p["source"], "title": p["title"], "url": p["url"],
+                            "why": str(k.get("why_relevant", ""))[:200],
+                            "reply": str(k.get("suggested_reply", ""))[:1500],
+                            "score": int(k.get("score") or 6), "status": "new", "created_at": now()})
+        added += 1
+    # remember discarded ids so we never re-analyze them
+    for p in batch:
+        if p["id"] not in kept:
+            mentions.append({"id": p["id"], "status": "discarded", "created_at": now()})
+    _save(F_MENTIONS, mentions[:400])
+    print(f"[SF] listening: {added} relevant post(s) found from {len(batch)} candidates; tokens {tin}/{tout}")
+
+# ----------------------------------------------------------------------------
 # DATA EXPORT — CSV + JSON of everything, refreshed every run -> data/exports/
 # ----------------------------------------------------------------------------
 def export_data():
@@ -743,6 +837,7 @@ def export_data():
     os.makedirs(exp, exist_ok=True)
     sets = {"tasks": load_tasks(), "leads": _load(F_LEADS, []), "recommendations": load_recs(),
             "requests": load_requests(), "outreach": load_outreach(),
+            "mentions": [m for m in _load(F_MENTIONS, []) if m.get("status") != "discarded"],
             "analytics_runs": load_analytics().get("runs", [])}
     for name, rows in sets.items():
         _save(os.path.join(exp, f"{name}.json"), rows)
@@ -768,6 +863,7 @@ def daily_report():
     cost_today = sum(r.get("cost", 0) for r in a.get("runs", []) if str(r.get("ts", ""))[:10] == today)
     sent = _sent_today()
     recs_open = [r for r in load_recs() if r.get("status") == "open"]
+    new_mentions = [m for m in _load(F_MENTIONS, []) if m.get("status") == "new"][:5]
     by_agent = {}
     for t in tasks:
         by_agent.setdefault(t["agent"], []).append(t["status"])
@@ -785,6 +881,9 @@ def daily_report():
         t0 = next(t for t in tasks if t["agent"] == agent)
         first_line = next((ln.strip("# ").strip() for ln in t0.get("output", "").splitlines() if ln.strip() and not ln.startswith("```")), "")[:110]
         lines.append(f"  - {agent}: {', '.join(sts)} — {first_line}")
+    if new_mentions:
+        lines += ["", "PEOPLE ASKING FOR YOU (reply drafts on the dashboard):"]
+        lines += [f"  - [{m.get('source','')}] {m.get('title','')[:80]} -> {m.get('url','')}" for m in new_mentions]
     if recs_open:
         lines += ["", "TOP DIRECTOR RECOMMENDATIONS:"]
         lines += [f"  - [{r.get('priority','P2')}] {r.get('problem','')[:100]}" for r in recs_open[:5]]
@@ -883,6 +982,10 @@ td{padding:8px;border-bottom:1px solid #1b1b1b;vertical-align:top}
 <div class="sub">Everyone the Lead Finder has discovered. Only verified leads get emailed - the rest are research.</div>
 <div class="pills" id="lpills"></div>
 <div class="card" id="leadsbox"></div>
+
+<h2 id="asking">People asking for you</h2>
+<div class="sub">Real posts found by your Listening AI where someone has the exact problem you solve. Open the post, paste the drafted reply (edit it a little so it sounds like today-you), done.</div>
+<div id="mentions"></div>
 
 <h2 id="attention">Anything needing attention?</h2>
 <div id="issues"></div>
@@ -990,6 +1093,13 @@ function renderLeads(){
 }
 renderLeads();
 
+/* mentions */
+document.getElementById('mentions').innerHTML=D.mentions&&D.mentions.length?D.mentions.map(m=>
+ `<div class="idea"><b>💬 ${esc(m.title)}</b><p>${esc(m.source)} · relevance ${m.score}/10 · ${esc(m.why)}</p>`+
+ `<p><a href="${esc(m.url)}" target="_blank" style="color:#34d399">Open the post ↗</a></p>`+
+ `<details><summary>Copy this reply</summary><pre>${esc(m.reply)}</pre></details></div>`).join('')
+ :'<div class="card mut">Nothing new right now. The Listening AI scans Reddit and Hacker News every 2 hours.</div>';
+
 /* attention */
 const errs=D.analytics.errors.slice(0,6);
 const redos=todayTasks.filter(t=>t.status==='needs_revision');
@@ -1030,6 +1140,7 @@ def build_dashboard():
                       for l in _load(F_LEADS, [])[:80]],
         "repo": REPO_URL,
         "sentToday": len(_sent_today()),
+        "mentions": [m for m in _load(F_MENTIONS, []) if m.get("status") == "new"][:20],
     }
     html = DASH_TEMPLATE.replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__BUILT__", now()[:16])
     os.makedirs(DOCS_DIR, exist_ok=True)
@@ -1157,6 +1268,7 @@ def main():
         for r in [r for r in WORKFORCE if is_due(r)]:
             run_employee(r)
         run_outreach()
+        run_listening()
     elif cmd == "director":
         run_director()
     elif cmd == "manager":
@@ -1167,6 +1279,8 @@ def main():
         status()
     elif cmd == "outreach":
         run_outreach()
+    elif cmd == "listening":
+        run_listening()
     elif cmd == "daily-report":
         daily_report()
     elif cmd == "export":
