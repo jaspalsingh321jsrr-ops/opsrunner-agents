@@ -13,7 +13,7 @@ Competitors: Rocket Money (bank login required $7-14/mo), Copilot ($10.99/mo)
 OPSRUNNER — AI team for accounting firms. 9 departments. 80% cost reduction.
 Differentiator: AI does 90% of work. Multi-ERP (QBO, Xero, Sage).
 
-FOUNDER: Jaspal Singh — QBO certified. singhjaspal3460@gmail.com
+FOUNDER: Jaspal Singh — QBO certified. jaspal@scrollandfind.com
 TARGET: US accounting firms, CFOs, privacy-conscious users.
 """
 
