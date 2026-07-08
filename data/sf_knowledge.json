@@ -17,6 +17,16 @@
   "case_studies": [],
   "entries": [
     {
+      "ts": "2026-07-08T03:37:41",
+      "by": "analytics",
+      "text": "Stage 0 metrics baseline: 0% conversion is normal; critical success factor is email deployment velocity. First MQL scorecard and first response should appear within 48–72h of day-0 send. If no conversion within 21 days of first touch, suspect list-quality issue or follow-up cadence failure, not prod"
+    },
+    {
+      "ts": "2026-07-08T03:37:26",
+      "by": "sales",
+      "text": "E-commerce GTM playbook v1 deployed: 90-word scan offer email, 3 DM scripts <280 chars, 4-touch follow-up (day 0/3/7/14/21), 3 objection handlers (bookkeeper, data safety, pricing). Role-based targeting only. Approved for beachhead execution."
+    },
+    {
       "ts": "2026-07-07T00:30:10",
       "by": "documentation",
       "text": "Documentation workflow: always supply completed work details (task ID, title, outcome, dates) before requesting docs. Use meta-request approach if source material is incomplete."

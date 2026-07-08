@@ -1,8 +1,40 @@
 {
-  "input_tokens": 45740,
-  "output_tokens": 29896,
-  "cost_usd": 0.19522,
+  "input_tokens": 56001,
+  "output_tokens": 35759,
+  "cost_usd": 0.234796,
   "runs": [
+    {
+      "role": "listening",
+      "ts": "2026-07-08T03:37:49",
+      "in": 2870,
+      "out": 429,
+      "cost": 0.005015,
+      "ok": true
+    },
+    {
+      "role": "analytics",
+      "ts": "2026-07-08T03:37:41",
+      "in": 2466,
+      "out": 1391,
+      "cost": 0.009421,
+      "ok": true
+    },
+    {
+      "role": "sales",
+      "ts": "2026-07-08T03:37:26",
+      "in": 2473,
+      "out": 1543,
+      "cost": 0.010188,
+      "ok": true
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-07-08T03:37:07",
+      "in": 2452,
+      "out": 2500,
+      "cost": 0.014952,
+      "ok": true
+    },
     {
       "role": "listening",
       "ts": "2026-07-07T20:10:28",
@@ -219,11 +251,11 @@
       "ok": true
     },
     "marketing": {
-      "last_run": "2026-07-07T00:26:31",
+      "last_run": "2026-07-08T03:37:07",
       "ok": true
     },
     "sales": {
-      "last_run": "2026-07-07T00:26:53",
+      "last_run": "2026-07-08T03:37:26",
       "ok": true
     },
     "customer_success": {
@@ -279,7 +311,7 @@
       "ok": true
     },
     "analytics": {
-      "last_run": "2026-07-07T00:29:59",
+      "last_run": "2026-07-08T03:37:41",
       "ok": true
     },
     "documentation": {
@@ -295,7 +327,7 @@
       "ok": true
     },
     "listening": {
-      "last_run": "2026-07-07T20:10:28",
+      "last_run": "2026-07-08T03:37:49",
       "ok": true
     }
   }

@@ -1,5 +1,27 @@
 [
   {
+    "id": "hn_43651119",
+    "source": "hackernews",
+    "title": "Show HN: I was tired of forgotten charges – so I built a subscription tracker",
+    "url": "https://subly-iota.vercel.app/",
+    "why": "Person frustrated with forgotten subscription charges looking for tracking solution. Core pain point Scroll and Find solves (money leak discovery from statements).",
+    "reply": "The frustration is real—most people find out about forgotten subscriptions by accident or when cash flow tightens. The challenge with manual trackers is they only work if you remember to update them, and they don't catch the subscriptions you never knew existed. We built Scroll and Find to reverse-engineer your actual subscriptions from your bank statement or credit card export (no login, just upload a PDF). It finds every recurring charge, dormant trials still running, and renewal dates you've forgotten. Free to scan; if you want monthly monitoring and alerts, there's a paid plan. Might save you the detective work.",
+    "score": 7,
+    "status": "new",
+    "created_at": "2026-07-08T03:37:49"
+  },
+  {
+    "id": "hn_46645213",
+    "source": "hackernews",
+    "title": "Show HN: NumeroMoney – Understand your spending without sharing bank login",
+    "url": "https://www.numeromoney.com/",
+    "why": "Real person asking about tracking spending without bank login + discovered money leaks (forgotten subscriptions, duplicate charges). Direct fit for Scroll and Find value prop.",
+    "reply": "This is exactly the problem we see most—subscriptions pile up silently and duplicate charges slip through because spreadsheets aren't built to catch patterns. The fact you spotted them manually means you're ahead of most households, but it takes time. We built Scroll and Find to do that scanning automatically from bank statements or credit card exports (no login required, just upload). You upload a PDF or CSV, get back a report of every subscription, dormant accounts, and duplicate patterns in 24 hours. Free tier lets you see if we're picking up things you've missed. Worth a shot if you want this to be less manual going forward.",
+    "score": 8,
+    "status": "new",
+    "created_at": "2026-07-08T03:37:49"
+  },
+  {
     "id": "hn_47316687",
     "source": "hackernews",
     "title": "Ask HN: General API for accessing bank transactions?",
@@ -178,5 +200,15 @@
     "id": "hn_47453030",
     "status": "discarded",
     "created_at": "2026-07-07T20:10:28"
+  },
+  {
+    "id": "hn_46367385",
+    "status": "discarded",
+    "created_at": "2026-07-08T03:37:49"
+  },
+  {
+    "id": "hn_42221129",
+    "status": "discarded",
+    "created_at": "2026-07-08T03:37:49"
   }
 ]
