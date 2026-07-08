@@ -4,6 +4,14 @@
   "cost_usd": 0.234796,
   "runs": [
     {
+      "role": "director",
+      "ts": "2026-07-08T15:54:11",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
       "role": "listening",
       "ts": "2026-07-08T10:28:44",
       "in": 0,
@@ -254,6 +262,11 @@
   ],
   "errors": [
     {
+      "role": "director",
+      "ts": "2026-07-08T15:54:11",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ccprta5MEp1Q6Ade2KR7j'}"
+    },
+    {
       "role": "listening",
       "ts": "2026-07-08T10:28:44",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CcpS59Hz2gziBvSFK2NbR'}"
@@ -350,8 +363,8 @@
       "ok": true
     },
     "director": {
-      "last_run": "2026-07-07T16:12:53",
-      "ok": true
+      "last_run": "2026-07-08T15:54:11",
+      "ok": false
     },
     "listening": {
       "last_run": "2026-07-08T10:28:44",

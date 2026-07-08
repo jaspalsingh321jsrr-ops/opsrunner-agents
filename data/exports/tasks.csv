@@ -1,4 +1,5 @@
 agent,approved_by,created_at,dept,high_risk,id,manager,note,output,quality,status,title,updated_at
+director,HUMAN-standing-order,2026-07-08T15:54:11,Executive,False,eb48ab5c,HUMAN,,"ERROR: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ccprta5MEp1Q6Ade2KR7j'}",0 recommendations,completed,Director audit — 2026-07-08T15:54 UTC,2026-07-08T15:54:11
 analytics,coo,2026-07-08T03:37:26,Analytics,False,709feb28,coo,,"# ANALYTICS REPORT — LIVE COMPANY DATA
 **Generated:** 2026-07-08T03:37:26 UTC | **Reporting Period:** Last 7 days + snapshot
 
