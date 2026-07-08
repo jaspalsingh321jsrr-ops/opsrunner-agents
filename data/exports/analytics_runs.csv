@@ -1,4 +1,5 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,listening,2026-07-08T06:36:02
 0.005015,2870,True,429,listening,2026-07-08T03:37:49
 0.009421,2466,True,1391,analytics,2026-07-08T03:37:41
 0.010188,2473,True,1543,sales,2026-07-08T03:37:26
