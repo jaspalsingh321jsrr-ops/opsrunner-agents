@@ -1,5 +1,109 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-07-10T04:06:23",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "knowledge_base",
+    "ts": "2026-07-10T04:06:21",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "documentation",
+    "ts": "2026-07-10T04:06:21",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "analytics",
+    "ts": "2026-07-10T04:06:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "qa",
+    "ts": "2026-07-10T04:06:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "devops",
+    "ts": "2026-07-10T04:06:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "frontend_engineer",
+    "ts": "2026-07-10T04:06:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "backend_engineer",
+    "ts": "2026-07-10T04:06:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "finance",
+    "ts": "2026-07-10T04:06:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "accounting",
+    "ts": "2026-07-10T04:06:19",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-07-10T04:06:19",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-07-10T04:06:19",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "product_manager",
+    "ts": "2026-07-10T04:06:19",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-07-09T16:16:54",
     "in": 0,
