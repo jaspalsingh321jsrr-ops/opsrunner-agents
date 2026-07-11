@@ -1,5 +1,13 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-07-11T17:08:52",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-07-11T14:40:14",
     "in": 0,
