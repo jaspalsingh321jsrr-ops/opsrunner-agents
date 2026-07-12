@@ -4,6 +4,30 @@
   "cost_usd": 0.234796,
   "runs": [
     {
+      "role": "analytics",
+      "ts": "2026-07-12T06:43:05",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "sales",
+      "ts": "2026-07-12T06:43:05",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-07-12T06:43:05",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
       "role": "listening",
       "ts": "2026-07-11T17:08:52",
       "in": 0,
@@ -478,6 +502,21 @@
   ],
   "errors": [
     {
+      "role": "analytics",
+      "ts": "2026-07-12T06:43:05",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ccwi6nQKtrZshgUAMEusT'}"
+    },
+    {
+      "role": "sales",
+      "ts": "2026-07-12T06:43:05",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ccwi6msaPXkaYTjFyDwfi'}"
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-07-12T06:43:05",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ccwi6kwm9d2FEowdKFnXE'}"
+    },
+    {
       "role": "listening",
       "ts": "2026-07-11T17:08:52",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ccve1atfTDmemY72osKUa'}"
@@ -642,11 +681,11 @@
       "ok": false
     },
     "marketing": {
-      "last_run": "2026-07-11T06:22:37",
+      "last_run": "2026-07-12T06:43:05",
       "ok": false
     },
     "sales": {
-      "last_run": "2026-07-11T06:22:38",
+      "last_run": "2026-07-12T06:43:05",
       "ok": false
     },
     "customer_success": {
@@ -702,7 +741,7 @@
       "ok": true
     },
     "analytics": {
-      "last_run": "2026-07-11T06:22:38",
+      "last_run": "2026-07-12T06:43:05",
       "ok": false
     },
     "documentation": {
