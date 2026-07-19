@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-07-19T13:45:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-07-19T13:45:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-07-19T13:45:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "listening",
     "ts": "2026-07-19T11:17:38",
     "in": 0,
