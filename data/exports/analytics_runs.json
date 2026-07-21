@@ -1,5 +1,37 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-07-21T17:39:00",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "analytics",
+    "ts": "2026-07-21T17:38:58",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-07-21T17:38:58",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-07-21T17:38:58",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-07-21T15:25:52",
     "in": 0,
