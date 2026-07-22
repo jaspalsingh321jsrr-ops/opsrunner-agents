@@ -5,7 +5,7 @@
     "department": "Engineering",
     "request": "[Async] Complete P2 agent prompt audit (e27034e7). Non-blocking for GTM but improves sales/support output quality. Estimate: 2–3h. Schedule after email deployment is live.",
     "priority": "P2",
-    "status": "open",
+    "status": "stale",
     "created_at": "2026-07-08T03:37:41"
   },
   {
@@ -14,7 +14,7 @@
     "department": "Marketing",
     "request": "[URGENT] P1 request f28531fb is 2+ hours old. Deploy day-0 e-commerce seller email + 4-touch LinkedIn cadence to 176 leads immediately. GTM templates pre-approved. Target: 25+ emails sent by EOD today, auto-sequence active by 2026-07-09 06:00 UTC. This unblocks conversion clock and first revenue.",
     "priority": "P0",
-    "status": "open",
+    "status": "stale",
     "created_at": "2026-07-08T03:37:41"
   },
   {
@@ -23,7 +23,7 @@
     "department": "Marketing",
     "request": "[P1] Activate e-commerce seller targeting in email/LinkedIn outreach queue. GTM templates approved. Ready to deploy cold sequence to 176 leads (segment: e-commerce, $10K–$100K/mo). Deploy day 0 email + LinkedIn cadence starting 2026-07-09.",
     "priority": "P1",
-    "status": "open",
+    "status": "stale",
     "created_at": "2026-07-08T03:37:26"
   },
   {
