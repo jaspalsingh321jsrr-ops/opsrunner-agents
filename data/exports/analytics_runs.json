@@ -1,5 +1,13 @@
 [
   {
+    "role": "customer_success",
+    "ts": "2026-07-23T14:25:49",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-07-22T17:35:40",
     "in": 0,
