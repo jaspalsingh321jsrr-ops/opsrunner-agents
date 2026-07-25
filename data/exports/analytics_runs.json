@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-07-25T19:21:54",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-07-25T19:21:54",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-07-25T19:21:54",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "knowledge_base",
     "ts": "2026-07-25T15:13:38",
     "in": 0,
