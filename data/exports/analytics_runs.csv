@@ -1,4 +1,13 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,knowledge_base,2026-07-28T17:43:18
+0.0,0,False,0,documentation,2026-07-28T17:43:18
+0.0,0,False,0,qa,2026-07-28T17:43:18
+0.0,0,False,0,devops,2026-07-28T17:43:17
+0.0,0,False,0,frontend_engineer,2026-07-28T17:43:16
+0.0,0,False,0,backend_engineer,2026-07-28T17:43:16
+0.0,0,False,0,finance,2026-07-28T17:43:16
+0.0,0,False,0,accounting,2026-07-28T17:43:15
+0.0,0,False,0,product_manager,2026-07-28T17:43:15
 0.0,0,False,0,director,2026-07-28T15:54:04
 0.0,0,False,0,listening,2026-07-28T06:35:37
 0.0,0,False,0,compliance,2026-07-28T06:35:34
