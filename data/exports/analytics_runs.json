@@ -1,5 +1,69 @@
 [
   {
+    "role": "compliance",
+    "ts": "2026-08-11T07:21:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "security",
+    "ts": "2026-08-11T07:21:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "designer",
+    "ts": "2026-08-11T07:21:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "fullstack_engineer",
+    "ts": "2026-08-11T07:21:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "recruiter",
+    "ts": "2026-08-11T07:21:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "hr",
+    "ts": "2026-08-11T07:21:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "coo",
+    "ts": "2026-08-11T07:21:26",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "ceo",
+    "ts": "2026-08-11T07:21:26",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-08-11T05:17:10",
     "in": 0,

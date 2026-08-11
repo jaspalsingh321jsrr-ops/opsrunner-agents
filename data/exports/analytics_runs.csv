@@ -1,4 +1,12 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,compliance,2026-08-11T07:21:27
+0.0,0,False,0,security,2026-08-11T07:21:27
+0.0,0,False,0,designer,2026-08-11T07:21:27
+0.0,0,False,0,fullstack_engineer,2026-08-11T07:21:27
+0.0,0,False,0,recruiter,2026-08-11T07:21:27
+0.0,0,False,0,hr,2026-08-11T07:21:27
+0.0,0,False,0,coo,2026-08-11T07:21:26
+0.0,0,False,0,ceo,2026-08-11T07:21:26
 0.0,0,False,0,analytics,2026-08-11T05:17:10
 0.0,0,False,0,sales,2026-08-11T05:17:10
 0.0,0,False,0,marketing,2026-08-11T05:17:09
