@@ -1,5 +1,20 @@
 [
   {
+    "id": "0869088b",
+    "agent": "director",
+    "dept": "Executive",
+    "manager": "HUMAN",
+    "title": "Director audit — 2026-08-22T13:59 UTC",
+    "status": "completed",
+    "high_risk": false,
+    "created_at": "2026-08-22T13:59:25",
+    "updated_at": "2026-08-22T13:59:25",
+    "quality": "0 recommendations",
+    "approved_by": "HUMAN-standing-order",
+    "note": null,
+    "output": "ERROR: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeHuY7X3arc1LPACuZBBr'}"
+  },
+  {
     "id": "198d01a3",
     "agent": "analytics",
     "dept": "Analytics",
