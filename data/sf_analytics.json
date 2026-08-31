@@ -4,6 +4,102 @@
   "cost_usd": 0.234796,
   "runs": [
     {
+      "role": "knowledge_base",
+      "ts": "2026-08-31T08:34:47",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "documentation",
+      "ts": "2026-08-31T08:34:47",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "analytics",
+      "ts": "2026-08-31T08:34:47",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "qa",
+      "ts": "2026-08-31T08:34:47",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "devops",
+      "ts": "2026-08-31T08:34:47",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "frontend_engineer",
+      "ts": "2026-08-31T08:34:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "backend_engineer",
+      "ts": "2026-08-31T08:34:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "finance",
+      "ts": "2026-08-31T08:34:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "accounting",
+      "ts": "2026-08-31T08:34:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "sales",
+      "ts": "2026-08-31T08:34:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-08-31T08:34:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "product_manager",
+      "ts": "2026-08-31T08:34:45",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
       "role": "director",
       "ts": "2026-08-30T17:46:49",
       "in": 0,
@@ -4030,6 +4126,66 @@
   ],
   "errors": [
     {
+      "role": "knowledge_base",
+      "ts": "2026-08-31T08:34:47",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4c6j2Kvq7TgeRiwPC'}"
+    },
+    {
+      "role": "documentation",
+      "ts": "2026-08-31T08:34:47",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4bP56TrEXpn6f3vfn'}"
+    },
+    {
+      "role": "analytics",
+      "ts": "2026-08-31T08:34:47",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4acBasrMqd7a45JCz'}"
+    },
+    {
+      "role": "qa",
+      "ts": "2026-08-31T08:34:47",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4Zqo2aEqN6kakaHNp'}"
+    },
+    {
+      "role": "devops",
+      "ts": "2026-08-31T08:34:47",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4Z9dCNy2dWCxYFxb1'}"
+    },
+    {
+      "role": "frontend_engineer",
+      "ts": "2026-08-31T08:34:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4YRDmLytTo8tNvqBn'}"
+    },
+    {
+      "role": "backend_engineer",
+      "ts": "2026-08-31T08:34:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4XhZXj3mPFsYGCN81'}"
+    },
+    {
+      "role": "finance",
+      "ts": "2026-08-31T08:34:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4WyevPQiuLm4RxA1n'}"
+    },
+    {
+      "role": "accounting",
+      "ts": "2026-08-31T08:34:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4WEkgFdqFGFsTnC8N'}"
+    },
+    {
+      "role": "sales",
+      "ts": "2026-08-31T08:34:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4VWMVnzHLvaTVPKtY'}"
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-08-31T08:34:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4UmCbkdzy3bSrpa2r'}"
+    },
+    {
+      "role": "product_manager",
+      "ts": "2026-08-31T08:34:45",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeaX4TqtREkJ3YBdDrCda'}"
+    },
+    {
       "role": "director",
       "ts": "2026-08-30T17:46:49",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeZMMFdj5ytaXefnCxeVZ'}"
@@ -4468,66 +4624,6 @@
       "role": "sales",
       "ts": "2026-08-19T08:49:04",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBpSjfQPZXow3e4WJY3y'}"
-    },
-    {
-      "role": "marketing",
-      "ts": "2026-08-19T08:49:03",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBpSif8PqSmZx564Ay2x'}"
-    },
-    {
-      "role": "knowledge_base",
-      "ts": "2026-08-19T03:06:04",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHkvXZfVdT3getz9i1'}"
-    },
-    {
-      "role": "documentation",
-      "ts": "2026-08-19T03:06:04",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHkGq8t99LwUT9sESk'}"
-    },
-    {
-      "role": "qa",
-      "ts": "2026-08-19T03:06:04",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHjc9nve6mPsTLnQuS'}"
-    },
-    {
-      "role": "devops",
-      "ts": "2026-08-19T03:06:04",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHitEvU93QUq9ohR2X'}"
-    },
-    {
-      "role": "frontend_engineer",
-      "ts": "2026-08-19T03:06:04",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHiDZCzxGJnm2r6MMW'}"
-    },
-    {
-      "role": "backend_engineer",
-      "ts": "2026-08-19T03:06:04",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHhZcvfhakQX8iV1PT'}"
-    },
-    {
-      "role": "finance",
-      "ts": "2026-08-19T03:06:03",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHgtgeHFKSpYpbpnsk'}"
-    },
-    {
-      "role": "accounting",
-      "ts": "2026-08-19T03:06:03",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHgCG9TQNJUqrcdLWV'}"
-    },
-    {
-      "role": "customer_success",
-      "ts": "2026-08-19T03:06:03",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHfYa4CTgkASCzadeM'}"
-    },
-    {
-      "role": "product_manager",
-      "ts": "2026-08-19T03:06:03",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeBNHeb2LZL8peHqkKdZw'}"
-    },
-    {
-      "role": "listening",
-      "ts": "2026-08-18T18:50:46",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeAiX5Fn2NebakYQt2EkQ'}"
     }
   ],
   "health": {
@@ -4540,15 +4636,15 @@
       "ok": false
     },
     "product_manager": {
-      "last_run": "2026-08-28T06:04:10",
+      "last_run": "2026-08-31T08:34:45",
       "ok": false
     },
     "marketing": {
-      "last_run": "2026-08-30T05:17:58",
+      "last_run": "2026-08-31T08:34:46",
       "ok": false
     },
     "sales": {
-      "last_run": "2026-08-30T05:17:58",
+      "last_run": "2026-08-31T08:34:46",
       "ok": false
     },
     "customer_success": {
@@ -4556,11 +4652,11 @@
       "ok": false
     },
     "accounting": {
-      "last_run": "2026-08-28T06:04:11",
+      "last_run": "2026-08-31T08:34:46",
       "ok": false
     },
     "finance": {
-      "last_run": "2026-08-28T06:04:11",
+      "last_run": "2026-08-31T08:34:46",
       "ok": false
     },
     "hr": {
@@ -4572,11 +4668,11 @@
       "ok": false
     },
     "backend_engineer": {
-      "last_run": "2026-08-28T06:04:11",
+      "last_run": "2026-08-31T08:34:46",
       "ok": false
     },
     "frontend_engineer": {
-      "last_run": "2026-08-28T06:04:11",
+      "last_run": "2026-08-31T08:34:46",
       "ok": false
     },
     "fullstack_engineer": {
@@ -4584,11 +4680,11 @@
       "ok": false
     },
     "devops": {
-      "last_run": "2026-08-28T06:04:11",
+      "last_run": "2026-08-31T08:34:47",
       "ok": false
     },
     "qa": {
-      "last_run": "2026-08-28T06:04:11",
+      "last_run": "2026-08-31T08:34:47",
       "ok": false
     },
     "designer": {
@@ -4604,15 +4700,15 @@
       "ok": false
     },
     "analytics": {
-      "last_run": "2026-08-30T05:17:58",
+      "last_run": "2026-08-31T08:34:47",
       "ok": false
     },
     "documentation": {
-      "last_run": "2026-08-28T06:04:12",
+      "last_run": "2026-08-31T08:34:47",
       "ok": false
     },
     "knowledge_base": {
-      "last_run": "2026-08-28T06:04:12",
+      "last_run": "2026-08-31T08:34:47",
       "ok": false
     },
     "director": {
