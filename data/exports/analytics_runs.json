@@ -1,5 +1,13 @@
 [
   {
+    "role": "director",
+    "ts": "2026-09-02T17:24:04",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-09-02T16:29:00",
     "in": 0,
