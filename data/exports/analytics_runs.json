@@ -1,5 +1,13 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-09-03T00:03:56",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "customer_success",
     "ts": "2026-09-02T20:57:05",
     "in": 0,
