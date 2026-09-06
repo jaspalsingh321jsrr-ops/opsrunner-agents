@@ -1,5 +1,13 @@
 [
   {
+    "role": "director",
+    "ts": "2026-09-06T16:26:47",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "knowledge_base",
     "ts": "2026-09-06T15:23:02",
     "in": 0,
