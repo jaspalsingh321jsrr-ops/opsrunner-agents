@@ -1,5 +1,77 @@
 [
   {
+    "role": "knowledge_base",
+    "ts": "2026-09-15T21:13:44",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "documentation",
+    "ts": "2026-09-15T21:13:44",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "qa",
+    "ts": "2026-09-15T21:13:43",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "devops",
+    "ts": "2026-09-15T21:13:43",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "frontend_engineer",
+    "ts": "2026-09-15T21:13:43",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "backend_engineer",
+    "ts": "2026-09-15T21:13:43",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "finance",
+    "ts": "2026-09-15T21:13:42",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "accounting",
+    "ts": "2026-09-15T21:13:42",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "product_manager",
+    "ts": "2026-09-15T21:13:42",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-09-15T17:46:16",
     "in": 0,
