@@ -4,6 +4,14 @@
   "cost_usd": 0.234796,
   "runs": [
     {
+      "role": "director",
+      "ts": "2026-09-18T17:14:38",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
       "role": "analytics",
       "ts": "2026-09-18T11:04:21",
       "in": 0,
@@ -5350,6 +5358,11 @@
   ],
   "errors": [
     {
+      "role": "director",
+      "ts": "2026-09-18T17:14:38",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfBHGK77hvQaaJAEGi7r2'}"
+    },
+    {
       "role": "analytics",
       "ts": "2026-09-18T11:04:21",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfAo2YZqkpEhuD7fzokCf'}"
@@ -5843,11 +5856,6 @@
       "role": "sales",
       "ts": "2026-09-07T04:23:31",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeoSZfpjn57SdDCGbhwEe'}"
-    },
-    {
-      "role": "marketing",
-      "ts": "2026-09-07T04:23:31",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeoSZeswPgu6iMGSZtmw9'}"
     }
   ],
   "health": {
@@ -5936,7 +5944,7 @@
       "ok": false
     },
     "director": {
-      "last_run": "2026-09-17T17:45:08",
+      "last_run": "2026-09-18T17:14:38",
       "ok": false
     },
     "listening": {
