@@ -1,5 +1,37 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-09-19T12:27:00",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "customer_success",
+    "ts": "2026-09-19T12:27:00",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-09-19T12:26:59",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-09-19T12:26:59",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "knowledge_base",
     "ts": "2026-09-19T00:10:52",
     "in": 0,
