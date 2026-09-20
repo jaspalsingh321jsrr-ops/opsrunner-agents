@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-09-20T15:57:34",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-09-20T15:57:34",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-09-20T15:57:34",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-09-19T16:49:14",
     "in": 0,
