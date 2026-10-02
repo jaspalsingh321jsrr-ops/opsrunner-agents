@@ -1,5 +1,20 @@
 [
   {
+    "id": "b58c83cc",
+    "agent": "director",
+    "dept": "Executive",
+    "manager": "HUMAN",
+    "title": "Director audit — 2026-10-02T18:42 UTC",
+    "status": "completed",
+    "high_risk": false,
+    "created_at": "2026-10-02T18:42:38",
+    "updated_at": "2026-10-02T18:42:38",
+    "quality": "0 recommendations",
+    "approved_by": "HUMAN-standing-order",
+    "note": null,
+    "output": "ERROR: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfduJGtGaeAN44ebSTtcU'}"
+  },
+  {
     "id": "df9a727b",
     "agent": "analytics",
     "dept": "Analytics",
@@ -8983,20 +8998,5 @@
     "approved_by": null,
     "note": "Manager(coo) rejected: contains 'ERROR:' (auto-retries next cycle)",
     "output": "ERROR: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdHEqEXSPwGtug9Toe8N1'}"
-  },
-  {
-    "id": "3e5f6df6",
-    "agent": "qa",
-    "dept": "Engineering",
-    "manager": "devops",
-    "title": "qa run — 2026-07-22T14:17 UTC",
-    "status": "needs_revision",
-    "high_risk": false,
-    "created_at": "2026-07-22T14:17:23",
-    "updated_at": "2026-07-22T14:17:23",
-    "quality": "contains 'ERROR:'",
-    "approved_by": null,
-    "note": "Manager(devops) rejected: contains 'ERROR:' (auto-retries next cycle)",
-    "output": "ERROR: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdHEqDujGW8qpVm6xfeW7'}"
   }
 ]
