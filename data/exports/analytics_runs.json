@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-10-05T08:51:00",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-10-05T08:51:00",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-10-05T08:51:00",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "knowledge_base",
     "ts": "2026-10-04T18:05:41",
     "in": 0,
@@ -6373,30 +6397,6 @@
     "in": 1616,
     "out": 1500,
     "cost": 0.009116,
-    "ok": true
-  },
-  {
-    "role": "devops",
-    "ts": "2026-07-07T00:28:39",
-    "in": 1466,
-    "out": 1016,
-    "cost": 0.006546,
-    "ok": true
-  },
-  {
-    "role": "fullstack_engineer",
-    "ts": "2026-07-07T00:28:29",
-    "in": 1428,
-    "out": 615,
-    "cost": 0.004503,
-    "ok": true
-  },
-  {
-    "role": "frontend_engineer",
-    "ts": "2026-07-07T00:28:22",
-    "in": 1427,
-    "out": 1500,
-    "cost": 0.008927,
     "ok": true
   }
 ]

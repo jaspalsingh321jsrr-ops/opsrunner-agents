@@ -1,4 +1,7 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,analytics,2026-10-05T08:51:00
+0.0,0,False,0,sales,2026-10-05T08:51:00
+0.0,0,False,0,marketing,2026-10-05T08:51:00
 0.0,0,False,0,knowledge_base,2026-10-04T18:05:41
 0.0,0,False,0,documentation,2026-10-04T18:05:41
 0.0,0,False,0,qa,2026-10-04T18:05:41
@@ -796,6 +799,3 @@ cost,in,ok,out,role,ts
 0.009132,1632,True,1500,security,2026-07-07T00:29:30
 0.009123,1623,True,1500,designer,2026-07-07T00:29:12
 0.009116,1616,True,1500,qa,2026-07-07T00:28:55
-0.006546,1466,True,1016,devops,2026-07-07T00:28:39
-0.004503,1428,True,615,fullstack_engineer,2026-07-07T00:28:29
-0.008927,1427,True,1500,frontend_engineer,2026-07-07T00:28:22
