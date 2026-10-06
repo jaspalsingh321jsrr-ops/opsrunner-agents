@@ -1,5 +1,77 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-10-06T22:36:09",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "compliance",
+    "ts": "2026-10-06T22:36:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "security",
+    "ts": "2026-10-06T22:36:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "designer",
+    "ts": "2026-10-06T22:36:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "fullstack_engineer",
+    "ts": "2026-10-06T22:36:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "recruiter",
+    "ts": "2026-10-06T22:36:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "hr",
+    "ts": "2026-10-06T22:36:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "coo",
+    "ts": "2026-10-06T22:36:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "ceo",
+    "ts": "2026-10-06T22:36:06",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-10-06T19:06:36",
     "in": 0,
@@ -6326,77 +6398,5 @@
     "out": 0,
     "cost": 0.0,
     "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-08T06:36:02",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-08T03:37:49",
-    "in": 2870,
-    "out": 429,
-    "cost": 0.005015,
-    "ok": true
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-08T03:37:41",
-    "in": 2466,
-    "out": 1391,
-    "cost": 0.009421,
-    "ok": true
-  },
-  {
-    "role": "sales",
-    "ts": "2026-07-08T03:37:26",
-    "in": 2473,
-    "out": 1543,
-    "cost": 0.010188,
-    "ok": true
-  },
-  {
-    "role": "marketing",
-    "ts": "2026-07-08T03:37:07",
-    "in": 2452,
-    "out": 2500,
-    "cost": 0.014952,
-    "ok": true
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-07T20:10:28",
-    "in": 2903,
-    "out": 239,
-    "cost": 0.004098,
-    "ok": true
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-07T18:09:59",
-    "in": 3572,
-    "out": 375,
-    "cost": 0.005447,
-    "ok": true
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-07T16:21:26",
-    "in": 3590,
-    "out": 631,
-    "cost": 0.006745,
-    "ok": true
-  },
-  {
-    "role": "director",
-    "ts": "2026-07-07T16:12:53",
-    "in": 3402,
-    "out": 2262,
-    "cost": 0.014712,
-    "ok": true
   }
 ]
