@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-10-06T08:52:40",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-10-06T08:52:40",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-10-06T08:52:40",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "listening",
     "ts": "2026-10-06T01:16:05",
     "in": 0,
@@ -6373,30 +6397,6 @@
     "in": 1931,
     "out": 1500,
     "cost": 0.009431,
-    "ok": true
-  },
-  {
-    "role": "documentation",
-    "ts": "2026-07-07T00:30:10",
-    "in": 1873,
-    "out": 972,
-    "cost": 0.006733,
-    "ok": true
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-07T00:29:59",
-    "in": 1812,
-    "out": 1354,
-    "cost": 0.008582,
-    "ok": true
-  },
-  {
-    "role": "compliance",
-    "ts": "2026-07-07T00:29:41",
-    "in": 1633,
-    "out": 930,
-    "cost": 0.006283,
     "ok": true
   }
 ]
