@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-10-08T13:17:56",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-10-08T13:17:56",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-10-08T13:17:55",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "knowledge_base",
     "ts": "2026-10-07T19:53:21",
     "in": 0,
@@ -6369,30 +6393,6 @@
   },
   {
     "role": "analytics",
-    "ts": "2026-07-10T04:06:20",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "qa",
-    "ts": "2026-07-10T04:06:20",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "devops",
-    "ts": "2026-07-10T04:06:20",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "frontend_engineer",
     "ts": "2026-07-10T04:06:20",
     "in": 0,
     "out": 0,
