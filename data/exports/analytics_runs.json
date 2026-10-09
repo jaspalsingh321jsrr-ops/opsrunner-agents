@@ -1,5 +1,13 @@
 [
   {
+    "role": "customer_success",
+    "ts": "2026-10-09T22:33:25",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-10-09T19:01:21",
     "in": 0,
@@ -6386,14 +6394,6 @@
   {
     "role": "marketing",
     "ts": "2026-07-11T06:22:37",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-10T23:09:15",
     "in": 0,
     "out": 0,
     "cost": 0.0,
