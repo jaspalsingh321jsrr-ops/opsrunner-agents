@@ -4,6 +4,30 @@
   "cost_usd": 0.234796,
   "runs": [
     {
+      "role": "analytics",
+      "ts": "2026-10-10T18:27:47",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "sales",
+      "ts": "2026-10-10T18:27:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-10-10T18:27:46",
+      "in": 0,
+      "out": 0,
+      "cost": 0.0,
+      "ok": false
+    },
+    {
       "role": "director",
       "ts": "2026-10-10T18:02:25",
       "in": 0,
@@ -6378,33 +6402,24 @@
       "out": 0,
       "cost": 0.0,
       "ok": false
-    },
-    {
-      "role": "analytics",
-      "ts": "2026-07-11T06:22:38",
-      "in": 0,
-      "out": 0,
-      "cost": 0.0,
-      "ok": false
-    },
-    {
-      "role": "customer_success",
-      "ts": "2026-07-11T06:22:38",
-      "in": 0,
-      "out": 0,
-      "cost": 0.0,
-      "ok": false
-    },
-    {
-      "role": "sales",
-      "ts": "2026-07-11T06:22:38",
-      "in": 0,
-      "out": 0,
-      "cost": 0.0,
-      "ok": false
     }
   ],
   "errors": [
+    {
+      "role": "analytics",
+      "ts": "2026-10-10T18:27:47",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfu2dwEkDyhUESB9jnhQ5'}"
+    },
+    {
+      "role": "sales",
+      "ts": "2026-10-10T18:27:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfu2dvW6NEYDyMjM2vxin'}"
+    },
+    {
+      "role": "marketing",
+      "ts": "2026-10-10T18:27:46",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cfu2du6WftxxoJixftf8u'}"
+    },
     {
       "role": "director",
       "ts": "2026-10-10T18:02:25",
@@ -6889,21 +6904,6 @@
       "role": "knowledge_base",
       "ts": "2026-09-28T13:42:32",
       "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfVwBNc4KkiZAJNoWtr4q'}"
-    },
-    {
-      "role": "documentation",
-      "ts": "2026-09-28T13:42:32",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfVwBMWaQu5dbbigsAnPp'}"
-    },
-    {
-      "role": "analytics",
-      "ts": "2026-09-28T13:42:32",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfVwBLUKZiREBLoJPMjRo'}"
-    },
-    {
-      "role": "qa",
-      "ts": "2026-09-28T13:42:31",
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfVwBKGdyt83MRAmgU6bb'}"
     }
   ],
   "health": {
@@ -6920,11 +6920,11 @@
       "ok": false
     },
     "marketing": {
-      "last_run": "2026-10-09T16:56:52",
+      "last_run": "2026-10-10T18:27:46",
       "ok": false
     },
     "sales": {
-      "last_run": "2026-10-09T16:56:53",
+      "last_run": "2026-10-10T18:27:46",
       "ok": false
     },
     "customer_success": {
@@ -6980,7 +6980,7 @@
       "ok": false
     },
     "analytics": {
-      "last_run": "2026-10-09T16:56:53",
+      "last_run": "2026-10-10T18:27:47",
       "ok": false
     },
     "documentation": {
