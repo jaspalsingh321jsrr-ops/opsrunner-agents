@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-10-11T18:47:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-10-11T18:47:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-10-11T18:47:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-10-11T18:28:30",
     "in": 0,
@@ -6370,30 +6394,6 @@
   {
     "role": "frontend_engineer",
     "ts": "2026-07-13T07:31:38",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "backend_engineer",
-    "ts": "2026-07-13T07:31:38",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "finance",
-    "ts": "2026-07-13T07:31:38",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "accounting",
-    "ts": "2026-07-13T07:31:37",
     "in": 0,
     "out": 0,
     "cost": 0.0,
