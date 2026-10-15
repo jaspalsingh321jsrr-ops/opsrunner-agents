@@ -1,4 +1,5 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,director,2026-10-15T17:53:30
 0.0,0,False,0,listening,2026-10-15T11:18:27
 0.0,0,False,0,analytics,2026-10-15T04:24:37
 0.0,0,False,0,sales,2026-10-15T04:24:37
@@ -798,4 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,analytics,2026-07-16T10:19:33
 0.0,0,False,0,qa,2026-07-16T10:19:32
 0.0,0,False,0,devops,2026-07-16T10:19:32
-0.0,0,False,0,frontend_engineer,2026-07-16T10:19:32
