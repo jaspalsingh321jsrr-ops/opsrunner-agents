@@ -1,5 +1,13 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-10-15T11:18:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-10-15T04:24:37",
     "in": 0,
@@ -6385,14 +6393,6 @@
   },
   {
     "role": "frontend_engineer",
-    "ts": "2026-07-16T10:19:32",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "backend_engineer",
     "ts": "2026-07-16T10:19:32",
     "in": 0,
     "out": 0,
