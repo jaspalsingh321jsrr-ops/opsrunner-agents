@@ -1,5 +1,37 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-10-16T07:02:12",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "customer_success",
+    "ts": "2026-10-16T07:02:12",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-10-16T07:02:11",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-10-16T07:02:11",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-10-15T17:53:30",
     "in": 0,
@@ -6362,38 +6394,6 @@
   {
     "role": "knowledge_base",
     "ts": "2026-07-16T10:19:33",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "documentation",
-    "ts": "2026-07-16T10:19:33",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-16T10:19:33",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "qa",
-    "ts": "2026-07-16T10:19:32",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "devops",
-    "ts": "2026-07-16T10:19:32",
     "in": 0,
     "out": 0,
     "cost": 0.0,
