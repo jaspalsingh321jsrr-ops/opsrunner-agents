@@ -1,5 +1,77 @@
 [
   {
+    "role": "knowledge_base",
+    "ts": "2026-10-17T06:51:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "documentation",
+    "ts": "2026-10-17T06:51:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "qa",
+    "ts": "2026-10-17T06:51:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "devops",
+    "ts": "2026-10-17T06:51:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "frontend_engineer",
+    "ts": "2026-10-17T06:51:08",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "backend_engineer",
+    "ts": "2026-10-17T06:51:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "finance",
+    "ts": "2026-10-17T06:51:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "accounting",
+    "ts": "2026-10-17T06:51:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "product_manager",
+    "ts": "2026-10-17T06:51:07",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "listening",
     "ts": "2026-10-16T20:56:43",
     "in": 0,
@@ -6322,78 +6394,6 @@
   {
     "role": "analytics",
     "ts": "2026-07-18T13:41:18",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "sales",
-    "ts": "2026-07-18T13:41:18",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "marketing",
-    "ts": "2026-07-18T13:41:18",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "director",
-    "ts": "2026-07-17T15:02:26",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-17T11:37:09",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "sales",
-    "ts": "2026-07-17T11:37:09",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "marketing",
-    "ts": "2026-07-17T11:37:09",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "customer_success",
-    "ts": "2026-07-17T10:07:39",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-17T03:31:03",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "director",
-    "ts": "2026-07-16T15:21:24",
     "in": 0,
     "out": 0,
     "cost": 0.0,
