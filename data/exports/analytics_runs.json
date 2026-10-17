@@ -1,5 +1,13 @@
 [
   {
+    "role": "director",
+    "ts": "2026-10-17T16:39:31",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-10-17T12:07:22",
     "in": 0,
@@ -6385,14 +6393,6 @@
   },
   {
     "role": "accounting",
-    "ts": "2026-07-19T11:17:35",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "customer_success",
     "ts": "2026-07-19T11:17:35",
     "in": 0,
     "out": 0,
