@@ -1,6 +1,14 @@
 [
   {
     "role": "director",
+    "ts": "2026-10-19T19:29:27",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "director",
     "ts": "2026-10-18T16:56:55",
     "in": 0,
     "out": 0,
@@ -6385,14 +6393,6 @@
   },
   {
     "role": "knowledge_base",
-    "ts": "2026-07-19T11:17:36",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "documentation",
     "ts": "2026-07-19T11:17:36",
     "in": 0,
     "out": 0,
