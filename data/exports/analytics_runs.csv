@@ -1,4 +1,5 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,director,2026-10-20T18:07:13
 0.0,0,False,0,knowledge_base,2026-10-20T11:23:41
 0.0,0,False,0,documentation,2026-10-20T11:23:41
 0.0,0,False,0,qa,2026-10-20T11:23:40
@@ -798,4 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,compliance,2026-07-21T03:35:20
 0.0,0,False,0,security,2026-07-21T03:35:20
 0.0,0,False,0,designer,2026-07-21T03:35:20
-0.0,0,False,0,fullstack_engineer,2026-07-21T03:35:20
