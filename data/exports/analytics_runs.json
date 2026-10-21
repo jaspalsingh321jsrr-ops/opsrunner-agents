@@ -1,5 +1,13 @@
 [
   {
+    "role": "director",
+    "ts": "2026-10-21T18:15:50",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "listening",
     "ts": "2026-10-21T07:27:56",
     "in": 0,
@@ -6386,14 +6394,6 @@
   {
     "role": "finance",
     "ts": "2026-07-22T14:17:22",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "accounting",
-    "ts": "2026-07-22T14:17:21",
     "in": 0,
     "out": 0,
     "cost": 0.0,
