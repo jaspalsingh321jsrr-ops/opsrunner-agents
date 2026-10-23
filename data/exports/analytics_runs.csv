@@ -1,4 +1,5 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,director,2026-10-23T17:57:50
 0.0,0,False,0,knowledge_base,2026-10-23T13:19:10
 0.0,0,False,0,documentation,2026-10-23T13:19:10
 0.0,0,False,0,qa,2026-10-23T13:19:10
@@ -798,4 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,listening,2026-07-24T21:15:14
 0.0,0,False,0,analytics,2026-07-24T17:46:09
 0.0,0,False,0,sales,2026-07-24T17:46:09
-0.0,0,False,0,marketing,2026-07-24T17:46:09
