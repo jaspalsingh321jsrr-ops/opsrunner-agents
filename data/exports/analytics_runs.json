@@ -1,5 +1,77 @@
 [
   {
+    "role": "knowledge_base",
+    "ts": "2026-10-23T13:19:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "documentation",
+    "ts": "2026-10-23T13:19:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "qa",
+    "ts": "2026-10-23T13:19:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "devops",
+    "ts": "2026-10-23T13:19:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "frontend_engineer",
+    "ts": "2026-10-23T13:19:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "backend_engineer",
+    "ts": "2026-10-23T13:19:09",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "finance",
+    "ts": "2026-10-23T13:19:09",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "accounting",
+    "ts": "2026-10-23T13:19:09",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "product_manager",
+    "ts": "2026-10-23T13:19:09",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-10-23T00:33:27",
     "in": 0,
@@ -6322,78 +6394,6 @@
   {
     "role": "marketing",
     "ts": "2026-07-24T17:46:09",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "director",
-    "ts": "2026-07-24T15:17:29",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-07-24T10:26:39",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-23T17:41:25",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "sales",
-    "ts": "2026-07-23T17:41:25",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "marketing",
-    "ts": "2026-07-23T17:41:25",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "director",
-    "ts": "2026-07-23T15:44:48",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "customer_success",
-    "ts": "2026-07-23T14:25:49",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-22T17:35:40",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "sales",
-    "ts": "2026-07-22T17:35:40",
     "in": 0,
     "out": 0,
     "cost": 0.0,
