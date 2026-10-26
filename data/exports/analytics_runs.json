@@ -1,5 +1,13 @@
 [
   {
+    "role": "director",
+    "ts": "2026-10-26T19:35:02",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-10-26T04:32:06",
     "in": 0,
@@ -6385,14 +6393,6 @@
   },
   {
     "role": "knowledge_base",
-    "ts": "2026-07-25T15:13:38",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "documentation",
     "ts": "2026-07-25T15:13:38",
     "in": 0,
     "out": 0,
