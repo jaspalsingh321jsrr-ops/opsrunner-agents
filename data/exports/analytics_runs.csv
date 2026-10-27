@@ -1,4 +1,7 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,analytics,2026-10-27T04:50:20
+0.0,0,False,0,sales,2026-10-27T04:50:19
+0.0,0,False,0,marketing,2026-10-27T04:50:19
 0.0,0,False,0,listening,2026-10-26T19:51:08
 0.0,0,False,0,knowledge_base,2026-10-26T19:51:06
 0.0,0,False,0,documentation,2026-10-26T19:51:06
@@ -796,6 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,recruiter,2026-07-28T06:35:33
 0.0,0,False,0,hr,2026-07-28T06:35:33
 0.0,0,False,0,coo,2026-07-28T06:35:33
-0.0,0,False,0,ceo,2026-07-28T06:35:33
-0.0,0,False,0,analytics,2026-07-27T19:47:53
-0.0,0,False,0,sales,2026-07-27T19:47:52

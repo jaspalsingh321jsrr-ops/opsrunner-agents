@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-10-27T04:50:20",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-10-27T04:50:19",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-10-27T04:50:19",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "listening",
     "ts": "2026-10-26T19:51:08",
     "in": 0,
@@ -6370,30 +6394,6 @@
   {
     "role": "coo",
     "ts": "2026-07-28T06:35:33",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "ceo",
-    "ts": "2026-07-28T06:35:33",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "analytics",
-    "ts": "2026-07-27T19:47:53",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "sales",
-    "ts": "2026-07-27T19:47:52",
     "in": 0,
     "out": 0,
     "cost": 0.0,
