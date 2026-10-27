@@ -1,4 +1,5 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,director,2026-10-27T18:59:45
 0.0,0,False,0,analytics,2026-10-27T04:50:20
 0.0,0,False,0,sales,2026-10-27T04:50:19
 0.0,0,False,0,marketing,2026-10-27T04:50:19
@@ -798,4 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,fullstack_engineer,2026-07-28T06:35:34
 0.0,0,False,0,recruiter,2026-07-28T06:35:33
 0.0,0,False,0,hr,2026-07-28T06:35:33
-0.0,0,False,0,coo,2026-07-28T06:35:33
