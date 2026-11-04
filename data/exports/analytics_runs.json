@@ -1,5 +1,85 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-11-04T09:02:15",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "compliance",
+    "ts": "2026-11-04T09:02:11",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "security",
+    "ts": "2026-11-04T09:02:11",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "designer",
+    "ts": "2026-11-04T09:02:11",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "fullstack_engineer",
+    "ts": "2026-11-04T09:02:11",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "recruiter",
+    "ts": "2026-11-04T09:02:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "hr",
+    "ts": "2026-11-04T09:02:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "customer_success",
+    "ts": "2026-11-04T09:02:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "coo",
+    "ts": "2026-11-04T09:02:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "ceo",
+    "ts": "2026-11-04T09:02:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-11-04T02:09:00",
     "in": 0,
@@ -6314,86 +6394,6 @@
   {
     "role": "marketing",
     "ts": "2026-08-03T23:13:21",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-08-03T19:49:51",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "listening",
-    "ts": "2026-08-03T18:00:21",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "knowledge_base",
-    "ts": "2026-08-03T18:00:08",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "documentation",
-    "ts": "2026-08-03T18:00:08",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "qa",
-    "ts": "2026-08-03T18:00:08",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "devops",
-    "ts": "2026-08-03T18:00:08",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "frontend_engineer",
-    "ts": "2026-08-03T18:00:08",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "backend_engineer",
-    "ts": "2026-08-03T18:00:08",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "finance",
-    "ts": "2026-08-03T18:00:07",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "accounting",
-    "ts": "2026-08-03T18:00:07",
     "in": 0,
     "out": 0,
     "cost": 0.0,
