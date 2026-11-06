@@ -1,5 +1,13 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-11-06T21:26:23",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-11-06T20:05:43",
     "in": 0,
@@ -6385,14 +6393,6 @@
   },
   {
     "role": "marketing",
-    "ts": "2026-08-07T00:10:42",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "product_manager",
     "ts": "2026-08-07T00:10:42",
     "in": 0,
     "out": 0,
