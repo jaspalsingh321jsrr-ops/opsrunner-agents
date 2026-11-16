@@ -1,5 +1,13 @@
 [
   {
+    "role": "director",
+    "ts": "2026-11-16T23:01:55",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-11-16T20:18:01",
     "in": 0,
@@ -6386,14 +6394,6 @@
   {
     "role": "product_manager",
     "ts": "2026-08-16T03:08:24",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "director",
-    "ts": "2026-08-15T13:59:51",
     "in": 0,
     "out": 0,
     "cost": 0.0,
