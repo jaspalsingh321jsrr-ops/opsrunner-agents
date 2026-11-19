@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-11-19T00:14:34",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-11-19T00:14:34",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-11-19T00:14:34",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "director",
     "ts": "2026-11-18T21:36:56",
     "in": 0,
@@ -6370,30 +6394,6 @@
   {
     "role": "security",
     "ts": "2026-08-18T08:48:28",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "designer",
-    "ts": "2026-08-18T08:48:27",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "fullstack_engineer",
-    "ts": "2026-08-18T08:48:27",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "recruiter",
-    "ts": "2026-08-18T08:48:27",
     "in": 0,
     "out": 0,
     "cost": 0.0,
