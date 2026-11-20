@@ -1,5 +1,13 @@
 [
   {
+    "role": "listening",
+    "ts": "2026-11-20T09:55:56",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "analytics",
     "ts": "2026-11-20T01:44:38",
     "in": 0,
@@ -6385,14 +6393,6 @@
   },
   {
     "role": "customer_success",
-    "ts": "2026-08-19T03:06:03",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "product_manager",
     "ts": "2026-08-19T03:06:03",
     "in": 0,
     "out": 0,
