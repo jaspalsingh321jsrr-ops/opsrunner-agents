@@ -1,4 +1,7 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,analytics,2026-11-20T01:44:38
+0.0,0,False,0,sales,2026-11-20T01:44:38
+0.0,0,False,0,marketing,2026-11-20T01:44:37
 0.0,0,False,0,director,2026-11-19T21:49:54
 0.0,0,False,0,customer_success,2026-11-19T18:57:33
 0.0,0,False,0,analytics,2026-11-19T00:14:34
@@ -796,6 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,accounting,2026-08-19T03:06:03
 0.0,0,False,0,customer_success,2026-08-19T03:06:03
 0.0,0,False,0,product_manager,2026-08-19T03:06:03
-0.0,0,False,0,listening,2026-08-18T18:50:46
-0.0,0,False,0,director,2026-08-18T14:17:01
-0.0,0,False,0,analytics,2026-08-18T08:48:28
