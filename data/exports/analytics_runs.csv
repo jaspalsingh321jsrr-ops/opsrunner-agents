@@ -1,4 +1,5 @@
 cost,in,ok,out,role,ts
+0.0,0,False,0,director,2026-11-25T22:48:50
 0.0,0,False,0,analytics,2026-11-25T02:15:49
 0.0,0,False,0,sales,2026-11-25T02:15:49
 0.0,0,False,0,marketing,2026-11-25T02:15:49
@@ -798,4 +799,3 @@ cost,in,ok,out,role,ts
 0.0,0,False,0,director,2026-08-23T14:01:24
 0.0,0,False,0,analytics,2026-08-23T10:33:34
 0.0,0,False,0,sales,2026-08-23T10:33:34
-0.0,0,False,0,marketing,2026-08-23T10:33:34
