@@ -1,5 +1,29 @@
 [
   {
+    "role": "analytics",
+    "ts": "2026-11-27T13:43:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "sales",
+    "ts": "2026-11-27T13:43:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
+    "role": "marketing",
+    "ts": "2026-11-27T13:43:10",
+    "in": 0,
+    "out": 0,
+    "cost": 0.0,
+    "ok": false
+  },
+  {
     "role": "listening",
     "ts": "2026-11-27T02:45:32",
     "in": 0,
@@ -6370,30 +6394,6 @@
   {
     "role": "sales",
     "ts": "2026-08-25T13:04:17",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "marketing",
-    "ts": "2026-08-25T13:04:17",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "compliance",
-    "ts": "2026-08-25T08:53:25",
-    "in": 0,
-    "out": 0,
-    "cost": 0.0,
-    "ok": false
-  },
-  {
-    "role": "security",
-    "ts": "2026-08-25T08:53:25",
     "in": 0,
     "out": 0,
     "cost": 0.0,
